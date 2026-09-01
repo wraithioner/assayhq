@@ -2,6 +2,39 @@
 
 A running log of non-obvious calls and their reasoning. Newest first.
 
+## Phase 1 — build (2026-09-01)
+
+Approved scope constraints (from the go-ahead): score **only the 35 feed-covered tokens**
+(no RH price API — breaks recomputability; no DEX mid — endogenous); majority-feedless agents
+are **unscoreable**, never partially scored. **Uniswap V3 only**; build an **unattributed-flow
+detector** (balance change with no matching indexed swap) that excludes those agents and ranks
+which venue to add next. **ERC-8004 self-declared = scoring universe**, heuristics display-only;
+**scoring starts at the registration block, never backfilled**; pre-registration history displays
+as `unverified` and is excluded from aggregates; entry-selection bias surfaced in the UI.
+
+### D-1.1 — Monorepo: pnpm workspaces, ship TS source (no build step)
+Packages export `src/*.ts` directly (`main`/`types` point at source); consumers use a bundler
+(vite/tsx/Next). Reason: fewer moving parts for a data-correctness project; the indexer/metrics/web
+import the same source the tests exercise, so there's no compiled artifact to drift.
+
+### D-1.2 — `packages/erc8056` first, as the executable spec
+The conversion math ships as **twin implementations** — TypeScript and `ScaledUIMath.sol` — that
+floor identically; the **TS property tests are the shared spec**. Reason: the on-chain and off-chain
+numbers must agree to the wei or NAV/slippage diverge; one spec, two conformant implementations.
+
+### D-1.3 — NAV has exactly one, multiplier-free implementation
+`rawBalanceValueUsd` takes **no** multiplier argument (the feed is total-return; §D-0.6). A property
+test pins that valuation is independent of the multiplier, and a concrete test shows double-applying
+it overstates NAV 4× on a CRWD-style 4.0 multiplier. Reason: make the most likely accounting bug
+structurally impossible, not just discouraged.
+
+### D-1.4 — AMM/multiplier analysis: splits are a non-event, dividends are the (small) hazard
+Because raw balances never rebase and the feed is total-return, a constant-product pool is immune to
+splits; the only LP loss is the ~`(√r−1)²/2` arbitrage during the window between a reinvested
+dividend's on-chain `effectiveAt` and the feed re-aligning (≈0.0012% for 1%). Consequence encoded
+downstream: slippage is measured vs the **Chainlink mid**, and fills inside a multiplier-step window
+are flagged. (Full derivation in `packages/erc8056/README.md`.)
+
 ## Phase 0 — recon (2026-09-01)
 
 ### D-0.1 — Primary sources are read from raw HTML / on-chain, not via a summarizer
