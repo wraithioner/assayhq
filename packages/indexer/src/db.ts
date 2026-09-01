@@ -90,6 +90,23 @@ export function createSchema(sqlite: Database.Database): void {
     CREATE INDEX IF NOT EXISTS tt_agent_idx ON token_transfers (agent_wallet, block_number);
     CREATE INDEX IF NOT EXISTS tt_tx_idx ON token_transfers (tx_hash);
 
+    CREATE TABLE IF NOT EXISTS cash_transfers (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      token TEXT NOT NULL,
+      from_addr TEXT NOT NULL,
+      to_addr TEXT NOT NULL,
+      value TEXT NOT NULL,
+      agent_wallet TEXT NOT NULL,
+      direction TEXT NOT NULL,
+      block_number INTEGER NOT NULL,
+      block_timestamp INTEGER NOT NULL,
+      tx_hash TEXT NOT NULL,
+      log_index INTEGER NOT NULL,
+      UNIQUE (tx_hash, log_index)
+    );
+    CREATE INDEX IF NOT EXISTS ct_agent_idx ON cash_transfers (agent_wallet, block_number);
+    CREATE INDEX IF NOT EXISTS ct_tx_idx ON cash_transfers (tx_hash);
+
     CREATE TABLE IF NOT EXISTS uni_pools (
       address TEXT PRIMARY KEY,
       token0 TEXT NOT NULL,

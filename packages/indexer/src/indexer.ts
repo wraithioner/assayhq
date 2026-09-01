@@ -26,6 +26,7 @@ import {
   uniswapV3FactoryAbi,
   uniswapV3PoolAbi,
   chainlinkFeedAbi,
+  evTransfer,
   evTransferWithScaledUI,
   evUIMultiplierUpdated,
   evRegistered,
@@ -371,6 +372,52 @@ export class Indexer {
     return n;
   }
 
+  /** Index USDG/WETH (the cash leg) Transfer events touching agent wallets. */
+  async indexCashTransfers(fromBlock: number, toBlock: number): Promise<number> {
+    const agents = this.db.select().from(t.agents).all();
+    if (agents.length === 0) return 0;
+    const walletSet = new Set(agents.map((a) => lc(a.owner)));
+    const walletArg = [...walletSet].map((a) => getAddress(a)) as Address[];
+    const cashTokens = [getAddress(this.cfg.stablecoins.USDG), getAddress(this.cfg.stablecoins.WETH)];
+    let n = 0;
+    for await (const [f, to] of this.chunks(fromBlock, toBlock)) {
+      for (const side of ["from", "to"] as const) {
+        const logs = await this.client.getLogs({
+          address: cashTokens,
+          event: evTransfer,
+          args: side === "from" ? { from: walletArg } : { to: walletArg },
+          fromBlock: f,
+          toBlock: to,
+        });
+        for (const log of logs) {
+          const from = lc(log.args.from as string);
+          const toA = lc(log.args.to as string);
+          const agentWallet = side === "from" ? from : toA;
+          if (!walletSet.has(agentWallet)) continue;
+          const ts = await this.blockTs(Number(log.blockNumber));
+          this.db
+            .insert(t.cashTransfers)
+            .values({
+              token: lc(log.address),
+              fromAddr: from,
+              toAddr: toA,
+              value: (log.args.value as bigint).toString(),
+              agentWallet,
+              direction: side === "from" ? "out" : "in",
+              blockNumber: Number(log.blockNumber),
+              blockTimestamp: ts,
+              txHash: log.transactionHash!,
+              logIndex: log.logIndex!,
+            })
+            .onConflictDoNothing()
+            .run();
+          n++;
+        }
+      }
+    }
+    return n;
+  }
+
   /**
    * Fetch gas facts for the transactions that moved agent balances. `feePayer`
    * is the receipt's `from`; for ERC-4337 flows that is the bundler, not the
@@ -447,6 +494,7 @@ export class Indexer {
     await this.indexPrices(fromBlock, toBlock);
     await this.indexSwaps(fromBlock, toBlock);
     await this.indexAgentTransfers(fromBlock, toBlock);
+    await this.indexCashTransfers(fromBlock, toBlock);
     await this.indexTxGas(fromBlock, toBlock);
     this.attribute(fromBlock, toBlock);
   }
@@ -456,6 +504,7 @@ export class Indexer {
     const tables = [
       t.agentOwnerHistory,
       t.tokenTransfers,
+      t.cashTransfers,
       t.swaps,
       t.multiplierUpdates,
       t.priceUpdates,

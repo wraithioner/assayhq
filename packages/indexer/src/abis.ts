@@ -8,6 +8,9 @@ import { parseAbi, parseAbiItem } from "viem";
 export const evTransferWithScaledUI = parseAbiItem(
   "event TransferWithScaledUI(address indexed from, address indexed to, uint256 value, uint256 uiValue)",
 );
+export const evTransfer = parseAbiItem(
+  "event Transfer(address indexed from, address indexed to, uint256 value)",
+);
 export const evUIMultiplierUpdated = parseAbiItem(
   "event UIMultiplierUpdated(uint256 oldMultiplier, uint256 newMultiplier, uint256 effectiveAtTimestamp)",
 );

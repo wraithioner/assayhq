@@ -95,6 +95,33 @@ export const tokenTransfers = sqliteTable(
   }),
 );
 
+/**
+ * Quote-asset (USDG/WETH) movements touching an agent — the cash leg. A row in
+ * the same tx as an attributed swap is a trade leg (internal); otherwise it is an
+ * external deposit/withdrawal. Needed so NAV values cash, not just stock.
+ */
+export const cashTransfers = sqliteTable(
+  "cash_transfers",
+  {
+    id: integer("id").primaryKey({ autoIncrement: true }),
+    token: text("token").notNull(), // USDG or WETH (lower-cased)
+    fromAddr: text("from_addr").notNull(),
+    toAddr: text("to_addr").notNull(),
+    value: text("value").notNull(), // decimal string
+    agentWallet: text("agent_wallet").notNull(),
+    direction: text("direction", { enum: ["in", "out"] }).notNull(),
+    blockNumber: integer("block_number").notNull(),
+    blockTimestamp: integer("block_timestamp").notNull(),
+    txHash: text("tx_hash").notNull(),
+    logIndex: integer("log_index").notNull(),
+  },
+  (tb) => ({
+    uq: unique().on(tb.txHash, tb.logIndex),
+    byAgent: index("ct_agent_idx").on(tb.agentWallet, tb.blockNumber),
+    byTx: index("ct_tx_idx").on(tb.txHash),
+  }),
+);
+
 /** Uniswap V3 pools involving a scoreable token and a quote asset (USDG/WETH). */
 export const uniPools = sqliteTable("uni_pools", {
   address: text("address").primaryKey(),
