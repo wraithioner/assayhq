@@ -1,0 +1,58 @@
+ticker,kind,name,proxyAddress,secondaryProxyAddress,decimals,heartbeat,path,marketHours
+AAPL,rh_total_return,Robinhood AAPL / USD,0x6B22A786bAa607d76728168703a39Ea9C99f2cD0,0x4bDbb3150014c6Ab2C6D9347B0779c49015a2f3f,8,86400,robinhood-aapl-usd-shared-svr,us_equities_24/5
+AMD,rh_total_return,Robinhood AMD / USD,0x943A29E7ae51A4798823ca9eEd2ed533B2A22C72,0xF6d57763DFa625F4A413485261Ab2E71Ff4304CF,8,86400,robinhood-amd-usd-shared-svr,us_equities_24/5
+AMZN,rh_total_return,Robinhood AMZN / USD,0xD5a1508ceD74c084eBf3cBe853e2C968fB2a651C,0x9244830430bC7D9C9A48dd47603F24AD61f7c56e,8,86400,robinhood-amzn-usd-shared-svr,us_equities_24/5
+ASML,rh_total_return,Robinhood ASML / USD,0xB4106147E8cce40b7d46124090d373A71b70f87D,0x3eFBba343e2b1cF9ed4d4D5768e20B70307Aa8c9,8,86400,robinhood-asml-usd-shared-svr,us_equities_24/5
+BABA,rh_total_return,Robinhood BABA / USD,0x62Cc8F9b5f56a33c9C8A60c8B92779f523c4E984,0xDB69948B26050818E8c9f43300F78b2582e67260,8,86400,robinhood-baba-usd-shared-svr,us_equities_24/5
+CLSK,rh_total_return,Robinhood CLSK / USD,0x810c12D3a554Bc47fd39597Fe3b3AAC4941F50eF,0x951C5E9a2a065053035D4B812b1f6cA7e64c5102,8,86400,robinhood-clsk-usd-shared-svr,us_equities_24/5
+COIN,rh_total_return,Robinhood COIN / USD,0xA3a468A452940B7D6b69991207B508c609a98Ef2,0xA7F7D79D578fb007384BaDF42c8E1D76a6a63bBD,8,86400,robinhood-coin-usd-shared-svr,us_equities_24/5
+CRCL,rh_total_return,Robinhood CRCL / USD,0x6652eDf64bA3731C4F2D3ce821A0Fb1f1f6b482a,0x025Ba3B3569Ca7d15Da7BFC1648F13F06A072851,8,86400,robinhood-crcl-usd-shared-svr,us_equities_24/5
+CRWV,rh_total_return,Robinhood CRWV / USD,0xe1b3aABCAFAd1c94708dc1367dcfF8Aa4407487C,0x288b837A17fED1aa00c1df832ef79D0C77336c10,8,86400,robinhood-crwv-usd-shared-svr,us_equities_24/5
+DELL,rh_total_return,Robinhood DELL-USD,0x1C6c8cADBe02E19129c39dDB92281cE4c0bf206b,0xe9B94828424a8Efe6e773c28AB5Fd486851867c8,8,86400,rhdell-usd-shared-svr,us_equities_24/5
+EWY,rh_total_return,Robinhood EWY / USD,0xEFdf54610B62A7753Ec30bDc380847c12D32e1D1,0x26bca2a89D2D23787ada8F91B849608c51A26977,8,86400,robinhood-ewy-usd-shared-svr,us_equities_24/5
+GME,rh_total_return,Robinhood GME / USD,0x27C71df6A64fB476468EdF256CF72c038baB5B67,0x42A4652D447A5B0bccF3B265bE8530b85A33b3A2,8,86400,robinhood-gme-usd-shared-svr,us_equities_24/5
+GOOGL,rh_total_return,Robinhood GOOGL / USD,0xF6f373a037c30F0e5010d854385cA89185AE638b,0xA04EE5c4c8827F17e82f93bE9e19DeA221A749a8,8,86400,robinhood-googl-usd-shared-svr,us_equities_24/5
+INTC,rh_total_return,Robinhood INTC / USD,0x3f390C5C24628Ac7C489515402235FeAD71D1913,0x127B1DeDeE6269E962a59E6C1295b4002c56c403,8,86400,robinhood-intc-usd-shared-svr,us_equities_24/5
+IONQ,rh_total_return,Robinhood IONQ / USD,0x22EfeC4919baf55F360E0EDee4AbEB26DE4971eb,0x926D7D95E554D1e671EB2C0d238fe37a2C23A64E,8,86400,robinhood-ionq-usd-shared-svr,us_equities_24/5
+META,rh_total_return,Robinhood META / USD,0x7C38C00C30BEe9378381E7B6135d7283356D71b1,0x5cBC53D382E56cBb223f118CF8Eefb6c9c2759f5,8,86400,robinhood-meta-usd-shared-svr,us_equities_24/5
+MSFT,rh_total_return,Robinhood MSFT / USD,0x45C3C877C15E6BA2EBB19eA114Ea508d14C1Af2E,0xaD6D88eab22aa4867Efe807a5311Ed64962f740D,8,86400,robinhood-msft-usd-shared-svr,us_equities_24/5
+MSTR,rh_total_return,Robinhood MSTR / USD,0x396118bdFB181e6240E74D243F266B061c0edc3D,0x2521a77F42098357e83bDea7fBb2A38745bf9280,8,86400,robinhood-mstr-usd-shared-svr,us_equities_24/5
+MU,rh_total_return,Robinhood MU / USD,0x425EEFdCf05ed6526C3cE61Af99429A228a6d596,0x5b40F4E78FA58B60a4F59b8cc8cB8d2Fb0690467,8,86400,robinhood-mu-usd-shared-svr,us_equities_24/5
+NBIS,rh_total_return,Robinhood NBIS / USD,0xE1D87B116Ba0fe898998f1D140339D1fA1E09705,0xCa59A8F53bf4E0628CC0b1BD3a2216F2F8E04770,8,86400,robinhood-nbis-usd-shared-svr,us_equities_24/5
+NVDA,rh_total_return,Robinhood NVDA / USD,0x379EC4f7C378F34a1B47E4F3cbeBCbAC3E8E9F15,0xCF169363636D73dbBf77733629CB38919d14232d,8,86400,robinhood-nvda-usd-shared-svr,us_equities_24/5
+ORCL,rh_total_return,Robinhood ORCL / USD,0x0e6a64a2B58A6693a531E6c555f3A5d042eEA844,0x2a07f8d87d369Bd8Bc36472337ae02d512a7b5e5,8,86400,robinhood-orcl-usd-shared-svr,us_equities_24/5
+PLTR,rh_total_return,Robinhood PLTR / USD,0x820ABedFF239034956B7A9d2F0a331f9F075eB4c,0x8cd1DFC0fc61fcA55FA77b37e008A90f13364Fce,8,86400,robinhood-pltr-usd-shared-svr,us_equities_24/5
+QQQ,rh_total_return,Robinhood QQQ / USD,0x80901d846d5D7B030F26B480776EE3b29374C2ae,0x41ed2c58611790af0760e31e80Bb427e4e83D603,8,86400,robinhood-qqq-usd-shared-svr,us_equities_24/5
+RGTI,rh_total_return,Robinhood RGTI / USD,0x2A045cF1C49c61c166C036d2f06FA2D2d984f765,0xC9C477AEfF7eD1BB89B84F7907E2e11707491466,8,86400,robinhood-rgti-usd-shared-svr,us_equities_24/5
+RKLB,rh_total_return,Robinhood RKLB / USD,0x045477BF65Aef6f4F2386ad0164579e48381CC74,0x955c60932E517B36be137Eee78E65343cBFC9D29,8,86400,robinhood-rklb-usd-shared-svr,us_equities_24/5
+SGOV,rh_total_return,Robinhood SGOV-USD,0xa0DF4ee0fFf975306345875E3548Fcc519577A11,0xa7a18Ca3F19E17FfA28F92302B817Ca8c1A94b06,8,86400,rhsgov-usd-shared-svr,us_equities_24/5
+SLV,rh_total_return,Robinhood SLV / USD,0x209b73908e92Ae021826eD79609845451Ecba2ce,0xdA81cD9c76F1D3Ea32655dfFc7408ef22BB0Ee2a,8,86400,robinhood-slv-usd-shared-svr,us_equities_24/5
+SNDK,rh_total_return,Robinhood SNDK / USD,0xfb133Fa4B7b385802B693a293606682Df47109A3,0xd1016D9Da414B13D55abe02221A8A145eB89aA0D,8,86400,robinhood-sndk-usd-shared-svr,us_equities_24/5
+SPCX,rh_total_return,Robinhood SPCX / USD,0xB265810950ba6c5C0Ff821c9963014a56fD8Bffb,0x42a95341ff361e81fd934F39943c5C98F6991844,8,86400,robinhood-spcx-usd-shared-svr,us_equities_24/5
+SPY,rh_total_return,Robinhood SPY / USD,0x319724394D3A0e3669269846abE664Cd621f9f6A,0xa68CA83408bE3f78d1c58a82081c619e9d21486d,8,86400,robinhood-spy-usd-shared-svr,us_equities_24/5
+TSLA,rh_total_return,Robinhood TSLA / USD,0x4A1166a659A55625345e9515b32adECea5547C38,0xE4479F01738B4e8C428CD8eB72D47AB9BC3c7de6,8,86400,robinhood-tsla-usd-shared-svr,us_equities_24/5
+TSM,rh_total_return,Robinhood TSM / USD,0x874cF94aa8eC88Fd9560094dD065f2fB3E41Fc2F,0xB48D6D5729Ca032ca43729F4b605bBf9f257A84d,8,86400,robinhood-tsm-usd-shared-svr,us_equities_24/5
+USAR,rh_total_return,Robinhood USAR-USD,0xA994d3684e8400A6c8078226925779FdeE682DD9,0x451B1295aA84FD6d6b58af1a5002eA1b1A1913A0,8,86400,rhusar-usd-shared-svr,us_equities_24/5
+USO,rh_total_return,Robinhood USO / USD,0x75a9c76Ef439e2C7c2E5a34Ab105EcFe3766431c,0x6D054DECb74Cf8ef3675B0Abc100e02921176EdF,8,86400,robinhood-uso-usd-shared-svr,us_equities_24/5
+BTC,standard,BTC / USD,0xa2c5184bF03d373Dc9dE4876eb4Bce595B460251,0x5a74F49d16fd0Cb866766d7e8EDb54DE36F6645A,8,86400,btc-usd-shared-svr,Crypto
+BTC.B,standard,BTC.B / USD,0x5BB5e6a17a477d5B6Fec77b4322daD4A66bFb732,0x7097e57539201dd96d1ca4db82bd3A3013B73D9D,8,86400,btc.b-usd-shared-svr,Crypto
+CBBTC,standard,CBBTC / USD,0x0009cD492adf8167f9eEBf1293556A673530a21a,0x3546407C5F94dD7Eab3a853D245b5C5EAb53318a,8,86400,cbbtc-usd-shared-svr,Crypto
+ENA,standard,ENA / USD,0x2A291496b3aa19d8948e442Ef28Ee952f3Ee97E8,0x68350E7a5f6b17d2d72231F2F33b2CfBAE408E23,8,86400,ena-usd-shared-svr,Crypto
+ETH,standard,ETH / USD,0x78F3556b67E17Df817D51Ef5a990cDaF09E8d3A9,0x5058aDee53b04e374d8bEDbAD634Bc4778F50b22,8,86400,eth-usd-shared-svr,Crypto
+EURC,standard,EURC / USD,0xfF2B10c1973eD10c841434f98e456d8f3a0D7DD8,0x785b8C8831CEFb9F165548872aCa11425F33Cd95,8,86400,eurc-usd-shared-svr,Crypto
+LBTC,standard,LBTC / USD,0xa621344AdAEE699491597Fd8890E0C59a5BFBE59,0x55F3a8f8D0b41a3DC02F117e5DE04CC7CAcc1879,8,86400,lbtc-usd-shared-svr,Crypto
+LINK,standard,LINK / USD,0xe86e3422Aa9B5e8ee9f3E41a63975bC387A8bce9,0xB7F054718bD802716FA7bD5944Df2f50a8D0424E,8,86400,link-usd-shared-svr,Crypto
+SYRUPUSDC,standard,SYRUPUSDC / USDC Exchange Rate,0x6317f016FA3e312C4625dee51d32b43a223011f8,,18,86400,syrupusdc-usdc-exchange-rate,Crypto
+SYRUPUSDC,standard,SYRUPUSDC / USD,0x8765c3B9Cda41d1029E780D0c1C37C8200DC4675,0x4a3A14febFD43c4cd8adFAE609f1fcCfd62E7538,8,86400,syrupusdc-usd-shared-svr,Crypto
+SYRUPUSDG,standard,syrupUSDG / USDG Exchange Rate,0xDd194C66aDcb422F188a04434e4824D70c151cF0,0x3bEdEA9CE3ead0Db4EA60dC497568DEdDe85dBa3,18,86400,syrupusdg-usdg-exchange-rate-shared-svr,Crypto
+SYRUPUSDT,standard,SYRUPUSDT / USDT Exchange Rate,0xBB688c0184Ce03fEdac89D71ccE752Ab21bC2999,0x7F7Fa3ab20d36689F854Cb6a788bF9fcd383B414,18,86400,syrupusdt-usdt-exchange-rate-shared-svr,Crypto
+USDC,standard,USDC / USD,0x9e6f4605992a899eE2999999F3Ec80C41F452546,0x8929d7B1989459b3b1ec69066A06eab5c93B6d85,8,86400,usdc-usd-shared-svr,Crypto
+USDE,standard,USDE / USD,0xb9fB4e65744E4178894f7C61CF80E8a48A5f224a,0xd9B1f2958298F25bf1289B5aaB7fB6d1B7416c95,8,86400,usde-usd-shared-svr,Crypto
+USDG,standard,USDG / USD,0x61B7e5650328764B076A108EFF5fa7282a1B9aD2,0x901f56689360B89D7767a8acE28B7801e6348fa2,8,86400,usdg-usd-shared-svr,Crypto
+USDS,standard,USDS / USD,0x2D88D75b625633dCcd65d9d53BfDD3Aea2d8e84f,0x08b18ae3AB64323Fe7e6f7b86e126d9F54e20B95,8,86400,usds-usd-shared-svr,Crypto
+USDT,standard,USDT / USD,0xbf3550B6fAe1671da7C238Af12e03Ac586BEf3B1,0x84dD63d9162DaA201c4Ea0a6dDbfBFB274F4514D,8,86400,usdt-usd-shared-svr,Crypto
+WBTC,standard,WBTC / USD,0x62107b0d3adA75fc1697fD342d99eed947a3aA5E,0x43AF1Fc55DeAD1766fe96432148A069Cfd52D138,8,86400,wbtc-usd-shared-svr,Crypto
+WEETH,standard,WEETH / USD,0xf882e1D50352aecB0Ac85378378918BCf40511e7,0x8A6f8b17D6faBFf4c400F7C9edb6872573F85F48,8,86400,weeth-usd-shared-svr,Crypto
+WEETH,standard,WEETH / EETH Exchange Rate,0xb63f44E40aA811Cc69Fc55da786a5F3834100B4A,0xFeDe0c0172960F3E5915a94Db84a7ae415F096d7,18,86400,weeth-eeth-exchange-rate-shared-svr,Crypto
+WSTETH,standard,WSTETH / USD,0x3F5040B50FB37934573B210fE54B53a6F1A792E8,0xe382E3CD333b6466f7C31d9a6Fd979A01fE86c75,8,86400,wsteth-usd-shared-svr,Crypto
+WSTETH,standard,WSTETH / STETH Exchange Rate,0x8E3Eb706B170c8FD1DdcD402932D952887736f9A,0x0D15F844B87C1EAAdC7202F5EE3C5D9B9389Bf02,18,86400,wsteth-steth-exchange-rate-shared-svr,Crypto

@@ -1,0 +1,21 @@
+{
+  "fetched_utc": "2026-09-01",
+  "sources": {
+    "rh-assets.raw.json": {
+      "url": "https://api.robinhood.com/rhj/assets",
+      "sha256": "b4fe914d1fe7c44e3aa192aa0d673952696add4aa30b2afc4338187988939188",
+      "count": 194
+    },
+    "chainlink-feeds-robinhood-mainnet.raw.json": {
+      "url": "https://reference-data-directory.vercel.app/feeds-robinhood-mainnet.json",
+      "sha256": "2ae1ea5f432cab06904134759033d7c6434c323171f954120c4933fdde42e85d",
+      "count": 57
+    }
+  },
+  "chain": {
+    "name": "Robinhood Chain",
+    "chainId": 4663,
+    "rpc": "https://rpc.mainnet.chain.robinhood.com",
+    "explorer": "https://robinhoodchain.blockscout.com"
+  }
+}
