@@ -35,6 +35,33 @@ dividend's on-chain `effectiveAt` and the feed re-aligning (≈0.0012% for 1%). 
 downstream: slippage is measured vs the **Chainlink mid**, and fills inside a multiplier-step window
 are flagged. (Full derivation in `packages/erc8056/README.md`.)
 
+### D-1.5 — Store raw events keyed by (txHash, logIndex); derive nothing in the indexer
+SQLite + Drizzle; every event table upserts `onConflictDoNothing` on
+`(tx_hash, log_index)`. Reason: idempotent re-runs, clean reorg rollback by block, and a
+single auditable store the metrics layer recomputes from — recomputability over convenience.
+
+### D-1.6 — Discover Uniswap pools by `factory.getPool`, not by scanning `PoolCreated`
+Pools were created at launch (~51M blocks ago); a call-based lookup is a handful of `eth_call`s
+vs thousands of `getLogs` chunks against a rate-limited public RPC. Trade-off: `created_block`
+is unknown (0) for call-found pools, which doesn't affect swap indexing. Validated live: 5 AAPL
+pools found, 22 real swaps decoded.
+
+### D-1.7 — Prices from Chainlink `AnswerUpdated` logs + `priceAsOf`, never the RH price API
+The feed emits `AnswerUpdated` (~24h heartbeat, sparse); NAV uses the last answer at-or-before a
+timestamp. Reason: fully recomputable from chain logs (the go-ahead banned the off-chain RH price
+API). Confirmed the event fires on the AAPL aggregator with the expected value.
+
+### D-1.8 — Agent identity = current AgentIdentity NFT owner (log-derivable)
+The ERC-8004 impl emits no event for `setAgentWallet`, so binding a distinct operating wallet isn't
+recomputable from logs. v1 scores the NFT owner (`Registered.owner`, updated by NFT `Transfer`);
+`getAgentWallet` is deferred to a clearly-flagged, call-derived Phase-2 enhancement. Reason:
+recomputability is non-negotiable for the scoreboard's promise.
+
+### D-1.9 — Unattributed-flow detector + coverage gate, exactly as directed
+A stock-token move with no same-tx Uniswap swap is unattributed (excluded from execution scoring;
+aggregated by token to rank the next venue). Majority-feedless agents are unscoreable, never
+partial. Both are pure, unit-tested functions.
+
 ## Phase 0 — recon (2026-09-01)
 
 ### D-0.1 — Primary sources are read from raw HTML / on-chain, not via a summarizer

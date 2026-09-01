@@ -1,0 +1,385 @@
+{
+  "chain": {
+    "name": "Robinhood Chain",
+    "chainId": 4663,
+    "rpcUrl": "https://rpc.mainnet.chain.robinhood.com",
+    "explorer": "https://robinhoodchain.blockscout.com",
+    "nativeCurrency": {
+      "name": "Ether",
+      "symbol": "ETH",
+      "decimals": 18
+    }
+  },
+  "launch": {
+    "date": "2026-07-01",
+    "gasWaiverEndsApprox": "2026-09-29"
+  },
+  "stablecoins": {
+    "USDG": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+    "WETH": "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+  },
+  "erc8004": {
+    "identityRegistry": "0x8004A169FB4a3325136EB29fA0ceB6D2e539a432",
+    "identityImplementation": "0x7274e874CA62410a93Bd8bf61c69d8045E399c02",
+    "reputationRegistry": "0x8004BAa17C55a88189AE136b182e5fdA19dE9b63"
+  },
+  "uniswapV3": {
+    "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+    "swapRouter02": "0xcaf681a66d020601342297493863e78c959e5cb2",
+    "universalRouter": "0x8876789976decbfcbbbe364623c63652db8c0904",
+    "quoterV2": "0x33e885ed0ec9bf04ecfb19341582aadcb4c8a9e7"
+  },
+  "sharedTokenImplementation": "0xb35490d6f9163de4f80d88dc75c3516eb64c5ae2",
+  "scoreableTokens": [
+    {
+      "symbol": "AAPL",
+      "address": "0xaF3D76f1834A1d425780943C99Ea8A608f8a93f9",
+      "decimals": 18,
+      "isin": "US0378331005",
+      "feedProxy": "0x6B22A786bAa607d76728168703a39Ea9C99f2cD0",
+      "feedSecondaryProxy": "0x4bDbb3150014c6Ab2C6D9347B0779c49015a2f3f",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    },
+    {
+      "symbol": "AMD",
+      "address": "0x86923f96303D656E4aa86D9d42D1e57ad2023fdC",
+      "decimals": 18,
+      "isin": "US0079031078",
+      "feedProxy": "0x943A29E7ae51A4798823ca9eEd2ed533B2A22C72",
+      "feedSecondaryProxy": "0xF6d57763DFa625F4A413485261Ab2E71Ff4304CF",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    },
+    {
+      "symbol": "AMZN",
+      "address": "0x12f190a9F9d7D37a250758b26824B97CE941bF54",
+      "decimals": 18,
+      "isin": "US0231351067",
+      "feedProxy": "0xD5a1508ceD74c084eBf3cBe853e2C968fB2a651C",
+      "feedSecondaryProxy": "0x9244830430bC7D9C9A48dd47603F24AD61f7c56e",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    },
+    {
+      "symbol": "ASML",
+      "address": "0x47F93d52cBeC7C6D2CfC080e154002370a60dAEA",
+      "decimals": 18,
+      "isin": "USN070592100",
+      "feedProxy": "0xB4106147E8cce40b7d46124090d373A71b70f87D",
+      "feedSecondaryProxy": "0x3eFBba343e2b1cF9ed4d4D5768e20B70307Aa8c9",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    },
+    {
+      "symbol": "BABA",
+      "address": "0xad25Ac6C84D497db898fa1E8387bf6Af3532a1c4",
+      "decimals": 18,
+      "isin": "US01609W1027",
+      "feedProxy": "0x62Cc8F9b5f56a33c9C8A60c8B92779f523c4E984",
+      "feedSecondaryProxy": "0xDB69948B26050818E8c9f43300F78b2582e67260",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    },
+    {
+      "symbol": "CLSK",
+      "address": "0xcBB95BBF36099d34dA091dc6Fa6F49EfA257Cee3",
+      "decimals": 18,
+      "isin": "US18452B2097",
+      "feedProxy": "0x810c12D3a554Bc47fd39597Fe3b3AAC4941F50eF",
+      "feedSecondaryProxy": "0x951C5E9a2a065053035D4B812b1f6cA7e64c5102",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    },
+    {
+      "symbol": "COIN",
+      "address": "0x6330D8C3178a418788dF01a47479c0ce7CCF450b",
+      "decimals": 18,
+      "isin": "US19260Q1076",
+      "feedProxy": "0xA3a468A452940B7D6b69991207B508c609a98Ef2",
+      "feedSecondaryProxy": "0xA7F7D79D578fb007384BaDF42c8E1D76a6a63bBD",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    },
+    {
+      "symbol": "CRCL",
+      "address": "0xdF0992E440dD0be65BD8439b609d6D4366bf1CB5",
+      "decimals": 18,
+      "isin": "US1725731079",
+      "feedProxy": "0x6652eDf64bA3731C4F2D3ce821A0Fb1f1f6b482a",
+      "feedSecondaryProxy": "0x025Ba3B3569Ca7d15Da7BFC1648F13F06A072851",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    },
+    {
+      "symbol": "CRWV",
+      "address": "0x5f10A1C971B69e47e059e1dC91901B59b3fB49C3",
+      "decimals": 18,
+      "isin": "US21873S1087",
+      "feedProxy": "0xe1b3aABCAFAd1c94708dc1367dcfF8Aa4407487C",
+      "feedSecondaryProxy": "0x288b837A17fED1aa00c1df832ef79D0C77336c10",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    },
+    {
+      "symbol": "DELL",
+      "address": "0x941AE714EC6D8130c7B75d67160Ca08f1e7d11Dd",
+      "decimals": 18,
+      "isin": "US24703L2025",
+      "feedProxy": "0x1C6c8cADBe02E19129c39dDB92281cE4c0bf206b",
+      "feedSecondaryProxy": "0xe9B94828424a8Efe6e773c28AB5Fd486851867c8",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    },
+    {
+      "symbol": "EWY",
+      "address": "0x7f0aBeF0C07280F82c6a08ead09dEd6BAE2C13Fc",
+      "decimals": 18,
+      "isin": "US4642867729",
+      "feedProxy": "0xEFdf54610B62A7753Ec30bDc380847c12D32e1D1",
+      "feedSecondaryProxy": "0x26bca2a89D2D23787ada8F91B849608c51A26977",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    },
+    {
+      "symbol": "GME",
+      "address": "0x1b0E319c6A659F002271B69dB8A7df2F911c153E",
+      "decimals": 18,
+      "isin": "US36467W1099",
+      "feedProxy": "0x27C71df6A64fB476468EdF256CF72c038baB5B67",
+      "feedSecondaryProxy": "0x42A4652D447A5B0bccF3B265bE8530b85A33b3A2",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    },
+    {
+      "symbol": "GOOGL",
+      "address": "0x2e0847E8910a9732eB3fb1bb4b70a580ADAD4FE3",
+      "decimals": 18,
+      "isin": "US02079K3059",
+      "feedProxy": "0xF6f373a037c30F0e5010d854385cA89185AE638b",
+      "feedSecondaryProxy": "0xA04EE5c4c8827F17e82f93bE9e19DeA221A749a8",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    },
+    {
+      "symbol": "INTC",
+      "address": "0xc72b96e0E48ecd4DC75E1e45396e26300BC39681",
+      "decimals": 18,
+      "isin": "US4581401001",
+      "feedProxy": "0x3f390C5C24628Ac7C489515402235FeAD71D1913",
+      "feedSecondaryProxy": "0x127B1DeDeE6269E962a59E6C1295b4002c56c403",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    },
+    {
+      "symbol": "IONQ",
+      "address": "0x558378E000D634A36593E338eBacdd6207640EfE",
+      "decimals": 18,
+      "isin": "US46222L1089",
+      "feedProxy": "0x22EfeC4919baf55F360E0EDee4AbEB26DE4971eb",
+      "feedSecondaryProxy": "0x926D7D95E554D1e671EB2C0d238fe37a2C23A64E",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    },
+    {
+      "symbol": "META",
+      "address": "0xc0D6457C16Cc70d6790Dd43521C899C87ce02f35",
+      "decimals": 18,
+      "isin": "US30303M1027",
+      "feedProxy": "0x7C38C00C30BEe9378381E7B6135d7283356D71b1",
+      "feedSecondaryProxy": "0x5cBC53D382E56cBb223f118CF8Eefb6c9c2759f5",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    },
+    {
+      "symbol": "MSFT",
+      "address": "0xe93237C50D904957Cf27E7B1133b510C669c2e74",
+      "decimals": 18,
+      "isin": "US5949181045",
+      "feedProxy": "0x45C3C877C15E6BA2EBB19eA114Ea508d14C1Af2E",
+      "feedSecondaryProxy": "0xaD6D88eab22aa4867Efe807a5311Ed64962f740D",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    },
+    {
+      "symbol": "MSTR",
+      "address": "0xec262a75e413fAfD0dF80480274532C79D42da09",
+      "decimals": 18,
+      "isin": "US5949724083",
+      "feedProxy": "0x396118bdFB181e6240E74D243F266B061c0edc3D",
+      "feedSecondaryProxy": "0x2521a77F42098357e83bDea7fBb2A38745bf9280",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    },
+    {
+      "symbol": "MU",
+      "address": "0xfF080c8ce2E5feadaCa0Da81314Ae59D232d4afD",
+      "decimals": 18,
+      "isin": "US5951121038",
+      "feedProxy": "0x425EEFdCf05ed6526C3cE61Af99429A228a6d596",
+      "feedSecondaryProxy": "0x5b40F4E78FA58B60a4F59b8cc8cB8d2Fb0690467",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    },
+    {
+      "symbol": "NBIS",
+      "address": "0x9D9c6684F596F66a64C030B93A886D51Fd4D7931",
+      "decimals": 18,
+      "isin": "NL0009805522",
+      "feedProxy": "0xE1D87B116Ba0fe898998f1D140339D1fA1E09705",
+      "feedSecondaryProxy": "0xCa59A8F53bf4E0628CC0b1BD3a2216F2F8E04770",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    },
+    {
+      "symbol": "NVDA",
+      "address": "0xd0601CE157Db5bdC3162BbaC2a2C8aF5320D9EEC",
+      "decimals": 18,
+      "isin": "US67066G1040",
+      "feedProxy": "0x379EC4f7C378F34a1B47E4F3cbeBCbAC3E8E9F15",
+      "feedSecondaryProxy": "0xCF169363636D73dbBf77733629CB38919d14232d",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    },
+    {
+      "symbol": "ORCL",
+      "address": "0xb0992820E760d836549ba69BC7598b4af75dEE03",
+      "decimals": 18,
+      "isin": "US68389X1054",
+      "feedProxy": "0x0e6a64a2B58A6693a531E6c555f3A5d042eEA844",
+      "feedSecondaryProxy": "0x2a07f8d87d369Bd8Bc36472337ae02d512a7b5e5",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    },
+    {
+      "symbol": "PLTR",
+      "address": "0x894E1EC2D74FFE5AEF8Dc8A9e84686acCB964F2A",
+      "decimals": 18,
+      "isin": "US69608A1088",
+      "feedProxy": "0x820ABedFF239034956B7A9d2F0a331f9F075eB4c",
+      "feedSecondaryProxy": "0x8cd1DFC0fc61fcA55FA77b37e008A90f13364Fce",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    },
+    {
+      "symbol": "QQQ",
+      "address": "0xD5f3879160bc7c32ebb4dC785F8a4F505888de68",
+      "decimals": 18,
+      "isin": "US46090E1038",
+      "feedProxy": "0x80901d846d5D7B030F26B480776EE3b29374C2ae",
+      "feedSecondaryProxy": "0x41ed2c58611790af0760e31e80Bb427e4e83D603",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    },
+    {
+      "symbol": "RGTI",
+      "address": "0x284358abc07F9359f19f4b5b4aC91901Be2597Ba",
+      "decimals": 18,
+      "isin": "US76655K1034",
+      "feedProxy": "0x2A045cF1C49c61c166C036d2f06FA2D2d984f765",
+      "feedSecondaryProxy": "0xC9C477AEfF7eD1BB89B84F7907E2e11707491466",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    },
+    {
+      "symbol": "RKLB",
+      "address": "0x3b14C39E89D60D627b42a1A4CA45b5bb45Fc12e2",
+      "decimals": 18,
+      "isin": "US7731211089",
+      "feedProxy": "0x045477BF65Aef6f4F2386ad0164579e48381CC74",
+      "feedSecondaryProxy": "0x955c60932E517B36be137Eee78E65343cBFC9D29",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    },
+    {
+      "symbol": "SGOV",
+      "address": "0x92FD66527192E3e61d4DDd13322Aa222DE86F9B5",
+      "decimals": 18,
+      "isin": "US46436E7186",
+      "feedProxy": "0xa0DF4ee0fFf975306345875E3548Fcc519577A11",
+      "feedSecondaryProxy": "0xa7a18Ca3F19E17FfA28F92302B817Ca8c1A94b06",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    },
+    {
+      "symbol": "SLV",
+      "address": "0x411eFb0E7f985935DAec3D4C3ebaEa0d0AD7D89f",
+      "decimals": 18,
+      "isin": "US46428Q1094",
+      "feedProxy": "0x209b73908e92Ae021826eD79609845451Ecba2ce",
+      "feedSecondaryProxy": "0xdA81cD9c76F1D3Ea32655dfFc7408ef22BB0Ee2a",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    },
+    {
+      "symbol": "SNDK",
+      "address": "0xB90A19fF0Af67f7779afF50A882A9CfF42446400",
+      "decimals": 18,
+      "isin": "US80004C2008",
+      "feedProxy": "0xfb133Fa4B7b385802B693a293606682Df47109A3",
+      "feedSecondaryProxy": "0xd1016D9Da414B13D55abe02221A8A145eB89aA0D",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    },
+    {
+      "symbol": "SPCX",
+      "address": "0x4a0E65A3EcceC6dBe60AE065F2e7bb85Fae35eEa",
+      "decimals": 18,
+      "isin": "US84615Q1031",
+      "feedProxy": "0xB265810950ba6c5C0Ff821c9963014a56fD8Bffb",
+      "feedSecondaryProxy": "0x42a95341ff361e81fd934F39943c5C98F6991844",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    },
+    {
+      "symbol": "SPY",
+      "address": "0x117cc2133c37B721F49dE2A7a74833232B3B4C0C",
+      "decimals": 18,
+      "isin": "US78462F1030",
+      "feedProxy": "0x319724394D3A0e3669269846abE664Cd621f9f6A",
+      "feedSecondaryProxy": "0xa68CA83408bE3f78d1c58a82081c619e9d21486d",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    },
+    {
+      "symbol": "TSLA",
+      "address": "0x322F0929c4625eD5bAd873c95208D54E1c003b2d",
+      "decimals": 18,
+      "isin": "US88160R1014",
+      "feedProxy": "0x4A1166a659A55625345e9515b32adECea5547C38",
+      "feedSecondaryProxy": "0xE4479F01738B4e8C428CD8eB72D47AB9BC3c7de6",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    },
+    {
+      "symbol": "TSM",
+      "address": "0x58FfE4a942d3885bAa22D7520691F611EF09e7AA",
+      "decimals": 18,
+      "isin": "US8740391003",
+      "feedProxy": "0x874cF94aa8eC88Fd9560094dD065f2fB3E41Fc2F",
+      "feedSecondaryProxy": "0xB48D6D5729Ca032ca43729F4b605bBf9f257A84d",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    },
+    {
+      "symbol": "USAR",
+      "address": "0xd917B029C761D264c6A312BBbcDA868658eF86a6",
+      "decimals": 18,
+      "isin": "US91733P1075",
+      "feedProxy": "0xA994d3684e8400A6c8078226925779FdeE682DD9",
+      "feedSecondaryProxy": "0x451B1295aA84FD6d6b58af1a5002eA1b1A1913A0",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    },
+    {
+      "symbol": "USO",
+      "address": "0xa30FA36Db767ad9eD3f7a60fC79526fB4d56D344",
+      "decimals": 18,
+      "isin": "US91232N2071",
+      "feedProxy": "0x75a9c76Ef439e2C7c2E5a34Ab105EcFe3766431c",
+      "feedSecondaryProxy": "0x6D054DECb74Cf8ef3675B0Abc100e02921176EdF",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    }
+  ]
+}
