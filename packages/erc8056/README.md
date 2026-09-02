@@ -153,8 +153,12 @@ whole multiples.
 
 ### Every corporate action ever emitted on Robinhood Chain
 
-Scanned `block 0 → 52,428,883` — 17 events across 10 tokens. This is the complete set, and it
-is committed as the test fixture (`test/fixtures/multiplier-history.json`).
+Scanned `block 0 → 52,428,883` — **17 `UIMultiplierUpdated` logs across 10 tokens**. That is
+the complete set, committed as the test fixture (`test/fixtures/multiplier-history.json`).
+
+The table below is the 11 logs on currently-listed tokens. The other six are five logs from one
+token that carries no ticker in the current 194-asset list (`0xc93a8c44…`, delisted or
+pre-listing) and one re-emission of the CRWD split — see [the note below](#re-emitted-updates).
 
 | Token | Block | Multiplier | Kind |
 |---|---|---|---|
@@ -172,6 +176,27 @@ is committed as the test fixture (`test/fixtures/multiplier-history.json`).
 
 SGOV’s three-step chain is the cleanest illustration of the model: an ETF accruing
 distributions purely through the multiplier, with the raw balance never once changing.
+
+#### Re-emitted updates
+
+`UIMultiplierUpdated` is not emitted exactly once per corporate action on this chain. CRWD’s
+4:1 split is logged twice — blocks 978,630 and 1,231,096, identical `oldMultiplier`,
+`newMultiplier` and `effectiveAt` — and the unlisted token above repeats an update the same
+way. Two of the 17 logs are therefore repeats rather than distinct actions.
+
+This matters for anyone feeding raw logs straight in: `fromEvents()` validates that each
+event’s `oldMultiplier` matches the running value, so a repeat fails that check rather than
+being ignored.
+
+```
+UIMultiplierUpdated chain broken at effectiveAt=1782999000:
+oldMultiplier=1000000000000000000 but running multiplier=4000000000000000000
+```
+
+Collapse repeats (same `effectiveAt` and same `newMultiplier`) per token before building a
+history. The strict check is deliberate — silently accepting a mismatched chain is how a
+position gets mis-valued by a whole multiple — but it means the raw log stream needs one pass
+of deduplication first.
 
 ## API
 

@@ -2,7 +2,7 @@
 pragma solidity ^0.8.20;
 
 /// @title ScaledUIMath
-/// @notice On-chain twin of the TypeScript `@rhchain/erc8056` conversion math.
+/// @notice On-chain twin of the TypeScript `@assayhq/erc8056` conversion math.
 ///         ERC-8056 stock tokens do not rebase: `balanceOf`/`totalSupply` (the
 ///         "raw" amount) are fixed, and the number of underlying shares a raw
 ///         amount represents is scaled by an 18-decimal UI multiplier.

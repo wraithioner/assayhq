@@ -7,7 +7,7 @@
  * canonical head and rolls back event rows above the common ancestor before
  * re-indexing.
  *
- * Stores RAW events only; @rhchain/metrics derives NAV/returns/costs from them.
+ * Stores RAW events only; @assayhq/metrics derives NAV/returns/costs from them.
  */
 import {
   createPublicClient,
@@ -703,7 +703,7 @@ export class Indexer {
    * Fetch gas facts for the transactions that moved agent balances. `txFrom`
    * is the receipt's `from`; for ERC-4337 flows that is the bundler, not the
    * agent — the subsidy/paymaster caveat (/docs/RECON.md §7) is resolved in
-   * @rhchain/metrics, which decides whether the agent actually bore the cost.
+   * @assayhq/metrics, which decides whether the agent actually bore the cost.
    */
   async indexTxGas(fromBlock: number, toBlock: number): Promise<number> {
     const rows = this.db

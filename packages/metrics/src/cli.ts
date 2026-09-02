@@ -1,5 +1,5 @@
 #!/usr/bin/env -S npx tsx
-import { config, openReadOnlyDb } from "@rhchain/indexer";
+import { config, openReadOnlyDb } from "@assayhq/indexer";
 import { MetricsEngine } from "./engine.js";
 
 function arg(name: string): string | undefined {

@@ -1,7 +1,7 @@
-# @rhchain/indexer
+# @assayhq/indexer
 
 A reorg-safe, idempotent, resumable indexer for Robinhood Chain. It stores **raw
-events** into SQLite and derives nothing itself — `@rhchain/metrics` computes NAV,
+events** into SQLite and derives nothing itself — `@assayhq/metrics` computes NAV,
 returns, costs and slippage from these tables so that every published number is
 recomputable from raw chain state.
 
@@ -37,7 +37,7 @@ The correctness-critical logic is unit-tested without network access: identity h
 (`reorg.ts`), attribution + coverage (`attribution.ts`), pricing + slippage
 (`pricing.ts`), plus SQLite integration tests for sync/rollback and Chainlink
 snapshot scheduling and read-only recomputation access. Run
-`pnpm --filter @rhchain/indexer test` (32 tests).
+`pnpm --filter @assayhq/indexer test` (32 tests).
 
 ## Scoring-relevant policy (from the go-ahead)
 
@@ -55,7 +55,7 @@ snapshot scheduling and read-only recomputation access. Run
 
 ## Validated against mainnet
 
-`pnpm --filter @rhchain/indexer smoke` (network-dependent) ran on 2026-09-01:
+`pnpm --filter @assayhq/indexer smoke` (network-dependent) ran on 2026-09-01:
 discovered **5 AAPL/Uniswap pools** by call and indexed **22 real swaps** in a
 1,500-block window (sample: ~0.094 AAPL for 29.8 USDG ≈ **$316/AAPL**, matching the
 Chainlink answer). `AnswerUpdated` events were confirmed on the AAPL aggregator
@@ -94,7 +94,7 @@ RH_RPC=<alchemy-url> tsx src/cli.ts follow --db data.sqlite --poll-ms 5000
   pools. It doesn't affect swap indexing.
 - **`tx_from` is not claimed to be the economic fee payer.** For ERC-4337 flows it
   can be the bundler; the subsidy/paymaster attribution is resolved in
-  `@rhchain/metrics` rather than silently charging the agent.
+  `@assayhq/metrics` rather than silently charging the agent.
 - **Historical snapshots require archive reads.** `latestRoundData` is called at
   explicit historical blocks; a non-archive RPC must fail rather than substitute
   today's answer.

@@ -1,4 +1,4 @@
-import type { NavPoint } from "@rhchain/metrics";
+import type { NavPoint } from "@assayhq/metrics";
 
 const WIDTH = 900;
 const HEIGHT = 330;

@@ -1,5 +1,5 @@
 import rawSnapshot from "@/data/scoreboard.json";
-import type { AgentScore, ScoreboardSnapshot } from "@rhchain/metrics";
+import type { AgentScore, ScoreboardSnapshot } from "@assayhq/metrics";
 
 export const snapshot = rawSnapshot as unknown as ScoreboardSnapshot;
 

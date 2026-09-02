@@ -1,5 +1,5 @@
 /**
- * @rhchain/indexer — reorg-safe, resumable indexer for Robinhood Chain.
+ * @assayhq/indexer — reorg-safe, resumable indexer for Robinhood Chain.
  * Public surface for the metrics package and tooling.
  */
 export {

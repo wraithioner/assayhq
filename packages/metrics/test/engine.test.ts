@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it } from "vitest";
-import { config, openDb, schema, type IndexerConfig } from "@rhchain/indexer";
+import { config, openDb, schema, type IndexerConfig } from "@assayhq/indexer";
 import { MetricsEngine } from "../src/engine.js";
 
 const wallet = "0x1111111111111111111111111111111111111111";

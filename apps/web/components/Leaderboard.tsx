@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import type { AgentScore } from "@rhchain/metrics";
+import type { AgentScore } from "@assayhq/metrics";
 import { formatPercent, formatUsd8, shortAddress } from "@/lib/format";
 
 type SortKey = "netReturn" | "alpha" | "maxDrawdown" | "coverage" | "nav";
@@ -48,7 +48,7 @@ export function Leaderboard({ agents }: { agents: AgentScore[] }) {
             Export a fully priced metrics snapshot to populate this board. Until then, the honest
             leaderboard is empty.
           </p>
-          <code>INDEX_DB=/path/index.sqlite pnpm --filter @rhchain/web export:data</code>
+          <code>INDEX_DB=/path/index.sqlite pnpm --filter @assayhq/web export:data</code>
         </div>
       </div>
     );

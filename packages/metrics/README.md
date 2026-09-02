@@ -1,4 +1,4 @@
-# @rhchain/metrics
+# @assayhq/metrics
 
 Recomputes agent performance from the indexer's raw SQLite tables. It never
 calls an RPC or off-chain price API and opens the database read-only.
@@ -45,13 +45,13 @@ bps against `log10(trade USD)` and stays null below three fills.
 
 ```bash
 # one agent, at the latest fully priced cadence
-pnpm --filter @rhchain/metrics recompute --db data.sqlite --agent 42
+pnpm --filter @assayhq/metrics recompute --db data.sqlite --agent 42
 
 # pin the exact published block
-pnpm --filter @rhchain/metrics recompute --db data.sqlite --agent 42 --block 51840000
+pnpm --filter @assayhq/metrics recompute --db data.sqlite --agent 42 --block 51840000
 
 # every registered agent, including unscoreable/dead entries
-pnpm --filter @rhchain/metrics recompute --db data.sqlite
+pnpm --filter @assayhq/metrics recompute --db data.sqlite
 ```
 
 All fixed-point USD fields are decimal strings with 8 decimals. Ratios are JSON

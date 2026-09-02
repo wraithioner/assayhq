@@ -1,6 +1,7 @@
 {
-  "name": "@rhchain/metrics",
+  "name": "@assayhq/metrics",
   "version": "0.1.0",
+  "private": true,
   "description": "Point-in-time, survivorship-safe performance metrics for ERC-8004 trading agents on Robinhood Chain.",
   "type": "module",
   "license": "MIT",
@@ -16,7 +17,7 @@
   },
   "dependencies": {
     "@assayhq/erc8056": "workspace:*",
-    "@rhchain/indexer": "workspace:*"
+    "@assayhq/indexer": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "22.10.2",

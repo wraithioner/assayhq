@@ -30,6 +30,34 @@ The plan's "be the reference implementation before anyone notices" premise is th
 measured AMM result above, 100% conversion-path coverage, and MIT. Publishing decision and
 final package name deferred to the owner.
 
+### D-2.4 — Workspace scope renamed `@rhchain/*` → `@assayhq/*`
+`@rhchain` was a placeholder scope we do not own; `@assayhq` is owned and is where
+`erc8056` was published. The three workspace-internal packages (`indexer`, `metrics`, `web`)
+were renamed to match, atomically across manifests, imports, `--filter` flags, docs and the
+lockfile, so the repository carries one scope. **Note on the original premise:** the
+`pnpm --filter @rhchain/metrics recompute` command in the README was not broken — that was
+the live package name — so this is a consistency rename, not a bug fix. All three are now
+marked `"private": true`, because renaming into a scope we *do* own turns a would-be 403 on
+an accidental `publish` into a real publish. Only `packages/erc8056` is publishable.
+
+### D-2.5 — Repository is Apache-2.0; `packages/erc8056` stays MIT
+Root `LICENSE` is the verbatim Apache-2.0 text (appendix template left unfilled — no
+copyright holder is asserted here, since guessing a legal name is worse than leaving it).
+`packages/erc8056` keeps its own MIT `LICENSE` and `"license": "MIT"`, so it can be vendored
+without Apache-2.0's attribution and NOTICE requirements. The carve-out is machine-readable
+from the package manifest and stated in both READMEs.
+
+### D-2.6 — `UIMultiplierUpdated` is re-emitted; the strict chain check stays strict
+Two of the 17 corporate-action logs on this chain are repeats, not distinct actions: CRWD's
+4:1 split is logged at blocks 978,630 *and* 1,231,096 with identical `oldMultiplier`,
+`newMultiplier` and `effectiveAt`, and one unlisted token repeats an update the same way.
+Fed the raw per-token log stream, `MultiplierHistory.fromEvents()` throws `chain broken`
+rather than ignoring the repeat. Decision: **document it, do not loosen the check.** Silently
+accepting a mismatched old→new chain is exactly the failure mode that mis-values a position by
+a whole multiple. Callers collapse repeats (same `effectiveAt` + same `newMultiplier`) per
+token first; the `erc8056` README now says so. A dedupe helper is a candidate for 0.1.2 and
+was deliberately not written under the current stop-building instruction.
+
 ## Phase 1 — build (2026-09-01)
 
 Approved scope constraints (from the go-ahead): score **only the 35 feed-covered tokens**
@@ -134,7 +162,7 @@ Reason: subtracting slippage again double-counts it, while pretending a receipt 
 ERC-4337 economic payer invents a cost the chain data does not prove.
 
 ### D-1.15 — Recompute is local, read-only, and pinned to a block
-`@rhchain/metrics` opens an existing SQLite index in read-only mode and emits fixed-point USD fields
+`@assayhq/metrics` opens an existing SQLite index in read-only mode and emits fixed-point USD fields
 plus ratios as JSON. A regression test changes future snapshots and proves that a block-pinned score
 does not move; another keeps an ERC-8004 registrant with no wallet/trades in the output. Reason:
 point-in-time and survivorship are product guarantees, so both need executable failure tests rather

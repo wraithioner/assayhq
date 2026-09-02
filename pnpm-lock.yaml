@@ -14,10 +14,10 @@ importers:
 
   apps/web:
     dependencies:
-      '@rhchain/indexer':
+      '@assayhq/indexer':
         specifier: workspace:*
         version: link:../../packages/indexer
-      '@rhchain/metrics':
+      '@assayhq/metrics':
         specifier: workspace:*
         version: link:../../packages/metrics
       next:
@@ -103,7 +103,7 @@ importers:
       '@assayhq/erc8056':
         specifier: workspace:*
         version: link:../erc8056
-      '@rhchain/indexer':
+      '@assayhq/indexer':
         specifier: workspace:*
         version: link:../indexer
     devDependencies:

@@ -1,5 +1,5 @@
 {
-  "name": "@rhchain/web",
+  "name": "@assayhq/web",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -11,8 +11,8 @@
     "export:data": "tsx scripts/export-scoreboard.ts"
   },
   "dependencies": {
-    "@rhchain/indexer": "workspace:*",
-    "@rhchain/metrics": "workspace:*",
+    "@assayhq/indexer": "workspace:*",
+    "@assayhq/metrics": "workspace:*",
     "next": "16.3.4",
     "react": "19.2.8",
     "react-dom": "19.2.8"

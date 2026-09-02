@@ -1,6 +1,7 @@
 {
-  "name": "@rhchain/indexer",
+  "name": "@assayhq/indexer",
   "version": "0.1.0",
+  "private": true,
   "description": "Reorg-safe, resumable indexer for Robinhood Chain: agent (ERC-8004) wallets, stock-token transfers (ERC-8056), Uniswap V3 swaps, Chainlink prices, and unattributed-flow detection. Stores raw events; derives everything else.",
   "type": "module",
   "license": "MIT",

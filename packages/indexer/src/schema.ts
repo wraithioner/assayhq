@@ -1,6 +1,6 @@
 /**
  * SQLite schema (Drizzle). Design rules:
- * - Store RAW events; derive everything else (metrics live in @rhchain/metrics).
+ * - Store RAW events; derive everything else (metrics live in @assayhq/metrics).
  * - Token amounts exceed 64-bit, so bigints are stored as decimal TEXT.
  * - Block numbers and unix timestamps fit in SQLite integers.
  * - Every event row is keyed by (txHash, logIndex) for idempotent upserts and

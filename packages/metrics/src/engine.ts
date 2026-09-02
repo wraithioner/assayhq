@@ -7,7 +7,7 @@ import {
   schema,
   type Db,
   type IndexerConfig,
-} from "@rhchain/indexer";
+} from "@assayhq/indexer";
 import { asOfBlock, atOrBefore, comparePosition, walletAsOf } from "./point-in-time.js";
 import {
   annualizedRatio,
@@ -685,7 +685,7 @@ export class MetricsEngine {
         scoredTradeCount: tradeFacts.filter((trade) => trade.scoreable).length,
       },
       series,
-      recomputeCommand: `pnpm --filter @rhchain/metrics recompute --db <index.sqlite> --agent ${agent.agentId} --block ${this.evaluationBlock}`,
+      recomputeCommand: `pnpm --filter @assayhq/metrics recompute --db <index.sqlite> --agent ${agent.agentId} --block ${this.evaluationBlock}`,
     };
   }
 

@@ -1,6 +1,6 @@
 # Agent Scoreboard web
 
-A static Next.js presentation of `@rhchain/metrics` output. There is no login,
+A static Next.js presentation of `@assayhq/metrics` output. There is no login,
 wallet connection, RPC call, server action, or write transaction in the app.
 
 The committed `data/scoreboard.json` is intentionally empty. The UI says so
@@ -8,8 +8,8 @@ plainly instead of shipping invented agents. Export a real snapshot from an
 indexed SQLite database before building:
 
 ```bash
-INDEX_DB=/absolute/path/index.sqlite pnpm --filter @rhchain/web export:data
-pnpm --filter @rhchain/web build
+INDEX_DB=/absolute/path/index.sqlite pnpm --filter @assayhq/web export:data
+pnpm --filter @assayhq/web build
 ```
 
 The exporter opens the index read-only and writes the versioned metrics JSON.
@@ -25,7 +25,7 @@ Routes:
 Local checks:
 
 ```bash
-pnpm --filter @rhchain/web typecheck
-pnpm --filter @rhchain/web test
-pnpm --filter @rhchain/web build
+pnpm --filter @assayhq/web typecheck
+pnpm --filter @assayhq/web test
+pnpm --filter @assayhq/web build
 ```

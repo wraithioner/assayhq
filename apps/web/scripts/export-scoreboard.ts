@@ -1,8 +1,8 @@
 import { writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { config, openReadOnlyDb } from "@rhchain/indexer";
-import { MetricsEngine } from "@rhchain/metrics";
+import { config, openReadOnlyDb } from "@assayhq/indexer";
+import { MetricsEngine } from "@assayhq/metrics";
 
 const dbPath = process.env.INDEX_DB;
 if (!dbPath) throw new Error("INDEX_DB=/absolute/path/to/index.sqlite is required");

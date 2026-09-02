@@ -2,7 +2,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
 import { Leaderboard } from "@/components/Leaderboard";
 import { PerformanceChart } from "@/components/PerformanceChart";
-import type { NavPoint } from "@rhchain/metrics";
+import type { NavPoint } from "@assayhq/metrics";
 
 const point = (timestamp: number, net: number, benchmark: number): NavPoint => ({
   blockNumber: timestamp,

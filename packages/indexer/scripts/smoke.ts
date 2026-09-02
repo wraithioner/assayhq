@@ -8,7 +8,7 @@
  * agent registrations over the last N blocks into an in-memory SQLite.
  *
  * Network-dependent, so NOT part of `pnpm test`.
- *   RH_RPC=<url> WINDOW=1500 pnpm --filter @rhchain/indexer smoke
+ *   RH_RPC=<url> WINDOW=1500 pnpm --filter @assayhq/indexer smoke
  */
 import { openDb } from "../src/db.js";
 import { config, robinhoodChain, type IndexerConfig } from "../src/config.js";
