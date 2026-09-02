@@ -29,7 +29,7 @@ population of strategy agents making periodic allocation decisions. Bytecode can
 intent, and this does not settle what those addresses are — but it does not support calling
 them AI trading agents.
 
-**The two measurement write-ups are the substance of this repository:**
+**The measurement write-ups are the substance of this repository:**
 
 - **[`docs/MARKET_SIZE.md`](docs/MARKET_SIZE.md)** — *Are there benchmarkable AI trading agents
   on Robinhood Chain?* Method, sampling limits, the flow numbers, the cadence and bytecode
@@ -37,13 +37,19 @@ them AI trading agents.
 - **[`docs/BACKFILL.md`](docs/BACKFILL.md)** — the ERC-8004 registry diagnostic: the full
   61 → 45 → 3 → 1 funnel, why the two exclusions are real rather than artefacts of a strict
   filter, and the registry addresses.
+- **[`docs/AGENT_VENUE.md`](docs/AGENT_VENUE.md)** — where Robinhood's agents actually execute,
+  verified against the newsroom, support docs, chain docs and SEC filings. Agentic Trading
+  shipped in May 2026 and reached ~100,000 accounts by July, entirely inside the brokerage.
+  Nothing routes an agent onto chain 4663, and the two user populations are legally disjoint.
 
 ## Status
 
 The measurement stack is built and tested — ERC-8056 adapter, raw-event indexer, metrics
 engine, and static export (94 tests across four packages). **The scoreboard is not published,
-because there is no population to score.** The committed site snapshot is empty and no agent
-rows are seeded.
+because this venue has no population to score.** The committed site snapshot is empty and no
+agent rows are seeded. Robinhood's own agent population is large — it simply executes in the
+brokerage, where it emits no logs, and no product routes it onchain
+([`AGENT_VENUE.md`](docs/AGENT_VENUE.md)).
 
 Building is paused. Every number above was produced while Robinhood covered gas; the 90-day
 fee waiver ends around **29 September 2026**, and no measurement of this chain unsubsidised

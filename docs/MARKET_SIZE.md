@@ -12,6 +12,11 @@ trading Stock Tokens — roughly **51** addresses operating continuously — but
 register any identity, and its behaviour looks more like market-making and arbitrage than like
 autonomous strategy agents. Both findings are below, with the method and the numbers.
 
+**Read the venue caveat in §6 before quoting the headline number.** Robinhood's own agent
+product had roughly 100,000 accounts by July 2026 — all of it inside the brokerage, none of it
+onchain. The near-zero count here is a fact about *this venue*, not about how many trading
+agents exist. Sources: [`AGENT_VENUE.md`](./AGENT_VENUE.md).
+
 ---
 
 ## 1. What "benchmarkable" has to mean
@@ -179,6 +184,33 @@ support calling them AI trading agents.
   ERC-8056 corporate-action mechanics that were expected to be dangerous turned out to be
   nearly free (a 1% dividend costs a constant-product pool ~0.124 bps; a compensated split
   costs zero). The constraint is that the population being measured does not yet exist.
+
+### Caveat: the agents are somewhere else, and this venue never had them
+
+Verified against Robinhood's newsroom, support docs, chain developer docs and SEC filings on
+2 September 2026 — full sourcing in [`AGENT_VENUE.md`](./AGENT_VENUE.md):
+
+- **Robinhood's agent product shipped, and it is large.** Agentic Trading launched 27 May 2026
+  and covers equities, options and crypto. The Q2 2026 Form 8-K (29 July 2026) reports "nearly
+  100 thousand customers have opened Agentic Trading accounts, with over $100 million in AUC."
+- **All of it executes in the brokerage, not on any chain.** Agents connect through the
+  Robinhood Trading MCP (`agent.robinhood.com/mcp/trading`) to custodial broker-dealer
+  accounts. Of the 57 documented tools, none transfers, bridges, stakes, lends or withdraws;
+  Robinhood's support docs state plainly that an agent "can't transfer, stake, or lend."
+  Without a transfer there is no path to chain 4663.
+- **Onchain agentic accounts have not shipped and were never announced.** No page in the
+  Robinhood Chain developer documentation mentions agentic trading, MCP, or ERC-8004.
+- **The two populations are legally disjoint.** Agentic Trading is offered "to U.S. customers"
+  (Form 10-Q, 30 July 2026). Stock Tokens are Regulation S instruments that "may not be
+  offered, sold or delivered within the United States to, or for the account or benefit of
+  U.S. Persons." The accounts that have an agent cannot hold the asset scored here.
+
+So the honest reading of the "one benchmarkable address" number is narrower than it first
+looks, in both directions. It is **not** evidence that autonomous trading agents are rare —
+they are numerous and well funded, just behind a custodial API that emits no logs. And chain
+4663 is **not** a closed venue: it is permissionless and has been open since 1 July 2026.
+What is missing is any product routing agents onto it. That gap is a securities-registration
+problem, not an indexing one, and no amount of better measurement closes it.
 
 **One open variable.** Every number here was produced while Robinhood covered gas. The 90-day
 fee waiver ends around 29 September 2026, and no measurement of this chain unsubsidised exists
