@@ -10,3 +10,5 @@ coverage/
 .next/
 out/
 *.tsbuildinfo
+__pycache__/
+*.pyc
