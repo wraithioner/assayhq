@@ -41,12 +41,21 @@ Commit [`f0a563d`](../../commit/f0a563d) · published 11:47:16 UTC
   `publishConfig`, which pnpm applies at publish time but **npm ignores entirely** — so 0.1.0
   resolved to nothing for npm and yarn users. Moved to the top level of the manifest.
 
-## 0.1.0 — 2026-09-02
+## 0.1.0 — 2026-09-02 · **deprecated**
 
 Commit [`bd08f0a`](../../commit/bd08f0a) · published 11:42:02 UTC
 
-First publish. Unusable for npm consumers; superseded within five minutes by 0.1.1. Kept on the
-registry rather than unpublished, so the integrity hashes stay resolvable.
+> Broken entry points (main/exports pointed at unpublished src). Use 0.1.1+.
+
+First publish, and unusable for npm consumers: `main`, `types` and `exports` resolved to
+`./src/index.ts`, which `files` does not ship. Superseded within five minutes by 0.1.1, and
+later marked deprecated on the registry with the message above — `npm install` warns rather
+than failing silently. Kept on the registry rather than unpublished, so the integrity hashes
+stay resolvable.
+
+The deprecation message predates 0.1.2 and points at "0.1.1+", which is correct about
+resolution: 0.1.1's entry points are byte-identical to 0.1.2's. It is not an endorsement of
+0.1.1's contents — see that entry.
 
 ---
 
