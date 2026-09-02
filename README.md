@@ -14,7 +14,7 @@ launched 1 July 2026:
 | …that have moved a Stock Token after their own registration block | **3** |
 | …whose trades can be matched to a priced execution — **benchmarkable** | **1** |
 | Stock Token movements made by that one address | **4** |
-| Sustained automated addresses trading Stock Tokens that never registered | **~51** |
+| Sustained automated addresses trading Stock Tokens that never registered | **~51** (lower bound) |
 
 Four movements cannot support a Sharpe ratio, an information ratio, or a drawdown series. A
 leaderboard built on this would be publishing noise.
@@ -29,6 +29,18 @@ population of strategy agents making periodic allocation decisions. Bytecode can
 intent, and this does not settle what those addresses are — but it does not support calling
 them AI trading agents.
 
+**That 51 is a floor, and a narrow one.** Flow is sampled — 16 windows of 40 seconds spread
+across 46 days, **0.016% of the period** — so an address is only seen if it trades often enough
+to land in three of them. Even odds of detection begin at **~353 trades a day**; a bot
+rebalancing ten times a day from someone's laptop has roughly a 1-in-10,000 chance of appearing
+here at all. Every unregistered-address count on this page therefore means *high-frequency*
+addresses specifically. Nothing fixes this in general: there is no on-chain signature of "an AI
+decided this," so any precise count of AI agents on a chain is either counting registrations or
+guessing. It also does not rescue the scoreboard — an agent that cannot be identified cannot be
+benchmarked, so undetected agents make the product harder, not easier. The arithmetic is
+[`docs/MARKET_SIZE.md` §2](docs/MARKET_SIZE.md#2-method), reproducible with
+[`scripts/snapshot/detection_floor.py`](scripts/snapshot/detection_floor.py).
+
 **One correction, added after the fact.** That verdict is about *agents* and *tokenized
 equities*, and it holds. It is not a verdict on the chain. Robinhood Chain earns
 **$157.9M in protocol fees per 30 days — the #4 chain in crypto** — on $19.2B of DEX volume,
@@ -39,8 +51,8 @@ activity looks like farming into the end of a gas subsidy rather than durable de
 **The measurement write-ups are the substance of this repository:**
 
 - **[`docs/MARKET_SIZE.md`](docs/MARKET_SIZE.md)** — *Are there benchmarkable AI trading agents
-  on Robinhood Chain?* Method, sampling limits, the flow numbers, the cadence and bytecode
-  findings, and re-run instructions.
+  on Robinhood Chain?* Method, the quantified detection floor (**~353 trades/day** for even
+  odds), the flow numbers, the cadence and bytecode findings, and re-run instructions.
 - **[`docs/BACKFILL.md`](docs/BACKFILL.md)** — the ERC-8004 registry diagnostic: the full
   61 → 45 → 3 → 1 funnel, why the two exclusions are real rather than artefacts of a strict
   filter, and the registry addresses.

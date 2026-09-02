@@ -106,6 +106,25 @@ weeks = farming). Lesson, and the reason this is a decision rather than a footno
 measurement of the wrong denominator is still the wrong answer**, and we caught it only by
 measuring where the money was rather than where the thesis pointed.
 
+### D-2.11 — The sampled detector's blind spot is quantified, not hedged
+Every unregistered-address count in `MARKET_SIZE.md` came from 16 windows of 400 blocks over
+40M blocks, and the document said only that infrequent addresses "can be missed". Asked how we
+could possibly see an agent someone runs from home, the honest answer is that we mostly cannot,
+and the size of that gap is computable from the sampling constants themselves: 16 x 40s of
+observation over 46 days is **0.016% of the period**, and detection requires landing in >= 3
+windows, so P(detected) is a binomial upper tail. Even odds begin at **~353 trades/day**,
+reliable detection at **~743/day**; ten trades a day is a 1-in-10,000 shot. Recorded as
+[`scripts/snapshot/detection_floor.py`](../scripts/snapshot/detection_floor.py), which derives
+the curve from the same constants so it cannot drift from the sampler, and stated in
+`MARKET_SIZE.md` §2 and §4 and in the README lead. Two things deliberately **not** done:
+the sampling constants were not widened (that changes what the committed 2026-09-02 baseline
+compares against), and the finding was not softened into "the population may be larger, so the
+scoreboard may work". It cuts the other way — an agent that cannot be identified cannot be
+benchmarked, so undetected agents make the product harder, not easier. The uniform-arrival
+model is also optimistic: measured flow has a median inter-event CV of 2.14, and bursty
+activity of the same daily volume clusters into fewer intervals, so the real floor is higher
+than these numbers.
+
 ## Phase 1 — build (2026-09-01)
 
 Approved scope constraints (from the go-ahead): score **only the 35 feed-covered tokens**
