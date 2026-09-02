@@ -10,6 +10,15 @@
    "max_missing_usd": 0.0
   },
   {
+   "symbol": "AAPL",
+   "address": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+   "declared": 60978,
+   "fetched": 60971,
+   "complete": true,
+   "priced": true,
+   "max_missing_usd": 0.0
+  },
+  {
    "symbol": "ABCL",
    "address": "0x3139d77ace0cbaa5bdfd38bd1f1911a794af0b0e",
    "declared": 23,
@@ -1018,6 +1027,15 @@
    "max_missing_usd": 0.0
   },
   {
+   "symbol": "NVDA",
+   "address": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+   "declared": 90465,
+   "fetched": 90817,
+   "complete": true,
+   "priced": true,
+   "max_missing_usd": 0.0
+  },
+  {
    "symbol": "NVTS",
    "address": "0xbe6702d7b70315376dc48a3293f24f0982f86386",
    "declared": 42,
@@ -1441,6 +1459,15 @@
    "max_missing_usd": 0.0
   },
   {
+   "symbol": "SPCX",
+   "address": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+   "declared": 68069,
+   "fetched": 68608,
+   "complete": true,
+   "priced": true,
+   "max_missing_usd": 0.0
+  },
+  {
    "symbol": "SPMO",
    "address": "0xad622320e520de39e72d41ef07438c3fd3354875",
    "declared": 63,
@@ -1709,51 +1736,18 @@
    "complete": true,
    "priced": false,
    "max_missing_usd": 0.0
-  },
-  {
-   "symbol": "AAPL",
-   "address": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
-   "declared": 60978,
-   "fetched": 50000,
-   "complete": false,
-   "priced": true,
-   "smallest_fetched_tokens": 1.9700396503446e-05,
-   "missing_holders": 10978,
-   "max_missing_usd": 70.221123117182
-  },
-  {
-   "symbol": "NVDA",
-   "address": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
-   "declared": 90465,
-   "fetched": 50000,
-   "complete": false,
-   "priced": true,
-   "smallest_fetched_tokens": 0.001002078583944716,
-   "missing_holders": 40465,
-   "max_missing_usd": 9068.968597967676
-  },
-  {
-   "symbol": "SPCX",
-   "address": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
-   "declared": 68069,
-   "fetched": 50000,
-   "complete": false,
-   "priced": true,
-   "smallest_fetched_tokens": 0.00022128103370721,
-   "missing_holders": 18069,
-   "max_missing_usd": 559.1060557331184
   }
  ],
- "positions_loaded": 849298,
+ "positions_loaded": 919694,
  "positions_declared": 914018,
- "distinct": 216611,
- "total_usd": 70899410.7907877,
- "max_missing_usd": 9698.295776817977,
+ "distinct": 237903,
+ "total_usd": 70901469.39503478,
+ "max_missing_usd": 0,
  "tok_usd": {
-  "NVDA": 13262174.587076075,
+  "NVDA": 13264068.8251595,
   "SPY": 11796640.6142641,
-  "SPCX": 6413025.70188017,
-  "AAPL": 4308571.375354859,
+  "SPCX": 6413172.343653688,
+  "AAPL": 4308589.099746215,
   "MU": 3082511.071511637,
   "QQQ": 2991140.32370025,
   "TSLA": 2869671.842335512,

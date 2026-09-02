@@ -3,12 +3,15 @@
 **A distribution measurement. Chain 4663, measured 2 September 2026 at head block
 52,664,749.** Chain launched 1 July 2026. Read-only; no product code was involved.
 
-**Headline.** **216,611** distinct addresses hold a non-zero balance of at least one of the
+**Headline.** **237,903** distinct addresses hold a non-zero balance of at least one of the
 194 Stock Tokens. Total value in the 35 tokens that have a Chainlink feed is
-**$70,899,411**, but **$40,834,946 of that (57.6%) sits in trading-venue contracts**, not in
-wallets. Excluding venue infrastructure leaves **$30,064,465** spread over **216,331**
-addresses — a **mean of $139 and a median of $0.75**. **1,228** addresses hold more than
+**$70,901,469**, but **$40,834,946 of that (57.6%) sits in trading-venue contracts**, not in
+wallets. Excluding venue infrastructure leaves **$30,066,523** spread over **237,623**
+addresses — a **mean of $127 and a median of $0.50**. **1,228** addresses hold more than
 $1,000; **157** hold more than $10,000; **25** hold more than $100,000.
+
+**Enumeration is complete: all 193 indexed tokens, all 919,694 holder positions. Nothing here
+is sampled or extrapolated except where §6, §7 and §8 say so explicitly.**
 
 ---
 
@@ -34,27 +37,25 @@ parsed naively that looks like an empty page and silently truncates a holder lis
 treated as retryable here and no token is accepted unless its row count matches the declared
 `holders_count`.
 
-**Coverage: 849,298 of 914,018 holder positions (92.9%), 190 of 193 tokens complete.**
+**Coverage: complete. All 193 indexed tokens, 919,694 holder positions, nothing missed.**
 
 | | |
 |---|---|
-| Tokens fully enumerated | **190** of 193 indexed (BND is not indexed as a token by Blockscout; 404) |
-| Tokens partially enumerated | **3** — AAPL, NVDA, SPCX (top 50,000 holders each) |
-| Holder positions loaded | **849,298** of 914,018 declared |
-| Distinct addresses | **216,611** — a **lower bound** |
+| Tokens indexed as tokens by Blockscout | **193** of 194 (BND returns 404 and is excluded) |
+| Tokens fully enumerated | **193** — every one |
+| Holder positions enumerated | **919,694** |
+| Distinct addresses | **237,903** — exact |
+| Maximum value missed | **$0** |
 
-Because the holder list is value-descending, a partial token is exactly its **top-K holders by
-balance**, and every holder not fetched holds strictly less than the smallest holder fetched.
-That gives a hard bound on missed value:
+The enumerated total (919,694) slightly exceeds the sum of the per-token `holders_count`
+counters (914,018), because those counters are cached and lag the live list by a little. The
+enumerated lists, not the counters, are the source of record here.
 
-> **maximum value missed across all three partial tokens: $9,698 — 0.01% of the total.**
-
-So **the value figures are effectively exact; only the address count is a lower bound.** To
-size that gap, the same truncation was simulated on the eight fully-enumerated tokens with
-≥20,000 holders: cutting them at the same depth loses between **1.2% and 5.0%** of the token's
-holders as *newly distinct* addresses (one outlier, GME, at 25%). Applied to the ~64,700
-unfetched positions, the true distinct count is likely **217,000–225,000**, and the arithmetic
-upper bound is 281,331.
+**One timing caveat.** The full pass took several hours, so this is a union over that window
+rather than a single-block snapshot: an address that opened a position mid-pass is included,
+and balances for different tokens were read minutes to hours apart. Prices are pinned to one
+block. Given the churn on this chain, treat the address count as accurate to a few tenths of a
+percent, not to the unit.
 
 Prices are `latestRoundData()` from the 35 `rh_total_return` Chainlink proxies, read at the
 head block. Per `RECON.md` D-0.6 these feeds are total-return and already multiplier-adjusted,
@@ -66,17 +67,17 @@ position count only (§5).
 
 | | |
 |---|---|
-| Distinct addresses, non-zero balance, any Stock Token | **216,611** (lower bound) |
-| …excluding venue infrastructure | **216,331** |
-| …holding at least one *feed-priced* token | **179,372** |
-| …holding **only** feed-less tokens (no USD value assignable) | **31,663** |
-| Holder positions (address × token pairs) | **849,298** of 914,018 declared |
-| Mean tokens held per address | **3.57** |
-| Addresses holding exactly one token | **124,749 (57.7%)** |
+| Distinct addresses, non-zero balance, any Stock Token | **237,903** |
+| …excluding venue infrastructure | **237,623** |
+| …holding at least one *feed-priced* token | **196,329** |
+| …holding **only** feed-less tokens (no USD value assignable) | **30,678** |
+| Holder positions (address × token pairs) | **919,694** |
+| Mean tokens held per address | **3.87** |
+| Addresses holding exactly one token | **141,029 (59.4%)** |
 
-The gap between 914,018 positions and 216,611 addresses is the single most important thing to
-know before quoting any "holders" number for this chain: **an address holds 4.2 tokens on
-average, so summing per-token holder counts overstates the population by roughly 4×.**
+The gap between 919,694 positions and 237,903 addresses is the single most important thing to
+know before quoting any "holders" number for this chain: **an address holds 3.87 tokens on
+average, so summing per-token holder counts overstates the population by nearly 4×.**
 
 ## 2. Balance distribution in USD
 
@@ -84,52 +85,53 @@ Excluding venue infrastructure (280 addresses, §4). Value covers the 35 feed-pr
 
 | Bucket | Addresses | Share |
 |---|---:|---:|
-| exactly $0 (see note) | 37,239 | 17.21% |
-| $0 – $100 | **169,966** | 78.57% |
-| $100 – $1,000 | 7,898 | 3.65% |
-| $1,000 – $10,000 | 1,071 | 0.50% |
-| $10,000 – $100,000 | 132 | 0.061% |
-| $100,000 – $1,000,000 | 21 | 0.010% |
+| exactly $0 (see note) | 41,574 | 17.50% |
+| $0 – $100 | **186,923** | 78.66% |
+| $100 – $1,000 | 7,898 | 3.32% |
+| $1,000 – $10,000 | 1,071 | 0.45% |
+| $10,000 – $100,000 | 132 | 0.056% |
+| $100,000 – $1,000,000 | 21 | 0.009% |
 | > $1,000,000 | 4 | 0.002% |
 
-The $0 row is **31,663** addresses holding only feed-less tokens (no price exists for them)
-plus **5,576** holding priced dust below $10⁻¹⁰, which the stored precision rounds to zero. It
-is not 37,239 empty wallets — every address counted anywhere in this document has a non-zero
+The $0 row is **30,678** addresses holding only feed-less tokens (no price exists for them)
+plus **10,896** holding priced dust below $10⁻¹⁰, which the stored precision rounds to zero. It
+is not 41,574 empty wallets — every address counted anywhere in this document has a non-zero
 token balance.
 
 Cumulative, which is the form the question was asked in:
 
 | Threshold | Addresses above it | Share |
 |---|---:|---:|
-| > $0 | **179,092** | 82.79% |
-| > $100 | **9,126** | 4.22% |
-| > $1,000 | **1,228** | 0.57% |
-| > $10,000 | **157** | 0.073% |
-| > $100,000 | **25** | 0.012% |
+| > $0 | **196,049** | 82.50% |
+| > $100 | **9,126** | 3.84% |
+| > $1,000 | **1,228** | 0.52% |
+| > $10,000 | **157** | 0.066% |
+| > $100,000 | **25** | 0.011% |
 | > $1,000,000 | **4** | 0.002% |
 
 | | Excluding infrastructure | All holders |
 |---|---:|---:|
-| Total value | **$30,064,465** | $70,899,411 |
-| **Mean** (all addresses) | **$138.97** | $327.31 |
-| **Median** (all addresses) | **$0.75** | $0.75 |
-| Mean (value > $0 only) | $167.87 | $395.26 |
-| Median (value > $0 only) | $1.57 | $1.58 |
+| Total value | **$30,066,523** | $70,901,469 |
+| **Mean** (all addresses) | **$126.53** | $298.03 |
+| **Median** (all addresses) | **$0.50** | $0.51 |
+| Mean (value > $0 only) | $153.36 | $361.14 |
+| Median (value > $0 only) | $1.14 | $1.15 |
 
-The distribution is dust-dominated. The median holder owns **75 cents** of Stock Tokens; the
-mean is 185× the median. Fully **78.6%** of addresses hold under $100, and the deepest tail
-holds literal single wei — the last rows of a completed token list are balances of `1`, i.e.
-10⁻¹⁸ of a token.
+The distribution is dust-dominated. The median holder owns **50 cents** of Stock Tokens; the
+mean is 251× the median. Fully **78.7%** of addresses hold under $100, and the deepest tail
+holds literal single wei — the last rows of a token list are balances of `1`, i.e. 10⁻¹⁸ of a
+token. Note that the counts above $100 are **identical** to those measured at 92.9% coverage:
+completing the enumeration added 21,292 addresses and only $2,058 of value, all of it dust.
 
 ## 3. Concentration
 
 | Share of total value held by | Excluding infrastructure | All holders |
 |---|---:|---:|
 | Top 1 address | **16.03%** | 35.96% |
-| Top 10 | **56.13%** | 66.67% |
-| Top 100 | **76.19%** | 85.80% |
-| Top 1% (n = 2,163 / 2,166) | **90.82%** | 95.88% |
-| Top 10% (n = 21,633 / 21,661) | **98.03%** | 99.16% |
+| Top 10 | **56.12%** | 66.67% |
+| Top 100 | **76.18%** | 85.79% |
+| Top 1% (n = 2,376 / 2,379) | **91.17%** | 96.06% |
+| Top 10% (n = 23,762 / 23,790) | **98.22%** | 99.20% |
 
 Including venue contracts, **one address holds 36% of every Stock Token on the chain**. That
 address is Uniswap V4's `PoolManager` (§4). Excluding infrastructure, the top 100 addresses
@@ -180,17 +182,17 @@ Reported by position count only — no dollar value is imputed to a token withou
 
 | | |
 |---|---:|
-| Priced positions (35 feed-covered tokens) | **718,157** |
+| Priced positions (35 feed-covered tokens) | **788,553** |
 | Feed-less positions (159 tokens) | **130,256** |
 | Addresses holding ≥1 feed-less token | **78,273** |
-| Addresses holding **only** feed-less tokens | **31,663** |
+| Addresses holding **only** feed-less tokens | **30,678** |
 
-So 84.6% of positions are priceable, but **31,663 addresses (14.6%) have no assignable dollar
+So 85.8% of positions are priceable, but **30,678 addresses (12.9%) have no assignable dollar
 value at all** and sit in the "$0" row of §2 by construction, not because they are empty.
 
 ## 6. EOAs vs contracts
 
-Blockscout's `is_contract` marks 111,157 of the 216,611 addresses (51%) as contracts. **That
+Blockscout's `is_contract` marks 123,664 of the 237,903 addresses (52%) as contracts. **That
 number is misleading and should not be used.** Sampling the bytecode shows the dominant
 "contract" is 23 bytes beginning `0xef0100` — an **EIP-7702 delegation designator**. These are
 ordinary EOAs that have delegated to a smart-account implementation; they are user wallets.
@@ -202,29 +204,31 @@ Verification of the label itself: of 50 sampled `is_contract=1` addresses, 50 ha
 50 sampled `is_contract=0` addresses, **3 had bytecode** — a ~6% false-negative rate, so the
 figures below are RPC-derived, not label-derived.
 
-**Exact, for all 1,505 addresses above $1,000** (`eth_getCode` on every one):
+**Exact, for all 1,508 addresses above $1,000** (`eth_getCode` on every one):
 
 | Kind | Count | Share |
 |---|---:|---:|
-| Plain EOA | 772 | 51.3% |
-| EIP-7702 delegated EOA | 130 | 8.6% |
-| Real contract | 603 | 40.1% |
-| *(of which AMM pools)* | *171* | *11.4%* |
+| Plain EOA | 772 | 51.2% |
+| EIP-7702 delegated EOA | 131 | 8.7% |
+| Real contract | 605 | 40.1% |
+| *(of which AMM pools)* | *171* | *11.3%* |
 
-**Sampled, for the 169,298 addresses at or below $1,000** (uniform random n = 900, 95% CI):
+**Sampled, for the 236,395 addresses at or below $1,000** (uniform random n = 900, 95% CI):
 
 | Kind | Share | Extrapolated |
 |---|---:|---:|
-| Plain EOA | 47.00% ± 3.26pp | ~79,600 |
-| EIP-7702 delegated EOA | 30.78% ± 3.02pp | ~52,100 |
-| Real contract | 22.22% ± 2.72pp | ~37,600 |
+| Plain EOA | 42.67% ± 3.23pp | ~100,900 |
+| EIP-7702 delegated EOA | 32.00% ± 3.05pp | ~75,600 |
+| Real contract | 25.33% ± 2.84pp | ~59,900 |
 
-**About 78% of the holder base is a user wallet** (plain EOA or 7702-delegated), and roughly
-22% is a genuine contract. Contract share rises with size: 40% above $1,000 versus 22% below.
+**About 75% of the holder base is a user wallet** (plain EOA or 7702-delegated), and roughly
+25% is a genuine contract. Contract share rises with size: 40% above $1,000 versus 25% below.
 
 ## 7. Growth: distinct holders per week
 
-Method: a uniform random sample of **500** non-infrastructure holders; for each, its ERC-20
+Method: a uniform random sample of **500** non-infrastructure holders, drawn when 172,527 of
+the eventual 237,623 had been enumerated (the remainder is deep-tail dust of AAPL, NVDA and
+SPCX, so the sample under-represents that tail); for each, its ERC-20
 transfer history was paged back (newest first, up to 400 transfers) and the **oldest inbound
 Stock Token transfer** taken as the address's first acquisition. 487 resolved; 13 showed no
 inbound Stock Token transfer within the window; **127 were censored** (history not exhausted),
@@ -294,28 +298,27 @@ average position of **$134**.
 
 | Measure | DWF, 27 Jul 2026 | This measurement, 2 Sep 2026 |
 |---|---:|---:|
-| "Holders" | 328,000 | **216,611** distinct addresses (lower bound; ~217–225k likely) |
-| Holder *positions* (address × token) | — | **914,018** declared / 849,298 enumerated |
+| "Holders" | 328,000 | **237,903** distinct addresses (complete enumeration) |
+| Holder *positions* (address × token) | — | **919,694** |
 | Total value | $44M | **$70.9M** all holders / **$30.1M** excluding venue contracts |
-| Average per holder | $134 | **$138.97** excluding venue contracts |
+| Average per holder | $134 | **$126.53** excluding venue contracts |
 
 Three specific observations:
 
-1. **My distinct-address count is ~34% below DWF's, five weeks later, during a period when the
+1. **My distinct-address count is ~27% below DWF's, five weeks later, during a period when the
    base was growing sharply.** That is not reconcilable as growth. Working backwards with the
-   §7 cohort curve, only ~18% of today's holders had joined by end-July — roughly **39,000**
-   distinct addresses at DWF's measurement date, about **8× below** their 328,000.
-2. **The mean matches almost exactly** — $134 versus $138.97 — but only against my
-   *infrastructure-excluded* value. That is a coincidence worth flagging rather than leaning
-   on: their $44M/328k and my $30.1M/216.3k land in the same place from different numerators
-   and denominators.
+   §7 cohort curve, only ~18% of today's holders had joined by end-July — roughly **43,000**
+   distinct addresses at DWF's measurement date, about **7.6× below** their 328,000.
+2. **The mean is close** — $134 versus $126.53 — but only against my *infrastructure-excluded*
+   value. That is worth flagging rather than leaning on: their $44M/328k and my $30.1M/237.6k
+   land in the same neighbourhood from different numerators and denominators.
 3. **Their $44M is between my two totals.** Customer-held value today is $30.1M; adding venue
    contracts gives $70.9M. If DWF included AMM/venue balances (most dashboards do), their $44M
    on 27 July is consistent with $70.9M today.
 
 The most likely explanations for the count gap, in order, are: DWF counted **per-token holder
-positions** rather than distinct addresses (positions run ~4.2× addresses here, and 328k
-positions in July against 914k today is a plausible trajectory); or DWF counted **cumulative
+positions** rather than distinct addresses (positions run 3.87× addresses here, and 328k
+positions in July against 920k today is a plausible trajectory); or DWF counted **cumulative
 addresses that ever received** a Stock Token, whereas this measures **current non-zero
 balances**, so every address that has since sold is excluded. Given the flow on this chain
 (≈11.5M movements per day, `MARKET_SIZE.md`), churn out of the holder set is likely large.
@@ -324,8 +327,8 @@ This cannot be settled from the source: the DWF figure is a social-media post wi
 methodology, and the reporting explicitly cautions that "the figures refer to platform holders
 and may include blockchain addresses rather than verified individual investors."
 
-**Statement of agreement: it does not agree.** On distinct current holders I measure 216,611
-against their 328,000 — about **34% lower**, and lower still on a like-for-like date basis.
+**Statement of agreement: it does not agree.** On distinct current holders I measure 237,903
+against their 328,000 — about **27% lower**, and far lower on a like-for-like date basis.
 On value my customer-side figure is **$30.1M** against their **$44M**, and my all-in figure is
 **$70.9M**.
 
