@@ -194,7 +194,11 @@ python3 scripts/snapshot/subsidy_snapshot.py --diff \
 ```
 
 Sampling constants are fixed in the script; changing them between runs invalidates the
-comparison.
+comparison. The snapshot covers Stock Token flow, chain-wide transaction rate, sustained
+agent-like addresses, **and the holder base** — exact holder positions plus a fixed-depth
+(top-200-per-token) value index split into customer and venue-infrastructure value. Add
+`--full-holders` to enumerate every holder of every token exactly instead, which takes about
+two hours rather than about five minutes.
 
 The recon facts, read-only:
 

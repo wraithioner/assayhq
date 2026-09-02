@@ -94,9 +94,25 @@ python3 scripts/snapshot/subsidy_snapshot.py --diff \
   docs/data/snapshots/2026-09-30-post-subsidy-end.json
 ```
 
-The snapshot script captures flow and agent-like address counts but **not** the holder
-distribution; extending it to carry holder count and customer-side value has to happen before
-the 29th to be worth anything.
+The snapshot now also carries the holder base, so the diff answers "did the *holders* leave?"
+directly rather than by inference:
+
+- **`holderPositions`** — exact, the summed per-token holder count. If the base was rented,
+  this is what collapses.
+- **`customerValueUsd`** and **`venueInfraValueUsd`** — priced with Chainlink and split by the
+  committed venue set, so liquidity leaving pools is not mistaken for customers leaving.
+- **`indexAddressesOver`** — how many index addresses hold more than $100 / $1k / $10k / $100k.
+
+The value figures are a **fixed-depth index** (top 200 holders per token), not a population
+total: two runs at the same depth are exactly comparable, which is what a diff needs. Measured
+against the complete enumeration behind [`HOLDER_BASE.md`](./HOLDER_BASE.md), depth 200 holds
+**95.11% of priced value and 88.55% of customer value — but only 28.6% of addresses over $100**,
+because a holder with $500 spread across five tokens sits deep in all five lists. Address counts
+are therefore reported for the index only. `--full-holders` enumerates everything exactly and
+takes about two hours.
+
+The 2 September baseline was **backfilled** with these metrics from the same-day complete
+census, so the comparison is valid despite the metrics being added after the baseline was taken.
 
 ## Sources
 

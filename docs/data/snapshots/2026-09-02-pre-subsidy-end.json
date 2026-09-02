@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "takenAtUtc": "2026-09-02T11:10:38Z",
   "headBlock": 52527642,
   "headTimestampUtc": "2026-09-02T11:08:42Z",
@@ -10,7 +10,8 @@
     "agentWindowSpanBlocks": 400,
     "agentLookbackBlocks": 40000000,
     "sustainedMinWindows": 3,
-    "blocksPerDay": 864000
+    "blocksPerDay": 864000,
+    "holderTopKPerToken": 200
   },
   "stockTokenMovements": {
     "sampledEventsInSpan": 6631,
@@ -37,5 +38,33 @@
       "10": 12,
       "12": 8
     }
+  },
+  "holderBase": {
+    "mode": "index",
+    "topKPerToken": 200,
+    "tokensQueried": 194,
+    "tokensValued": 35,
+    "tokensMissingFromExplorer": [
+      "BND"
+    ],
+    "holderPositions": 914018,
+    "addressesInIndex": 4061,
+    "pricedValueUsd": 67431588.86,
+    "venueInfraAddresses": 271,
+    "venueInfraValueUsd": 40807581.33,
+    "customerValueUsd": 26624007.54,
+    "indexAddressesOver": {
+      "100": 2610,
+      "1000": 898,
+      "10000": 152,
+      "100000": 25
+    },
+    "concentrationOfPricedValue": {
+      "top1": 0.378092,
+      "top10": 0.701009,
+      "top100": 0.902025
+    },
+    "coverage": "INDEX at depth 200. Comparable between runs at the same depth; not a population total. Against a complete enumeration on 2026-09-02 this depth held 95.11% of priced value and 88.55% of customer value, but only 28.6% of addresses over $100 \u2014 so indexAddressesOver counts the INDEX, not the chain.",
+    "_backfill": "Reconstructed 2026-09-02 from the complete same-day enumeration behind docs/HOLDER_BASE.md (all 193 indexed tokens, 919,694 positions), truncated to depth 200 to match what the script measures live. Not fetched by an earlier run of this script."
   }
 }
