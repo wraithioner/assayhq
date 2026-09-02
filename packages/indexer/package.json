@@ -16,7 +16,7 @@
     "smoke": "tsx scripts/smoke.ts"
   },
   "dependencies": {
-    "@rhchain/erc8056": "workspace:*",
+    "@assayhq/erc8056": "workspace:*",
     "better-sqlite3": "13.0.3",
     "drizzle-orm": "0.36.4",
     "viem": "2.21.55"

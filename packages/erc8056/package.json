@@ -1,5 +1,5 @@
 {
-  "name": "@rhchain/erc8056",
+  "name": "@assayhq/erc8056",
   "version": "0.1.0",
   "description": "ERC-8056 (Scaled UI Amount) reference math: raw <-> underlying-share conversion, a point-in-time corporate-action multiplier history, and multiplier-independent valuation. Zero dependencies.",
   "keywords": [

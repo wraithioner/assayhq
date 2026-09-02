@@ -8,7 +8,7 @@ provably independent of the multiplier.
 library so on-chain and off-chain accounting agree to the wei.
 
 ```bash
-npm install @rhchain/erc8056
+npm install @assayhq/erc8056
 ```
 
 ---
@@ -59,7 +59,7 @@ latest one you happen to have fetched.
 before* — but each of those raw units now represents four underlying shares.
 
 ```ts
-import { toUnderlyingShares, WAD } from "@rhchain/erc8056";
+import { toUnderlyingShares, WAD } from "@assayhq/erc8056";
 
 const raw = WAD;                       // balanceOf() -> 1.0, before AND after the split
 toUnderlyingShares(raw, WAD);          // 1e18  → 1 share   (multiplier 1.0)
@@ -81,7 +81,7 @@ Three concrete traps:
    structurally impossible: `rawBalanceValueUsd()` takes no multiplier argument.
 
 ```ts
-import { rawBalanceValueUsd } from "@rhchain/erc8056";
+import { rawBalanceValueUsd } from "@assayhq/erc8056";
 // value a raw balance with a total-return answer — no multiplier term, by design
 rawBalanceValueUsd(WAD, 31_563_860_540n); // 315.6386054e18  ($315.6386054)
 ```
@@ -183,7 +183,7 @@ import {
   multiplierToFloat,                          // display only
   WAD, TOKEN_DECIMALS, FEED_DECIMALS,
   TOPIC, SELECTOR, SCALED_UI_ABI,             // verified event/selector constants
-} from "@rhchain/erc8056";
+} from "@assayhq/erc8056";
 ```
 
 **Point-in-time history**, built straight from decoded events. `multiplierAt()` never

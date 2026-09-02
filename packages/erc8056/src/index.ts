@@ -1,5 +1,5 @@
 /**
- * @rhchain/erc8056 — ERC-8056 (Scaled UI Amount) adapter for Robinhood Chain.
+ * @assayhq/erc8056 — ERC-8056 (Scaled UI Amount) adapter for Robinhood Chain.
  *
  * - raw <-> underlying-share math (floor, matching the on-chain library)
  * - a point-in-time multiplier history built from UIMultiplierUpdated events

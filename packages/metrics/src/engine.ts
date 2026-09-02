@@ -1,4 +1,4 @@
-import { rawBalanceValueUsd } from "@rhchain/erc8056";
+import { rawBalanceValueUsd } from "@assayhq/erc8056";
 import {
   ZERO_ADDRESS,
   adverseSlippageBps,

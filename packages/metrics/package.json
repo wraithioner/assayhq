@@ -15,7 +15,7 @@
     "recompute": "tsx src/cli.ts"
   },
   "dependencies": {
-    "@rhchain/erc8056": "workspace:*",
+    "@assayhq/erc8056": "workspace:*",
     "@rhchain/indexer": "workspace:*"
   },
   "devDependencies": {
