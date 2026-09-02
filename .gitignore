@@ -7,3 +7,6 @@ dist/
 build/
 coverage/
 .cache/
+.next/
+out/
+*.tsbuildinfo

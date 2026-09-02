@@ -112,6 +112,15 @@ does not move; another keeps an ERC-8004 registrant with no wallet/trades in the
 point-in-time and survivorship are product guarantees, so both need executable failure tests rather
 than prose conventions.
 
+### D-1.16 — The website is a static view of an explicit, versioned snapshot
+The Next.js app has no runtime RPC, wallet connection, sign-in, or server action. A separate command
+opens the SQLite index read-only, runs the same metrics engine as the recompute CLI, and writes a
+versioned JSON snapshot before static export. The committed snapshot is empty and produces an honest
+empty state; no demonstration agents or plausible-looking performance figures are seeded. Scoreable,
+unscoreable, and inactive registrants share the same dataset and detail-page model. Reason: a static
+artifact keeps every displayed number tied to a known evaluation block while preserving survivorship
+and avoiding a second, browser-only scoring implementation.
+
 ## Phase 0 — recon (2026-09-01)
 
 ### D-0.1 — Primary sources are read from raw HTML / on-chain, not via a summarizer
