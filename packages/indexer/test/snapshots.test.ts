@@ -85,13 +85,23 @@ describe("Chainlink event/cadence snapshots", () => {
         logIndex: 0,
       })
       .run();
+    db.insert(t.agentWalletHistory)
+      .values({
+        agentId: "1",
+        wallet: "0x1111111111111111111111111111111111111111",
+        blockNumber: 105,
+        blockTimestamp: 1_700_000_105,
+        txHash: "0xbinding",
+        logIndex: 0,
+      })
+      .run();
 
     await indexer.indexPriceSnapshots(100, 110);
     await indexer.indexPriceSnapshots(100, 110); // idempotent rows
 
     const rows = db.select().from(t.priceSnapshots).all();
-    expect(rows).toHaveLength(10);
-    expect(calls).toHaveLength(20);
+    expect(rows).toHaveLength(13);
+    expect(calls).toHaveLength(26);
     expect(
       rows.find(
         (row) => row.feedProxy === aapl.feedProxy.toLowerCase() && row.blockNumber === 103,
@@ -105,6 +115,7 @@ describe("Chainlink event/cadence snapshots", () => {
       )?.answer,
     ).toBe("500000000000");
     expect(rows.filter((row) => row.blockNumber === 100)).toHaveLength(3);
+    expect(rows.filter((row) => row.blockNumber === 105)).toHaveLength(3);
     expect(rows.filter((row) => row.blockNumber === 110)).toHaveLength(3);
   });
 });

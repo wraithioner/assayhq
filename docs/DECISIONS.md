@@ -88,6 +88,30 @@ converted through their point-in-time USD feeds, and ETH/USD is captured at ever
 for gas. Reason: assuming USDG=$1 hides depegs, while treating WETH units as dollars is a catastrophic
 but superficially plausible execution-price bug.
 
+### D-1.13 — Score a covered subportfolio with explicit cash-flow boundaries
+NAV contains the 35 feed-covered Stock Tokens plus USDG/WETH. Matched feed-less trades remain in
+the flow-coverage denominator, but their realized quote leg is treated as a scoped withdrawal/buy
+or contribution/sell so an unpriceable holding does not masquerade as a covered-portfolio loss or
+gain. Returns are time-weighted across external cash flows and wallet-binding segments. Any
+unattributed/ambiguous stock flow, mismatched stock/cash swap leg, overlapping agent-wallet binding,
+or missing point-in-time fact makes the score unpublishable. Reason: a narrower honest score is
+preferable to a numerically complete score with hidden balance-sheet holes.
+
+### D-1.14 — Net holdings already contain slippage; gas is direct-payer only
+Actual post-trade balances already embody execution slippage. Net P&L therefore uses actual NAV and
+subtracts only gas paid by a transaction whose sender is the bound wallet; gross P&L adds both that
+gas and signed adverse slippage back once. Bundler/paymaster gas is reported as unassigned, not
+charged. The default benchmark is explicitly `inferred: SPY`; no off-chain mandate is fetched.
+Reason: subtracting slippage again double-counts it, while pretending a receipt sender identifies an
+ERC-4337 economic payer invents a cost the chain data does not prove.
+
+### D-1.15 — Recompute is local, read-only, and pinned to a block
+`@rhchain/metrics` opens an existing SQLite index in read-only mode and emits fixed-point USD fields
+plus ratios as JSON. A regression test changes future snapshots and proves that a block-pinned score
+does not move; another keeps an ERC-8004 registrant with no wallet/trades in the output. Reason:
+point-in-time and survivorship are product guarantees, so both need executable failure tests rather
+than prose conventions.
+
 ## Phase 0 — recon (2026-09-01)
 
 ### D-0.1 — Primary sources are read from raw HTML / on-chain, not via a summarizer

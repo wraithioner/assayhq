@@ -9,12 +9,14 @@ and timestamped, and dead agents can't be deleted from the sample. This project 
 and publishes metrics that are **net of costs, survivorship-safe, point-in-time, and recomputable
 by a third party**.
 
-## Status: Phase 1 — indexer correctness pass
+## Status: Phase 1 — metrics complete; web next
 
 Phase 0 established ground truth against primary sources. Phase 1 is approved and underway:
-the ERC-8056 adapter is complete, and the raw-event indexer now has point-in-time ERC-8004 wallet
+the ERC-8056 adapter and raw-event indexer are complete, including point-in-time ERC-8004 wallet
 bindings, canonical Stock Token filtering, Uniswap attribution, Chainlink proxy snapshots, and a
-tested reorg/resume loop. Metrics and the static web scoreboard are next. Start here:
+tested reorg/resume loop. The metrics package now recomputes covered-subportfolio NAV, net/gross
+returns, SPY alpha, Sharpe/IR, drawdown, turnover, capacity decay, time-in-market, coverage, gas and
+slippage from a read-only SQLite index. The static web scoreboard is next. Start here:
 
 - **[`docs/RECON.md`](docs/RECON.md)** — the recon deliverable: chain params, token & feed
   addresses, exact ERC-8056 interface + event topic hashes, ERC-8004 registry, DEX venues, the gas
@@ -61,3 +63,12 @@ apps/web           # sortable static leaderboard + per-agent "verify this yourse
 ```
 
 Stack: TypeScript, viem, SQLite, Drizzle, Next.js. Versions are pinned.
+
+## Recompute a score
+
+```bash
+pnpm --filter @rhchain/metrics recompute --db data.sqlite --agent <erc8004-agent-id>
+```
+
+The JSON result includes the evaluation block and the exact command needed to
+reproduce it. The database is opened read-only.

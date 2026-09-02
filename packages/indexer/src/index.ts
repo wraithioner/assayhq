@@ -17,7 +17,7 @@ export type {
   CanonicalStockToken,
   QuoteAsset,
 } from "./config.js";
-export { openDb, createSchema } from "./db.js";
+export { openDb, openReadOnlyDb, createSchema } from "./db.js";
 export type { Db, OpenedDb } from "./db.js";
 export { Indexer } from "./indexer.js";
 export type { IndexerOptions, SyncResult } from "./indexer.js";

@@ -464,11 +464,13 @@ export class Indexer {
     );
     const ethFeed = getAddress(this.cfg.quoteAssets.WETH.feedProxy);
     const allFeeds = [...new Set([...stockFeed.values(), ...quoteFeed.values()])];
-    const requests = new Map<number, Map<string, "cadence" | "event">>();
+    type SnapshotSource = "cadence" | "event" | "both";
+    const requests = new Map<number, Map<string, SnapshotSource>>();
     const request = (block: number, feed: Address, source: "cadence" | "event") => {
-      const atBlock = requests.get(block) ?? new Map<string, "cadence" | "event">();
+      const atBlock = requests.get(block) ?? new Map<string, SnapshotSource>();
       const key = lc(feed);
-      if (atBlock.get(key) !== "event") atBlock.set(key, source);
+      const previous = atBlock.get(key);
+      atBlock.set(key, previous && previous !== source ? "both" : (previous ?? source));
       requests.set(block, atBlock);
     };
 
@@ -487,6 +489,16 @@ export class Indexer {
       .from(t.cashTransfers)
       .where(and(gte(t.cashTransfers.blockNumber, fromBlock), lte(t.cashTransfers.blockNumber, toBlock)))
       .all();
+    const bindingRows = this.db
+      .select()
+      .from(t.agentWalletHistory)
+      .where(
+        and(
+          gte(t.agentWalletHistory.blockNumber, fromBlock),
+          lte(t.agentWalletHistory.blockNumber, toBlock),
+        ),
+      )
+      .all();
     const agentTxs = new Set([...tokenRows, ...cashRows].map((row) => row.txHash));
     const swapRows = this.db
       .select()
@@ -504,6 +516,9 @@ export class Indexer {
       const feed = quoteFeed.get(lc(row.token));
       if (feed) request(row.blockNumber, feed, "event");
       request(row.blockNumber, ethFeed, "event");
+    }
+    for (const row of bindingRows) {
+      for (const feed of allFeeds) request(row.blockNumber, feed, "event");
     }
     for (const row of swapRows) {
       const feed = quoteFeed.get(lc(row.quoteToken));

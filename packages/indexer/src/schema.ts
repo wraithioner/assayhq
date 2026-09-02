@@ -233,7 +233,7 @@ export const priceSnapshots = sqliteTable(
     updatedAt: integer("updated_at").notNull(),
     blockNumber: integer("block_number").notNull(),
     blockTimestamp: integer("block_timestamp").notNull(),
-    source: text("source", { enum: ["cadence", "event"] }).notNull(),
+    source: text("source", { enum: ["cadence", "event", "both"] }).notNull(),
   },
   (t) => ({
     uq: unique().on(t.feedProxy, t.blockNumber),

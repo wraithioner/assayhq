@@ -22,6 +22,13 @@ export function openDb(path = ":memory:"): OpenedDb {
   return { sqlite, db };
 }
 
+/** Open an existing index database without schema creation or any other write. */
+export function openReadOnlyDb(path: string): OpenedDb {
+  const sqlite = new Database(path, { readonly: true, fileMustExist: true });
+  const db = drizzle(sqlite, { schema });
+  return { sqlite, db };
+}
+
 export function createSchema(sqlite: Database.Database): void {
   sqlite.exec(`
     CREATE TABLE IF NOT EXISTS indexer_state (

@@ -36,7 +36,8 @@ generated from the primary-source-verified [`/docs/RECON.md`](../../docs/RECON.m
 The correctness-critical logic is unit-tested without network access: identity history, reorg
 (`reorg.ts`), attribution + coverage (`attribution.ts`), pricing + slippage
 (`pricing.ts`), plus SQLite integration tests for sync/rollback and Chainlink
-snapshot scheduling. Run `pnpm --filter @rhchain/indexer test` (31 tests).
+snapshot scheduling and read-only recomputation access. Run
+`pnpm --filter @rhchain/indexer test` (32 tests).
 
 ## Scoring-relevant policy (from the go-ahead)
 
