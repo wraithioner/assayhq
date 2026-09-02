@@ -36,6 +36,7 @@
     "dist",
     "solidity",
     "README.md",
+    "CHANGELOG.md",
     "LICENSE"
   ],
   "engines": {

@@ -139,7 +139,9 @@ Measured against every `UIMultiplierUpdated` event ever emitted on the chain (17
 The real hazard of ERC-8056 is share accounting — reading `balanceOf()` as a share count, or
 applying the multiplier twice — which is off by whole multiples rather than fractions of a
 basis point. See [`packages/erc8056/README.md`](packages/erc8056/README.md) for the arithmetic
-and the full on-chain history.
+and the full on-chain history, and
+[`packages/erc8056/CHANGELOG.md`](packages/erc8056/CHANGELOG.md) for each published version and
+the commit it was built from.
 
 ## Chain facts
 
