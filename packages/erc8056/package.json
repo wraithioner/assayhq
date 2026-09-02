@@ -1,6 +1,6 @@
 {
   "name": "@assayhq/erc8056",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "ERC-8056 (Scaled UI Amount) reference math: raw <-> underlying-share conversion, a point-in-time corporate-action multiplier history, and multiplier-independent valuation. Zero dependencies.",
   "keywords": [
     "erc8056",
@@ -17,11 +17,19 @@
   "license": "MIT",
   "type": "module",
   "sideEffects": false,
-  "main": "./src/index.ts",
-  "types": "./src/index.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
-    ".": "./src/index.ts",
-    "./constants": "./src/constants.ts",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./constants": {
+      "types": "./dist/constants.d.ts",
+      "import": "./dist/constants.js",
+      "default": "./dist/constants.js"
+    },
     "./package.json": "./package.json"
   },
   "files": [
@@ -44,7 +52,8 @@
     "test:watch": "vitest",
     "coverage": "vitest run --coverage",
     "typecheck": "tsc --noEmit",
-    "prepublishOnly": "npm run build && npm run test"
+    "prepublishOnly": "npm run build && npm run test",
+    "prepare": "npm run build"
   },
   "devDependencies": {
     "@vitest/coverage-v8": "2.1.8",
@@ -53,21 +62,6 @@
     "vitest": "2.1.8"
   },
   "publishConfig": {
-    "access": "public",
-    "main": "./dist/index.js",
-    "types": "./dist/index.d.ts",
-    "exports": {
-      ".": {
-        "types": "./dist/index.d.ts",
-        "import": "./dist/index.js",
-        "default": "./dist/index.js"
-      },
-      "./constants": {
-        "types": "./dist/constants.d.ts",
-        "import": "./dist/constants.js",
-        "default": "./dist/constants.js"
-      },
-      "./package.json": "./package.json"
-    }
+    "access": "public"
   }
 }
