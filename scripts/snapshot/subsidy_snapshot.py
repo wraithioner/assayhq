@@ -31,6 +31,13 @@ Holder metrics (added 2026-09-02, before the subsidy expiry):
     are therefore reported only for the index itself, never as a population
     estimate. Use --full-holders for the real distribution.
 
+Sensitivity floor of the agent-like detector: 16 windows of 40s observe 0.016% of the
+period, so an address is only caught if it trades often enough to land in 3 of them —
+~353 trades/day for even odds, ~743/day for 95%. A bot trading 10 times a day has a
+~0.01% chance of showing up. `sustainedNonPool` therefore counts HIGH-FREQUENCY
+automated addresses, not all of them. Run detection_floor.py in this directory to
+reproduce the curve.
+
 Counts and aggregates only. This script deliberately emits no per-address data.
 """
 from __future__ import annotations

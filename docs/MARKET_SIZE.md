@@ -65,9 +65,40 @@ responses at 10,000 logs, and a single 10,000-block window already exceeds that 
 enumerate exactly; flow data is therefore sampled: 16 windows of 400 blocks, spread across the
 40M blocks below head, covering **0.0122%** of chain history.
 
-Sampled discovery makes the address counts **lower bounds**. An address active in less than
-roughly a fifth of all 40-second intervals can be missed entirely, so the error runs toward
-undercounting the automated population, not overcounting it.
+Sampled discovery makes the address counts **lower bounds**, and the sensitivity floor is
+quantifiable rather than vague. Sixteen windows of 40 seconds observe **640 seconds out of 46
+days — 0.016% of the period** — so an address is detected only if its activity is frequent
+enough to land in three of those windows:
+
+| Address makes | Chance this method detects it |
+|---|---:|
+| 10 trades/day | **0.01%** |
+| 100 trades/day | 3.5% |
+| 250 trades/day | 28% |
+| 500 trades/day | 75% |
+| 1,000 trades/day | 99.5% |
+
+**Coin-flip odds begin at ~353 trades/day; reliable detection at ~743/day.** Reproduce with
+[`scripts/snapshot/detection_floor.py`](../scripts/snapshot/detection_floor.py).
+
+So the counts below should be read as **"addresses trading at least roughly a thousand times a
+day"**, not "all automated addresses". A bot rebalancing ten times a day from someone's laptop
+has about a 1-in-10,000 chance of appearing here. The figures also assume uniform arrivals;
+real flow on this chain is bursty (median inter-event CV 2.14, §5), and bursty activity of the
+same daily volume is *harder* to catch, so these thresholds are a best case.
+
+**A limit no sampling can fix.** There is no on-chain signature of "an AI decided this." A
+transaction signed by a script is byte-for-byte indistinguishable from one signed by a person
+clicking a button. The only two handles are self-declaration (§3, leaky by choice) and cadence
+inference (§4–5, leaky by frequency). Any precise count of "AI agents" on a chain is therefore
+either counting registrations or guessing.
+
+This does not, however, rescue the scoreboard thesis. An agent that cannot be identified cannot
+be benchmarked — scoring required attributing fills to a known agent over time. Undetected
+agents make the population estimate less certain while making the product *harder*, not easier.
+And the largest agent population of all is out of reach for a different reason entirely: the
+~100,000 accounts behind Robinhood's Agentic Trading emit no on-chain transactions at all
+([`AGENT_VENUE.md`](./AGENT_VENUE.md)).
 
 **The holder side of this was later measured exactly.** Current balances do not require log
 replay — the explorer's holder index is already net of every movement — so all 193 indexed
@@ -140,7 +171,9 @@ infrastructure (any contract answering `token0()`, i.e. an AMM pool — 19 of th
 
 Each window is 400 blocks ≈ 40 seconds. Appearing in three separate 40-second snapshots
 scattered across 60 days implies activity in a large fraction of all such intervals, so k=3 is
-a sparse-sampling bar rather than a lax one.
+a sparse-sampling bar rather than a lax one — and, per §2, an effective floor of roughly
+**353 trades/day for even odds of detection**. Everything below that frequency is invisible to
+this method, so these are counts of *high-frequency* automated addresses specifically.
 
 For context, the literal threshold "more than 50 Stock Token movements since launch" does not
 discriminate at this density. With 1,694 addresses visible in 0.0122% of blocks, the
