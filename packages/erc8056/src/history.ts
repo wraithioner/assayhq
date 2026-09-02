@@ -49,7 +49,9 @@ export class MultiplierHistory {
       if (u.oldMultiplier !== undefined && u.oldMultiplier !== prev.multiplier) {
         throw new Error(
           `UIMultiplierUpdated chain broken at effectiveAt=${u.effectiveAt}: ` +
-            `oldMultiplier=${u.oldMultiplier} but running multiplier=${prev.multiplier}`,
+            `oldMultiplier=${u.oldMultiplier} but running multiplier=${prev.multiplier}. ` +
+            `If these are raw logs, Robinhood Chain re-emits some updates — ` +
+            `run them through dedupeMultiplierEvents() first.`,
         );
       }
       // Defence in depth: unreachable while the constructor sorts by effectiveAt
@@ -109,4 +111,48 @@ export class MultiplierHistory {
   changes(): { effectiveAt: bigint; multiplier: bigint }[] {
     return this.points.slice(1).map((p) => ({ effectiveAt: p.effectiveAt, multiplier: p.multiplier }));
   }
+}
+
+/** The fields of a decoded `UIMultiplierUpdated` log that identify its content. */
+export interface RawMultiplierEvent {
+  oldMultiplier: bigint;
+  newMultiplier: bigint;
+  effectiveAtTimestamp: bigint;
+}
+
+/**
+ * Drop re-emitted `UIMultiplierUpdated` logs from one token's log stream.
+ *
+ * Robinhood Chain does not emit exactly one log per corporate action. CRWD's
+ * 4:1 split is logged at blocks 978,630 *and* 1,231,096 with identical
+ * `oldMultiplier`, `newMultiplier` and `effectiveAt`. Fed straight to
+ * {@link MultiplierHistory.fromEvents}, the repeat fails the old->new chain
+ * check: the running multiplier is already 4.0 when a log claiming
+ * `oldMultiplier = 1.0` arrives.
+ *
+ * A log counts as a repeat only when **all three** fields match one already
+ * seen, so two genuinely different actions can never be merged — including a
+ * corrected schedule that reuses an `effectiveAt` with a different
+ * `newMultiplier`, which `MultiplierHistory` resolves on its own.
+ *
+ * Input order is preserved and the first occurrence of each triple is kept.
+ * Extra fields (block, tx hash) are carried through untouched.
+ *
+ * Pass **one token's** logs at a time — multipliers are per-token, so mixing
+ * tokens would compare unrelated chains.
+ *
+ * ```ts
+ * MultiplierHistory.fromEvents(dedupeMultiplierEvents(logsForOneToken));
+ * ```
+ */
+export function dedupeMultiplierEvents<T extends RawMultiplierEvent>(events: readonly T[]): T[] {
+  const seen = new Set<string>();
+  const out: T[] = [];
+  for (const e of events) {
+    const key = `${e.oldMultiplier}:${e.newMultiplier}:${e.effectiveAtTimestamp}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(e);
+  }
+  return out;
 }

@@ -189,14 +189,28 @@ event’s `oldMultiplier` matches the running value, so a repeat fails that chec
 being ignored.
 
 ```
-UIMultiplierUpdated chain broken at effectiveAt=1782999000:
-oldMultiplier=1000000000000000000 but running multiplier=4000000000000000000
+UIMultiplierUpdated chain broken at effectiveAt=1782999000: oldMultiplier=1000000000000000000
+but running multiplier=4000000000000000000. If these are raw logs, Robinhood Chain re-emits
+some updates — run them through dedupeMultiplierEvents() first.
 ```
 
-Collapse repeats (same `effectiveAt` and same `newMultiplier`) per token before building a
-history. The strict check is deliberate — silently accepting a mismatched chain is how a
-position gets mis-valued by a whole multiple — but it means the raw log stream needs one pass
-of deduplication first.
+The check stays strict, because silently accepting a mismatched chain is how a position gets
+mis-valued by a whole multiple. Run one token's logs through the dedupe pass first:
+
+```ts
+import { MultiplierHistory, dedupeMultiplierEvents } from "@assayhq/erc8056";
+
+MultiplierHistory.fromEvents(dedupeMultiplierEvents(logsForOneToken));
+```
+
+A log is a repeat only when **`oldMultiplier`, `newMultiplier` and `effectiveAt` all match**
+one already seen, so two genuinely different actions are never merged — including a corrected
+schedule that reuses an `effectiveAt` with a different `newMultiplier`, which
+`MultiplierHistory` resolves on its own. Pass one token at a time; multipliers are per-token.
+
+Every token on the chain builds a clean point-in-time history after this pass, and the test
+suite pins both halves: the raw stream throws for exactly the two repeating tokens, the
+deduped stream throws for none.
 
 ## API
 
@@ -205,6 +219,7 @@ import {
   toUnderlyingShares, fromUnderlyingShares,  // conversion (floors, matches Solidity)
   rawBalanceValueUsd, rawBalanceValueUsdExact, // multiplier-free valuation
   MultiplierHistory,                          // point-in-time multiplier lookup
+  dedupeMultiplierEvents,                     // drop this chain's re-emitted updates
   multiplierToFloat,                          // display only
   WAD, TOKEN_DECIMALS, FEED_DECIMALS,
   TOPIC, SELECTOR, SCALED_UI_ABI,             // verified event/selector constants
@@ -247,7 +262,7 @@ TypeScript property tests are the shared specification for both.
 ## Testing
 
 ```bash
-npm test          # 42 tests
+npm test          # 52 tests
 npm run coverage  # 100% statements / branches / functions / lines
 ```
 
@@ -259,7 +274,8 @@ property-based tests (`fast-check`) for the invariants that matter:
 - underlying shares are monotonic in the multiplier;
 - valuation is **independent of the multiplier**, and double-applying it demonstrably
   overstates NAV (4× on a real CRWD-style multiplier);
-- the point-in-time history never looks ahead.
+- the point-in-time history never looks ahead;
+- every token's real on-chain log stream replays cleanly once re-emissions are dropped.
 
 ## Licence
 

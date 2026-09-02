@@ -8,6 +8,7 @@ import {
   fromUnderlyingShares,
   rawBalanceValueUsd,
   MultiplierHistory,
+  dedupeMultiplierEvents,
 } from "../src/index.js";
 
 /**
@@ -160,5 +161,83 @@ describe("conversion is exact across every real multiplier in the fixture", () =
         expect(raw - rt).toBeLessThanOrEqual(2n);
       }
     }
+  });
+});
+
+describe("re-emitted UIMultiplierUpdated logs", () => {
+  const toUpdate = (e: Ev) => ({
+    oldMultiplier: BigInt(e.oldMultiplier),
+    newMultiplier: BigInt(e.newMultiplier),
+    effectiveAtTimestamp: BigInt(e.effectiveAt),
+  });
+
+  /** The fixture is every log on the chain; multipliers are per-token. */
+  const byToken = (): Map<string, Ev[]> => {
+    const m = new Map<string, Ev[]>();
+    for (const e of fixture.events) m.set(e.token, [...(m.get(e.token) ?? []), e]);
+    for (const logs of m.values()) logs.sort((a, b) => a.block - b.block);
+    return m;
+  };
+
+  const CRWD = "0xea72ecca2d0f6bfa1394dbbcff85b52cd4233931";
+  const UNLISTED = "0xc93a8c440cea26d7445df01729f193b27965099f";
+
+  it("2 of the 17 logs are repeats, not distinct corporate actions", () => {
+    const distinct = new Set(
+      fixture.events.map((e) => `${e.token}:${e.oldMultiplier}:${e.newMultiplier}:${e.effectiveAt}`),
+    );
+    expect(fixture.events.length).toBe(17);
+    expect(distinct.size).toBe(15);
+  });
+
+  it("CRWD's 4:1 split is logged twice, identically, at two different blocks", () => {
+    const [a, b] = bySymbol("CRWD").sort((x, y) => x.block - y.block);
+    expect([a!.block, b!.block]).toEqual([978_630, 1_231_096]);
+    expect(a!.oldMultiplier).toBe(b!.oldMultiplier);
+    expect(a!.newMultiplier).toBe(b!.newMultiplier);
+    expect(a!.effectiveAt).toBe(b!.effectiveAt);
+  });
+
+  it("fromEvents rejects the raw stream rather than silently mis-valuing", () => {
+    const raw = bySymbol("CRWD")
+      .sort((x, y) => x.block - y.block)
+      .map(toUpdate);
+    expect(() => MultiplierHistory.fromEvents(raw)).toThrow(/chain broken/);
+    // and the message points at the fix
+    expect(() => MultiplierHistory.fromEvents(raw)).toThrow(/dedupeMultiplierEvents/);
+  });
+
+  it("dedupe collapses the repeat, and the history then builds", () => {
+    const clean = dedupeMultiplierEvents(
+      bySymbol("CRWD")
+        .sort((x, y) => x.block - y.block)
+        .map(toUpdate),
+    );
+    expect(clean).toHaveLength(1);
+    expect(MultiplierHistory.fromEvents(clean).current()).toBe(4n * WAD);
+  });
+
+  it("without dedupe, exactly the two repeating tokens fail", () => {
+    const failed: string[] = [];
+    for (const [token, logs] of byToken()) {
+      try {
+        MultiplierHistory.fromEvents(logs.map(toUpdate));
+      } catch {
+        failed.push(token);
+      }
+    }
+    expect(failed.sort()).toEqual([UNLISTED, CRWD].sort());
+  });
+
+  it("with dedupe, every token on the chain builds a clean point-in-time history", () => {
+    const failed: string[] = [];
+    for (const [token, logs] of byToken()) {
+      try {
+        MultiplierHistory.fromEvents(dedupeMultiplierEvents(logs.map(toUpdate)));
+      } catch (err) {
+        failed.push(`${token}: ${(err as Error).message}`);
+      }
+    }
+    expect(failed).toEqual([]);
   });
 });

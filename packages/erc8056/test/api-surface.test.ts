@@ -10,6 +10,7 @@ import {
   rawBalanceValueUsd,
   rawBalanceValueUsdExact,
   MultiplierHistory,
+  dedupeMultiplierEvents,
 } from "../src/index.js";
 
 /**
@@ -91,5 +92,43 @@ describe("published constants", () => {
     expect(SELECTOR.uiMultiplier).toBe("0xa60bf13d");
     for (const t of Object.values(TOPIC)) expect(t).toMatch(/^0x[0-9a-f]{64}$/);
     for (const s of Object.values(SELECTOR)) expect(s).toMatch(/^0x[0-9a-f]{8}$/);
+  });
+});
+
+describe("dedupeMultiplierEvents", () => {
+  const ev = (o: bigint, n: bigint, t: bigint, block?: number) => ({
+    oldMultiplier: o,
+    newMultiplier: n,
+    effectiveAtTimestamp: t,
+    ...(block === undefined ? {} : { block }),
+  });
+
+  it("handles an empty stream", () => {
+    expect(dedupeMultiplierEvents([])).toEqual([]);
+  });
+
+  it("keeps the first occurrence, preserves order, carries extra fields through", () => {
+    const a = ev(WAD, 2n * WAD, 100n, 1);
+    const b = ev(2n * WAD, 3n * WAD, 200n, 2);
+    const repeat = ev(WAD, 2n * WAD, 100n, 9);
+    expect(dedupeMultiplierEvents([a, b, repeat])).toEqual([a, b]);
+  });
+
+  it("does NOT merge two different updates sharing one effectiveAt", () => {
+    // A corrected schedule, not a re-emission — MultiplierHistory resolves it itself.
+    const kept = dedupeMultiplierEvents([ev(WAD, 2n * WAD, 100n), ev(WAD, 3n * WAD, 100n)]);
+    expect(kept).toHaveLength(2);
+    const h = new MultiplierHistory(
+      WAD,
+      kept.map((e) => ({ newMultiplier: e.newMultiplier, effectiveAt: e.effectiveAtTimestamp })),
+    );
+    expect(h.current()).toBe(3n * WAD);
+  });
+
+  it("keeps logs that differ in effectiveAt, leaving the strict check to fire", () => {
+    // Not byte-identical, so not a re-emission: dropping it would be a guess.
+    const kept = dedupeMultiplierEvents([ev(WAD, 2n * WAD, 100n), ev(WAD, 2n * WAD, 200n)]);
+    expect(kept).toHaveLength(2);
+    expect(() => MultiplierHistory.fromEvents(kept)).toThrow(/chain broken/);
   });
 });

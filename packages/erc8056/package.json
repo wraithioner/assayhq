@@ -1,6 +1,6 @@
 {
   "name": "@assayhq/erc8056",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "ERC-8056 (Scaled UI Amount) reference math: raw <-> underlying-share conversion, a point-in-time corporate-action multiplier history, and multiplier-independent valuation. Zero dependencies.",
   "keywords": [
     "erc8056",
@@ -43,7 +43,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Ransenfun/Robinhood-.git",
+    "url": "git+https://github.com/wraithioner/assayhq.git",
     "directory": "packages/erc8056"
   },
   "scripts": {

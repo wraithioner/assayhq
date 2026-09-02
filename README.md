@@ -41,7 +41,7 @@ them AI trading agents.
 ## Status
 
 The measurement stack is built and tested — ERC-8056 adapter, raw-event indexer, metrics
-engine, and static export (84 tests across four packages). **The scoreboard is not published,
+engine, and static export (94 tests across four packages). **The scoreboard is not published,
 because there is no population to score.** The committed site snapshot is empty and no agent
 rows are seeded.
 
@@ -138,7 +138,7 @@ private.
 
 ```bash
 corepack pnpm install
-corepack pnpm -r test        # 84 tests
+corepack pnpm -r test        # 94 tests
 corepack pnpm -r typecheck
 ```
 

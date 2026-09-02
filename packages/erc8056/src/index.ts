@@ -3,6 +3,7 @@
  *
  * - raw <-> underlying-share math (floor, matching the on-chain library)
  * - a point-in-time multiplier history built from UIMultiplierUpdated events
+ * - a dedupe pass for the updates this chain re-emits
  * - multiplier-free USD NAV (the feed is total-return, per /docs/RECON.md §3)
  * - verified event/selector/ABI constants
  */
@@ -22,4 +23,9 @@ export { toUnderlyingShares, fromUnderlyingShares, multiplierToFloat } from "./m
 
 export { rawBalanceValueUsd, rawBalanceValueUsdExact, type ValueOptions } from "./value.js";
 
-export { MultiplierHistory, type UIMultiplierUpdate } from "./history.js";
+export {
+  MultiplierHistory,
+  dedupeMultiplierEvents,
+  type UIMultiplierUpdate,
+  type RawMultiplierEvent,
+} from "./history.js";

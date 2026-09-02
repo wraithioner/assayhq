@@ -41,11 +41,11 @@ marked `"private": true`, because renaming into a scope we *do* own turns a woul
 an accidental `publish` into a real publish. Only `packages/erc8056` is publishable.
 
 ### D-2.5 — Repository is Apache-2.0; `packages/erc8056` stays MIT
-Root `LICENSE` is the verbatim Apache-2.0 text (appendix template left unfilled — no
-copyright holder is asserted here, since guessing a legal name is worse than leaving it).
-`packages/erc8056` keeps its own MIT `LICENSE` and `"license": "MIT"`, so it can be vendored
-without Apache-2.0's attribution and NOTICE requirements. The carve-out is machine-readable
-from the package manifest and stated in both READMEs.
+Root `LICENSE` is the verbatim Apache-2.0 text, with the appendix copyright filled in as
+**Muslim Oskanov, 2026** at the owner's direction. `packages/erc8056` keeps its own MIT
+`LICENSE` and `"license": "MIT"`, so it can be vendored without Apache-2.0's attribution and
+NOTICE requirements. The carve-out is machine-readable from the package manifest and stated in
+both READMEs.
 
 ### D-2.6 — `UIMultiplierUpdated` is re-emitted; the strict chain check stays strict
 Two of the 17 corporate-action logs on this chain are repeats, not distinct actions: CRWD's
@@ -54,9 +54,13 @@ Two of the 17 corporate-action logs on this chain are repeats, not distinct acti
 Fed the raw per-token log stream, `MultiplierHistory.fromEvents()` throws `chain broken`
 rather than ignoring the repeat. Decision: **document it, do not loosen the check.** Silently
 accepting a mismatched old→new chain is exactly the failure mode that mis-values a position by
-a whole multiple. Callers collapse repeats (same `effectiveAt` + same `newMultiplier`) per
-token first; the `erc8056` README now says so. A dedupe helper is a candidate for 0.1.2 and
-was deliberately not written under the current stop-building instruction.
+a whole multiple. Callers collapse repeats per token before building a history, and 0.1.2
+ships that pass as the exported `dedupeMultiplierEvents()` — ten lines, opt-in, keyed on all
+three fields (`oldMultiplier`, `newMultiplier`, `effectiveAt`) so two genuinely different
+actions can never be merged, a corrected schedule reusing an `effectiveAt` included.
+`fromEvents()` is unchanged and still throws; only its error message gained a pointer to the
+helper. Tests pin both halves against the real fixture: the raw stream throws for exactly the
+two repeating tokens, the deduped stream for none.
 
 ## Phase 1 — build (2026-09-01)
 
