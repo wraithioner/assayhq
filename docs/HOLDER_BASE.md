@@ -13,6 +13,11 @@ $1,000; **157** hold more than $10,000; **25** hold more than $100,000.
 **Enumeration is complete: all 193 indexed tokens, all 919,694 holder positions. Nothing here
 is sampled or extrapolated except where §6, §7 and §8 say so explicitly.**
 
+**Scope note.** Stock Tokens are a minor part of this chain. The $70.9M measured here sits
+against $19.2B of 30-day DEX volume and $157.9M of 30-day protocol fees, almost all of it
+memecoin launchpads and DEX trading in other tokens — see [`CHAIN_SCALE.md`](./CHAIN_SCALE.md).
+Nothing below changes; it simply is not a measurement of the chain.
+
 ---
 
 ## Method and coverage

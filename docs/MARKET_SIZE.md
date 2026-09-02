@@ -12,6 +12,11 @@ trading Stock Tokens — roughly **51** addresses operating continuously — but
 register any identity, and its behaviour looks more like market-making and arbitrage than like
 autonomous strategy agents. Both findings are below, with the method and the numbers.
 
+**Scope correction.** This document measures *agents* and *Stock Token flow*. It is not a
+measurement of the chain: Robinhood Chain earns $157.9M in protocol fees per 30 days and ranks
+#4 in crypto, almost entirely from memecoin launchpads and DEX trading that this document never
+looked at. See [`CHAIN_SCALE.md`](./CHAIN_SCALE.md).
+
 **Read the venue caveat in §6 before quoting the headline number.** Robinhood's own agent
 product had roughly 100,000 accounts by July 2026 — all of it inside the brokerage, none of it
 onchain. The near-zero count here is a fact about *this venue*, not about how many trading

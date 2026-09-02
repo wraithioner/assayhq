@@ -92,6 +92,20 @@ is therefore three-way and RPC-derived, not label-derived: ~75% of the base is a
 The label also has ~6% false negatives (3 of 50 sampled `is_contract=0` addresses had
 bytecode), so it is not trusted in either direction.
 
+### D-2.10 — Correcting our own framing: we measured a thin slice, not a thin chain
+Four documents measured ERC-8004 agents and Stock Tokens on chain 4663, found almost nothing,
+and framed it as a verdict on the venue. Independent measurement of protocol fee data (DefiLlama,
+2,649 protocols, per-chain `breakdown30d`) shows Robinhood Chain earning **$157.9M/30d across 121
+protocols — the #4 chain in crypto** — on **$19.2B** of DEX volume, at a 0.67–1.02% fee/volume
+ratio. Composition is memecoin launchpads ($46.9M) and DEX trading ($75.1M), not equities. On
+Blockscout, the memecoin CASHCAT ($267M, 104,221 holders) is worth 21x the largest Stock Token.
+The original measurements are unchanged and correct; the inference drawn from them was not.
+Recorded as [`CHAIN_SCALE.md`](./CHAIN_SCALE.md) rather than by editing the dated documents, and
+paired with a falsifiable prediction for the 29 Sept subsidy expiry (>70% fee decline within two
+weeks = farming). Lesson, and the reason this is a decision rather than a footnote: **exhaustive
+measurement of the wrong denominator is still the wrong answer**, and we caught it only by
+measuring where the money was rather than where the thesis pointed.
+
 ## Phase 1 — build (2026-09-01)
 
 Approved scope constraints (from the go-ahead): score **only the 35 feed-covered tokens**

@@ -29,6 +29,13 @@ population of strategy agents making periodic allocation decisions. Bytecode can
 intent, and this does not settle what those addresses are — but it does not support calling
 them AI trading agents.
 
+**One correction, added after the fact.** That verdict is about *agents* and *tokenized
+equities*, and it holds. It is not a verdict on the chain. Robinhood Chain earns
+**$157.9M in protocol fees per 30 days — the #4 chain in crypto** — on $19.2B of DEX volume,
+almost all of it memecoin launchpads and DEX trading. Stock Tokens are roughly 2% of on-chain
+token value. See [`docs/CHAIN_SCALE.md`](docs/CHAIN_SCALE.md), which also explains why that
+activity looks like farming into the end of a gas subsidy rather than durable demand.
+
 **The measurement write-ups are the substance of this repository:**
 
 - **[`docs/MARKET_SIZE.md`](docs/MARKET_SIZE.md)** — *Are there benchmarkable AI trading agents
@@ -45,6 +52,11 @@ them AI trading agents.
   chain. Stock Tokens are Regulation S instruments that may not be delivered to US persons,
   while Agentic Trading is offered only to US customers: **the two populations are legally
   disjoint.**
+- **[`docs/CHAIN_SCALE.md`](docs/CHAIN_SCALE.md)** — what the chain is actually used for, and
+  the correction to this repository's own framing. **$157.9M of protocol fees per 30 days across
+  121 protocols, #4 chain in crypto**, of which launchpads alone are $46.9M. The largest token
+  by holders after USDG is a memecoin, CASHCAT, worth 21× the largest tokenized equity. Includes
+  the falsifiable prediction for the 29 September gas-subsidy expiry.
 - **[`docs/HOLDER_BASE.md`](docs/HOLDER_BASE.md)** — who actually holds Stock Tokens. Full
   enumeration of all **193** indexed tokens and **919,694** holder positions; nothing sampled.
   **237,903** distinct addresses hold a non-zero balance, but only **1,228** hold more than
@@ -56,10 +68,10 @@ them AI trading agents.
 
 ## Status
 
-**The research phase is complete: four findings published, no product built, building
+**The research phase is complete: five findings published, no product built, building
 paused.** The measurement stack itself is built and tested — ERC-8056 adapter, raw-event
 indexer, metrics engine and static export, 94 tests across four packages — but **the
-scoreboard was never published, because this venue has no population to score.** The committed
+scoreboard was never published, because there is no agent population to score.** The committed
 site snapshot is empty and no agent rows are seeded. Robinhood's own agent population is
 large; it simply executes in the brokerage, where it emits no logs, and no product routes it
 onchain ([`AGENT_VENUE.md`](docs/AGENT_VENUE.md)).

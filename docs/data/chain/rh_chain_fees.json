@@ -1,0 +1,164 @@
+{
+ "as_of_utc": "2026-09-02",
+ "source": "DefiLlama /overview/fees, breakdown30d, pulled 2026-09-02",
+ "chain": "Robinhood Chain (4663)",
+ "protocols": 121,
+ "fees_30d_total": 157875275.46,
+ "by_category": {
+  "Dexs": 75119035.82,
+  "Launchpad": 46915690.13,
+  "Telegram Bot": 15244649.0,
+  "Chain": 10304589.0,
+  "NFT Marketplace": 2226303.0,
+  "Liquidity Manager": 1322562.76,
+  "Lending": 1089219.0,
+  "Derivatives": 1070340.29,
+  "Foundation": 1037008.0,
+  "Risk Curators": 1011461.0,
+  "Gamified Mining": 963156.15,
+  "Indexes": 496866.0,
+  "DEX Aggregator": 445905.01,
+  "AI Agents": 438465.0,
+  "Wallets": 66178.0,
+  "Liquidity Automation": 57878.69,
+  "Yield Aggregator": 15913.0,
+  "Luck Games": 12910.8,
+  "Uncollateralized Lending": 10810.34,
+  "SoFi": 10638.65,
+  "Volume Boosting": 10622.13,
+  "Cross Chain Bridge": 5781.0,
+  "Privacy": 3787.86,
+  "Domains": 1545.0,
+  "Trading App": 536.0,
+  "Payments": 40.63,
+  "DePIN": 23.7,
+  "Onchain Capital Allocator": -6640.5
+ },
+ "top_protocols": [
+  {
+   "protocol": "Uniswap V4",
+   "category": "Dexs",
+   "fees30d": 44706237
+  },
+  {
+   "protocol": "Pons V2",
+   "category": "Launchpad",
+   "fees30d": 26939684
+  },
+  {
+   "protocol": "Uniswap V3",
+   "category": "Dexs",
+   "fees30d": 23229746
+  },
+  {
+   "protocol": "GMGN",
+   "category": "Telegram Bot",
+   "fees30d": 14659894
+  },
+  {
+   "protocol": "Robinhood Chain",
+   "category": "Chain",
+   "fees30d": 10304589
+  },
+  {
+   "protocol": "Pons V1",
+   "category": "Launchpad",
+   "fees30d": 8300755
+  },
+  {
+   "protocol": "NOXA Fun",
+   "category": "Launchpad",
+   "fees30d": 4222953
+  },
+  {
+   "protocol": "Uniswap V2",
+   "category": "Dexs",
+   "fees30d": 2740715
+  },
+  {
+   "protocol": "StonkBrokers",
+   "category": "Launchpad",
+   "fees30d": 2542956
+  },
+  {
+   "protocol": "Opensea Seaport",
+   "category": "NFT Marketplace",
+   "fees30d": 2226303
+  },
+  {
+   "protocol": "LetsCash",
+   "category": "Launchpad",
+   "fees30d": 1613786
+  },
+  {
+   "protocol": "up v3",
+   "category": "Dexs",
+   "fees30d": 1519155
+  },
+  {
+   "protocol": "Pools",
+   "category": "Launchpad",
+   "fees30d": 1514075
+  },
+  {
+   "protocol": "Snuggle",
+   "category": "Liquidity Manager",
+   "fees30d": 1320944
+  },
+  {
+   "protocol": "Morpho Blue",
+   "category": "Lending",
+   "fees30d": 1089219
+  },
+  {
+   "protocol": "Arbitrum Nitro",
+   "category": "Foundation",
+   "fees30d": 1037008
+  },
+  {
+   "protocol": "Steakhouse Financial",
+   "category": "Risk Curators",
+   "fees30d": 1011461
+  },
+  {
+   "protocol": "Ramses CL V2",
+   "category": "Dexs",
+   "fees30d": 747944
+  },
+  {
+   "protocol": "Lighter Robinhood Perps",
+   "category": "Derivatives",
+   "fees30d": 741328
+  },
+  {
+   "protocol": "o1 Launchpad",
+   "category": "Launchpad",
+   "fees30d": 656777.1
+  },
+  {
+   "protocol": "SLVR",
+   "category": "Gamified Mining",
+   "fees30d": 617390
+  },
+  {
+   "protocol": "SushiSwap V3",
+   "category": "Dexs",
+   "fees30d": 612091
+  },
+  {
+   "protocol": "Maestro",
+   "category": "Telegram Bot",
+   "fees30d": 584755
+  },
+  {
+   "protocol": "The Index",
+   "category": "Indexes",
+   "fees30d": 496866
+  },
+  {
+   "protocol": "Curve DEX",
+   "category": "Dexs",
+   "fees30d": 483870.64
+  }
+ ]
+}
