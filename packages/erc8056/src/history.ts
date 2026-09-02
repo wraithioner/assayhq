@@ -52,6 +52,9 @@ export class MultiplierHistory {
             `oldMultiplier=${u.oldMultiplier} but running multiplier=${prev.multiplier}`,
         );
       }
+      // Defence in depth: unreachable while the constructor sorts by effectiveAt
+      // above, but kept so the invariant fails loudly if that sort is ever removed.
+      /* v8 ignore next 3 */
       if (u.effectiveAt < prev.effectiveAt) {
         throw new Error(`updates not monotonic in effectiveAt near ${u.effectiveAt}`);
       }

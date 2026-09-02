@@ -1,0 +1,183 @@
+{
+  "_provenance": {
+    "source": "eth_getLogs, Robinhood Chain mainnet (chainId 4663)",
+    "rpc": "https://rpc.mainnet.chain.robinhood.com",
+    "topic0": "0x2205df4534432b2f60654a3fdb48737ffdaf3e9edb1a498bd985bc026b15b055",
+    "event": "UIMultiplierUpdated(uint256 oldMultiplier, uint256 newMultiplier, uint256 effectiveAtTimestamp)",
+    "range": "block 0 -> 52428883",
+    "fetchedUtc": "2026-09-02",
+    "note": "Every corporate action ever emitted by an ERC-8056 stock token on this chain. Symbol null = token not in the current 194-asset list (delisted//early)."
+  },
+  "events": [
+    {
+      "token": "0xc93a8c440cea26d7445df01729f193b27965099f",
+      "symbol": null,
+      "block": 154326,
+      "oldMultiplier": "1000000000000000000",
+      "newMultiplier": "2000000000000000000",
+      "effectiveAt": 1782226680,
+      "tx": "0xb2d2c4dfcd7b3cce3a6b0e2c28d1fec2ebb0f979378c18d0b717bd357c43bf2d",
+      "logIndex": 0
+    },
+    {
+      "token": "0xc93a8c440cea26d7445df01729f193b27965099f",
+      "symbol": null,
+      "block": 154448,
+      "oldMultiplier": "2000000000000000000",
+      "newMultiplier": "1000000000000000000",
+      "effectiveAt": 1782227580,
+      "tx": "0x3b04378b43cd852dd3d9f4fe6e84fa8b523e46afb4251e7b3a42aeb5d661781a",
+      "logIndex": 0
+    },
+    {
+      "token": "0xc93a8c440cea26d7445df01729f193b27965099f",
+      "symbol": null,
+      "block": 176471,
+      "oldMultiplier": "1000000000000000000",
+      "newMultiplier": "1003091262135922330",
+      "effectiveAt": 1782339000,
+      "tx": "0x96cd9b086e135c95da47057cf3f1c5f8e8a4f0d1ea24d2df0ecb2eddf5955025",
+      "logIndex": 0
+    },
+    {
+      "token": "0xc93a8c440cea26d7445df01729f193b27965099f",
+      "symbol": null,
+      "block": 242671,
+      "oldMultiplier": "1003091262135922330",
+      "newMultiplier": "2006182524271844660",
+      "effectiveAt": 1782739800,
+      "tx": "0x27e31b674338efc7e0c17b18d9b5d0da676810d3dadcb891cc62ceb22818d15c",
+      "logIndex": 0
+    },
+    {
+      "token": "0xc93a8c440cea26d7445df01729f193b27965099f",
+      "symbol": null,
+      "block": 394227,
+      "oldMultiplier": "1003091262135922330",
+      "newMultiplier": "2006182524271844660",
+      "effectiveAt": 1782739800,
+      "tx": "0x04b4f70dd56489859a137f51fbd377f5f9dbc764f81b8b783a3ad79832b307e1",
+      "logIndex": 0
+    },
+    {
+      "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+      "symbol": "AAPL",
+      "block": 36345344,
+      "oldMultiplier": "1000000000000000000",
+      "newMultiplier": "1000566080061092436",
+      "effectiveAt": 1786720366,
+      "tx": "0x6d72ca599d812b9eb483fa82ba204e6d079e981b675669c9b659b7fac8adff35",
+      "logIndex": 97
+    },
+    {
+      "token": "0x47f93d52cbec7c6d2cfc080e154002370a60daea",
+      "symbol": "ASML",
+      "block": 29439914,
+      "oldMultiplier": "1000000000000000000",
+      "newMultiplier": "1000101323251417769",
+      "effectiveAt": 1786029025,
+      "tx": "0x1f74e07c6a56f9cf89b70d4b09263abe20c577757269be45608af2a30328ee6a",
+      "logIndex": 96
+    },
+    {
+      "token": "0x9651342cea770ae9a2969ba2a52611523146aef9",
+      "symbol": "CCL",
+      "block": 50955407,
+      "oldMultiplier": "1000000000000000000",
+      "newMultiplier": "1021486444855206408",
+      "effectiveAt": 1788189026,
+      "tx": "0x391030f47dae3d1ac98f9f4384c31186fad48fae6d62d1b3fae5e1449e2fdd02",
+      "logIndex": 11
+    },
+    {
+      "token": "0x4ea005168d7f09a7a0ba9d1def21a479950e44c2",
+      "symbol": "COST",
+      "block": 32889913,
+      "oldMultiplier": "1000000000000000000",
+      "newMultiplier": "1000612040296259656",
+      "effectiveAt": 1786374624,
+      "tx": "0x728a9545a0d36b55ef5b4c12a9b9a3565e22167abe78f4453efb78d1292fcf62",
+      "logIndex": 24
+    },
+    {
+      "token": "0xea72ecca2d0f6bfa1394dbbcff85b52cd4233931",
+      "symbol": "CRWD",
+      "block": 978630,
+      "oldMultiplier": "1000000000000000000",
+      "newMultiplier": "4000000000000000000",
+      "effectiveAt": 1782999000,
+      "tx": "0x07884f2f2440316a996ab3a9c0f8bce962ec872af6924745f5a04a9e9ac1d31f",
+      "logIndex": 0
+    },
+    {
+      "token": "0xea72ecca2d0f6bfa1394dbbcff85b52cd4233931",
+      "symbol": "CRWD",
+      "block": 1231096,
+      "oldMultiplier": "1000000000000000000",
+      "newMultiplier": "4000000000000000000",
+      "effectiveAt": 1782999000,
+      "tx": "0x5dbbb9524fc402fea6786eb5a5dd40205ce8c6e848fb313eecedf7e9395f5bf0",
+      "logIndex": 0
+    },
+    {
+      "token": "0x941ae714ec6d8130c7b75d67160ca08f1e7d11dd",
+      "symbol": "DELL",
+      "block": 26853518,
+      "oldMultiplier": "1000000000000000000",
+      "newMultiplier": "1000063708620124549",
+      "effectiveAt": 1785769823,
+      "tx": "0x8881e24ee42a7fdac96523e3166e8361ea72d24c45f2f6991a1da174acb531a8",
+      "logIndex": 0
+    },
+    {
+      "token": "0xff080c8ce2e5feadaca0da81314ae59d232d4afd",
+      "symbol": "MU",
+      "block": 18239875,
+      "oldMultiplier": "1000000000000000000",
+      "newMultiplier": "1000074823219171086",
+      "effectiveAt": 1784905824,
+      "tx": "0x7ceb72589f22e0257aeb44441275c6f9d835d1baa4a0c8f4cf87a4e08286cb69",
+      "logIndex": 194
+    },
+    {
+      "token": "0xb0992820e760d836549ba69bc7598b4af75dee03",
+      "symbol": "ORCL",
+      "block": 20823272,
+      "oldMultiplier": "1000000000000000000",
+      "newMultiplier": "1002210914971013375",
+      "effectiveAt": 1785165023,
+      "tx": "0xdb44087be277205a6819d8656cdd87e1c0a061822798c735f3efdf94bbfc9bd7",
+      "logIndex": 1
+    },
+    {
+      "token": "0x92fd66527192e3e61d4ddd13322aa222de86f9b5",
+      "symbol": "SGOV",
+      "block": 4629631,
+      "oldMultiplier": "1000000000000000000",
+      "newMultiplier": "1000957519890990718",
+      "effectiveAt": 1783541672,
+      "tx": "0x79292bc8af671bd6fc4ebc8f5e7a27c814d87988e175cbfab2ab1db1df0efbfb",
+      "logIndex": 7
+    },
+    {
+      "token": "0x92fd66527192e3e61d4ddd13322aa222de86f9b5",
+      "symbol": "SGOV",
+      "block": 30302195,
+      "oldMultiplier": "1000957519890990718",
+      "newMultiplier": "1002981519346766532",
+      "effectiveAt": 1786115424,
+      "tx": "0x94aaa4c5c537412b8a5ed4a1933cc8ee7cb3c5bc903a741e11d4aada5dc02ebd",
+      "logIndex": 196
+    },
+    {
+      "token": "0x92fd66527192e3e61d4ddd13322aa222de86f9b5",
+      "symbol": "SGOV",
+      "block": 51269236,
+      "oldMultiplier": "1002981519346766532",
+      "newMultiplier": "1005101770003214918",
+      "effectiveAt": 1788220826,
+      "tx": "0xf33317c324c4d1d53278dd5c0fcb6ca3afeea41ccf39441ecada548148f5f4e7",
+      "logIndex": 40
+    }
+  ]
+}
