@@ -125,6 +125,14 @@ accounting agree to the wei.
 npm install @assayhq/erc8056
 ```
 
+**Current version: 0.1.2**, published 2026-09-02. It carries the `latest` dist-tag, so a bare
+install resolves to it; don't pin an earlier one. **0.1.0 is deprecated on npm** — its `main`
+and `exports` pointed at `./src`, which the package does not ship, so it resolved to nothing.
+**0.1.1** has correct entry points, but its README makes a claim about the fixture set that is
+false and its `repository` field points at the wrong GitHub repository. Per-version detail, and
+the commit each was built from, is in
+[`packages/erc8056/CHANGELOG.md`](packages/erc8056/CHANGELOG.md).
+
 Measured against every `UIMultiplierUpdated` event ever emitted on the chain (17 events across
 10 tokens, committed as a test fixture):
 
