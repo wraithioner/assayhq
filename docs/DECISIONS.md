@@ -62,6 +62,36 @@ actions can never be merged, a corrected schedule reusing an `effectiveAt` inclu
 helper. Tests pin both halves against the real fixture: the raw stream throws for exactly the
 two repeating tokens, the deduped stream for none.
 
+### D-2.7 — Holder balances read from the explorer index, not replayed from logs
+Reconstructing current balances from `Transfer` / `TransferWithScaledUI` is still impossible
+(>50M movements; a full-range topic query returns `log query timed out`). Blockscout's
+`/api/v2/tokens/{t}/holders` is exact, already net of every movement, strictly
+value-descending, and carries `is_contract` per row — so it was used instead, and all 193
+indexed tokens were enumerated completely (919,694 positions, nothing sampled). Two traps are
+recorded because either one silently corrupts the result: the legacy `/api` endpoint bans for
+hours after a few hundred requests while `/api/v2` sustains 8.7 req/s, and **a soft rate limit
+arrives as HTTP 200 with `{"status":"0"}`**, which parses as an empty page and truncates a
+holder list. No token is accepted unless its row count matches the declared `holders_count`.
+
+### D-2.8 — `token0()` is not a sufficient venue test on this chain
+The brief specified excluding "contracts answering `token0()`". That misses **Uniswap V4,
+which keeps every pool's liquidity in one singleton `PoolManager`** with no `token0()` — and
+that contract is the single largest Stock Token holder on the chain ($25.5M, 192 of 194
+tokens). It also misses Lighter's `ZkLighter` proxy and V4 hooks. Detection now unions
+`token0()` responders, `poolManager()` responders and verified venue names. Using the brief's
+test alone would have misattributed **$32M of venue liquidity to customers** and reported the
+top holder as a whale. Three large unverified contracts ($6.7M) remain unidentified and are
+deliberately **not** excluded.
+
+### D-2.9 — Blockscout `is_contract` overstates contracts; EIP-7702 wallets are users
+`is_contract` marks 52% of holders as contracts. Sampling the bytecode shows the dominant
+"contract" is 23 bytes beginning `0xef0100` — an **EIP-7702 delegation designator**, i.e. an
+ordinary EOA delegated to a smart account (`Simple7702Account`, MetaMask's
+`EIP7702StatelessDeleGator`, Alchemy's `SemiModularAccount7702`, all verified). Classification
+is therefore three-way and RPC-derived, not label-derived: ~75% of the base is a user wallet.
+The label also has ~6% false negatives (3 of 50 sampled `is_contract=0` addresses had
+bytecode), so it is not trusted in either direction.
+
 ## Phase 1 — build (2026-09-01)
 
 Approved scope constraints (from the go-ahead): score **only the 35 feed-covered tokens**

@@ -372,6 +372,25 @@ These are the "stop and ask / verify from primary source" items — **do not har
 7. **ERC-8056 pending multiplier flow** — capture a real `UIMultiplierUpdated` with a future
    `effectiveAt` to test scheduled changes (none pending at snapshot).
 
+### Status of these items as of 2026-09-02
+
+Recorded here rather than edited above, so the Phase 0 snapshot stays intact.
+
+| # | Item | Status |
+|---|---|---|
+| 1 | Rialto addresses | **still open.** 280 venue contracts were identified in [`HOLDER_BASE.md`](./HOLDER_BASE.md) §4, but none is confirmed as Rialto. Three unverified contracts holding $6.7M are candidates and were not guessed at. |
+| 2 | Lighter rollup contract | **resolved.** `0x94bab9693ba2f6358507effcbd372b0660afff9d` — a proxy over a verified `ZkLighter` implementation, holding $5.7M of Stock Tokens, the second-largest holder on the chain. Deposit/withdraw ABI still unmapped. |
+| 3 | Gas subsidy mechanism | **still open.** The 29 Sept regime change is instrumented by observation (`scripts/snapshot/`) rather than by identifying the paymaster. |
+| 4 | Pricing the feed-less tokens | **decided, not solved.** D-1.x scores only the 35 feed-covered tokens; feed-less holdings are reported by position count and never valued. Measured exposure: 158 tokens, **$21.0M, 23.7% of on-chain Stock Token value with no independent oracle**. |
+| 5 | `ACCESS_CONTROLLED_REGISTRY` gating | **still open.** |
+| 6 | ERC-8004 Validation registry | **still open.** Identity and Reputation confirmed; Validation not located. |
+| 7 | ERC-8056 pending-multiplier flow | **partially resolved.** No future-dated `effectiveAt` has yet appeared in 17 events. What did appear is **re-emission**: 2 of the 17 logs repeat an earlier update verbatim, which breaks a naive chain-validating importer (D-2.6). |
+
+Two facts established later that contradict nothing above but extend it: the ERC-8004 registry
+is live and unreferenced in Robinhood's own docs ([`BACKFILL.md`](./BACKFILL.md)), and no page
+of the Robinhood Chain developer documentation mentions agentic trading, MCP or ERC-8004 at all
+([`AGENT_VENUE.md`](./AGENT_VENUE.md)).
+
 ---
 
 ## Reproduce this

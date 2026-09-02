@@ -1,21 +1,78 @@
 {
-  "fetched_utc": "2026-09-01",
-  "sources": {
-    "rh-assets.raw.json": {
-      "url": "https://api.robinhood.com/rhj/assets",
-      "sha256": "b4fe914d1fe7c44e3aa192aa0d673952696add4aa30b2afc4338187988939188",
-      "count": 194
-    },
-    "chainlink-feeds-robinhood-mainnet.raw.json": {
-      "url": "https://reference-data-directory.vercel.app/feeds-robinhood-mainnet.json",
-      "sha256": "2ae1ea5f432cab06904134759033d7c6434c323171f954120c4933fdde42e85d",
-      "count": 57
-    }
+ "fetched_utc": "2026-09-01",
+ "sources": {
+  "rh-assets.raw.json": {
+   "url": "https://api.robinhood.com/rhj/assets",
+   "sha256": "b4fe914d1fe7c44e3aa192aa0d673952696add4aa30b2afc4338187988939188",
+   "count": 194
   },
-  "chain": {
-    "name": "Robinhood Chain",
-    "chainId": 4663,
-    "rpc": "https://rpc.mainnet.chain.robinhood.com",
-    "explorer": "https://robinhoodchain.blockscout.com"
+  "chainlink-feeds-robinhood-mainnet.raw.json": {
+   "url": "https://reference-data-directory.vercel.app/feeds-robinhood-mainnet.json",
+   "sha256": "2ae1ea5f432cab06904134759033d7c6434c323171f954120c4933fdde42e85d",
+   "count": 57
   }
+ },
+ "chain": {
+  "name": "Robinhood Chain",
+  "chainId": 4663,
+  "rpc": "https://rpc.mainnet.chain.robinhood.com",
+  "explorer": "https://robinhoodchain.blockscout.com"
+ },
+ "derived": {
+  "_note": "Derived datasets, not primary-source snapshots. Regenerate with scripts/holders/ and scripts/snapshot/; see docs/HOLDER_BASE.md for method and limits.",
+  "holders/token_meta.json": {
+   "produced_by": "scripts/holders/fetch_meta.py",
+   "source": "https://robinhoodchain.blockscout.com/api/v2/tokens/{address}",
+   "as_of_utc": "2026-09-02",
+   "tokens": 194,
+   "indexed_as_token": 193
+  },
+  "holders/prices.json": {
+   "produced_by": "scripts/holders/price.py",
+   "source": "eth_call latestRoundData() on 35 rh_total_return Chainlink proxies",
+   "head_block": 52664749,
+   "as_of_utc": "2026-09-02"
+  },
+  "holders/build_summary.json": {
+   "produced_by": "scripts/holders/build.py",
+   "positions_enumerated": 919694,
+   "distinct_addresses": 237903,
+   "total_priced_usd": 70901469,
+   "max_missing_usd": 0,
+   "tokens_complete": "193/193"
+  },
+  "holders/classify.json": {
+   "produced_by": "scripts/holders/classify.py",
+   "method": "eth_getCode; exact above $1k (n=1508), uniform sample below (n=900, seed 20260902)"
+  },
+  "holders/infra.json": {
+   "produced_by": "scripts/holders/infra.py",
+   "venue_addresses": 280,
+   "venue_usd": 40834946,
+   "detectors": [
+    "token0()",
+    "poolManager()",
+    "verified venue name"
+   ]
+  },
+  "holders/final_analysis.json": {
+   "produced_by": "scripts/holders/final_analysis.py"
+  },
+  "holders/cohorts_growth.json": {
+   "produced_by": "scripts/holders/cohorts.py growth 500",
+   "method": "uniform sample of 500 non-infrastructure holders; oldest inbound Stock Token transfer",
+   "resolved": 487,
+   "censored": 127
+  },
+  "holders/funder_split.json": {
+   "produced_by": "scripts/holders/cohorts.py funders 1200",
+   "resolved": 1184,
+   "distinct_non_venue_funders": 339
+  },
+  "snapshots/2026-09-02-pre-subsidy-end.json": {
+   "produced_by": "scripts/snapshot/subsidy_snapshot.py",
+   "head_block": 52527642,
+   "purpose": "baseline for the 29 Sept 2026 gas-subsidy comparison"
+  }
+ }
 }

@@ -64,6 +64,13 @@ Sampled discovery makes the address counts **lower bounds**. An address active i
 roughly a fifth of all 40-second intervals can be missed entirely, so the error runs toward
 undercounting the automated population, not overcounting it.
 
+**The holder side of this was later measured exactly.** Current balances do not require log
+replay — the explorer's holder index is already net of every movement — so all 193 indexed
+tokens were enumerated in full: **919,694 positions, 237,903 distinct addresses, nothing
+sampled**. That census, and what it says about position sizes, is in
+[`HOLDER_BASE.md`](./HOLDER_BASE.md). It does not change any flow number in this document,
+which remains sampled.
+
 ## 3. The registered population: 61 identities, 1 benchmarkable
 
 The ERC-8004 `IdentityRegistry` is live at `0x8004A169FB4a3325136EB29fA0ceB6D2e539a432`

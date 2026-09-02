@@ -38,18 +38,31 @@ them AI trading agents.
   61 → 45 → 3 → 1 funnel, why the two exclusions are real rather than artefacts of a strict
   filter, and the registry addresses.
 - **[`docs/AGENT_VENUE.md`](docs/AGENT_VENUE.md)** — where Robinhood's agents actually execute,
-  verified against the newsroom, support docs, chain docs and SEC filings. Agentic Trading
-  shipped in May 2026 and reached ~100,000 accounts by July, entirely inside the brokerage.
-  Nothing routes an agent onto chain 4663, and the two user populations are legally disjoint.
+  verified against the newsroom, support docs, chain developer docs and SEC filings. Agentic
+  Trading shipped 27 May 2026 and by 29 July held **~100,000 accounts and over $100M in AUC**,
+  entirely inside custodial US brokerage accounts. Of the 57 documented Trading MCP tools
+  **none transfers, bridges, stakes or withdraws**, so there is no path from an agent to any
+  chain. Stock Tokens are Regulation S instruments that may not be delivered to US persons,
+  while Agentic Trading is offered only to US customers: **the two populations are legally
+  disjoint.**
+- **[`docs/HOLDER_BASE.md`](docs/HOLDER_BASE.md)** — who actually holds Stock Tokens. Full
+  enumeration of all **193** indexed tokens and **919,694** holder positions; nothing sampled.
+  **237,903** distinct addresses hold a non-zero balance, but only **1,228** hold more than
+  $1,000, **157** more than $10,000 and **25** more than $100,000, at a median customer balance
+  of **$0.50**. **$40.8M of the $70.9M on chain sits in venue infrastructure**, not customer
+  wallets. The publicly cited figure of **328,000** holders does not reconcile; on a
+  like-for-like date basis the cohort curve puts roughly **43,000** addresses at that
+  measurement date.
 
 ## Status
 
-The measurement stack is built and tested — ERC-8056 adapter, raw-event indexer, metrics
-engine, and static export (94 tests across four packages). **The scoreboard is not published,
-because this venue has no population to score.** The committed site snapshot is empty and no
-agent rows are seeded. Robinhood's own agent population is large — it simply executes in the
-brokerage, where it emits no logs, and no product routes it onchain
-([`AGENT_VENUE.md`](docs/AGENT_VENUE.md)).
+**The research phase is complete: four findings published, no product built, building
+paused.** The measurement stack itself is built and tested — ERC-8056 adapter, raw-event
+indexer, metrics engine and static export, 94 tests across four packages — but **the
+scoreboard was never published, because this venue has no population to score.** The committed
+site snapshot is empty and no agent rows are seeded. Robinhood's own agent population is
+large; it simply executes in the brokerage, where it emits no logs, and no product routes it
+onchain ([`AGENT_VENUE.md`](docs/AGENT_VENUE.md)).
 
 Building is paused. Every number above was produced while Robinhood covered gas; the 90-day
 fee waiver ends around **29 September 2026**, and no measurement of this chain unsubsidised
@@ -117,7 +130,11 @@ section listing where the original brief was wrong:
   EIP-8056 draft's `TransferWithUIAmount`, whose topic never appears on chain.
 - Chainlink feeds are **total-return, multiplier-adjusted, 8-decimal** — the multiplier must not
   be re-applied. **Only 35 of 194 tokens have a feed.** Coverage excluded no agent in the funnel
-  above; it was not the binding constraint.
+  above; it was not the binding constraint. Measured across the whole holder base, the 158
+  feed-less tokens hold **$21.0M, 23.7% of on-chain Stock Token value, with no independent
+  oracle** ([`HOLDER_BASE.md`](docs/HOLDER_BASE.md) §5).
+- **194** tokens exist, but **193** are indexed as tokens by Blockscout; BND returns 404 and is
+  excluded from the holder census.
 - The **ERC-8004 identity registry is live** at `0x8004A169FB4a3325136EB29fA0ceB6D2e539a432`
   and is not referenced anywhere in Robinhood's developer documentation.
 - **90-day gas waiver active** (launch 2026-07-01 → ≈ 2026-09-29).
@@ -132,6 +149,9 @@ packages/erc8056   # raw <-> underlying-share adapter (TS + Solidity), multiplie
 packages/indexer   # Transfer, TransferWithScaledUI, UIMultiplierUpdated, DEX swaps -> SQLite
 packages/metrics   # NAV, return/alpha/IR/Sharpe/maxDD net of gas+slippage; survivorship + PIT
 apps/web           # static leaderboard + per-agent "verify this yourself" recompute panel
+scripts/recon      # Phase 0 primary-source verification (verify.sh, keccak.py)
+scripts/snapshot   # deterministic pre/post gas-subsidy snapshot + --diff
+scripts/holders    # full Stock Token holder enumeration, pricing, classification (HOLDER_BASE)
 ```
 
 The indexer stores raw events only and derives nothing; it includes point-in-time ERC-8004
@@ -173,6 +193,21 @@ python3 scripts/recon/keccak.py  # event topic0 hashes (self-tested)
 
 The registry funnel can be re-derived directly from `eth_getLogs` — the exact calls are in
 [`docs/MARKET_SIZE.md` §7](docs/MARKET_SIZE.md#7-reproducing-this).
+
+The holder census, re-runnable end to end (~40 minutes; see
+[`scripts/holders/README.md`](scripts/holders/README.md) for the two rate-limit traps that
+will otherwise silently truncate the result):
+
+```bash
+cd scripts/holders
+cp ../../docs/data/stock-tokens.csv ../../docs/data/chainlink-feeds.csv .
+python3 fetch_meta.py     # exact per-token holder counts
+python3 price.py          # 35 Chainlink feeds at the head block
+python3 enum_v3.py        # every holder of every token, resumable
+python3 build.py          # -> addr_values.tsv, coverage + missed-value bound
+python3 classify.py && python3 identify.py && python3 infra.py
+python3 final_analysis.py # distribution, histogram, concentration
+```
 
 Given an index, a score recomputes from SQLite alone:
 
