@@ -2,6 +2,34 @@
 
 A running log of non-obvious calls and their reasoning. Newest first.
 
+## Phase 2 — findings and scope calls (2026-09-02)
+
+### D-2.1 — RHMachines integration: NO
+The unattributed-flow detector ranked RHMachines/`RHBTCAccount` as the #1 next venue
+(30 of 34 unattributed movements). Declined: it would fix NAV coverage for a scoreable
+population of **one**, and deposits carry no execution price, so it cannot improve slippage
+measurement — the thing the scoreboard exists to do. Recorded as the ranked next integration
+if the population ever justifies it. See [`BACKFILL.md`](./BACKFILL.md) §(e).
+
+### D-2.2 — The AMM framing in the original brief was overstated; corrected
+The brief warned that a multiplier step leaves every constant-product pool mispriced and LPs
+arbitraged. Our own arithmetic, measured against every corporate action ever emitted on this
+chain, disproves it: **≈0.124 bps for a 1% dividend, exactly zero for a compensated split**
+(raw balances never rebase). The `erc8056` README now leads with that finding rather than a
+warning, and labels the `r = 10` desynchronisation figure explicitly as a bound that has
+never occurred, not a prediction. The real ERC-8056 hazard is share accounting, where errors
+are whole multiples. Accuracy is the product; a scary-but-wrong framing would have cost more
+than it bought.
+
+### D-2.3 — `erc8056` on npm was already taken, six weeks before us
+The unscoped name was published 2026-07-20 by `three-ws`
+(`github.com/nirholas/robinhood-chain-erc8056`), describing itself as the "reference
+implementation and canonical explainer" for ERC-8056 with Solidity + exact-bigint TypeScript.
+The plan's "be the reference implementation before anyone notices" premise is therefore
+**already false**. Our differentiation is narrower and empirical: real on-chain fixtures, the
+measured AMM result above, 100% conversion-path coverage, and MIT. Publishing decision and
+final package name deferred to the owner.
+
 ## Phase 1 — build (2026-09-01)
 
 Approved scope constraints (from the go-ahead): score **only the 35 feed-covered tokens**

@@ -13,6 +13,26 @@ npm install @rhchain/erc8056
 
 ---
 
+## Headline finding: corporate actions are far less dangerous to AMMs than expected
+
+The common warning about ERC-8056 is that when a dividend or split fires, every
+constant-product pool holding that token is instantly mispriced and LPs get arbitraged. We
+measured it against every corporate action ever emitted on Robinhood Chain. The warning is
+overstated, and the arithmetic says so:
+
+- **A 1% reinvested dividend costs LPs ≈ 0.124 bps of pool value.** Roughly one part in
+  80,000. The largest distribution ever emitted on this chain (CCL, +2.15%) costs 0.571 bps.
+- **A compensated split — 10:1, 4:1, any ratio — costs exactly zero.** Because raw balances
+  never rebase and the feed is total-return, the pool doesn't move and neither does fair
+  value. The split is invisible to the pool.
+
+The real hazard of ERC-8056 is **not** the AMM. It is **share accounting**: reading
+`balanceOf()` as a share count, or applying the multiplier twice. Those are silent, they are
+off by whole multiples rather than fractions of a basis point, and they are what this library
+exists to prevent. [Skip to the arithmetic](#what-a-multiplier-step-actually-does-to-a-constant-product-amm).
+
+---
+
 ## The mechanic
 
 An ERC-8056 token carries a second quantity alongside the ordinary ERC-20 balance: an
@@ -69,13 +89,14 @@ rawBalanceValueUsd(WAD, 31_563_860_540n); // 315.6386054e18  ($315.6386054)
 A useful corollary for anyone building a portfolio tracker: **a multiplier step alone does
 not move NAV.** Share count jumps, per-share price divides, USD value is continuous.
 
-## What a multiplier step does to a constant-product AMM
+## What a multiplier step actually does to a constant-product AMM
 
 A Uniswap-style pool holds *raw* tokens and consults no oracle. Its price is `y/x`. The fair
 price of a raw token is the total-return feed, `underlying_price × multiplier ÷ 1e18`.
 
-When the multiplier steps by ratio `r`, what happens depends entirely on whether the
-underlying price moves to offset it **at the same instant**:
+The intuition that a multiplier step must wreck the pool assumes the pool's fair price jumps
+when the multiplier does. Usually it doesn't. What matters is not the size of the multiplier
+step but whether the underlying price moves to offset it **at the same instant**:
 
 - **A split (e.g. 10:1).** Multiplier ×10, underlying share price ÷10. Fair per-raw-token
   price is *unchanged*, and since raw balances never rebase, the pool’s reserves don’t move
@@ -111,17 +132,24 @@ drift from the chain.
 | 10:1 split, *uncompensated* — a bound, not an expectation | 10 | `2.3377` | — |
 | CRWD 4:1 split, *uncompensated* bound — real, block 978,630 | 4 | `0.5000` | — |
 
-Read that table carefully, because the headline is counter-intuitive:
+Read that table carefully, because it contradicts the usual warning:
 
-- **Dividends are the real hazard, and they are tiny.** A 1% reinvested dividend costs LPs
-  about **0.12 bps** of pool value. The largest distribution ever emitted on this chain (CCL,
-  +2.15%) costs **0.57 bps**.
-- **Splits are a non-event** — *provided* the feed and the multiplier move together. The
-  `r = 10` row is what happens if they ever don’t: `(√10 − 1)²/2 ≈ 2.34`, which is not a
-  “234% loss” so much as a statement that the token side of the pool is emptied into the
-  arbitrageur. That is a bound on desynchronisation risk, not a prediction.
-- Because `effectiveAt` is **known in advance**, a pool or an LP can pause, widen, or
-  oracle-gate across the step. The risk is schedulable.
+- **Dividends are the only real effect, and they are tiny.** A 1% reinvested dividend costs
+  LPs about **0.12 bps** of pool value — smaller than a single Uniswap fee tier by two orders
+  of magnitude, and smaller than the spread almost any LP already tolerates. The largest
+  distribution ever emitted on this chain (CCL, +2.15%) costs **0.57 bps**.
+- **Splits are a non-event**, provided the feed and the multiplier move together — which is
+  the designed behaviour, and what the on-chain history shows.
+- **The `r = 10` row is a bound on desynchronisation, not a prediction.** It answers "what if
+  the multiplier and the feed came apart completely?" — `(√10 − 1)²/2 ≈ 2.34`, meaning the
+  token side of the pool is emptied into the arbitrageur. It is included for completeness and
+  has never happened. Quoting it as an expected loss would be wrong.
+- Because `effectiveAt` is **known in advance**, even that residual risk is schedulable: a
+  pool or LP can pause, widen, or oracle-gate across the step.
+
+The practical conclusion for an integrator: **do not build multiplier-aware AMM machinery to
+avoid a 0.12 bps effect.** Spend the effort on share accounting instead, where the errors are
+whole multiples.
 
 ### Every corporate action ever emitted on Robinhood Chain
 
