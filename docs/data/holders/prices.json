@@ -1,0 +1,250 @@
+{
+ "head_block": 52664749,
+ "feeds": {
+  "AAPL": {
+   "proxy": "0x6B22A786bAa607d76728168703a39Ea9C99f2cD0",
+   "answer": 32469049682,
+   "decimals": 8,
+   "updatedAt": 1788356229,
+   "usd": 324.69049682
+  },
+  "AMD": {
+   "proxy": "0x943A29E7ae51A4798823ca9eEd2ed533B2A22C72",
+   "answer": 45670500000,
+   "decimals": 8,
+   "updatedAt": 1788360590,
+   "usd": 456.705
+  },
+  "AMZN": {
+   "proxy": "0xD5a1508ceD74c084eBf3cBe853e2C968fB2a651C",
+   "answer": 25496000000,
+   "decimals": 8,
+   "updatedAt": 1788356846,
+   "usd": 254.96
+  },
+  "ASML": {
+   "proxy": "0xB4106147E8cce40b7d46124090d373A71b70f87D",
+   "answer": 167365356284,
+   "decimals": 8,
+   "updatedAt": 1788358827,
+   "usd": 1673.65356284
+  },
+  "BABA": {
+   "proxy": "0x62Cc8F9b5f56a33c9C8A60c8B92779f523c4E984",
+   "answer": 11220000000,
+   "decimals": 8,
+   "updatedAt": 1788359208,
+   "usd": 112.2
+  },
+  "CLSK": {
+   "proxy": "0x810c12D3a554Bc47fd39597Fe3b3AAC4941F50eF",
+   "answer": 1101500000,
+   "decimals": 8,
+   "updatedAt": 1788360946,
+   "usd": 11.015
+  },
+  "COIN": {
+   "proxy": "0xA3a468A452940B7D6b69991207B508c609a98Ef2",
+   "answer": 17748000000,
+   "decimals": 8,
+   "updatedAt": 1788359478,
+   "usd": 177.48
+  },
+  "CRCL": {
+   "proxy": "0x6652eDf64bA3731C4F2D3ce821A0Fb1f1f6b482a",
+   "answer": 8827500000,
+   "decimals": 8,
+   "updatedAt": 1788361044,
+   "usd": 88.275
+  },
+  "CRWV": {
+   "proxy": "0xe1b3aABCAFAd1c94708dc1367dcfF8Aa4407487C",
+   "answer": 8051625000,
+   "decimals": 8,
+   "updatedAt": 1788360749,
+   "usd": 80.51625
+  },
+  "DELL": {
+   "proxy": "0x1C6c8cADBe02E19129c39dDB92281cE4c0bf206b",
+   "answer": 44126201040,
+   "decimals": 8,
+   "updatedAt": 1788360589,
+   "usd": 441.2620104
+  },
+  "EWY": {
+   "proxy": "0xEFdf54610B62A7753Ec30bDc380847c12D32e1D1",
+   "answer": 17785500000,
+   "decimals": 8,
+   "updatedAt": 1788358234,
+   "usd": 177.855
+  },
+  "GME": {
+   "proxy": "0x27C71df6A64fB476468EdF256CF72c038baB5B67",
+   "answer": 1881499999,
+   "decimals": 8,
+   "updatedAt": 1788358855,
+   "usd": 18.81499999
+  },
+  "GOOGL": {
+   "proxy": "0xF6f373a037c30F0e5010d854385cA89185AE638b",
+   "answer": 33759665000,
+   "decimals": 8,
+   "updatedAt": 1788359952,
+   "usd": 337.59665
+  },
+  "INTC": {
+   "proxy": "0x3f390C5C24628Ac7C489515402235FeAD71D1913",
+   "answer": 8885605000,
+   "decimals": 8,
+   "updatedAt": 1788360796,
+   "usd": 88.85605
+  },
+  "IONQ": {
+   "proxy": "0x22EfeC4919baf55F360E0EDee4AbEB26DE4971eb",
+   "answer": 3804515000,
+   "decimals": 8,
+   "updatedAt": 1788358691,
+   "usd": 38.04515
+  },
+  "META": {
+   "proxy": "0x7C38C00C30BEe9378381E7B6135d7283356D71b1",
+   "answer": 59757475000,
+   "decimals": 8,
+   "updatedAt": 1788359890,
+   "usd": 597.57475
+  },
+  "MSFT": {
+   "proxy": "0x45C3C877C15E6BA2EBB19eA114Ea508d14C1Af2E",
+   "answer": 49798075000,
+   "decimals": 8,
+   "updatedAt": 1788355837,
+   "usd": 497.98075
+  },
+  "MSTR": {
+   "proxy": "0x396118bdFB181e6240E74D243F266B061c0edc3D",
+   "answer": 12302500000,
+   "decimals": 8,
+   "updatedAt": 1788360755,
+   "usd": 123.025
+  },
+  "MU": {
+   "proxy": "0x425EEFdCf05ed6526C3cE61Af99429A228a6d596",
+   "answer": 93822024540,
+   "decimals": 8,
+   "updatedAt": 1788360823,
+   "usd": 938.2202454
+  },
+  "NBIS": {
+   "proxy": "0xE1D87B116Ba0fe898998f1D140339D1fA1E09705",
+   "answer": 20005000000,
+   "decimals": 8,
+   "updatedAt": 1788359980,
+   "usd": 200.05
+  },
+  "NVDA": {
+   "proxy": "0x379EC4f7C378F34a1B47E4F3cbeBCbAC3E8E9F15",
+   "answer": 22365395000,
+   "decimals": 8,
+   "updatedAt": 1788359804,
+   "usd": 223.65395
+  },
+  "ORCL": {
+   "proxy": "0x0e6a64a2B58A6693a531E6c555f3A5d042eEA844",
+   "answer": 14551100274,
+   "decimals": 8,
+   "updatedAt": 1788358064,
+   "usd": 145.51100274
+  },
+  "PLTR": {
+   "proxy": "0x820ABedFF239034956B7A9d2F0a331f9F075eB4c",
+   "answer": 17250500000,
+   "decimals": 8,
+   "updatedAt": 1788361125,
+   "usd": 172.505
+  },
+  "QQQ": {
+   "proxy": "0x80901d846d5D7B030F26B480776EE3b29374C2ae",
+   "answer": 70835500000,
+   "decimals": 8,
+   "updatedAt": 1788358730,
+   "usd": 708.355
+  },
+  "RGTI": {
+   "proxy": "0x2A045cF1C49c61c166C036d2f06FA2D2d984f765",
+   "answer": 1495500000,
+   "decimals": 8,
+   "updatedAt": 1788358358,
+   "usd": 14.955
+  },
+  "RKLB": {
+   "proxy": "0x045477BF65Aef6f4F2386ad0164579e48381CC74",
+   "answer": 6265200000,
+   "decimals": 8,
+   "updatedAt": 1788359973,
+   "usd": 62.652
+  },
+  "SGOV": {
+   "proxy": "0xa0DF4ee0fFf975306345875E3548Fcc519577A11",
+   "answer": 10092226805,
+   "decimals": 8,
+   "updatedAt": 1788307271,
+   "usd": 100.92226805
+  },
+  "SLV": {
+   "proxy": "0x209b73908e92Ae021826eD79609845451Ecba2ce",
+   "answer": 5890500000,
+   "decimals": 8,
+   "updatedAt": 1788359443,
+   "usd": 58.905
+  },
+  "SNDK": {
+   "proxy": "0xfb133Fa4B7b385802B693a293606682Df47109A3",
+   "answer": 152709630000,
+   "decimals": 8,
+   "updatedAt": 1788360603,
+   "usd": 1527.0963
+  },
+  "SPCX": {
+   "proxy": "0xB265810950ba6c5C0Ff821c9963014a56fD8Bffb",
+   "answer": 13983499999,
+   "decimals": 8,
+   "updatedAt": 1788360669,
+   "usd": 139.83499999
+  },
+  "SPY": {
+   "proxy": "0x319724394D3A0e3669269846abE664Cd621f9f6A",
+   "answer": 76349135000,
+   "decimals": 8,
+   "updatedAt": 1788357719,
+   "usd": 763.49135
+  },
+  "TSLA": {
+   "proxy": "0x4A1166a659A55625345e9515b32adECea5547C38",
+   "answer": 35207500000,
+   "decimals": 8,
+   "updatedAt": 1788361022,
+   "usd": 352.075
+  },
+  "TSM": {
+   "proxy": "0x874cF94aa8eC88Fd9560094dD065f2fB3E41Fc2F",
+   "answer": 41413000000,
+   "decimals": 8,
+   "updatedAt": 1788358724,
+   "usd": 414.13
+  },
+  "USAR": {
+   "proxy": "0xA994d3684e8400A6c8078226925779FdeE682DD9",
+   "answer": 1764700000,
+   "decimals": 8,
+   "updatedAt": 1788360700,
+   "usd": 17.647
+  },
+  "USO": {
+   "proxy": "0x75a9c76Ef439e2C7c2E5a34Ab105EcFe3766431c",
+   "answer": 14043000000,
+   "decimals": 8,
+   "updatedAt": 1788360575,
+   "usd": 140.43
+  }
+ }
+}

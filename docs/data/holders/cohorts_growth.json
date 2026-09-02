@@ -1,0 +1,3424 @@
+{
+ "0x6dbfce3eca3233ff9c6d64ba65b1774ca7651aed": {
+  "ts": "2026-08-30T02:19:59.000000Z",
+  "block": 49648285,
+  "frm": "0x2ebf0b66b575cd714d011dcc20487b47a052856e",
+  "token": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+  "censored": false
+ },
+ "0xa922e8add066bb72a884154eff90454a1f8376d8": {
+  "ts": "2026-08-19T07:39:00.000000Z",
+  "block": 40386260,
+  "frm": "0xc72759220e4fd934482b8ac6eb8ecc8f426f20f4",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": false
+ },
+ "0xcb210d01a11ba35bc4253980750174e86d46a8bf": {
+  "ts": "2026-09-02T14:02:09.000000Z",
+  "block": 52630758,
+  "frm": "0xe5e8749adeac280482fbb5e8afdbf73422f70f18",
+  "token": "0x1d11f0496982706c5e14a514d4e79f2e6bde4516",
+  "censored": false
+ },
+ "0xc3c5ffe9c1c1be411c0491f69dcb9b8cb9d27f69": {
+  "ts": "2026-08-30T22:51:03.000000Z",
+  "block": 50378243,
+  "frm": "0x78e66d9ac1f8d7b55e9c0f7e37278496daf704da",
+  "token": "0x1d11f0496982706c5e14a514d4e79f2e6bde4516",
+  "censored": false
+ },
+ "0x5fed2e4d948e7d192f0989e2a637e18e0da8c4cd": {
+  "ts": "2026-09-02T06:31:04.000000Z",
+  "block": 52362307,
+  "frm": "0x3746fd683e8af0a9c0abbc0fa0741ca7d1420fa4",
+  "token": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "censored": false
+ },
+ "0xcda4ea327e639b2d040363de04271f096af9212b": {
+  "ts": "2026-08-31T16:18:29.000000Z",
+  "block": 51001049,
+  "frm": "0x6a66e02a9816aa104db9ae2723e65152b8fd5592",
+  "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+  "censored": false
+ },
+ "0x468b3ca72f518c33dcc329693f927e1a2ddfc36b": {
+  "ts": "2026-07-24T10:05:40.000000Z",
+  "block": 18063475,
+  "frm": "0x1579ad64756e82aba5d6a1f4653ef58c40e5ffb5",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": false
+ },
+ "0x4f3131cfc0b5b4fbc5a26fcbffe6b6f5fadfb4cc": {
+  "ts": "2026-08-30T00:46:50.000000Z",
+  "block": 49592912,
+  "frm": "0x02a54417aba7a8429be0ea4532d965665c1f2201",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0xecf230b0e6e3b8da984409ec51ecd36cf87ddd33": {
+  "ts": "2026-08-29T02:35:53.000000Z",
+  "block": 48802390,
+  "frm": "0xe492912f37c2a4eca45d42dc67548f4c6cd7ce2b",
+  "token": "0x6330d8c3178a418788df01a47479c0ce7ccf450b",
+  "censored": true
+ },
+ "0xd0f6782e6c76601ec8d1e7388c0f18296ec2a3e5": {
+  "ts": "2026-08-30T14:10:28.000000Z",
+  "block": 50070008,
+  "frm": "0xe33e9e479df8802cb0866d5d05258bec4cf62948",
+  "token": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "censored": false
+ },
+ "0x0232b9afb9160fe479f25dade62fa60ef657bdc5": {
+  "ts": "2026-09-02T05:31:52.000000Z",
+  "block": 52327108,
+  "frm": "0x44c0055bd51f7ec7b914ae00fffac5f4c2c56363",
+  "token": "0x86923f96303d656e4aa86d9d42d1e57ad2023fdc",
+  "censored": true
+ },
+ "0x4e3b2851fa567b39b499da0840f892884685541c": {
+  "ts": "2026-09-02T09:26:41.000000Z",
+  "block": 52466914,
+  "frm": "0xc603c8fb07e1f182ac34c41e176e4244606e734b",
+  "token": "0x2e0847e8910a9732eb3fb1bb4b70a580adad4fe3",
+  "censored": false
+ },
+ "0x60607f9a2f0e3b2d5ca83bd6090396b4e88d7b1e": {
+  "ts": "2026-08-31T05:47:13.000000Z",
+  "block": 50625525,
+  "frm": "0x82753967e6998382fee953067083684d98b2afc1",
+  "token": "0xe0444ef8bf4ed74f74fd73686e2ddf4c1c5591e8",
+  "censored": true
+ },
+ "0x1fbd3a87729bc8701edeee3b1755fcf83e4d5477": {
+  "ts": "2026-08-21T22:51:48.000000Z",
+  "block": 42654646,
+  "frm": "0xe33e9e479df8802cb0866d5d05258bec4cf62948",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0xb0b3a093f234bc3e5ee0b5f137cd0929cba1c381": {
+  "ts": "2026-08-21T04:49:06.000000Z",
+  "block": 42007169,
+  "frm": "0xf1c50ffeb5cc8a50b153ceed1b7dd0c42f3e5438",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0x3f4b08b3800557791904ce5dffa3f3df6c15068d": {
+  "ts": "2026-08-20T00:55:34.000000Z",
+  "block": 41006068,
+  "frm": "0x144400e9c0b7b033153394258d2b6e9c637ce971",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": true
+ },
+ "0xdd395018f5d00ec995ea341a121ee44f441a0c2e": null,
+ "0xe0c6cab951b832680b76f0c59d0f7d49bbb807c9": {
+  "ts": "2026-07-21T11:49:57.000000Z",
+  "block": 15539983,
+  "frm": "0x2459dedb3012d1e929edd17df26620120bdf11bf",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": false
+ },
+ "0xb2298d5554554231dd72c145f5e5570465d7d9fc": {
+  "ts": "2026-08-02T01:35:42.000000Z",
+  "block": 25510217,
+  "frm": "0xe311d712bd0669896bcb47f38845ad71a641b8be",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": true
+ },
+ "0x778af3963b865a70f129fa301c3ff0ea68ca5ef9": {
+  "ts": "2026-07-28T01:16:06.000000Z",
+  "block": 21190230,
+  "frm": "0xc72759220e4fd934482b8ac6eb8ecc8f426f20f4",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0x10c57f229f86fb82b24bc74aa05d8760918f3273": {
+  "ts": "2026-08-14T13:55:42.000000Z",
+  "block": 36304964,
+  "frm": "0x30f3916201e49bd6e5f47566bb59a68e6cede5c5",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0xb3946563fc67b739abd2e8ce18c3182e2a899db1": {
+  "ts": "2026-07-18T12:47:59.000000Z",
+  "block": 12991912,
+  "frm": "0xd183b7e40629f6919b70f2035f250ec6e653e8ee",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": false
+ },
+ "0x36f6063bccde30d9d9cce5a3496776886bb837e2": {
+  "ts": "2026-08-27T04:21:04.000000Z",
+  "block": 47152973,
+  "frm": "0x2c7caaddb19ceeaf1ce0c3e8fe000c40321907f6",
+  "token": "0xe93237c50d904957cf27e7b1133b510c669c2e74",
+  "censored": false
+ },
+ "0xd33859b6b65fd1efae7dd24e6780910ee9d8dd87": {
+  "ts": "2026-08-27T04:51:43.000000Z",
+  "block": 47171162,
+  "frm": "0xa9cfd46e5ef604a5b58a1ad242734e91e417052f",
+  "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+  "censored": false
+ },
+ "0xaeec6301ed206f4fbe1c11de4624ef65e2505eee": {
+  "ts": "2026-07-17T01:20:43.000000Z",
+  "block": 11720207,
+  "frm": "0x2459dedb3012d1e929edd17df26620120bdf11bf",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": false
+ },
+ "0x23f6f7f2364abbf99f9334d3e9eef1950273678b": {
+  "ts": "2026-08-26T05:01:43.000000Z",
+  "block": 46321085,
+  "frm": "0x30f3916201e49bd6e5f47566bb59a68e6cede5c5",
+  "token": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+  "censored": false
+ },
+ "0x50870b67dcfd547a3dd4a7e62e7d501c99f9d2a4": {
+  "ts": "2026-08-28T14:16:41.000000Z",
+  "block": 48363342,
+  "frm": "0xf387ec4583069998428aa7442b1aad75aafd63cf",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0xcad12d3ecfb39459713f8ec057a3cfd371cfe5ab": {
+  "ts": "2026-08-30T15:39:38.000000Z",
+  "block": 50122671,
+  "frm": "0xd52e81999b7dfe5092cac5b1be6266067388b1fc",
+  "token": "0x411efb0e7f985935daec3d4c3ebaea0d0ad7d89f",
+  "censored": false
+ },
+ "0x2e4f4a47275425d794186144cb934435a11621a8": {
+  "ts": "2026-08-31T08:06:42.000000Z",
+  "block": 50708528,
+  "frm": "0xe980c581f0abac4ceb008827b0f355f7e5b0bdd9",
+  "token": "0xc0d6457c16cc70d6790dd43521c899c87ce02f35",
+  "censored": false
+ },
+ "0x7a3010b00d9866c80cadafeca573490e432ba3ac": {
+  "ts": "2026-08-27T21:57:21.000000Z",
+  "block": 47780985,
+  "frm": "0xe7b816835917e03e2fe8495855870fa4e2809428",
+  "token": "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a",
+  "censored": true
+ },
+ "0xa596a45d5772ec68552d72b2df8d6ffcb1340e1d": {
+  "ts": "2026-07-15T11:14:33.000000Z",
+  "block": 10348602,
+  "frm": "0x2459dedb3012d1e929edd17df26620120bdf11bf",
+  "token": "0x822cc93ffd030293e9842c30bbd678f530701867",
+  "censored": true
+ },
+ "0xed9f8f6b52b1971abe11997d21976653820550be": {
+  "ts": "2026-08-07T20:42:39.000000Z",
+  "block": 30507060,
+  "frm": "0x1d0a029be4aa391a36b22bc629735a9d6f105b83",
+  "token": "0xe0444ef8bf4ed74f74fd73686e2ddf4c1c5591e8",
+  "censored": true
+ },
+ "0xedfd96596419db9a8bb3a35d5d3f8ba17c0d8e01": {
+  "ts": "2026-09-01T15:18:17.000000Z",
+  "block": 51820652,
+  "frm": "0xa95b830e320a365a976e946cfd289ced4c74ba12",
+  "token": "0x62fd0668e10d8b72339be2dcf7643001688ff13b",
+  "censored": false
+ },
+ "0x61f12ea36c822a30eef51941368ad8f54cf372a0": {
+  "ts": "2026-07-19T04:06:51.000000Z",
+  "block": 13541290,
+  "frm": "0xacc79e7b9f8dbb22e197c76d92ff8c0472ac81b4",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0x6b1cb8f6f32e253c0b5be3a9904237241aba34da": {
+  "ts": "2026-08-29T23:04:33.000000Z",
+  "block": 49532157,
+  "frm": "0x6328617942226e873069130469c483c1637259b0",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": true
+ },
+ "0xc965991ae96381ba236bd5aaef0c32e3b0dc000a": {
+  "ts": "2026-08-29T22:23:55.000000Z",
+  "block": 49508003,
+  "frm": "0x24e3b8aef0fbaec43fe063771e4581c61d281319",
+  "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+  "censored": false
+ },
+ "0x31ccb289454640bac46c4fc9408d201222886007": {
+  "ts": "2026-08-30T09:19:23.000000Z",
+  "block": 49897292,
+  "frm": "0x792d9d66c365c3d1667adb2ada44e88f632241f1",
+  "token": "0xc9a981fee1f9dec688bb123ccdecc63d0debfc4e",
+  "censored": false
+ },
+ "0x872194c4c50efbdd1a2be43aed4a0d29ffe15387": {
+  "ts": "2026-08-28T05:40:23.000000Z",
+  "block": 48056235,
+  "frm": "0x48df914b987b4958ddb156570e14635ea8557196",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0x791d7f143175cc425a2715c221b4ae28f36c6698": {
+  "ts": "2026-09-02T15:50:32.000000Z",
+  "block": 52695007,
+  "frm": "0xa3fbab3c521e85e5f94f09739ab14668130b804b",
+  "token": "0x1d11f0496982706c5e14a514d4e79f2e6bde4516",
+  "censored": true
+ },
+ "0x4a9bee712f77ccce57f1a8004d5dc6b9f5f791ff": {
+  "ts": "2026-08-31T16:18:15.000000Z",
+  "block": 51000912,
+  "frm": "0xc4cf22a0901e83072e65bde391aadbaf3fe92897",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0xd9d836ebc67abeec65b29e586f89816dab991f69": {
+  "ts": "2026-08-25T15:00:18.000000Z",
+  "block": 45819075,
+  "frm": "0xa99d15dace9aede816600a31c3e4158926000f3c",
+  "token": "0x6330d8c3178a418788df01a47479c0ce7ccf450b",
+  "censored": false
+ },
+ "0x136e6b28a4800c59c496b56481bdda29a7d91703": {
+  "ts": "2026-09-02T09:50:14.000000Z",
+  "block": 52480930,
+  "frm": "0x4d69d9c4d51afa1b2a075b48aa9394d09a5df926",
+  "token": "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a",
+  "censored": true
+ },
+ "0xfc214c891bc94674fb46c6e2a1b043c9ee251614": {
+  "ts": "2026-08-30T17:31:07.000000Z",
+  "block": 50188862,
+  "frm": "0xd3afeb2a57f70ef218aa82451c51b2fb0416ac9e",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0xa194184cd1ec10ac76e2ac7fa902bce390fb6d75": {
+  "ts": "2026-08-30T13:39:39.000000Z",
+  "block": 50051726,
+  "frm": "0x315b65cb3d038fa549fa72e69eaed6adebaa0a09",
+  "token": "0x1d11f0496982706c5e14a514d4e79f2e6bde4516",
+  "censored": true
+ },
+ "0x396e69fdbc27e1bbba210186731a241be870d4f0": {
+  "ts": "2026-08-12T20:31:23.000000Z",
+  "block": 34817850,
+  "frm": "0xdfe8d771c5187e690d3b8063795fc5254bb5dce6",
+  "token": "0xf0c4bf4c582cb3836e98394b1d4e7b7281101be8",
+  "censored": true
+ },
+ "0x61c3aec06f20bb93b6d23fccada5fab82e1f031c": {
+  "ts": "2026-07-25T21:40:05.000000Z",
+  "block": 19339719,
+  "frm": "0xacc79e7b9f8dbb22e197c76d92ff8c0472ac81b4",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0x5a7e225908e4bef691fbe86363fd350ec6a4ee21": {
+  "ts": "2026-08-04T04:58:29.000000Z",
+  "block": 27355128,
+  "frm": "0xe311d712bd0669896bcb47f38845ad71a641b8be",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0xdffe8a28ba200db125f102b694f606efc4c1d0e8": {
+  "ts": "2026-09-02T02:04:12.000000Z",
+  "block": 52203570,
+  "frm": "0xf1c50ffeb5cc8a50b153ceed1b7dd0c42f3e5438",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": false
+ },
+ "0x9dc703d38e626886e790b2bb2cbe8b57aea2d361": {
+  "ts": "2026-09-01T19:39:35.000000Z",
+  "block": 51975476,
+  "frm": "0xcda2f395a62a6b86a59d392d343dd1a55571b3c6",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0x91f928512774ee5e95d66fd05ba33bc070045818": {
+  "ts": "2026-08-31T04:29:15.000000Z",
+  "block": 50579159,
+  "frm": "0xe33e9e479df8802cb0866d5d05258bec4cf62948",
+  "token": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "censored": false
+ },
+ "0x5fdd5c411312116858f9e27ad47cb1d454981f28": {
+  "ts": "2026-09-02T09:26:41.000000Z",
+  "block": 52466914,
+  "frm": "0xc603c8fb07e1f182ac34c41e176e4244606e734b",
+  "token": "0x2e0847e8910a9732eb3fb1bb4b70a580adad4fe3",
+  "censored": false
+ },
+ "0x0fc486b74fc51b3c132b3a68adb2462b622f669f": {
+  "ts": "2026-08-16T15:38:04.000000Z",
+  "block": 38089058,
+  "frm": "0xd0a40c6526acdebd4f6d87931098ff37a9f8e4bf",
+  "token": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "censored": false
+ },
+ "0xc791bbcdccaca8fa242a87f642fbbfb34f829729": {
+  "ts": "2026-07-24T05:07:32.000000Z",
+  "block": 17885304,
+  "frm": "0xbd17aa2234f366b1d0fffa080158915bfddd3c99",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": false
+ },
+ "0x84a3293bc2535f5cad35a422807b575958c0f755": {
+  "ts": "2026-09-02T13:55:17.000000Z",
+  "block": 52626717,
+  "frm": "0x4fdaab9427aff5d8e2fff9d9f9b5dd3a9dc014d6",
+  "token": "0x1d11f0496982706c5e14a514d4e79f2e6bde4516",
+  "censored": true
+ },
+ "0x8387c3ec28703ad84024b8c010a8ff0d97b7f740": {
+  "ts": "2026-08-19T12:24:29.000000Z",
+  "block": 40556359,
+  "frm": "0x5acb370682a0f1e5e81810a06a087343a5661717",
+  "token": "0xc72b96e0e48ecd4dc75e1e45396e26300bc39681",
+  "censored": true
+ },
+ "0xa8ad52d8fbf3e8fd0c8ce0c8b84c4a6e756689f5": {
+  "ts": "2026-08-26T21:16:16.000000Z",
+  "block": 46900438,
+  "frm": "0xeac421adfeba93f3012362a5ab8203e0f2c6b666",
+  "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+  "censored": false
+ },
+ "0x9583861eaaf7ab6b2e6ff5fab5cd1c270d793caf": {
+  "ts": "2026-08-08T10:32:36.000000Z",
+  "block": 31004123,
+  "frm": "0xb173c67f7826c5f77a3311be3e3add8ab6ec44f6",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0x631046bc261e0b2e3db480b87d2b7033d9720c90": {
+  "ts": "2026-07-24T14:06:00.000000Z",
+  "block": 18207094,
+  "frm": "0x2459dedb3012d1e929edd17df26620120bdf11bf",
+  "token": "0x6330d8c3178a418788df01a47479c0ce7ccf450b",
+  "censored": true
+ },
+ "0x0000000000000000000000000000000000010280": {
+  "ts": "2026-07-09T17:46:42.000000Z",
+  "block": 5407880,
+  "frm": "0xd06885490be220dabb8502bce9f8833093df0f3d",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": false
+ },
+ "0x51ae27f4847173a9e6f10bb994dad041d5e82f05": {
+  "ts": "2026-07-24T18:44:10.000000Z",
+  "block": 18373837,
+  "frm": "0xdd19646c1e76e99dc65b5b290a078961b59c874e",
+  "token": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+  "censored": true
+ },
+ "0x5521ef8ea2a328177b8b2d7d93dfe712b278d4f6": {
+  "ts": "2026-07-30T15:19:37.000000Z",
+  "block": 23417813,
+  "frm": "0x6e96e5d84513996ef7df308af345f9283c4da284",
+  "token": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+  "censored": false
+ },
+ "0x77aa0c2062656838a08234c104da3a2fdcc27fb6": {
+  "ts": "2026-08-11T04:13:25.000000Z",
+  "block": 33364912,
+  "frm": "0xfb4b4b17c87075c94469565ea6f3904f61bf2e51",
+  "token": "0x411efb0e7f985935daec3d4c3ebaea0d0ad7d89f",
+  "censored": true
+ },
+ "0x8900fc68fd28a36b40aa71e0b0cbc69f47eb6c56": {
+  "ts": "2026-08-17T12:23:44.000000Z",
+  "block": 38833785,
+  "frm": "0xbfa7207799d98b5b29323f8640a403bae2a5b153",
+  "token": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "censored": false
+ },
+ "0x0d6d8c3627cb96021dfcaf7785dc4ba2dba00a88": {
+  "ts": "2026-08-29T10:39:52.000000Z",
+  "block": 49090000,
+  "frm": "0x778e344d7e92caec1e51e7db4d4c11cfadc1008a",
+  "token": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+  "censored": true
+ },
+ "0x5ba6424d6af8895efb2edb2cfd4f7a5decccd912": {
+  "ts": "2026-08-30T03:44:49.000000Z",
+  "block": 49698635,
+  "frm": "0x39adb8acd07427d338b5f1afab436a04abfdb7c4",
+  "token": "0xd917b029c761d264c6a312bbbcda868658ef86a6",
+  "censored": true
+ },
+ "0x09ebb58eb7544359a0b4e4a954e18a00d50da0fd": {
+  "ts": "2026-08-30T00:59:44.000000Z",
+  "block": 49600588,
+  "frm": "0x22ae7e8c970eea0391b016253ed53470df1a0d53",
+  "token": "0x6330d8c3178a418788df01a47479c0ce7ccf450b",
+  "censored": true
+ },
+ "0x09530b34098f9f82c44fb51841c25f33305c6777": {
+  "ts": "2026-08-17T12:30:54.000000Z",
+  "block": 38838070,
+  "frm": "0x1fe005d9cc3044885bb7568f8c1792ed55c35344",
+  "token": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "censored": true
+ },
+ "0x05e558123775620826902dc30caa043c89e7cd82": {
+  "ts": "2026-09-01T13:25:13.000000Z",
+  "block": 51753537,
+  "frm": "0xd4eb21209c4d6093f80b5b84f5c45cc093ea14a3",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": true
+ },
+ "0x163a6ceac0e2fb07aaa8fda3ed612fe9451f0c04": {
+  "ts": "2026-09-01T16:05:32.000000Z",
+  "block": 51848583,
+  "frm": "0xa72e859d5a2a98d820c073bacdf5a9f8ba78082d",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": true
+ },
+ "0x118214748245a7bf23057c696e766420236c7f74": {
+  "ts": "2026-08-30T15:44:20.000000Z",
+  "block": 50125457,
+  "frm": "0x8bf3c3b8e6e958bb5be57bc8fcba111a8113ac0b",
+  "token": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+  "censored": false
+ },
+ "0xea223d6f5c64b80bdb266e300581248d298e4f62": {
+  "ts": "2026-08-10T14:35:20.000000Z",
+  "block": 32874490,
+  "frm": "0x4a36005ed0c421d3ae52b899af9aed6cd220e05a",
+  "token": "0x86923f96303d656e4aa86d9d42d1e57ad2023fdc",
+  "censored": false
+ },
+ "0xbfe467f1c68422986b1d9390e65f067b2d8cb4c4": {
+  "ts": "2026-08-10T15:54:40.000000Z",
+  "block": 32922008,
+  "frm": "0x73ff3adafa43db16281ab29220778fe47dedaaba",
+  "token": "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a",
+  "censored": false
+ },
+ "0xd4b9321dfd4a9d3269e7dc4d05ed76fd4545c0c3": {
+  "ts": "2026-08-30T21:17:35.000000Z",
+  "block": 50322873,
+  "frm": "0x1f8b25cc3cdfbfe80553936ab8be742d1c38819a",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0xc083ae7e5eb0afba093c0d10b93d39ba2b649a85": {
+  "ts": "2026-09-02T07:16:42.000000Z",
+  "block": 52389556,
+  "frm": "0x847b076396265f8b3c06fc22865bb472377f0334",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": false
+ },
+ "0x8ee335465499d415b6a09c4e3abe9b0a826a3fa8": {
+  "ts": "2026-08-31T01:02:23.000000Z",
+  "block": 50456166,
+  "frm": "0xd3afeb2a57f70ef218aa82451c51b2fb0416ac9e",
+  "token": "0x2e0847e8910a9732eb3fb1bb4b70a580adad4fe3",
+  "censored": false
+ },
+ "0x0323647ec308137814286080d9464d45669e0d3d": {
+  "ts": "2026-08-24T00:39:22.000000Z",
+  "block": 44441916,
+  "frm": "0x17578c0e0d15da44f31677263114f71ae76653ea",
+  "token": "0xec262a75e413fafd0df80480274532c79d42da09",
+  "censored": false
+ },
+ "0x69a174fd66ae1b28d4ab4dc5c09f61252146cc7d": {
+  "ts": "2026-08-29T17:42:40.000000Z",
+  "block": 49341027,
+  "frm": "0xe33e9e479df8802cb0866d5d05258bec4cf62948",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0xe880eb15c4e27762f86a720b70f3cd53e85bfe6b": {
+  "ts": "2026-08-15T14:04:55.000000Z",
+  "block": 37172321,
+  "frm": "0xd52e81999b7dfe5092cac5b1be6266067388b1fc",
+  "token": "0xf0c4bf4c582cb3836e98394b1d4e7b7281101be8",
+  "censored": false
+ },
+ "0xdc043438102263a9e4db7c71e0b047e0d04c9729": {
+  "ts": "2026-07-24T04:15:07.000000Z",
+  "block": 17854009,
+  "frm": "0x6682d7a0541261db789441df9bcc48c4c023980e",
+  "token": "0x6330d8c3178a418788df01a47479c0ce7ccf450b",
+  "censored": false
+ },
+ "0x3a9021c52c7b5b24ccce3ee4e608d835e053f392": {
+  "ts": "2026-08-29T20:24:07.000000Z",
+  "block": 49436823,
+  "frm": "0x2af2c2792e9a6e60d3c1be469ed35064d7a0cee5",
+  "token": "0x6330d8c3178a418788df01a47479c0ce7ccf450b",
+  "censored": false
+ },
+ "0xa2ad64b2d890a59ce18c0ddd51a7de9ef69eb3da": {
+  "ts": "2026-08-27T10:07:52.000000Z",
+  "block": 47359186,
+  "frm": "0xa89e3852db570da7f97c4644eaf864d74324d415",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0x6fa111d453cae72e0f89404616d9f71ba3fcc83c": {
+  "ts": "2026-08-04T04:38:45.000000Z",
+  "block": 27343310,
+  "frm": "0xe311d712bd0669896bcb47f38845ad71a641b8be",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0x47f7197d0ca4f7418e67128f87ac58d7694c5e6e": {
+  "ts": "2026-08-24T06:52:29.000000Z",
+  "block": 44665148,
+  "frm": "0x2ce79485d20dfdce0e15434184e2fa4fd1391cc6",
+  "token": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+  "censored": true
+ },
+ "0xee0cb85c2670b7d880febb70e6da21ace460153c": {
+  "ts": "2026-09-01T17:01:33.000000Z",
+  "block": 51881667,
+  "frm": "0xe33e9e479df8802cb0866d5d05258bec4cf62948",
+  "token": "0x5e81213613b6b86eab4c6c50d718d34359459786",
+  "censored": false
+ },
+ "0xac6b177577a141f33357de66cc833a92ccdec7d8": {
+  "ts": "2026-07-19T04:21:08.000000Z",
+  "block": 13549831,
+  "frm": "0xacc79e7b9f8dbb22e197c76d92ff8c0472ac81b4",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0x4c46ea64eaa0bebff465c8fc884529620e1f38cc": {
+  "ts": "2026-07-16T18:43:09.000000Z",
+  "block": 11481837,
+  "frm": "0x006102b16a04c20306a28b652745d3973d7d24fa",
+  "token": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+  "censored": false
+ },
+ "0xf4efc353b73df5c4a12775f9e1bc218bdf97ad89": {
+  "ts": "2026-08-24T12:52:46.000000Z",
+  "block": 44880739,
+  "frm": "0x39adb8acd07427d338b5f1afab436a04abfdb7c4",
+  "token": "0xb90a19ff0af67f7779aff50a882a9cff42446400",
+  "censored": true
+ },
+ "0x3cd6ae6efda0f04a997bc648a7b0757f581ea03e": {
+  "ts": "2026-08-18T19:10:29.000000Z",
+  "block": 39938903,
+  "frm": "0x65050a9b7e5075a2ba5ced7b1b64ee66262c40dc",
+  "token": "0x5e81213613b6b86eab4c6c50d718d34359459786",
+  "censored": false
+ },
+ "0x8a7fc095b8571204cc5d42efee44d9811397c834": {
+  "ts": "2026-08-31T23:36:31.000000Z",
+  "block": 51260726,
+  "frm": "0x3b52ca6c38245b8f73f541090c6cc9929919bcd3",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0x23f221dcc740e7d99385b404f8f9199fa058ba3f": {
+  "ts": "2026-07-27T21:59:31.000000Z",
+  "block": 21072670,
+  "frm": "0x65050a9b7e5075a2ba5ced7b1b64ee66262c40dc",
+  "token": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+  "censored": false
+ },
+ "0x1629ec52f525f35968e416877f028554a4bc928f": {
+  "ts": "2026-09-02T13:00:51.000000Z",
+  "block": 52594406,
+  "frm": "0xe33e9e479df8802cb0866d5d05258bec4cf62948",
+  "token": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "censored": false
+ },
+ "0xc541ab1cf4f737f2c2bfe297b52d8ca6cd6fc0fa": null,
+ "0xb9f6063d52d79eaeaa7557c55218ecb9dffc3e36": {
+  "ts": "2026-09-01T01:04:29.000000Z",
+  "block": 51312986,
+  "frm": "0xcda2f395a62a6b86a59d392d343dd1a55571b3c6",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0x820d7ec267aaf6fda1f2237cc236a21c35363c64": {
+  "ts": "2026-09-02T07:55:24.000000Z",
+  "block": 52412598,
+  "frm": "0xe33e9e479df8802cb0866d5d05258bec4cf62948",
+  "token": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "censored": false
+ },
+ "0x5ab7213685e9f61b990e1484a7403b783c872230": {
+  "ts": "2026-08-29T14:43:44.000000Z",
+  "block": 49234965,
+  "frm": "0x9982538f41f2ae29ddb9d3d9307010052984fdbb",
+  "token": "0xf0c4bf4c582cb3836e98394b1d4e7b7281101be8",
+  "censored": false
+ },
+ "0x60c366306beccfc9cefd5dd96c721f78b7d18503": {
+  "ts": "2026-08-22T19:17:16.000000Z",
+  "block": 43387739,
+  "frm": "0x64f0d3f4ab58665641da791a930bb5864cc56c23",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0x0df9a8932b1ccacfcad3f1409431ebf8800f42e8": {
+  "ts": "2026-08-29T17:11:35.000000Z",
+  "block": 49322565,
+  "frm": "0x000000000022b747bc1057d9497efe6d1c69296f",
+  "token": "0x2e0847e8910a9732eb3fb1bb4b70a580adad4fe3",
+  "censored": true
+ },
+ "0x839224cc9eb3bc51bbe458234f798f5809997dc3": {
+  "ts": "2026-08-27T02:41:26.000000Z",
+  "block": 47093698,
+  "frm": "0xafc8a3d8aa7f6bd5a753be3baa847190887444f3",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": false
+ },
+ "0x5080fc6a4f9e6f035ee88a5a24f5a39aa7caa72a": {
+  "ts": "2026-09-02T14:14:22.000000Z",
+  "block": 52638035,
+  "frm": "0x44db4ecd5b0048d55c762e32ff53afaeccf75ed7",
+  "token": "0xc9a981fee1f9dec688bb123ccdecc63d0debfc4e",
+  "censored": false
+ },
+ "0xc7ca69dd20f095635868cc5f85beb5fac7091b04": {
+  "ts": "2026-08-14T15:28:25.000000Z",
+  "block": 36360501,
+  "frm": "0x65050a9b7e5075a2ba5ced7b1b64ee66262c40dc",
+  "token": "0xd5f3879160bc7c32ebb4dc785f8a4f505888de68",
+  "censored": false
+ },
+ "0xd5129652177a44919959d2189026440a024dd61f": {
+  "ts": "2026-08-31T18:34:43.000000Z",
+  "block": 51081718,
+  "frm": "0xbfa7207799d98b5b29323f8640a403bae2a5b153",
+  "token": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "censored": true
+ },
+ "0x1ce1c98d0f2295cffb978503a1be4c2ef43aaa96": {
+  "ts": "2026-08-29T17:26:42.000000Z",
+  "block": 49331541,
+  "frm": "0xa7bb1ac63bbab0c44316e6c8c455213441689167",
+  "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+  "censored": false
+ },
+ "0x414d93e663c3e780f40541d752ac7baaa1f0aa9b": {
+  "ts": "2026-09-02T13:54:53.000000Z",
+  "block": 52626482,
+  "frm": "0x4fdaab9427aff5d8e2fff9d9f9b5dd3a9dc014d6",
+  "token": "0x1d11f0496982706c5e14a514d4e79f2e6bde4516",
+  "censored": true
+ },
+ "0x468abfa03d81d1ddbe0d5c51ca296abf1490e005": {
+  "ts": "2026-08-25T17:24:16.000000Z",
+  "block": 45905426,
+  "frm": "0xbed65f995c626d573843264b05a30dabd76c61a3",
+  "token": "0xe93237c50d904957cf27e7b1133b510c669c2e74",
+  "censored": false
+ },
+ "0x7d012ce5f84fcb80909aeaca20766519edfeef1c": {
+  "ts": "2026-09-01T06:55:46.000000Z",
+  "block": 51521855,
+  "frm": "0x1631fcc5aec4f54c5f9ddb933845b876294c8e93",
+  "token": "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a",
+  "censored": false
+ },
+ "0xe364fe86828176783dfceefd0b19e8b32053c84f": {
+  "ts": "2026-08-10T00:01:13.000000Z",
+  "block": 32351094,
+  "frm": "0x14e964edacb6b6770a5e70d6abb74303910724a0",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0x4b4f170b2e9580cb62cdea9c0fc05cd1971e832e": {
+  "ts": "2026-08-31T19:14:06.000000Z",
+  "block": 51105057,
+  "frm": "0xbf3d44f06afecd22322f6eac7607a590ebbbf3e6",
+  "token": "0x9b23573b156b52565012f5ce02cdf60afbaa70be",
+  "censored": false
+ },
+ "0x03d7f86349625282a2602b7870d5ae18ec1918f4": {
+  "ts": "2026-09-01T04:29:44.000000Z",
+  "block": 51434997,
+  "frm": "0x32ae4c4fbfe505052a9c772b0e27882d4d87fae0",
+  "token": "0xc0d6457c16cc70d6790dd43521c899c87ce02f35",
+  "censored": false
+ },
+ "0xd36c2cbe9dd5f872b2203c27bf0fce57e0465879": {
+  "ts": "2026-08-12T06:57:36.000000Z",
+  "block": 34329168,
+  "frm": "0x0482ec5e01e52df32a75646d0ec7330aaaecb65c",
+  "token": "0x411efb0e7f985935daec3d4c3ebaea0d0ad7d89f",
+  "censored": false
+ },
+ "0x4124a51ef45b70c9c3afce77b04b0242063080f7": null,
+ "0xf5eb41f1100fbb18419b926fbe7fb4a5e34e2575": {
+  "ts": "2026-08-25T18:33:25.000000Z",
+  "block": 45946814,
+  "frm": "0xc4bd6adc82115c6cc74f487b39489a3792cb11fe",
+  "token": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+  "censored": false
+ },
+ "0x1a97e422e4f58f5121d6144910fc5ebe964d0df0": {
+  "ts": "2026-08-31T18:34:58.000000Z",
+  "block": 51081862,
+  "frm": "0xa1853edcb0f0dea1ea3ffa9fec198add8d7290ab",
+  "token": "0xff080c8ce2e5feadaca0da81314ae59d232d4afd",
+  "censored": false
+ },
+ "0x5828be1c9d9016bf0f7ee7286334396723f121bd": {
+  "ts": "2026-09-02T09:25:16.000000Z",
+  "block": 52466071,
+  "frm": "0x1dae8fee94451fc5bed759322ca772f470f064c7",
+  "token": "0xc9a981fee1f9dec688bb123ccdecc63d0debfc4e",
+  "censored": true
+ },
+ "0x81792dc7ab6e2dacf9e8390df2aeb5a43ccc228b": {
+  "ts": "2026-08-24T13:28:51.000000Z",
+  "block": 44902327,
+  "frm": "0xe8b5faf559033a9515142fa1ca4d142565de2bb1",
+  "token": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+  "censored": false
+ },
+ "0x8a91b5ba2420f23cfa3b2d9e71dd03bcfd5865de": {
+  "ts": "2026-08-16T10:15:58.000000Z",
+  "block": 37896593,
+  "frm": "0x47846128e74242f1a7cc0c58b2f4dcc4cb793ff6",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": false
+ },
+ "0x6335abb3918b1fbefbbcba1d6f6f986d7a91de1e": {
+  "ts": "2026-08-29T18:41:07.000000Z",
+  "block": 49375692,
+  "frm": "0x39adb8acd07427d338b5f1afab436a04abfdb7c4",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": true
+ },
+ "0xccc5e509a3fbb984b94d570c5b666fd5065d101a": {
+  "ts": "2026-08-31T21:56:04.000000Z",
+  "block": 51201181,
+  "frm": "0xd3afeb2a57f70ef218aa82451c51b2fb0416ac9e",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0x6956c63527e53f144727ac3b6fd0d121b33c1195": {
+  "ts": "2026-08-27T12:44:33.000000Z",
+  "block": 47452343,
+  "frm": "0x55642a3f10f1af5145d3d59021b1d6b03bb8692c",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": true
+ },
+ "0x77f7f1e4eeacd9fe3e0bcac0c524bedab24f0281": {
+  "ts": "2026-08-28T16:15:11.000000Z",
+  "block": 48433478,
+  "frm": "0x65050a9b7e5075a2ba5ced7b1b64ee66262c40dc",
+  "token": "0x86923f96303d656e4aa86d9d42d1e57ad2023fdc",
+  "censored": false
+ },
+ "0xc7cb376a05959515bd914ac1044c409e125ecd9b": {
+  "ts": "2026-08-05T06:54:18.000000Z",
+  "block": 28285870,
+  "frm": "0x9f8dfe32cd3c4d9ea2c988458cff01a03e42a7c0",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0xe2f45b7e487273135b27dc2620782f7c671a6feb": {
+  "ts": "2026-07-29T10:41:43.000000Z",
+  "block": 22389780,
+  "frm": "0x006102b16a04c20306a28b652745d3973d7d24fa",
+  "token": "0xd917b029c761d264c6a312bbbcda868658ef86a6",
+  "censored": false
+ },
+ "0xaa4083b1b0da88120572ee564d8a2a15011a1ce9": {
+  "ts": "2026-09-01T19:39:41.000000Z",
+  "block": 51975544,
+  "frm": "0xe33e9e479df8802cb0866d5d05258bec4cf62948",
+  "token": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+  "censored": false
+ },
+ "0x6f420681d047bdc821b2c5366efb4faa8456a7ae": {
+  "ts": "2026-08-14T13:29:02.000000Z",
+  "block": 36288995,
+  "frm": "0x4c9893a583349083253ae4e3da610e7815897bad",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": false
+ },
+ "0x6111552054fcb6ead9b7fccb672b462e96b1779f": {
+  "ts": "2026-09-01T14:23:32.000000Z",
+  "block": 51788175,
+  "frm": "0xe33e9e479df8802cb0866d5d05258bec4cf62948",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0xbcab0c8436c55d3e3484a76d64fc47e5393ebd3d": {
+  "ts": "2026-08-28T19:47:56.000000Z",
+  "block": 48559944,
+  "frm": "0x55642a3f10f1af5145d3d59021b1d6b03bb8692c",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": true
+ },
+ "0xcdd13f4e0f4bac2b6cdb066aff01509d6c5bb494": {
+  "ts": "2026-08-17T22:16:51.000000Z",
+  "block": 39188859,
+  "frm": "0xb92fe925dc43a0ecde6c8b1a2709c170ec4fff4f",
+  "token": "0xff080c8ce2e5feadaca0da81314ae59d232d4afd",
+  "censored": false
+ },
+ "0x72b4883e297db07633efeb04293b35f2e8f6096e": {
+  "ts": "2026-08-23T22:32:50.000000Z",
+  "block": 44366115,
+  "frm": "0xe8b5faf559033a9515142fa1ca4d142565de2bb1",
+  "token": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+  "censored": false
+ },
+ "0xa631c09da93dd3429e9dfbc9e67608dccd1654c2": {
+  "ts": "2026-08-28T14:27:47.000000Z",
+  "block": 48369931,
+  "frm": "0xc3ceb87b186b687a7a3a8ed475f541352d3ebbcc",
+  "token": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+  "censored": false
+ },
+ "0x671ccaac7a7b90b163bc353015675e41f2efd985": {
+  "ts": "2026-09-02T00:56:02.000000Z",
+  "block": 52163087,
+  "frm": "0x55642a3f10f1af5145d3d59021b1d6b03bb8692c",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": true
+ },
+ "0x0404fd45a0370accaac4ab7d8f76f8de84542f55": {
+  "ts": "2026-08-03T13:04:21.000000Z",
+  "block": 26783764,
+  "frm": "0x39adb8acd07427d338b5f1afab436a04abfdb7c4",
+  "token": "0xc72b96e0e48ecd4dc75e1e45396e26300bc39681",
+  "censored": true
+ },
+ "0x14e2b8741b94c992b5c14ccf08fa27516d4a7d91": {
+  "ts": "2026-08-29T00:53:54.000000Z",
+  "block": 48741737,
+  "frm": "0x65050a9b7e5075a2ba5ced7b1b64ee66262c40dc",
+  "token": "0x1d11f0496982706c5e14a514d4e79f2e6bde4516",
+  "censored": false
+ },
+ "0xaaf7818a5d17c71dd4c402977a42d309ef6d4985": {
+  "ts": "2026-09-02T10:35:37.000000Z",
+  "block": 52507940,
+  "frm": "0xc673260a702a8b97bce8bb97fd8841d6febf4427",
+  "token": "0xd5f3879160bc7c32ebb4dc785f8a4f505888de68",
+  "censored": false
+ },
+ "0xd78c09bc0c828046d2e59cc86a6c0e3d0f8b62c1": {
+  "ts": "2026-09-02T14:54:50.000000Z",
+  "block": 52661980,
+  "frm": "0xe33e9e479df8802cb0866d5d05258bec4cf62948",
+  "token": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "censored": false
+ },
+ "0xaf8bfe31b257839731da01aad316b287a0fd62dd": {
+  "ts": "2026-09-02T04:17:25.000000Z",
+  "block": 52282789,
+  "frm": "0xd3afeb2a57f70ef218aa82451c51b2fb0416ac9e",
+  "token": "0xe93237c50d904957cf27e7b1133b510c669c2e74",
+  "censored": false
+ },
+ "0x3b85415591da73e6ad6f7277b4ebab97cbcbdd3a": {
+  "ts": "2026-08-31T16:38:41.000000Z",
+  "block": 51012981,
+  "frm": "0x048ab452c2699be0344fe60350de7f1d8b2bbb6f",
+  "token": "0x48e39e56acdba37b09020c0b734a613c9a2f100a",
+  "censored": false
+ },
+ "0xa52ac1adf89207f966cc4146a4aa0c927746d7d7": {
+  "ts": "2026-09-01T19:14:15.000000Z",
+  "block": 51960404,
+  "frm": "0xd3afeb2a57f70ef218aa82451c51b2fb0416ac9e",
+  "token": "0x5e81213613b6b86eab4c6c50d718d34359459786",
+  "censored": false
+ },
+ "0x3100f0d4fca4ae2d153a16b3d3e199d2a3fe7e15": {
+  "ts": "2026-08-30T01:09:03.000000Z",
+  "block": 49606137,
+  "frm": "0x02a54417aba7a8429be0ea4532d965665c1f2201",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0x0c64ac00e2402835a62d37b41547d4788dcefbe9": {
+  "ts": "2026-07-27T09:51:08.000000Z",
+  "block": 20638013,
+  "frm": "0x6e96e5d84513996ef7df308af345f9283c4da284",
+  "token": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+  "censored": false
+ },
+ "0x7ad6b52f0ac72da72c5f34f9caa358b6ddaf6bf8": {
+  "ts": "2026-08-30T01:16:35.000000Z",
+  "block": 49610599,
+  "frm": "0x02a54417aba7a8429be0ea4532d965665c1f2201",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0x212c2e603f8aa0c7634edfa0326fe575d9d955e6": {
+  "ts": "2026-08-12T09:08:57.000000Z",
+  "block": 34408027,
+  "frm": "0xa1d65242d367501d9a261389a69005e584f4786a",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": true
+ },
+ "0x9234885a3fbd27cc2232e33674460fc2130d6b43": {
+  "ts": "2026-08-27T19:20:25.000000Z",
+  "block": 47687661,
+  "frm": "0x65050a9b7e5075a2ba5ced7b1b64ee66262c40dc",
+  "token": "0x5e81213613b6b86eab4c6c50d718d34359459786",
+  "censored": false
+ },
+ "0x405a0422051e935b906adfcbce13653b9699b3cc": {
+  "ts": "2026-08-21T22:55:30.000000Z",
+  "block": 42656874,
+  "frm": "0xb42129707ceb8f01970d98009cea7ac7793971ee",
+  "token": "0xa30fa36db767ad9ed3f7a60fc79526fb4d56d344",
+  "censored": false
+ },
+ "0x2e1948c37b39ce9aeb9beb80934f5a1c45e784fa": {
+  "ts": "2026-08-31T18:32:35.000000Z",
+  "block": 51080472,
+  "frm": "0xbf3d44f06afecd22322f6eac7607a590ebbbf3e6",
+  "token": "0x9b23573b156b52565012f5ce02cdf60afbaa70be",
+  "censored": false
+ },
+ "0xfa719c720e77b64f62711509418718fa88f0fa6a": {
+  "ts": "2026-08-26T06:29:25.000000Z",
+  "block": 46373323,
+  "frm": "0xb477751b76cf82d00a686a1232f5fcd772414af3",
+  "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+  "censored": false
+ },
+ "0x9c701dec4120629207b519cfc4fca620b8b7de22": {
+  "ts": "2026-07-23T23:36:14.000000Z",
+  "block": 17687226,
+  "frm": "0x0b1cc94e1474fd61f5efa628f32afed69ac08328",
+  "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+  "censored": true
+ },
+ "0xc8d3dbde405f21e0fa68f8213a90bc1bdb38840f": {
+  "ts": "2026-08-14T21:50:46.000000Z",
+  "block": 36589542,
+  "frm": "0xc275aedde2d2e7f4ecf6c9d7bac18463e38e38e6",
+  "token": "0x1d11f0496982706c5e14a514d4e79f2e6bde4516",
+  "censored": false
+ },
+ "0xe700f1be3178b1724ac75522b61811b8d2004617": {
+  "ts": "2026-08-30T18:43:09.000000Z",
+  "block": 50231586,
+  "frm": "0xf4b646e7ca0bb5c8d84007e00b683741b8634e18",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": true
+ },
+ "0x5e4039a997cc7c871aa35f8c7ca2dd549138f66f": {
+  "ts": "2026-07-20T21:00:55.000000Z",
+  "block": 15007998,
+  "frm": "0xab1e92d71bc7b87682a74a248839a745c3bb4dd9",
+  "token": "0x92fd66527192e3e61d4ddd13322aa222de86f9b5",
+  "censored": false
+ },
+ "0xcdd87aa7caba9520a069d6334ad80a60de7571fe": {
+  "ts": "2026-08-31T05:54:17.000000Z",
+  "block": 50629730,
+  "frm": "0xe33e9e479df8802cb0866d5d05258bec4cf62948",
+  "token": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "censored": false
+ },
+ "0x6463b64362cf5d4ad348fa83be61c82dba4fbd97": {
+  "ts": "2026-08-31T13:48:15.000000Z",
+  "block": 50912100,
+  "frm": "0x82397a2c356394b86c2297ffbbb448f68e262b8b",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0xb862e22bb1fe5f50d98c6edfe9a22f53bb3d919a": {
+  "ts": "2026-08-31T15:44:14.000000Z",
+  "block": 50980742,
+  "frm": "0x8f775fdd095bc30a6df5fe9804704364b747bf71",
+  "token": "0xc9a981fee1f9dec688bb123ccdecc63d0debfc4e",
+  "censored": false
+ },
+ "0xd34c374a8aae6c39e7cd239f3e9a9b030b917eda": {
+  "ts": "2026-07-25T13:52:23.000000Z",
+  "block": 19059953,
+  "frm": "0x524578c304f0ae80f3892d427f275ea82f996b20",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0x15b67900f2e054838e3251a780d94bcc0c973f56": {
+  "ts": "2026-08-30T20:35:00.000000Z",
+  "block": 50297716,
+  "frm": "0x49cf942c92d636404319c98cf78ba1751217b5e4",
+  "token": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "censored": false
+ },
+ "0xbeaeddcb49bc8f130ac914255c42d04636b0c82e": {
+  "ts": "2026-09-02T09:47:14.000000Z",
+  "block": 52479154,
+  "frm": "0x44db4ecd5b0048d55c762e32ff53afaeccf75ed7",
+  "token": "0xc9a981fee1f9dec688bb123ccdecc63d0debfc4e",
+  "censored": false
+ },
+ "0x29d5ebbade5c9a004328777b20ebf0a2fff9a3f9": {
+  "ts": "2026-08-31T14:36:35.000000Z",
+  "block": 50940736,
+  "frm": "0xe33e9e479df8802cb0866d5d05258bec4cf62948",
+  "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+  "censored": false
+ },
+ "0x1c9e79c4faf9b4b6fadf6019a3724c6a73b4f962": {
+  "ts": "2026-08-28T17:05:07.000000Z",
+  "block": 48463140,
+  "frm": "0x006102b16a04c20306a28b652745d3973d7d24fa",
+  "token": "0xa30fa36db767ad9ed3f7a60fc79526fb4d56d344",
+  "censored": true
+ },
+ "0x70775c99f294397cd79f874eb3510d4660945c45": {
+  "ts": "2026-09-02T09:50:20.000000Z",
+  "block": 52480988,
+  "frm": "0x4d69d9c4d51afa1b2a075b48aa9394d09a5df926",
+  "token": "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a",
+  "censored": false
+ },
+ "0xf045e66ddb91914b16cce50e22db75d5e14d5c7c": {
+  "ts": "2026-08-30T21:35:51.000000Z",
+  "block": 50333615,
+  "frm": "0xbe97710cc792b3037c72cadb72f07f02a09f7285",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0x0b9a03a70e64340debe13e5f020dbeae408a69b5": {
+  "ts": "2026-07-21T02:43:23.000000Z",
+  "block": 15213061,
+  "frm": "0x006102b16a04c20306a28b652745d3973d7d24fa",
+  "token": "0xdf0992e440dd0be65bd8439b609d6d4366bf1cb5",
+  "censored": false
+ },
+ "0x29e0b3d861cf908df2102b03df1fa23c631ef16f": {
+  "ts": "2026-09-02T13:09:12.000000Z",
+  "block": 52599364,
+  "frm": "0xd3afeb2a57f70ef218aa82451c51b2fb0416ac9e",
+  "token": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+  "censored": false
+ },
+ "0x5a00e397deef758064ab4cc08af351eee2374162": {
+  "ts": "2026-09-01T02:45:37.000000Z",
+  "block": 51373080,
+  "frm": "0xd3afeb2a57f70ef218aa82451c51b2fb0416ac9e",
+  "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+  "censored": false
+ },
+ "0x3ad04b1d97ee8ab63c30f16070d264811fef0f25": {
+  "ts": "2026-08-30T06:05:20.000000Z",
+  "block": 49782050,
+  "frm": "0x515e79b395d4105f4fa700f153175490dc2c1230",
+  "token": "0xec262a75e413fafd0df80480274532c79d42da09",
+  "censored": false
+ },
+ "0x345e48768a65ae596ac6a2aee71202753c4866f5": null,
+ "0x1e39dd89daa19356c525542987e644e13b90654b": {
+  "ts": "2026-09-02T14:35:53.000000Z",
+  "block": 52650800,
+  "frm": "0xd3afeb2a57f70ef218aa82451c51b2fb0416ac9e",
+  "token": "0xc0d6457c16cc70d6790dd43521c899c87ce02f35",
+  "censored": false
+ },
+ "0xda5831453b85468ea50166769664440e46a70c75": {
+  "ts": "2026-08-22T19:19:22.000000Z",
+  "block": 43388996,
+  "frm": "0x64f0d3f4ab58665641da791a930bb5864cc56c23",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0x98304522ae254c49ba9936a917392f70635899ad": {
+  "ts": "2026-08-31T02:18:56.000000Z",
+  "block": 50501681,
+  "frm": "0xd890a736f3960249b601522acfe6f42f51f7a792",
+  "token": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+  "censored": false
+ },
+ "0x8610faa252dc70ba711bd6f786f73a9663204e2f": {
+  "ts": "2026-07-18T03:40:40.000000Z",
+  "block": 12665208,
+  "frm": "0x539cdd042c2f3d93ebc5be7dfff0c79f3b4fabf0",
+  "token": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+  "censored": false
+ },
+ "0xfa38fdcc3efb9a45724d36f8b05f1240bc65b903": {
+  "ts": "2026-07-20T16:14:33.000000Z",
+  "block": 14836488,
+  "frm": "0xacc79e7b9f8dbb22e197c76d92ff8c0472ac81b4",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0x00b2aa95716293ee42340a90c728a0bdb683ad64": {
+  "ts": "2026-07-29T06:40:40.000000Z",
+  "block": 22245759,
+  "frm": "0xe645cfbeaa2ceb08eab41fbfd8089113d255a87a",
+  "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+  "censored": false
+ },
+ "0xe8d47c2c35fb7e2169d60cba3f11212c72d2c53e": {
+  "ts": "2026-09-02T15:23:27.000000Z",
+  "block": 52678955,
+  "frm": "0xb59ddca644696dcb4acc577ce6c6118fc711613d",
+  "token": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "censored": false
+ },
+ "0xf6ab44ff27d4cc5e78e069f1f83831a4a24c5e04": {
+  "ts": "2026-08-28T16:50:09.000000Z",
+  "block": 48454247,
+  "frm": "0x4703b278973fb1d0098a06c0e70d0621b522a23c",
+  "token": "0x1d11f0496982706c5e14a514d4e79f2e6bde4516",
+  "censored": false
+ },
+ "0x5b82e5c6d3e0848da21cf1c993585ec5a77152bc": {
+  "ts": "2026-08-31T13:51:34.000000Z",
+  "block": 50914084,
+  "frm": "0x9170c8b77fa5e84e8dac1a77c2a1ced65a58a45b",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": false
+ },
+ "0x59cb6c1d0a4d987fdda58de37c5f8584915739d1": {
+  "ts": "2026-08-06T18:08:32.000000Z",
+  "block": 29552326,
+  "frm": "0x1182f62027be728a77a4e98ae23279264ffb701e",
+  "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+  "censored": true
+ },
+ "0x861daa6c31b6330e8bc575ddd577551347658a16": {
+  "ts": "2026-08-15T13:30:03.000000Z",
+  "block": 37151447,
+  "frm": "0xb4acbc082b5e7ded571c98ee4257778a9d784b36",
+  "token": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "censored": true
+ },
+ "0x925615eafcdd610020e1a83aa8f380fbece84c8c": {
+  "ts": "2026-08-26T22:07:01.000000Z",
+  "block": 46930564,
+  "frm": "0xeac421adfeba93f3012362a5ab8203e0f2c6b666",
+  "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+  "censored": false
+ },
+ "0x4e8d0422668e835a92de54c4a263bf1f1ed235ed": {
+  "ts": "2026-08-29T17:39:55.000000Z",
+  "block": 49339425,
+  "frm": "0x39adb8acd07427d338b5f1afab436a04abfdb7c4",
+  "token": "0x6330d8c3178a418788df01a47479c0ce7ccf450b",
+  "censored": true
+ },
+ "0xd53d3bf094809d7ef56658d43cfb7dd17579d148": {
+  "ts": "2026-08-17T13:12:09.000000Z",
+  "block": 38862745,
+  "frm": "0xc5ca9ff08e7bbd134b6a62c5a5f0f4821ff5e93b",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": true
+ },
+ "0x5ee4f1c4d157534534db1f1db1c299e168d48212": {
+  "ts": "2026-08-30T15:39:38.000000Z",
+  "block": 50122671,
+  "frm": "0xd52e81999b7dfe5092cac5b1be6266067388b1fc",
+  "token": "0x411efb0e7f985935daec3d4c3ebaea0d0ad7d89f",
+  "censored": true
+ },
+ "0xd5a6d67addc57d7daff6c1267b4c51fc9e607b69": {
+  "ts": "2026-09-01T13:46:17.000000Z",
+  "block": 51766051,
+  "frm": "0x65050a9b7e5075a2ba5ced7b1b64ee66262c40dc",
+  "token": "0xd5f3879160bc7c32ebb4dc785f8a4f505888de68",
+  "censored": true
+ },
+ "0xfa9521721ae7459eb474fff2eaef7297c67325f6": {
+  "ts": "2026-09-02T08:03:32.000000Z",
+  "block": 52417428,
+  "frm": "0xe33e9e479df8802cb0866d5d05258bec4cf62948",
+  "token": "0x4ea005168d7f09a7a0ba9d1def21a479950e44c2",
+  "censored": false
+ },
+ "0xb5af6cda2a4afc2b7c6bf49ab25b8cb39df7ce64": {
+  "ts": "2026-09-01T19:09:54.000000Z",
+  "block": 51957821,
+  "frm": "0x65050a9b7e5075a2ba5ced7b1b64ee66262c40dc",
+  "token": "0xe93237c50d904957cf27e7b1133b510c669c2e74",
+  "censored": true
+ },
+ "0x1a209e1f74de2a0799c6ca13bd20bf6fcba51a0d": {
+  "ts": "2026-08-27T04:32:11.000000Z",
+  "block": 47159521,
+  "frm": "0x49d2675ea20bd5188ac30e331eb6c618f752ee7b",
+  "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+  "censored": false
+ },
+ "0xa7fc81cc00c897a49d325e81031c0f7f599320ea": {
+  "ts": "2026-08-14T00:00:32.000000Z",
+  "block": 35804870,
+  "frm": "0x39adb8acd07427d338b5f1afab436a04abfdb7c4",
+  "token": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+  "censored": true
+ },
+ "0x6edcfab90a29ed58898fef62dbdd638317770d3a": {
+  "ts": "2026-08-28T06:33:03.000000Z",
+  "block": 48087563,
+  "frm": "0x82753967e6998382fee953067083684d98b2afc1",
+  "token": "0xe0444ef8bf4ed74f74fd73686e2ddf4c1c5591e8",
+  "censored": false
+ },
+ "0x7bfc58272441418832149d65826407928548308c": {
+  "ts": "2026-08-30T22:25:57.000000Z",
+  "block": 50363319,
+  "frm": "0xe33e9e479df8802cb0866d5d05258bec4cf62948",
+  "token": "0xd5f3879160bc7c32ebb4dc785f8a4f505888de68",
+  "censored": false
+ },
+ "0xc30f47159631e2a8435d1ae2ad746daedd94fb01": {
+  "ts": "2026-08-30T13:00:37.000000Z",
+  "block": 50028584,
+  "frm": "0x27b5b7e01841b586b22aa993d8ae789138ccebf9",
+  "token": "0x5e81213613b6b86eab4c6c50d718d34359459786",
+  "censored": false
+ },
+ "0x273852df684a18d4c02cb5b50edcc49e0382ee4a": {
+  "ts": "2026-08-09T17:09:16.000000Z",
+  "block": 32104095,
+  "frm": "0xa1de6625ab940d065fbeda37627106f010d54c26",
+  "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+  "censored": false
+ },
+ "0x0d8cbb854d73ab3045d8d02bda82cc1ec56e572b": {
+  "ts": "2026-08-28T13:18:35.000000Z",
+  "block": 48328918,
+  "frm": "0x15a1efe27e297ba8c001599d27ba31caafa23353",
+  "token": "0x5e81213613b6b86eab4c6c50d718d34359459786",
+  "censored": false
+ },
+ "0x28ac08f931c67a81cd66b1b08d354333e02ea5e7": {
+  "ts": "2026-08-03T21:17:02.000000Z",
+  "block": 27078921,
+  "frm": "0x464fc28b9cbc1781286c8626b6e925275c8c14f1",
+  "token": "0xb0992820e760d836549ba69bc7598b4af75dee03",
+  "censored": false
+ },
+ "0xbfd99c34ab74f44ff45dcf9dafb4b1d0aa58c7ea": {
+  "ts": "2026-08-27T00:07:31.000000Z",
+  "block": 47002137,
+  "frm": "0x778e344d7e92caec1e51e7db4d4c11cfadc1008a",
+  "token": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+  "censored": false
+ },
+ "0x46b6d862e4aed01e0ef671bf278b29fa2f24e46b": {
+  "ts": "2026-08-27T15:30:14.000000Z",
+  "block": 47550851,
+  "frm": "0xacc79e7b9f8dbb22e197c76d92ff8c0472ac81b4",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0x71ee1cbac76d5d0d8d4702e77c4f880697fab8bd": {
+  "ts": "2026-08-22T17:53:17.000000Z",
+  "block": 43337450,
+  "frm": "0x315b65cb3d038fa549fa72e69eaed6adebaa0a09",
+  "token": "0x1d11f0496982706c5e14a514d4e79f2e6bde4516",
+  "censored": false
+ },
+ "0x53a703666c20f2eb4ad1899abed2067140f53c88": {
+  "ts": "2026-08-27T00:07:14.000000Z",
+  "block": 47001975,
+  "frm": "0x778e344d7e92caec1e51e7db4d4c11cfadc1008a",
+  "token": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+  "censored": false
+ },
+ "0x1f34bf21a7b6b4cefb0cff8b2d8fd2eaf9e202ea": {
+  "ts": "2026-08-28T14:27:37.000000Z",
+  "block": 48369829,
+  "frm": "0xc3ceb87b186b687a7a3a8ed475f541352d3ebbcc",
+  "token": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+  "censored": false
+ },
+ "0x18503518ae63dd64e94d6c3c1b0ba018f69b86f2": {
+  "ts": "2026-08-21T04:49:24.000000Z",
+  "block": 42007350,
+  "frm": "0xf1c50ffeb5cc8a50b153ceed1b7dd0c42f3e5438",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0x99ac81528f6f6e128b9fd57cc7ff4c1bd5b1f276": {
+  "ts": "2026-07-28T08:01:06.000000Z",
+  "block": 21432257,
+  "frm": "0x2459dedb3012d1e929edd17df26620120bdf11bf",
+  "token": "0xb0992820e760d836549ba69bc7598b4af75dee03",
+  "censored": true
+ },
+ "0x4878f64994a285b49aad505031dc5c76265ceaf1": {
+  "ts": "2026-08-08T10:28:02.000000Z",
+  "block": 31001385,
+  "frm": "0x7c9f17f76f34106f0d62c9f09c63e496c2c52330",
+  "token": "0x2e0847e8910a9732eb3fb1bb4b70a580adad4fe3",
+  "censored": false
+ },
+ "0x4971a48e8837c3369f92c1674aa18cf12ab0752e": {
+  "ts": "2026-08-14T21:55:19.000000Z",
+  "block": 36592262,
+  "frm": "0x9a68431deb545a3b3ad51415280e77a1ce7fdc6e",
+  "token": "0xad25ac6c84d497db898fa1e8387bf6af3532a1c4",
+  "censored": false
+ },
+ "0x2ef5fc9b362656388a075ebf3dc6af5344917417": {
+  "ts": "2026-08-27T00:07:08.000000Z",
+  "block": 47001917,
+  "frm": "0x778e344d7e92caec1e51e7db4d4c11cfadc1008a",
+  "token": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+  "censored": true
+ },
+ "0xc84fb4e573b5cb3d4ac98829f4df675149294b5f": {
+  "ts": "2026-08-28T14:27:48.000000Z",
+  "block": 48369942,
+  "frm": "0xc3ceb87b186b687a7a3a8ed475f541352d3ebbcc",
+  "token": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+  "censored": false
+ },
+ "0xb52e8a4543e94a8c4d3e265fdb78bc1fa76c714c": {
+  "ts": "2026-08-24T00:10:03.000000Z",
+  "block": 44424364,
+  "frm": "0x6cf19308c22fc82ea620fa0b3e94948d20f27b96",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": true
+ },
+ "0xf0b4bbc6e53109952574c88b70477726c0049f08": {
+  "ts": "2026-08-29T16:15:33.000000Z",
+  "block": 49289271,
+  "frm": "0xe33e9e479df8802cb0866d5d05258bec4cf62948",
+  "token": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "censored": false
+ },
+ "0x5d9a5047770b5bac0c048355f41bbbc3f061fa67": {
+  "ts": "2026-09-01T23:50:37.000000Z",
+  "block": 52124234,
+  "frm": "0xd3afeb2a57f70ef218aa82451c51b2fb0416ac9e",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0x8575dcd5f91777fd8942b9047c6bca0135bd947b": {
+  "ts": "2026-08-30T16:36:05.000000Z",
+  "block": 50156177,
+  "frm": "0xcf28ea751b05a41285c970cc148b60354f916c0e",
+  "token": "0xd5f3879160bc7c32ebb4dc785f8a4f505888de68",
+  "censored": false
+ },
+ "0x0338f2bc50def7992866f88104d30520a39a92da": {
+  "ts": "2026-08-27T17:50:32.000000Z",
+  "block": 47634219,
+  "frm": "0x315b65cb3d038fa549fa72e69eaed6adebaa0a09",
+  "token": "0x1d11f0496982706c5e14a514d4e79f2e6bde4516",
+  "censored": false
+ },
+ "0x7511976aa854988bb1f5ace05649df9a158c937a": {
+  "ts": "2026-09-01T18:12:13.000000Z",
+  "block": 51923556,
+  "frm": "0x98996e833ea35ec17c3645ca7b6dd40d188564c4",
+  "token": "0xc9a981fee1f9dec688bb123ccdecc63d0debfc4e",
+  "censored": false
+ },
+ "0xfaa387b2fdc176a02be851499d77b70a567c7de1": {
+  "ts": "2026-09-02T02:50:00.000000Z",
+  "block": 52230822,
+  "frm": "0xe33e9e479df8802cb0866d5d05258bec4cf62948",
+  "token": "0xc9a981fee1f9dec688bb123ccdecc63d0debfc4e",
+  "censored": false
+ },
+ "0x7bb18a5c1e56565f2a3dd5cdeed38a013a388705": {
+  "ts": "2026-09-02T09:43:55.000000Z",
+  "block": 52477162,
+  "frm": "0x432ff839556c232fb0328a810a09c90a3849cedc",
+  "token": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "censored": true
+ },
+ "0x92f28857f9363ddde069189beaae54f8d2b70041": {
+  "ts": "2026-09-01T00:39:47.000000Z",
+  "block": 51298281,
+  "frm": "0xcda2f395a62a6b86a59d392d343dd1a55571b3c6",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0x52909aaf1f5e955ee6cd97d47f8b7ad3f69d8519": {
+  "ts": "2026-08-23T22:32:47.000000Z",
+  "block": 44366087,
+  "frm": "0xe8b5faf559033a9515142fa1ca4d142565de2bb1",
+  "token": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+  "censored": true
+ },
+ "0x519c4d06b4a020fc62c5f7ce5a6fe0eff95e062c": {
+  "ts": "2026-09-01T06:33:24.000000Z",
+  "block": 51508539,
+  "frm": "0xabd03d22f0f16954fac4915fa10c1273fa02a467",
+  "token": "0x6330d8c3178a418788df01a47479c0ce7ccf450b",
+  "censored": false
+ },
+ "0xe70868395f453478c10008ac1cc8cd13e8415faf": null,
+ "0x58f238a2e700c9ba0f6f18a2326ba34634832cef": {
+  "ts": "2026-08-30T20:03:22.000000Z",
+  "block": 50279104,
+  "frm": "0x8876789976decbfcbbbe364623c63652db8c0904",
+  "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+  "censored": true
+ },
+ "0x3872ef30dcdcfda02407af8e31f9c4b6058966be": {
+  "ts": "2026-08-27T23:11:30.000000Z",
+  "block": 47825125,
+  "frm": "0x8f775fdd095bc30a6df5fe9804704364b747bf71",
+  "token": "0xc9a981fee1f9dec688bb123ccdecc63d0debfc4e",
+  "censored": false
+ },
+ "0xec4d97ef36c221a65df61f9594cf478dd281ff8a": {
+  "ts": "2026-08-30T04:09:01.000000Z",
+  "block": 49712968,
+  "frm": "0xe33e9e479df8802cb0866d5d05258bec4cf62948",
+  "token": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "censored": false
+ },
+ "0x0089cdd0df0417a95715277a0b8a0beb99ac637d": {
+  "ts": "2026-08-14T07:07:02.000000Z",
+  "block": 36060381,
+  "frm": "0x6828e679fb51b6d0416035370af6ec0fb2f2055a",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0xcf2794f8b4abbab1c79f610a4146a52367e9124c": {
+  "ts": "2026-07-24T03:30:54.000000Z",
+  "block": 17827562,
+  "frm": "0x0b1cc94e1474fd61f5efa628f32afed69ac08328",
+  "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+  "censored": false
+ },
+ "0x39414e7b911ae52bad5d10591eddd63ed88f6455": {
+  "ts": "2026-08-30T15:28:14.000000Z",
+  "block": 50115923,
+  "frm": "0xd683db88b0cc6c233bc12f27b323220878aae59e",
+  "token": "0xc9a981fee1f9dec688bb123ccdecc63d0debfc4e",
+  "censored": false
+ },
+ "0xd4ef6bcddb2f495d7f0f5559013e08c45e3e0178": {
+  "ts": "2026-08-28T13:18:58.000000Z",
+  "block": 48329150,
+  "frm": "0x15a1efe27e297ba8c001599d27ba31caafa23353",
+  "token": "0x5e81213613b6b86eab4c6c50d718d34359459786",
+  "censored": false
+ },
+ "0x07d80307c79c77db677886977edee64a3508e124": {
+  "ts": "2026-08-23T22:32:42.000000Z",
+  "block": 44366040,
+  "frm": "0xe8b5faf559033a9515142fa1ca4d142565de2bb1",
+  "token": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+  "censored": false
+ },
+ "0x098473b24ae3b23679cd50c1cad60a5ccdfebecf": {
+  "ts": "2026-07-27T22:35:32.000000Z",
+  "block": 21094179,
+  "frm": "0xc72759220e4fd934482b8ac6eb8ecc8f426f20f4",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0x58d3382fc3fc09b08ee4560a41008856321e926d": {
+  "ts": "2026-08-31T20:36:11.000000Z",
+  "block": 51153754,
+  "frm": "0x8366a39cc670b4001a1121b8f6a443a643e40951",
+  "token": "0x9e7abd3c9139d14e4c86dce0e455aab7a0c2fb3e",
+  "censored": false
+ },
+ "0xcb901b52ab4663d1a42efcbc1c3ccf1c4c403b54": null,
+ "0x91a6dfa12b03b971e49541abddd6aa147270f922": {
+  "ts": "2026-08-31T17:20:57.000000Z",
+  "block": 51038030,
+  "frm": "0xe33e9e479df8802cb0866d5d05258bec4cf62948",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0x3b389b69aa13b81a2b6cdab6d272b72a84f0b827": {
+  "ts": "2026-09-02T14:38:06.000000Z",
+  "block": 52652106,
+  "frm": "0x1283b995aa37a71abd5f9d68ca986a96eea68ecc",
+  "token": "0x1d11f0496982706c5e14a514d4e79f2e6bde4516",
+  "censored": false
+ },
+ "0x036a37e8ba935536a24cbf67d2e892c38e3c6623": {
+  "ts": "2026-08-07T22:02:34.000000Z",
+  "block": 30555032,
+  "frm": "0x1d0a029be4aa391a36b22bc629735a9d6f105b83",
+  "token": "0xe0444ef8bf4ed74f74fd73686e2ddf4c1c5591e8",
+  "censored": true
+ },
+ "0x091f27552fa7f1cc8966ffb6c3bdf40a34f170b7": {
+  "ts": "2026-08-29T16:47:42.000000Z",
+  "block": 49308404,
+  "frm": "0xe33e9e479df8802cb0866d5d05258bec4cf62948",
+  "token": "0x2e0847e8910a9732eb3fb1bb4b70a580adad4fe3",
+  "censored": false
+ },
+ "0x9cb91e6211cb7d5ebc0314e750aa9cf185e6fcce": null,
+ "0x8b3ad16fa2dcca707ed5e410196e8c87b2075d47": {
+  "ts": "2026-08-27T15:17:57.000000Z",
+  "block": 47543530,
+  "frm": "0x922f2c10f778a8f44995a1f0bcedcebe58a5701b",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0x769cf8d017a470506c7264eae455c7fcb604dc56": {
+  "ts": "2026-08-20T21:53:18.000000Z",
+  "block": 41758557,
+  "frm": "0x8366a39cc670b4001a1121b8f6a443a643e40951",
+  "token": "0x5e81213613b6b86eab4c6c50d718d34359459786",
+  "censored": true
+ },
+ "0x1cddb2b2a047e2fc31b2621eccd5f88d4af5ff40": {
+  "ts": "2026-08-31T18:50:46.000000Z",
+  "block": 51091268,
+  "frm": "0xd3afeb2a57f70ef218aa82451c51b2fb0416ac9e",
+  "token": "0xd5f3879160bc7c32ebb4dc785f8a4f505888de68",
+  "censored": false
+ },
+ "0x37483840f368ea5e9f2766eeccb90a4165ecdf35": {
+  "ts": "2026-08-28T09:07:16.000000Z",
+  "block": 48179330,
+  "frm": "0xd782783fa928150950bbe070fa4c18c85b9427e2",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": true
+ },
+ "0xffe872d5776d8cc931d16e6acb34a291099647f9": {
+  "ts": "2026-08-29T17:39:51.000000Z",
+  "block": 49339382,
+  "frm": "0x39adb8acd07427d338b5f1afab436a04abfdb7c4",
+  "token": "0x5f10a1c971b69e47e059e1dc91901b59b3fb49c3",
+  "censored": true
+ },
+ "0x7702395e5ca3591f2075311d73810a6b7a777777": {
+  "ts": "2026-08-30T15:57:20.000000Z",
+  "block": 50133171,
+  "frm": "0xb75f40ded859afd1454f0760a22723ab42a05d05",
+  "token": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+  "censored": false
+ },
+ "0xac7f91aebcc571f1381f100add0c9c40dfb2cb6e": {
+  "ts": "2026-08-29T18:21:55.000000Z",
+  "block": 49364360,
+  "frm": "0xaefab758302dca0c5478d904cf40af4244d32a92",
+  "token": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+  "censored": false
+ },
+ "0x3ff10d917cfc0a0f6d299b7d82698bf1ae01d81b": {
+  "ts": "2026-09-02T02:55:03.000000Z",
+  "block": 52233814,
+  "frm": "0x38140f2d60383fb4d1dd24d7092130d59a60cd6f",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": true
+ },
+ "0x708861df4ec98865f4c8a25e622350ea16429de7": {
+  "ts": "2026-09-02T11:42:06.000000Z",
+  "block": 52547581,
+  "frm": "0xe33e9e479df8802cb0866d5d05258bec4cf62948",
+  "token": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "censored": false
+ },
+ "0xe59d573dc57990a9430c7fbf5f08256d7f64a77b": {
+  "ts": "2026-08-09T18:30:04.000000Z",
+  "block": 32152502,
+  "frm": "0x1fe005d9cc3044885bb7568f8c1792ed55c35344",
+  "token": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "censored": false
+ },
+ "0x0b003f7d87de91836cbd445e185a41794eb01e82": {
+  "ts": "2026-09-02T07:00:46.000000Z",
+  "block": 52380084,
+  "frm": "0x6707aeac7d0e519b083219d27bb427364363183a",
+  "token": "0x6330d8c3178a418788df01a47479c0ce7ccf450b",
+  "censored": false
+ },
+ "0x1f436356516ac0331c0088048fdd3e5232c446cf": {
+  "ts": "2026-07-29T15:26:22.000000Z",
+  "block": 22560115,
+  "frm": "0x038a7f4e4e89448ad74e044337c9ac25c11e726b",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": true
+ },
+ "0x778ed619ddc5b2aef5feeccd122c2e6d115f0143": {
+  "ts": "2026-09-02T11:02:06.000000Z",
+  "block": 52523729,
+  "frm": "0xe33e9e479df8802cb0866d5d05258bec4cf62948",
+  "token": "0x1d11f0496982706c5e14a514d4e79f2e6bde4516",
+  "censored": false
+ },
+ "0x6e642e91817e3625575f7ec0f1e74a3758b0730f": {
+  "ts": "2026-08-29T11:39:47.000000Z",
+  "block": 49125631,
+  "frm": "0x8366a39cc670b4001a1121b8f6a443a643e40951",
+  "token": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "censored": false
+ },
+ "0x3106866aced7f7d8d546410686e6889ec4ec17ee": {
+  "ts": "2026-08-18T04:17:04.000000Z",
+  "block": 39404478,
+  "frm": "0x0482ec5e01e52df32a75646d0ec7330aaaecb65c",
+  "token": "0x411efb0e7f985935daec3d4c3ebaea0d0ad7d89f",
+  "censored": false
+ },
+ "0x8e7d8036ab728781274188af45f15afc2ad81371": {
+  "ts": "2026-09-02T14:37:43.000000Z",
+  "block": 52651876,
+  "frm": "0xe33e9e479df8802cb0866d5d05258bec4cf62948",
+  "token": "0xd5f3879160bc7c32ebb4dc785f8a4f505888de68",
+  "censored": false
+ },
+ "0x1d69cb4767b2d5bd9c215e8d0c231a5ad24eea9b": null,
+ "0x59a301c1b1ae9c9ce3ce5fc3a6810f510c0c6e19": {
+  "ts": "2026-08-27T15:49:07.000000Z",
+  "block": 47562059,
+  "frm": "0xd3afeb2a57f70ef218aa82451c51b2fb0416ac9e",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0x0000000000000000000000000000000000010066": {
+  "ts": "2026-07-09T17:46:33.000000Z",
+  "block": 5407791,
+  "frm": "0xd06885490be220dabb8502bce9f8833093df0f3d",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": false
+ },
+ "0x2b3dd961b6591b6ba3d5a2fba8da5f2e9f4d3e8f": {
+  "ts": "2026-08-31T00:45:05.000000Z",
+  "block": 50445889,
+  "frm": "0x1e1422b95f69cc7b8c0844fdd496920c79f064c4",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": true
+ },
+ "0x33f68eb203dc67dc8bf40bb91b96498308157e1d": {
+  "ts": "2026-08-28T15:41:01.000000Z",
+  "block": 48413306,
+  "frm": "0x4703b278973fb1d0098a06c0e70d0621b522a23c",
+  "token": "0x1d11f0496982706c5e14a514d4e79f2e6bde4516",
+  "censored": true
+ },
+ "0xcb78cf8fae19c165f260a6becf3c0f2e3deb5bfb": {
+  "ts": "2026-08-31T22:08:38.000000Z",
+  "block": 51208658,
+  "frm": "0x9f71558b0f9c14fc1a2e5ea5eb1bd24dbcf38150",
+  "token": "0xe0444ef8bf4ed74f74fd73686e2ddf4c1c5591e8",
+  "censored": false
+ },
+ "0x2065fcbb5cba59479babf5fc285675ccd12cf0ed": {
+  "ts": "2026-08-21T18:59:41.000000Z",
+  "block": 42515795,
+  "frm": "0x663dc15d3c1ac63ff12e45ab68fea3f0a883c251",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0x07b1ff2d9f896e71a6dfdd0194bc1c1ee74cda27": {
+  "ts": "2026-07-28T22:59:29.000000Z",
+  "block": 21969664,
+  "frm": "0x39adb8acd07427d338b5f1afab436a04abfdb7c4",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": false
+ },
+ "0x657c172485a14dc9d0834feb3661fdb839d49e2c": {
+  "ts": "2026-08-26T06:22:48.000000Z",
+  "block": 46369389,
+  "frm": "0x39adb8acd07427d338b5f1afab436a04abfdb7c4",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": true
+ },
+ "0xb7f10d33deb338a9da88b6f4a5d5074a80c4d75e": {
+  "ts": "2026-08-28T12:50:57.000000Z",
+  "block": 48312497,
+  "frm": "0x2cb4d42b2f2ba940ad84308b5e37ef71ae91642e",
+  "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+  "censored": false
+ },
+ "0xe624bbadf9530a2df6e577b7d2012dc346eec70c": {
+  "ts": "2026-07-12T18:37:58.000000Z",
+  "block": 8026426,
+  "frm": "0x006102b16a04c20306a28b652745d3973d7d24fa",
+  "token": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+  "censored": false
+ },
+ "0x1ab6d482feb577fac299fd3db1c0ebc51d85505f": {
+  "ts": "2026-08-28T15:40:16.000000Z",
+  "block": 48412857,
+  "frm": "0xb0817f2cc3365df7f564f970169026c866a14a44",
+  "token": "0x4ea005168d7f09a7a0ba9d1def21a479950e44c2",
+  "censored": false
+ },
+ "0x6ab5604a34b82b4c9cf5e9116a96bc63c93bb09b": {
+  "ts": "2026-07-18T03:10:35.000000Z",
+  "block": 12647254,
+  "frm": "0x4f2d757a4aa0f4cef89c6509cc00136e3229b41a",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0x0000000000000000000000000000000000010226": {
+  "ts": "2026-07-09T17:46:40.000000Z",
+  "block": 5407867,
+  "frm": "0xd06885490be220dabb8502bce9f8833093df0f3d",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": false
+ },
+ "0x72102e6e57e4242caf1621ed39e1bbe92538cff0": {
+  "ts": "2026-08-05T06:54:18.000000Z",
+  "block": 28285870,
+  "frm": "0xf738b086ddff68e6a91f398813b167fafdb2eec5",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0xbabbcce3540725bc359d2b5822c7b2955a95bdff": {
+  "ts": "2026-09-02T14:01:07.000000Z",
+  "block": 52630146,
+  "frm": "0xe33e9e479df8802cb0866d5d05258bec4cf62948",
+  "token": "0x1d11f0496982706c5e14a514d4e79f2e6bde4516",
+  "censored": false
+ },
+ "0x6b37e9000fb66c119eff97958399c0653775458a": {
+  "ts": "2026-08-27T20:12:19.000000Z",
+  "block": 47718521,
+  "frm": "0xe311d712bd0669896bcb47f38845ad71a641b8be",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0xe620abbdbd5d3db5691699796090897fdfa008d7": {
+  "ts": "2026-08-29T20:31:40.000000Z",
+  "block": 49441310,
+  "frm": "0xf7c28f229d576dda26b47af64e9ce8ed42b53f40",
+  "token": "0x6330d8c3178a418788df01a47479c0ce7ccf450b",
+  "censored": false
+ },
+ "0x775256e60f88c5e0f149db67fbcb738da75143d7": {
+  "ts": "2026-08-27T16:02:46.000000Z",
+  "block": 47570175,
+  "frm": "0x04cd240eb97e0eb7d5276304b7699ec1adef19cf",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0x516edb1c93afc2733756617af4a68b2c07fa1e8d": {
+  "ts": "2026-09-02T06:34:59.000000Z",
+  "block": 52364659,
+  "frm": "0xd3afeb2a57f70ef218aa82451c51b2fb0416ac9e",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0x8625368dbc73fdb950b5ddb01a4ec1dfb63e66bc": {
+  "ts": "2026-08-16T20:21:11.000000Z",
+  "block": 38258402,
+  "frm": "0x30f3916201e49bd6e5f47566bb59a68e6cede5c5",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": true
+ },
+ "0x9085c9d0e27343bfa2f42138d47ab0d88e8d8dd0": {
+  "ts": "2026-08-24T03:45:47.000000Z",
+  "block": 44553459,
+  "frm": "0x39adb8acd07427d338b5f1afab436a04abfdb7c4",
+  "token": "0x822cc93ffd030293e9842c30bbd678f530701867",
+  "censored": true
+ },
+ "0x6d3dadf1ee333e0448fcdf2c5963fcfda635bb2e": {
+  "ts": "2026-08-04T04:53:18.000000Z",
+  "block": 27352014,
+  "frm": "0xe311d712bd0669896bcb47f38845ad71a641b8be",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0xa6db23791cd636b128107bfaf2b5f41d14976859": {
+  "ts": "2026-07-18T15:15:22.000000Z",
+  "block": 13080034,
+  "frm": "0x006102b16a04c20306a28b652745d3973d7d24fa",
+  "token": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+  "censored": false
+ },
+ "0x9589e87861eb3756e1519bade055471c05cd444d": {
+  "ts": "2026-09-01T19:44:31.000000Z",
+  "block": 51978424,
+  "frm": "0x09180907d1ba1f94b848e0f335d9a9c8a2511f12",
+  "token": "0x62fd0668e10d8b72339be2dcf7643001688ff13b",
+  "censored": false
+ },
+ "0xfa65ffbfd42cba4ca3e3c285ec4cfb21d4af8d73": {
+  "ts": "2026-07-28T05:20:40.000000Z",
+  "block": 21336416,
+  "frm": "0x35da157f8ee56d4df33b17e2c08852e0e9fcbc97",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": false
+ },
+ "0xaecc91cff72772610eb6547a3d25db7cb395930a": {
+  "ts": "2026-08-27T23:11:32.000000Z",
+  "block": 47825145,
+  "frm": "0x8f775fdd095bc30a6df5fe9804704364b747bf71",
+  "token": "0xc9a981fee1f9dec688bb123ccdecc63d0debfc4e",
+  "censored": false
+ },
+ "0xc36c9b1cbb2564cf45b490d101407db70867cba5": {
+  "ts": "2026-09-02T06:37:45.000000Z",
+  "block": 52366283,
+  "frm": "0xf574664c58f37033a6cfb6b092d7d8972fb9a2d2",
+  "token": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+  "censored": false
+ },
+ "0x35ed57ed243e2f41630dc14a3d9e5e1b9a46a8af": {
+  "ts": "2026-07-09T15:28:57.000000Z",
+  "block": 5325386,
+  "frm": "0x39793ccc4ace60b5100be177460abeb046b76c1c",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": false
+ },
+ "0xcfd6b27a27286516596d99f7fbd88dc39b68c87d": {
+  "ts": "2026-08-22T22:37:37.000000Z",
+  "block": 43507668,
+  "frm": "0xd572c2ad4185cf966fc289991e4a07a7d1641d4d",
+  "token": "0x1d11f0496982706c5e14a514d4e79f2e6bde4516",
+  "censored": false
+ },
+ "0x5a171e054cc3cfbf31afb400191ab554e13fc599": {
+  "ts": "2026-08-27T15:32:36.000000Z",
+  "block": 47552287,
+  "frm": "0xacc79e7b9f8dbb22e197c76d92ff8c0472ac81b4",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0x8a2829dbf1479802f5b74f3ba22c5116a9aed162": {
+  "ts": "2026-07-23T09:33:21.000000Z",
+  "block": 17182706,
+  "frm": "0x8366a39cc670b4001a1121b8f6a443a643e40951",
+  "token": "0xe93237c50d904957cf27e7b1133b510c669c2e74",
+  "censored": false
+ },
+ "0xca287f150341444bb5b37b00531f2a568a3084d5": {
+  "ts": "2026-09-02T08:47:09.000000Z",
+  "block": 52443376,
+  "frm": "0xa9cfd46e5ef604a5b58a1ad242734e91e417052f",
+  "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+  "censored": true
+ },
+ "0x21a20649f61eb5972e1115160ed36b7467dd236c": {
+  "ts": "2026-08-26T12:18:42.000000Z",
+  "block": 46581380,
+  "frm": "0xc4bd6adc82115c6cc74f487b39489a3792cb11fe",
+  "token": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+  "censored": false
+ },
+ "0x72743b2536a2e6936d9ef988ecd9f40576d727fa": {
+  "ts": "2026-08-21T04:48:45.000000Z",
+  "block": 42006968,
+  "frm": "0xf1c50ffeb5cc8a50b153ceed1b7dd0c42f3e5438",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0xfd842dd4039f4a0e238d0b9386177649c3159e7a": {
+  "ts": "2026-08-28T13:39:34.000000Z",
+  "block": 48341346,
+  "frm": "0xa72e859d5a2a98d820c073bacdf5a9f8ba78082d",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": false
+ },
+ "0x4e1d046b7f2bf1a7d5a5ca8955b36673c2978e78": {
+  "ts": "2026-07-18T05:32:59.000000Z",
+  "block": 12732278,
+  "frm": "0x85134bedafeb10aab0dcb02aab94dea54ca2c3c6",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": true
+ },
+ "0x9a8f2b8a1047513cb3ef8fc8c75bf29631f5aaf9": {
+  "ts": "2026-09-02T12:56:34.000000Z",
+  "block": 52591850,
+  "frm": "0xe33e9e479df8802cb0866d5d05258bec4cf62948",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0x260f6ef778fba829ad030b78e3792ac7d247e7a8": {
+  "ts": "2026-07-24T06:48:03.000000Z",
+  "block": 17945377,
+  "frm": "0x144400e9c0b7b033153394258d2b6e9c637ce971",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": false
+ },
+ "0x059eeddbbebafa2e3eab7169959e35d94df85c6a": {
+  "ts": "2026-09-02T13:53:55.000000Z",
+  "block": 52625915,
+  "frm": "0x4fdaab9427aff5d8e2fff9d9f9b5dd3a9dc014d6",
+  "token": "0x1d11f0496982706c5e14a514d4e79f2e6bde4516",
+  "censored": false
+ },
+ "0xfe76ca309a550827b6fbd272dce74879b21d9292": {
+  "ts": "2026-08-28T21:27:36.000000Z",
+  "block": 48619195,
+  "frm": "0xae12d26415e826e4166c83f60ff236f15c475df6",
+  "token": "0x6330d8c3178a418788df01a47479c0ce7ccf450b",
+  "censored": true
+ },
+ "0x84c9013f17a3860fda2db59328aa09ed00cd248c": {
+  "ts": "2026-08-08T15:27:16.000000Z",
+  "block": 31180596,
+  "frm": "0x374f567ea050fde8ec9a5202e4fe30d62f2be4ee",
+  "token": "0x58ffe4a942d3885baa22d7520691f611ef09e7aa",
+  "censored": false
+ },
+ "0x307c7f3d59ce675a86c829719189e67fdfce6f1e": {
+  "ts": "2026-08-29T05:31:02.000000Z",
+  "block": 48906416,
+  "frm": "0xf4acdaeeb7022862a763c9b1b885e11191c889e3",
+  "token": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+  "censored": false
+ },
+ "0xb4e40411dae66a3bfdb9ebfacb47ce66f89d064c": {
+  "ts": "2026-08-09T19:10:42.000000Z",
+  "block": 32176877,
+  "frm": "0x1fe005d9cc3044885bb7568f8c1792ed55c35344",
+  "token": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "censored": true
+ },
+ "0xbda2356554a66a0900a7c1952aae61b534fa4e7b": {
+  "ts": "2026-08-27T17:09:41.000000Z",
+  "block": 47609955,
+  "frm": "0x82753967e6998382fee953067083684d98b2afc1",
+  "token": "0xe0444ef8bf4ed74f74fd73686e2ddf4c1c5591e8",
+  "censored": false
+ },
+ "0xc10758f064eb859a6f11dc1d687f569f6eeea268": {
+  "ts": "2026-07-24T19:30:38.000000Z",
+  "block": 18401661,
+  "frm": "0x43dc3ecfe02aa4192f41143fee9c0b6267424935",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0xb0f219cc09b998fb705a7f7b5612c43262b530ea": null,
+ "0xc8b6f68b58cc6b447313fc0fc3d354c150946730": {
+  "ts": "2026-09-01T21:24:54.000000Z",
+  "block": 52037843,
+  "frm": "0x51567d23390950131323f303b70d389bea9455cf",
+  "token": "0x4d21483a44bf67a86b77e3da301411880797d452",
+  "censored": true
+ },
+ "0x000000000000000000000000000000000000dead": null,
+ "0xf76a10ec8944931736f84b03fc25e18f3c6090a9": {
+  "ts": "2026-08-24T20:39:53.000000Z",
+  "block": 45160680,
+  "frm": "0xf1c50ffeb5cc8a50b153ceed1b7dd0c42f3e5438",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0x2d3552a78ad4d3663a8a67c8ea95c56e63db3d93": {
+  "ts": "2026-08-30T21:31:35.000000Z",
+  "block": 50331088,
+  "frm": "0x55b600ac3f311354a78b2f6148e9fc7acdae6890",
+  "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+  "censored": false
+ },
+ "0x8eba9bd627d290af737d74ec58690a2d50686b10": {
+  "ts": "2026-07-14T10:15:13.000000Z",
+  "block": 9449426,
+  "frm": "0x2459dedb3012d1e929edd17df26620120bdf11bf",
+  "token": "0xb0992820e760d836549ba69bc7598b4af75dee03",
+  "censored": true
+ },
+ "0xf1cfc0c935fb34532c27dcfebfdb6a6f12fe8c13": {
+  "ts": "2026-08-25T15:14:25.000000Z",
+  "block": 45827522,
+  "frm": "0x350eafa2ea8bb8a4e6294b8fe82ccbf2944201b2",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": true
+ },
+ "0xf3b9275f8e3612caa578a34330bfa18828ad76b3": {
+  "ts": "2026-09-01T15:09:11.000000Z",
+  "block": 51815251,
+  "frm": "0x51567d23390950131323f303b70d389bea9455cf",
+  "token": "0x4d21483a44bf67a86b77e3da301411880797d452",
+  "censored": false
+ },
+ "0xba83d55082fbfbe7f6d8d4d8f7ebd77992db3ed8": {
+  "ts": "2026-07-26T08:11:42.000000Z",
+  "block": 19717170,
+  "frm": "0xc407b9a8279e5b072923443f5f91b7a80cf1933d",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": false
+ },
+ "0xab6a1ab57c86d09b162b61b37295924710110363": {
+  "ts": "2026-09-02T06:37:42.000000Z",
+  "block": 52366253,
+  "frm": "0xd3afeb2a57f70ef218aa82451c51b2fb0416ac9e",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0xbc0c19235d263aa6ffe8a4dec7901a343539d7e1": {
+  "ts": "2026-08-06T01:47:04.000000Z",
+  "block": 28964699,
+  "frm": "0x39adb8acd07427d338b5f1afab436a04abfdb7c4",
+  "token": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+  "censored": true
+ },
+ "0x5922c63185b6f78a4c47850e11d6c84e349676d0": {
+  "ts": "2026-09-01T09:30:18.000000Z",
+  "block": 51613842,
+  "frm": "0x8cf784519a308f8ac1e1dce5420ed0cefcbac191",
+  "token": "0xbef75684c43c4ea7bd18dd532a2244674ee8b926",
+  "censored": true
+ },
+ "0xf2aa868597f6a7215a05412a3a0261fec9f1bd97": {
+  "ts": "2026-07-19T13:33:55.000000Z",
+  "block": 13879730,
+  "frm": "0x4f2d757a4aa0f4cef89c6509cc00136e3229b41a",
+  "token": "0xe93237c50d904957cf27e7b1133b510c669c2e74",
+  "censored": true
+ },
+ "0xa4742bf2fc80dc956469bde39181a6036d2f84b4": {
+  "ts": "2026-07-22T05:06:21.000000Z",
+  "block": 16160806,
+  "frm": "0xb92fe925dc43a0ecde6c8b1a2709c170ec4fff4f",
+  "token": "0x2e0847e8910a9732eb3fb1bb4b70a580adad4fe3",
+  "censored": false
+ },
+ "0xe0b4dd9e954a200d6c4dcc39f54a0826d688029c": {
+  "ts": "2026-07-18T00:47:12.000000Z",
+  "block": 12561407,
+  "frm": "0x35da157f8ee56d4df33b17e2c08852e0e9fcbc97",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": false
+ },
+ "0xb7863443d559ae8571e020af591c3f67db06e0c3": {
+  "ts": "2026-08-26T15:38:05.000000Z",
+  "block": 46699694,
+  "frm": "0x65050a9b7e5075a2ba5ced7b1b64ee66262c40dc",
+  "token": "0x5e81213613b6b86eab4c6c50d718d34359459786",
+  "censored": false
+ },
+ "0xb541a18bbe56bb4f990381464fdec46d79594f60": {
+  "ts": "2026-08-30T16:06:16.000000Z",
+  "block": 50138482,
+  "frm": "0xe33e9e479df8802cb0866d5d05258bec4cf62948",
+  "token": "0x6330d8c3178a418788df01a47479c0ce7ccf450b",
+  "censored": false
+ },
+ "0x26bab966ee47ac5f6b23eecbb22d08bbd3823eaf": {
+  "ts": "2026-07-24T02:30:58.000000Z",
+  "block": 17791712,
+  "frm": "0x35da157f8ee56d4df33b17e2c08852e0e9fcbc97",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": false
+ },
+ "0xf3921cb7978967af02d28abed9c63f2514cf8fb7": {
+  "ts": "2026-08-31T08:10:16.000000Z",
+  "block": 50710643,
+  "frm": "0x44db4ecd5b0048d55c762e32ff53afaeccf75ed7",
+  "token": "0xc9a981fee1f9dec688bb123ccdecc63d0debfc4e",
+  "censored": false
+ },
+ "0x00000000000000000000000000000000000101db": {
+  "ts": "2026-07-09T17:46:39.000000Z",
+  "block": 5407855,
+  "frm": "0xd06885490be220dabb8502bce9f8833093df0f3d",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": false
+ },
+ "0x1e2496dd3dc75c9de6fd12b14a639ff64715a7ec": {
+  "ts": "2026-07-24T14:57:22.000000Z",
+  "block": 18237877,
+  "frm": "0x040a61ce223918eee16d4d84187398908082d3e7",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0x2f343dfac62e362fce06d1c51046e8b1df3caa73": {
+  "ts": "2026-08-05T03:17:19.000000Z",
+  "block": 28156091,
+  "frm": "0x39adb8acd07427d338b5f1afab436a04abfdb7c4",
+  "token": "0xd917b029c761d264c6a312bbbcda868658ef86a6",
+  "censored": true
+ },
+ "0x2200d098283170fae636a45cd0555ac14953a968": {
+  "ts": "2026-08-30T17:13:12.000000Z",
+  "block": 50178219,
+  "frm": "0xe33e9e479df8802cb0866d5d05258bec4cf62948",
+  "token": "0xec262a75e413fafd0df80480274532c79d42da09",
+  "censored": false
+ },
+ "0x207ea94469189d6905fa80d912d398a0a0142b5e": {
+  "ts": "2026-08-31T13:36:17.000000Z",
+  "block": 50904990,
+  "frm": "0x8366a39cc670b4001a1121b8f6a443a643e40951",
+  "token": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+  "censored": false
+ },
+ "0x8366a39cc670b4001a1121b8f6a443a643e40951": {
+  "ts": "2026-09-02T16:15:52.000000Z",
+  "block": 52710032,
+  "frm": "0xe492912f37c2a4eca45d42dc67548f4c6cd7ce2b",
+  "token": "0x2e0847e8910a9732eb3fb1bb4b70a580adad4fe3",
+  "censored": true
+ },
+ "0x698cb603278ce33280063312d608eb3d4bbcaa4c": {
+  "ts": "2026-08-28T17:10:19.000000Z",
+  "block": 48466212,
+  "frm": "0x82753967e6998382fee953067083684d98b2afc1",
+  "token": "0xe0444ef8bf4ed74f74fd73686e2ddf4c1c5591e8",
+  "censored": false
+ },
+ "0x1ec1db0b048e1bc699d5bedafa6c606bcd65f205": {
+  "ts": "2026-08-08T14:50:10.000000Z",
+  "block": 31158290,
+  "frm": "0x374f567ea050fde8ec9a5202e4fe30d62f2be4ee",
+  "token": "0x58ffe4a942d3885baa22d7520691f611ef09e7aa",
+  "censored": true
+ },
+ "0x62c24075efa9d42fd6e3a5158973365ef0c339f6": {
+  "ts": "2026-07-10T20:18:20.000000Z",
+  "block": 6361411,
+  "frm": "0x144400e9c0b7b033153394258d2b6e9c637ce971",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": false
+ },
+ "0x42207074923bd83e8d0d548f006580d395d88e71": {
+  "ts": "2026-08-14T06:02:13.000000Z",
+  "block": 36021489,
+  "frm": "0xe2b46c905e12ab8e2f864e4821a4325884c1b126",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": true
+ },
+ "0x11a0db36a68b2d103d160dfdf19cae2011ee8e5c": {
+  "ts": "2026-08-30T10:16:59.000000Z",
+  "block": 49931550,
+  "frm": "0x30f3916201e49bd6e5f47566bb59a68e6cede5c5",
+  "token": "0x6330d8c3178a418788df01a47479c0ce7ccf450b",
+  "censored": false
+ },
+ "0x4e4b53e80052bcb5aaf9d1adb7ea59f72786dfb5": {
+  "ts": "2026-09-02T09:53:34.000000Z",
+  "block": 52482907,
+  "frm": "0x54437377bec1b19b82392b0df3992f71853c207e",
+  "token": "0xd5f3879160bc7c32ebb4dc785f8a4f505888de68",
+  "censored": true
+ },
+ "0xa121fa0ff2a707339e26c49e1eb845e86d9634cd": {
+  "ts": "2026-08-29T19:45:26.000000Z",
+  "block": 49413760,
+  "frm": "0x22ae7e8c970eea0391b016253ed53470df1a0d53",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0xa06d844e4ac576286a5dbd115fa440fadcbc7016": {
+  "ts": "2026-08-26T03:39:35.000000Z",
+  "block": 46272170,
+  "frm": "0xacc79e7b9f8dbb22e197c76d92ff8c0472ac81b4",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0x58e6a5cd87d38ae2c35007b1bd7b25026be9b0b1": {
+  "ts": "2026-08-25T13:28:14.000000Z",
+  "block": 45763953,
+  "frm": "0x70805ad25c7ace32d72200e428346accbc1fa5ac",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": true
+ },
+ "0x45b916a604419acaea5348dcec13b826452b4e00": {
+  "ts": "2026-09-01T21:59:47.000000Z",
+  "block": 52058439,
+  "frm": "0x51567d23390950131323f303b70d389bea9455cf",
+  "token": "0x4d21483a44bf67a86b77e3da301411880797d452",
+  "censored": false
+ },
+ "0xa071e88795ea27361792e0b3f74ef5a540af5fdd": {
+  "ts": "2026-09-02T09:26:54.000000Z",
+  "block": 52467035,
+  "frm": "0xc603c8fb07e1f182ac34c41e176e4244606e734b",
+  "token": "0x2e0847e8910a9732eb3fb1bb4b70a580adad4fe3",
+  "censored": false
+ },
+ "0x8357b66f74363e926de4186a449f365707c7fbad": {
+  "ts": "2026-08-24T21:20:05.000000Z",
+  "block": 45184787,
+  "frm": "0x09e99d23bf226a6c6b4c2126239a3df3ca1b89b6",
+  "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+  "censored": false
+ },
+ "0x80ee683ad22d90a718bbbc20c1bd641fce6ed95e": {
+  "ts": "2026-07-28T02:34:24.000000Z",
+  "block": 21237086,
+  "frm": "0xc72759220e4fd934482b8ac6eb8ecc8f426f20f4",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0x2ad41576364037cf25fd08948f425b63610d6cf3": {
+  "ts": "2026-08-12T04:24:24.000000Z",
+  "block": 34237031,
+  "frm": "0x9d590437abaae12cf9fe0627caf4cfd633152599",
+  "token": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+  "censored": false
+ },
+ "0x6ba60fbba0a05671781094f923c8f71f69e85ce6": {
+  "ts": "2026-08-29T12:00:29.000000Z",
+  "block": 49137910,
+  "frm": "0x5f6593022a665b6d225a4f808cb23ecd60d123d4",
+  "token": "0x5e81213613b6b86eab4c6c50d718d34359459786",
+  "censored": false
+ },
+ "0x9afc3922da0e377b8665363ca13aa34472a31197": {
+  "ts": "2026-09-02T11:50:43.000000Z",
+  "block": 52552688,
+  "frm": "0xe33e9e479df8802cb0866d5d05258bec4cf62948",
+  "token": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "censored": false
+ },
+ "0x8957423f8b1c880ce47ebb0f142c8b5e9643db5b": {
+  "ts": "2026-08-24T20:38:19.000000Z",
+  "block": 45159739,
+  "frm": "0xf1c50ffeb5cc8a50b153ceed1b7dd0c42f3e5438",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0x1622df720f43b8feaab4d3dd61bf16fc3795956b": {
+  "ts": "2026-08-28T14:27:37.000000Z",
+  "block": 48369829,
+  "frm": "0xc3ceb87b186b687a7a3a8ed475f541352d3ebbcc",
+  "token": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+  "censored": false
+ },
+ "0x599569be692f18f270413fc6c1e57cf14b89f635": {
+  "ts": "2026-08-30T22:29:20.000000Z",
+  "block": 50365355,
+  "frm": "0x2ddb12976c9ba07fc770288b07c54c7e64a1d471",
+  "token": "0xd5f3879160bc7c32ebb4dc785f8a4f505888de68",
+  "censored": true
+ },
+ "0xa8445b000371445c672d48ac0a505e5c284d50a4": {
+  "ts": "2026-08-02T01:46:24.000000Z",
+  "block": 25516617,
+  "frm": "0xe311d712bd0669896bcb47f38845ad71a641b8be",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0x920b1e1e6de8695fb9f62b16fbf27d85dc28b89a": {
+  "ts": "2026-08-26T23:35:56.000000Z",
+  "block": 46983379,
+  "frm": "0xc94135b63772b91d79d0a2daab2a8801f32359bd",
+  "token": "0x92fd66527192e3e61d4ddd13322aa222de86f9b5",
+  "censored": false
+ },
+ "0xe5a8cc5a082681de43835fc67b72b140919577c6": {
+  "ts": "2026-08-26T15:28:09.000000Z",
+  "block": 46693857,
+  "frm": "0x39adb8acd07427d338b5f1afab436a04abfdb7c4",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": true
+ },
+ "0xc1f3ef44ea2f414041cbfe0e70965567963d352b": {
+  "ts": "2026-08-27T21:15:44.000000Z",
+  "block": 47756215,
+  "frm": "0xf1c50ffeb5cc8a50b153ceed1b7dd0c42f3e5438",
+  "token": "0x86923f96303d656e4aa86d9d42d1e57ad2023fdc",
+  "censored": false
+ },
+ "0x88259bd5976d2bb0720ceab37297b82a455ba0ab": {
+  "ts": "2026-08-30T14:00:48.000000Z",
+  "block": 50064271,
+  "frm": "0x515e79b395d4105f4fa700f153175490dc2c1230",
+  "token": "0xec262a75e413fafd0df80480274532c79d42da09",
+  "censored": false
+ },
+ "0x7664f5daa56288045dec029058917661ff78c9f3": {
+  "ts": "2026-09-02T14:13:22.000000Z",
+  "block": 52637446,
+  "frm": "0xcaa72ea67b55d09f77eaa795a5366ecf75095ec8",
+  "token": "0x5e81213613b6b86eab4c6c50d718d34359459786",
+  "censored": false
+ },
+ "0x3338b2be9603630d7412902ae150d413ba399bc6": {
+  "ts": "2026-08-30T00:33:54.000000Z",
+  "block": 49585211,
+  "frm": "0xb98d21d44b779c951bde9a6111ab260a6f86927e",
+  "token": "0x86923f96303d656e4aa86d9d42d1e57ad2023fdc",
+  "censored": false
+ },
+ "0xb69dd930ce07c80f42b49fc7d458ba694ca2d53b": null,
+ "0x81d1768c64690da5a4a836dea355545ffc6275e9": {
+  "ts": "2026-09-01T18:12:39.000000Z",
+  "block": 51923813,
+  "frm": "0xc61284332117c3fb23a2a56cceffd07f7af60029",
+  "token": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+  "censored": false
+ },
+ "0xd76ff76ac8019c99237bde08d7c39dab5481bed2": {
+  "ts": "2026-08-19T20:41:06.000000Z",
+  "block": 40853662,
+  "frm": "0xf56e517652bb18e519871abb13a382d205f6e375",
+  "token": "0xe93237c50d904957cf27e7b1133b510c669c2e74",
+  "censored": false
+ },
+ "0xf49b60594c4c40efd43fa9caf0f793c068bffb93": {
+  "ts": "2026-08-31T23:06:04.000000Z",
+  "block": 51242626,
+  "frm": "0x5e2de437040d9ce74592789d8dc72fee0a18dc50",
+  "token": "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a",
+  "censored": false
+ },
+ "0xc586c6039e466cfb829aacdcbca68a8eb5cb5188": {
+  "ts": "2026-09-02T00:58:39.000000Z",
+  "block": 52164617,
+  "frm": "0xb74f1c76b3cf7b035bec9d10194a885431344ea0",
+  "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+  "censored": true
+ },
+ "0x2e234882231cdc99c654a213a5ecc848459cceee": {
+  "ts": "2026-08-30T13:05:21.000000Z",
+  "block": 50031383,
+  "frm": "0xd4eb21209c4d6093f80b5b84f5c45cc093ea14a3",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": true
+ },
+ "0x80e94c1643e14b5cb52f0faacb381bb2ce5aa7aa": {
+  "ts": "2026-08-29T14:29:09.000000Z",
+  "block": 49226315,
+  "frm": "0x5f8d4bd961fc5faf629170a3a4b71c2c36006b71",
+  "token": "0xe93237c50d904957cf27e7b1133b510c669c2e74",
+  "censored": false
+ },
+ "0x7acb693345cf634cb3e0884154ff734d27dc1c26": {
+  "ts": "2026-07-24T10:36:04.000000Z",
+  "block": 18081625,
+  "frm": "0x6a8bb5c76bc1f9b5667433fc529b9fb21e4c7aa3",
+  "token": "0x2e0847e8910a9732eb3fb1bb4b70a580adad4fe3",
+  "censored": false
+ },
+ "0xc6da9c87cae2fcecad79e22c398de16bfab0cfda": {
+  "ts": "2026-07-25T19:08:54.000000Z",
+  "block": 19249252,
+  "frm": "0xc6bcc95043dc48c204bb2d57fb264a10efe0a607",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0xa4a053ab45e50ba67ed9b5306e93dcd37b3bf4a0": {
+  "ts": "2026-08-31T21:18:47.000000Z",
+  "block": 51179062,
+  "frm": "0x20f6ee51340adeed01a59b0e65cb3703f3dc860c",
+  "token": "0xec262a75e413fafd0df80480274532c79d42da09",
+  "censored": false
+ },
+ "0xfb3dd0b2bd0f47973f90ee3fff9866cfe12cd54e": {
+  "ts": "2026-08-31T01:32:13.000000Z",
+  "block": 50473897,
+  "frm": "0xfd46af62cf6e9306008a13bee045c542ec3daef6",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": true
+ },
+ "0x714d5a6cd567323b1c473d17cca258ac59d58f84": {
+  "ts": "2026-07-23T13:40:33.000000Z",
+  "block": 17330591,
+  "frm": "0x006102b16a04c20306a28b652745d3973d7d24fa",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0x75ea77c6f099528001dae2bd5d185a054a838b58": {
+  "ts": "2026-09-01T21:39:19.000000Z",
+  "block": 52046374,
+  "frm": "0x51567d23390950131323f303b70d389bea9455cf",
+  "token": "0x4d21483a44bf67a86b77e3da301411880797d452",
+  "censored": false
+ },
+ "0x039c77fb88d37fcdd126bb638d259037b29212a3": {
+  "ts": "2026-08-27T02:13:23.000000Z",
+  "block": 47077016,
+  "frm": "0xacc79e7b9f8dbb22e197c76d92ff8c0472ac81b4",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0x818ef381488b1769863f6837f1ddbac637b2f145": {
+  "ts": "2026-08-28T00:25:35.000000Z",
+  "block": 47869216,
+  "frm": "0x30f3916201e49bd6e5f47566bb59a68e6cede5c5",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": false
+ },
+ "0x7dfdc998dbb08cb26c4f57ea49150fd058128d08": {
+  "ts": "2026-09-01T02:10:33.000000Z",
+  "block": 51352195,
+  "frm": "0xcda2f395a62a6b86a59d392d343dd1a55571b3c6",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0x70202636361b24cbc0e9c636f39e14108e8d64da": {
+  "ts": "2026-08-28T20:16:26.000000Z",
+  "block": 48576853,
+  "frm": "0xc3ceb87b186b687a7a3a8ed475f541352d3ebbcc",
+  "token": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+  "censored": false
+ },
+ "0x91a21f778a700b3f106f8333457b22571ad03f8d": {
+  "ts": "2026-08-30T06:26:31.000000Z",
+  "block": 49794630,
+  "frm": "0xbdbae060cbab0e9cfe802a7513dd5ecb36cda6c3",
+  "token": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "censored": false
+ },
+ "0x1535d65e650fedfbe21e8474fa95dbfad1aed301": {
+  "ts": "2026-08-28T13:18:35.000000Z",
+  "block": 48328918,
+  "frm": "0x15a1efe27e297ba8c001599d27ba31caafa23353",
+  "token": "0x5e81213613b6b86eab4c6c50d718d34359459786",
+  "censored": false
+ },
+ "0xf5c53af735b90eab220feeb6781b302d1a7cf889": {
+  "ts": "2026-09-02T15:22:52.000000Z",
+  "block": 52678615,
+  "frm": "0x4fdaab9427aff5d8e2fff9d9f9b5dd3a9dc014d6",
+  "token": "0x1d11f0496982706c5e14a514d4e79f2e6bde4516",
+  "censored": false
+ },
+ "0x3470af5f94cc7bb42f67b632cf78522bc0c839fb": {
+  "ts": "2026-08-26T16:53:11.000000Z",
+  "block": 46744271,
+  "frm": "0x508852b7e1701e61a38944346fa977a7bfc96176",
+  "token": "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a",
+  "censored": false
+ },
+ "0x41ce474266b82fbc29839e3cb4476bf8c33f2e12": {
+  "ts": "2026-07-27T20:18:03.000000Z",
+  "block": 21011890,
+  "frm": "0xc72759220e4fd934482b8ac6eb8ecc8f426f20f4",
+  "token": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+  "censored": false
+ },
+ "0x3028b1d630840a96866a9e492bd0d06876270578": {
+  "ts": "2026-07-24T04:15:13.000000Z",
+  "block": 17854071,
+  "frm": "0x6682d7a0541261db789441df9bcc48c4c023980e",
+  "token": "0x6330d8c3178a418788df01a47479c0ce7ccf450b",
+  "censored": false
+ },
+ "0x417ad1da491e6195f402987246c0fd3e34371d51": {
+  "ts": "2026-08-08T14:30:34.000000Z",
+  "block": 31146558,
+  "frm": "0x30f3916201e49bd6e5f47566bb59a68e6cede5c5",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": false
+ },
+ "0x32bc849a54924ad28f14ca4b6a4c54ca502a3703": {
+  "ts": "2026-08-28T16:49:18.000000Z",
+  "block": 48453740,
+  "frm": "0x4703b278973fb1d0098a06c0e70d0621b522a23c",
+  "token": "0x1d11f0496982706c5e14a514d4e79f2e6bde4516",
+  "censored": false
+ },
+ "0xb427430782ed671e88bd0b10444d38c4ef68df0d": {
+  "ts": "2026-08-25T04:37:19.000000Z",
+  "block": 45446398,
+  "frm": "0xacc79e7b9f8dbb22e197c76d92ff8c0472ac81b4",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0xacf9261015e4efb77fc682d70885a789abb936a2": {
+  "ts": "2026-08-21T08:52:58.000000Z",
+  "block": 42152867,
+  "frm": "0x2da0f858c20398854301fcdc64a9c2899c61de01",
+  "token": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "censored": false
+ },
+ "0x40029ee8f8f67bf42d16970893417f33ae897a62": {
+  "ts": "2026-07-22T00:44:25.000000Z",
+  "block": 16004025,
+  "frm": "0x2459dedb3012d1e929edd17df26620120bdf11bf",
+  "token": "0x5f10a1c971b69e47e059e1dc91901b59b3fb49c3",
+  "censored": true
+ },
+ "0x668836300214a4d8824e69537c77382fabd35a1d": {
+  "ts": "2026-08-20T04:31:16.000000Z",
+  "block": 41134997,
+  "frm": "0x1f12fe622c11947f93f53d63f68f7f46b6d081c9",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": true
+ },
+ "0x45b7d230e6eef7f66a9ee4aa2073f7fbf33121ac": {
+  "ts": "2026-09-02T01:55:55.000000Z",
+  "block": 52198651,
+  "frm": "0xbed65f995c626d573843264b05a30dabd76c61a3",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": true
+ },
+ "0x1ac5cd942942e95396e82d3a4b37455b58cb26d1": {
+  "ts": "2026-08-28T20:18:35.000000Z",
+  "block": 48578125,
+  "frm": "0x55677dbc535dd27dfaad5f2b724de56b868233ac",
+  "token": "0x1d11f0496982706c5e14a514d4e79f2e6bde4516",
+  "censored": false
+ },
+ "0x88ae88fda58aa6d0bc06eaf8d5ccc82dfd9e3072": {
+  "ts": "2026-09-01T14:18:14.000000Z",
+  "block": 51785021,
+  "frm": "0x8366a39cc670b4001a1121b8f6a443a643e40951",
+  "token": "0x9e7abd3c9139d14e4c86dce0e455aab7a0c2fb3e",
+  "censored": true
+ },
+ "0x29c18d99ba7085eb2c49f62f6af5269d926fa183": {
+  "ts": "2026-09-02T09:43:24.000000Z",
+  "block": 52476852,
+  "frm": "0x3746fd683e8af0a9c0abbc0fa0741ca7d1420fa4",
+  "token": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "censored": false
+ },
+ "0x456ce508462a2f431ce9e102eb8af7e4e31e528a": {
+  "ts": "2026-08-07T15:08:28.000000Z",
+  "block": 30306901,
+  "frm": "0x839de3aeac05ebca8cbbaf2f01e0db8b32c1f0da",
+  "token": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+  "censored": false
+ },
+ "0x5c7a25b6a9b968e0a1e2d0be061d91beb4ae5552": {
+  "ts": "2026-08-27T06:32:41.000000Z",
+  "block": 47231242,
+  "frm": "0x3abf87c647758f8071985048feb7168f30b6fad5",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0xf7f6c46bd03e9ebef74ad2b6fc1b8279c9d846de": {
+  "ts": "2026-07-24T04:15:13.000000Z",
+  "block": 17854071,
+  "frm": "0x6682d7a0541261db789441df9bcc48c4c023980e",
+  "token": "0x6330d8c3178a418788df01a47479c0ce7ccf450b",
+  "censored": true
+ },
+ "0xf5c65dc6efda2bdaf0e38187aa9ef3460332af6d": {
+  "ts": "2026-09-02T10:32:13.000000Z",
+  "block": 52505950,
+  "frm": "0xc603c8fb07e1f182ac34c41e176e4244606e734b",
+  "token": "0x2e0847e8910a9732eb3fb1bb4b70a580adad4fe3",
+  "censored": false
+ },
+ "0xf9da49b600228cab30639d5cb1d10220bfe3aaee": {
+  "ts": "2026-08-30T20:47:33.000000Z",
+  "block": 50305140,
+  "frm": "0xbfa7207799d98b5b29323f8640a403bae2a5b153",
+  "token": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "censored": true
+ },
+ "0x60f7d6343ff40145d22c7cb7765ce46398b986a7": {
+  "ts": "2026-08-29T15:27:23.000000Z",
+  "block": 49260811,
+  "frm": "0xbdb0b32d79fe5eabd043b2bdec3a102535729680",
+  "token": "0xdf0992e440dd0be65bd8439b609d6d4366bf1cb5",
+  "censored": false
+ },
+ "0xaac13f941bdfb28d11bea09a0b3e8bb814c6d3d1": {
+  "ts": "2026-07-10T14:04:30.000000Z",
+  "block": 6137288,
+  "frm": "0x144400e9c0b7b033153394258d2b6e9c637ce971",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": false
+ },
+ "0x64516a69b523b61947e0b99230624c93ecfb58bc": {
+  "ts": "2026-09-01T20:33:56.000000Z",
+  "block": 52007758,
+  "frm": "0xe33e9e479df8802cb0866d5d05258bec4cf62948",
+  "token": "0x1d11f0496982706c5e14a514d4e79f2e6bde4516",
+  "censored": false
+ },
+ "0x059452274930056455f9f0d070e67af159b86433": {
+  "ts": "2026-08-05T11:05:51.000000Z",
+  "block": 28436329,
+  "frm": "0x5db3155c30d3c3c55f74e7cb00a694e49cb5a5c2",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0x2804b16d1ea0eed55119bcc44a7cbccfe367b956": {
+  "ts": "2026-08-07T21:06:32.000000Z",
+  "block": 30521373,
+  "frm": "0xa6fa611d306e638c325410f4cec2f1b7b362e4ed",
+  "token": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "censored": false
+ },
+ "0x0750a076666ec460a566faa2e3ac653295dfacd0": {
+  "ts": "2026-08-29T18:11:25.000000Z",
+  "block": 49358110,
+  "frm": "0x70504a6fafdbfb75fe971faa4dd716e79ac5624c",
+  "token": "0xec262a75e413fafd0df80480274532c79d42da09",
+  "censored": false
+ },
+ "0x520ea3de138725ce6a877a133f8d62e9e068ab77": {
+  "ts": "2026-09-02T07:24:24.000000Z",
+  "block": 52394141,
+  "frm": "0x315b65cb3d038fa549fa72e69eaed6adebaa0a09",
+  "token": "0x1d11f0496982706c5e14a514d4e79f2e6bde4516",
+  "censored": false
+ },
+ "0x650a840a86943385845747fb94de1d24fc4764e5": {
+  "ts": "2026-08-21T04:49:16.000000Z",
+  "block": 42007277,
+  "frm": "0xf1c50ffeb5cc8a50b153ceed1b7dd0c42f3e5438",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0x9d74f12dc08b8e12f5afee932c5af3b5d17a3ea4": {
+  "ts": "2026-08-30T22:49:31.000000Z",
+  "block": 50377332,
+  "frm": "0xe33e9e479df8802cb0866d5d05258bec4cf62948",
+  "token": "0x1d11f0496982706c5e14a514d4e79f2e6bde4516",
+  "censored": false
+ },
+ "0x7779bc4d7a28783f7e535cc4fedc920764656e43": {
+  "ts": "2026-08-29T20:02:38.000000Z",
+  "block": 49424032,
+  "frm": "0xf45ffb66007396159c4850759f6f564b4b569a6c",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": true
+ },
+ "0x563819d6388804617a97f1987770184a3624cdc5": {
+  "ts": "2026-08-24T20:39:23.000000Z",
+  "block": 45160384,
+  "frm": "0xf1c50ffeb5cc8a50b153ceed1b7dd0c42f3e5438",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0x34c12ad0aef9925cfcef9ca97aa9faa2eb50ff98": {
+  "ts": "2026-09-02T07:17:25.000000Z",
+  "block": 52389977,
+  "frm": "0x19aaf2152e3a86705e8cb293cc95f1427e03810b",
+  "token": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+  "censored": false
+ },
+ "0x513fe99c0fa5f8087b5ab4a52a7b9815c1c0bc6d": {
+  "ts": "2026-08-30T15:48:14.000000Z",
+  "block": 50127797,
+  "frm": "0xacc79e7b9f8dbb22e197c76d92ff8c0472ac81b4",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0x34dd9bb0bdcf5919197ba981095ed4ea4f0b1272": {
+  "ts": "2026-08-26T10:35:28.000000Z",
+  "block": 46519888,
+  "frm": "0x30f3916201e49bd6e5f47566bb59a68e6cede5c5",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": true
+ },
+ "0x9acf8d0315094d33aa6875b673eb126483c3a2c0": {
+  "ts": "2026-07-18T14:20:36.000000Z",
+  "block": 13047267,
+  "frm": "0x5aadb19cace36a8e021064793a7ab020088c5d3b",
+  "token": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+  "censored": true
+ },
+ "0xa8af1d6f43012afb9c6f7744d3fe6e523eebe201": {
+  "ts": "2026-07-24T09:48:02.000000Z",
+  "block": 18052952,
+  "frm": "0x35da157f8ee56d4df33b17e2c08852e0e9fcbc97",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": false
+ },
+ "0x1b9934f30115a3209240e9ca21a07e4e86c11546": {
+  "ts": "2026-07-21T18:12:01.000000Z",
+  "block": 15768889,
+  "frm": "0xacc79e7b9f8dbb22e197c76d92ff8c0472ac81b4",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0xa2e3b29f7a6955c300493052f44f267c228a44a0": {
+  "ts": "2026-09-02T01:40:26.000000Z",
+  "block": 52189451,
+  "frm": "0xe33e9e479df8802cb0866d5d05258bec4cf62948",
+  "token": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+  "censored": false
+ },
+ "0x09089983a02f6ae2f70811897090b1075fc92276": {
+  "ts": "2026-07-10T05:28:45.000000Z",
+  "block": 5828200,
+  "frm": "0x144400e9c0b7b033153394258d2b6e9c637ce971",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": false
+ },
+ "0x2ca1c755829f978d8ededc4dc8ebad7a91671eda": {
+  "ts": "2026-09-01T13:15:28.000000Z",
+  "block": 51747728,
+  "frm": "0xe33e9e479df8802cb0866d5d05258bec4cf62948",
+  "token": "0x5e81213613b6b86eab4c6c50d718d34359459786",
+  "censored": false
+ },
+ "0xc4d50263c1e89b65b63c830ff93fadc957064fa4": {
+  "ts": "2026-09-02T14:39:27.000000Z",
+  "block": 52652880,
+  "frm": "0x39b38686a19836ac10162c490e4558e120cbbe5f",
+  "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+  "censored": true
+ },
+ "0x1b5a3e227506b428ecf39acb1fa5d5da871a1edd": {
+  "ts": "2026-07-15T14:36:07.000000Z",
+  "block": 10469563,
+  "frm": "0xa93c6fae18837afa4b95ff2b19fb6286b77d1148",
+  "token": "0xd5f3879160bc7c32ebb4dc785f8a4f505888de68",
+  "censored": false
+ },
+ "0x541098bd0828954377512fe56c141c5e038ee060": {
+  "ts": "2026-07-09T15:47:42.000000Z",
+  "block": 5336621,
+  "frm": "0x144400e9c0b7b033153394258d2b6e9c637ce971",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": false
+ },
+ "0xaf2573bc08601f39e38360dea0814799e632d348": {
+  "ts": "2026-08-02T21:39:37.000000Z",
+  "block": 26230375,
+  "frm": "0x038a7f4e4e89448ad74e044337c9ac25c11e726b",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": true
+ },
+ "0x8bfd1a91afe53d1e2b2a11991e1af9b854521b0d": {
+  "ts": "2026-08-02T02:39:03.000000Z",
+  "block": 25548113,
+  "frm": "0xc94135b63772b91d79d0a2daab2a8801f32359bd",
+  "token": "0x84cab63bc87912e71ad199ff14a0ba45de68fef8",
+  "censored": false
+ },
+ "0x61712585e1866f57e66f96a8057ecb28e30c8c2c": {
+  "ts": "2026-07-24T19:36:40.000000Z",
+  "block": 18405275,
+  "frm": "0x28e67855d2bb4e809720e2285384bf446c2351cd",
+  "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+  "censored": true
+ },
+ "0x18c30810eec67a572f8125d4c6f02a833d54a39f": {
+  "ts": "2026-08-30T12:19:13.000000Z",
+  "block": 50004052,
+  "frm": "0xa4bdb396a69617eb7f70e2cc1ef526f7340b1b0d",
+  "token": "0xc0d6457c16cc70d6790dd43521c899c87ce02f35",
+  "censored": false
+ },
+ "0x5e0f96a6b6531c21990a93fb91e2dd5573f6f096": {
+  "ts": "2026-08-28T20:12:58.000000Z",
+  "block": 48574821,
+  "frm": "0x4703b278973fb1d0098a06c0e70d0621b522a23c",
+  "token": "0x1d11f0496982706c5e14a514d4e79f2e6bde4516",
+  "censored": false
+ },
+ "0x14b4022d668a9841c2eac1ff3b26fece6a5e2092": {
+  "ts": "2026-07-19T12:32:34.000000Z",
+  "block": 13843071,
+  "frm": "0x66d29ddfb9de339950e493da4bfbe186ea49f9e1",
+  "token": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+  "censored": false
+ },
+ "0xc9f1e0b165fd99d981114284d547f356316d955e": {
+  "ts": "2026-08-07T23:42:29.000000Z",
+  "block": 30614957,
+  "frm": "0xd0a40c6526acdebd4f6d87931098ff37a9f8e4bf",
+  "token": "0xdf0992e440dd0be65bd8439b609d6d4366bf1cb5",
+  "censored": false
+ },
+ "0x86462635b9a3c9293bdb05c10eda9d5d877cae3b": {
+  "ts": "2026-08-08T16:27:40.000000Z",
+  "block": 31216767,
+  "frm": "0x2599882aaf5c14834562ee59ca7a3d1ffcc229d7",
+  "token": "0xe93237c50d904957cf27e7b1133b510c669c2e74",
+  "censored": false
+ },
+ "0x7e3f82e9e3520938a74d9c3270a63e47cca8a79d": {
+  "ts": "2026-08-04T05:00:54.000000Z",
+  "block": 27356561,
+  "frm": "0xe311d712bd0669896bcb47f38845ad71a641b8be",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0x1bf1cd008d74230617136582967c866a4edd4e43": {
+  "ts": "2026-08-31T16:26:48.000000Z",
+  "block": 51005942,
+  "frm": "0xcf28ea751b05a41285c970cc148b60354f916c0e",
+  "token": "0xd5f3879160bc7c32ebb4dc785f8a4f505888de68",
+  "censored": false
+ },
+ "0x44addbb6d25ca11ec4d2d0a9abcacf7cad4c1a26": {
+  "ts": "2026-08-29T23:57:00.000000Z",
+  "block": 49563308,
+  "frm": "0xbfa7207799d98b5b29323f8640a403bae2a5b153",
+  "token": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "censored": true
+ },
+ "0x2c4282ee478a2aae64f4fe5f767cee4051e79e24": {
+  "ts": "2026-07-24T04:17:45.000000Z",
+  "block": 17855578,
+  "frm": "0x144400e9c0b7b033153394258d2b6e9c637ce971",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": true
+ },
+ "0x11315cce8f009e4cb4234ffeaf2e860b84e5b0f6": {
+  "ts": "2026-07-23T16:57:52.000000Z",
+  "block": 17448735,
+  "frm": "0xacc79e7b9f8dbb22e197c76d92ff8c0472ac81b4",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0x5d10169c0c18122e0254e63ec35c7910ced64b88": {
+  "ts": "2026-07-09T15:35:31.000000Z",
+  "block": 5329319,
+  "frm": "0x9826c1b135bb865cdfe62d948909bb0bbec6e4a1",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": false
+ },
+ "0xa680307760ccc37eed0a9e5e4d995dedd3883d85": {
+  "ts": "2026-09-02T10:33:36.000000Z",
+  "block": 52506745,
+  "frm": "0x735122a54795813942f2e6ef7a6975beaf7c3770",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0xb4776dc57d29fed1b48110d61c6b9a105abd5d7c": {
+  "ts": "2026-07-24T09:54:53.000000Z",
+  "block": 18057035,
+  "frm": "0x2459dedb3012d1e929edd17df26620120bdf11bf",
+  "token": "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a",
+  "censored": true
+ },
+ "0x58d3cf89a1fc1ed034e9d816d63f6f702fff16e3": {
+  "ts": "2026-08-26T07:25:32.000000Z",
+  "block": 46406733,
+  "frm": "0x2ce79485d20dfdce0e15434184e2fa4fd1391cc6",
+  "token": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+  "censored": true
+ },
+ "0x6b551c74df750baee5407e61d0f7b47ccb1fef6e": {
+  "ts": "2026-09-02T15:56:54.000000Z",
+  "block": 52698782,
+  "frm": "0xcdba95ac46cc990b14611432b246952322980b4a",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": false
+ },
+ "0xf5b9838b7ac5c4e95c5c8d7450ff6b6eaf9b1eb4": {
+  "ts": "2026-08-28T14:30:23.000000Z",
+  "block": 48371505,
+  "frm": "0x82753967e6998382fee953067083684d98b2afc1",
+  "token": "0xe0444ef8bf4ed74f74fd73686e2ddf4c1c5591e8",
+  "censored": false
+ },
+ "0x36c415d27cbcfd828ec81f2d272aff8f1179aa42": {
+  "ts": "2026-08-30T20:18:51.000000Z",
+  "block": 50288196,
+  "frm": "0xf8e6c6f4d2af82a8bc9f00086726fc4e399913f6",
+  "token": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+  "censored": false
+ },
+ "0x92766d4a3974cb98300e588ef33f64b86f4f16d0": {
+  "ts": "2026-08-31T08:53:52.000000Z",
+  "block": 50736608,
+  "frm": "0x3cf6cb71c4df11eea7e37ddd88abeefe482165b6",
+  "token": "0x2e0847e8910a9732eb3fb1bb4b70a580adad4fe3",
+  "censored": true
+ },
+ "0x77577439244fa4da4f7f5a8945052c76ab979c82": {
+  "ts": "2026-08-26T08:41:54.000000Z",
+  "block": 46452229,
+  "frm": "0xc4bd6adc82115c6cc74f487b39489a3792cb11fe",
+  "token": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+  "censored": false
+ },
+ "0xa3bce7efb10174e6db1b93e7f8ec762f811afac6": {
+  "ts": "2026-08-27T21:34:15.000000Z",
+  "block": 47767250,
+  "frm": "0xe33e9e479df8802cb0866d5d05258bec4cf62948",
+  "token": "0x5e81213613b6b86eab4c6c50d718d34359459786",
+  "censored": false
+ },
+ "0x0b9b8f40073538a31e1d5f388a0f59c2fb35e17e": {
+  "ts": "2026-09-02T12:37:34.000000Z",
+  "block": 52580547,
+  "frm": "0xc94135b63772b91d79d0a2daab2a8801f32359bd",
+  "token": "0x6330d8c3178a418788df01a47479c0ce7ccf450b",
+  "censored": false
+ },
+ "0x66b244258039a2faaefda4462c0346294115c68b": {
+  "ts": "2026-08-11T14:16:09.000000Z",
+  "block": 33726303,
+  "frm": "0x2e2a857c08ad6c09f1d1ec4fdb4cc7cd06cf17f4",
+  "token": "0x59818904ab4ce163b3ce4ffb64f2d6ca02c434b4",
+  "censored": false
+ },
+ "0xa4e0b157233e174fcf2336ff73b18663a057b991": {
+  "ts": "2026-08-25T16:50:20.000000Z",
+  "block": 45885108,
+  "frm": "0xbed65f995c626d573843264b05a30dabd76c61a3",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": true
+ },
+ "0xea45d97b0581275d1c18d8cb0d03b36cda7694f1": {
+  "ts": "2026-09-02T00:37:13.000000Z",
+  "block": 52151970,
+  "frm": "0xc61284332117c3fb23a2a56cceffd07f7af60029",
+  "token": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+  "censored": false
+ },
+ "0x20bddc8e3fd22b8ec254277d2393399d24181858": {
+  "ts": "2026-07-17T12:54:11.000000Z",
+  "block": 12134621,
+  "frm": "0x0b1cc94e1474fd61f5efa628f32afed69ac08328",
+  "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+  "censored": false
+ },
+ "0x785e97881d6e9b28ee07c9e5315a07920c5a2d3d": {
+  "ts": "2026-07-24T19:44:23.000000Z",
+  "block": 18409893,
+  "frm": "0xe2b46c905e12ab8e2f864e4821a4325884c1b126",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0x944d7555b0ab0e5cc5be8502b1fe2055d934c689": {
+  "ts": "2026-07-30T16:49:00.000000Z",
+  "block": 23471272,
+  "frm": "0x77bedd6f81326871d27674d6acef171bd47ef1fd",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": true
+ },
+ "0x4cc7bf7dcba733f0131bff6cf82a36115dbbf369": {
+  "ts": "2026-08-25T06:20:47.000000Z",
+  "block": 45508252,
+  "frm": "0x30f3916201e49bd6e5f47566bb59a68e6cede5c5",
+  "token": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+  "censored": false
+ },
+ "0x4e42e4304e1b38a8ec6841d9b66b490b7d454569": {
+  "ts": "2026-08-30T11:41:46.000000Z",
+  "block": 49981874,
+  "frm": "0x315b65cb3d038fa549fa72e69eaed6adebaa0a09",
+  "token": "0x1d11f0496982706c5e14a514d4e79f2e6bde4516",
+  "censored": true
+ },
+ "0x959adda976842fe1f44e9091240e0fd10552787b": {
+  "ts": "2026-08-27T16:38:03.000000Z",
+  "block": 47591169,
+  "frm": "0x0f2730c4b0c279c8c7e3e5f9b7032eb7d42d06c0",
+  "token": "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a",
+  "censored": false
+ },
+ "0x2f58b00f877503323af830d138ca24ab78f141a0": {
+  "ts": "2026-08-29T15:10:34.000000Z",
+  "block": 49250866,
+  "frm": "0x2b9f4aa83915217a0b764d69c1e17e6db8c4cb1f",
+  "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+  "censored": false
+ },
+ "0xb2ba0d65881beae15ae2c96eb1f1b20c439d5ced": {
+  "ts": "2026-08-23T20:32:57.000000Z",
+  "block": 44294174,
+  "frm": "0x369f76234dc29d8f08f3c1fb5e93071411105324",
+  "token": "0xec262a75e413fafd0df80480274532c79d42da09",
+  "censored": false
+ },
+ "0xe00c284f7d367806b2e8d7527b370c7c8bb2ef02": {
+  "ts": "2026-08-29T22:23:31.000000Z",
+  "block": 49507765,
+  "frm": "0x44db4ecd5b0048d55c762e32ff53afaeccf75ed7",
+  "token": "0xc9a981fee1f9dec688bb123ccdecc63d0debfc4e",
+  "censored": false
+ },
+ "0xdee091e276a890ca2383b06f6794fa79b082c479": {
+  "ts": "2026-08-27T01:36:18.000000Z",
+  "block": 47054926,
+  "frm": "0x63ab7c90ad049a9f2e7214cbfc6f0541725fcec6",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0xc407b9a8279e5b072923443f5f91b7a80cf1933d": {
+  "ts": "2026-07-29T15:00:24.000000Z",
+  "block": 22544576,
+  "frm": "0xb944cec30bd4175855215d767adc81f39e5f7e2b",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": true
+ },
+ "0x8856655ed291761ecb7bda777f83139b17efcb42": {
+  "ts": "2026-08-30T21:57:01.000000Z",
+  "block": 50346201,
+  "frm": "0x65050a9b7e5075a2ba5ced7b1b64ee66262c40dc",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": true
+ },
+ "0xd952c30ca700a4cf0a7ac8144d61acb61f822e8d": {
+  "ts": "2026-09-02T06:31:04.000000Z",
+  "block": 52362307,
+  "frm": "0x3746fd683e8af0a9c0abbc0fa0741ca7d1420fa4",
+  "token": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "censored": false
+ },
+ "0x0ac9cd59e3926b5d01d4d9ff2f93e9b7385a8a02": {
+  "ts": "2026-09-02T09:25:16.000000Z",
+  "block": 52466071,
+  "frm": "0xea0a9e389d439acb767e915b8b59f56796905fb6",
+  "token": "0xd5f3879160bc7c32ebb4dc785f8a4f505888de68",
+  "censored": false
+ },
+ "0x2f02da705f2a53b068ba046813a4f5d221949ef0": {
+  "ts": "2026-08-04T04:53:18.000000Z",
+  "block": 27352014,
+  "frm": "0xe311d712bd0669896bcb47f38845ad71a641b8be",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0xd9ddf3d9742946904cf00f18247c3793faeec457": {
+  "ts": "2026-08-31T16:44:38.000000Z",
+  "block": 51016473,
+  "frm": "0xc5efa791c47bc5c4f996ca318c4559c623fc3574",
+  "token": "0x408c14038a04f7bd235329e26d2bf569ee20e250",
+  "censored": true
+ },
+ "0xf61e396a2ec698886a4a41157e39dc88e29dce61": {
+  "ts": "2026-08-26T17:34:26.000000Z",
+  "block": 46768733,
+  "frm": "0xbed65f995c626d573843264b05a30dabd76c61a3",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": true
+ },
+ "0x5d04e7e31c2b7e71c6c18804248bf70b53467083": {
+  "ts": "2026-08-19T12:37:50.000000Z",
+  "block": 40564337,
+  "frm": "0x5c5375fe2ace088bd27da8b91bffbc8ff396d9ea",
+  "token": "0x43b07d15ce533bec5476d70c22a78a1b2b662155",
+  "censored": true
+ },
+ "0x8034948b4c6f161536486abf50f8d91994a1256d": {
+  "ts": "2026-08-21T04:49:31.000000Z",
+  "block": 42007422,
+  "frm": "0xf1c50ffeb5cc8a50b153ceed1b7dd0c42f3e5438",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0xea25a54194a0929afbe26c48568bcb4f2b94e6db": {
+  "ts": "2026-08-06T18:45:47.000000Z",
+  "block": 29574642,
+  "frm": "0xa6fa611d306e638c325410f4cec2f1b7b362e4ed",
+  "token": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "censored": false
+ },
+ "0x5bdde6856b79f60bc3b9b234f3e9d007902abc8e": {
+  "ts": "2026-08-30T04:11:33.000000Z",
+  "block": 49714473,
+  "frm": "0x82753967e6998382fee953067083684d98b2afc1",
+  "token": "0xe0444ef8bf4ed74f74fd73686e2ddf4c1c5591e8",
+  "censored": false
+ },
+ "0xa0367450db4fcf9c2577bb268a44870555230f06": {
+  "ts": "2026-08-18T16:46:21.000000Z",
+  "block": 39852603,
+  "frm": "0x7baf435847a4b45c2e22a7fd13549c3192c95953",
+  "token": "0xc72b96e0e48ecd4dc75e1e45396e26300bc39681",
+  "censored": false
+ },
+ "0xfc711e2ce293703ff703195f69bcfb486d911213": {
+  "ts": "2026-07-15T10:09:57.000000Z",
+  "block": 10309771,
+  "frm": "0x2459dedb3012d1e929edd17df26620120bdf11bf",
+  "token": "0x2e0847e8910a9732eb3fb1bb4b70a580adad4fe3",
+  "censored": true
+ },
+ "0x88d8b311c60ec8fd107cb82406411d5b970897ec": {
+  "ts": "2026-08-27T02:39:39.000000Z",
+  "block": 47092643,
+  "frm": "0x4230750b3c69ae6054a3f778d75adc2e9a27d70f",
+  "token": "0xe93237c50d904957cf27e7b1133b510c669c2e74",
+  "censored": false
+ },
+ "0x610663dc35b1404b92ebe9f0e4d98e5155c79dee": {
+  "ts": "2026-07-24T02:50:21.000000Z",
+  "block": 17803304,
+  "frm": "0x144400e9c0b7b033153394258d2b6e9c637ce971",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": false
+ },
+ "0x27feca2f36ec7eb3742dbb0049e81a9d1e1dce1e": {
+  "ts": "2026-09-01T12:15:13.000000Z",
+  "block": 51711912,
+  "frm": "0xe33e9e479df8802cb0866d5d05258bec4cf62948",
+  "token": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "censored": false
+ },
+ "0x0fa4311144f2e366ebcd82005d1e2084279d521c": {
+  "ts": "2026-08-03T16:11:33.000000Z",
+  "block": 26895906,
+  "frm": "0xe311d712bd0669896bcb47f38845ad71a641b8be",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0x1c3bed59b09f56c778b4bba3c3a82e5e8d60ebfc": {
+  "ts": "2026-08-15T14:02:40.000000Z",
+  "block": 37170976,
+  "frm": "0xd52e81999b7dfe5092cac5b1be6266067388b1fc",
+  "token": "0xf0c4bf4c582cb3836e98394b1d4e7b7281101be8",
+  "censored": false
+ },
+ "0x74b89745a59e138a343230644e04f1037008a1f8": {
+  "ts": "2026-09-02T00:41:06.000000Z",
+  "block": 52154240,
+  "frm": "0xd3afeb2a57f70ef218aa82451c51b2fb0416ac9e",
+  "token": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+  "censored": false
+ },
+ "0x308660fab09e8deb4c7f1146040ccbd7578cbda2": null,
+ "0x1a63244d48b25216776f1a8c2ccc09e6db595812": {
+  "ts": "2026-07-15T06:07:29.000000Z",
+  "block": 10163838,
+  "frm": "0x0b1cc94e1474fd61f5efa628f32afed69ac08328",
+  "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+  "censored": true
+ },
+ "0xc6555e6d7c37119d1dae0106c523ce9d2098841b": {
+  "ts": "2026-09-02T04:51:52.000000Z",
+  "block": 52303325,
+  "frm": "0xe33e9e479df8802cb0866d5d05258bec4cf62948",
+  "token": "0xd5f3879160bc7c32ebb4dc785f8a4f505888de68",
+  "censored": false
+ },
+ "0x2f0ef6a1ee6f8e73585ed69f27a21712ff3b848a": {
+  "ts": "2026-08-05T06:53:47.000000Z",
+  "block": 28285566,
+  "frm": "0x9f8dfe32cd3c4d9ea2c988458cff01a03e42a7c0",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": false
+ },
+ "0x37c88fd5f35b620fc8681a8345f3352961047cd2": {
+  "ts": "2026-07-19T04:13:58.000000Z",
+  "block": 13545551,
+  "frm": "0xacc79e7b9f8dbb22e197c76d92ff8c0472ac81b4",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0x5365f07f6ba17dfa576950a3f33f48371d56440b": {
+  "ts": "2026-08-29T10:30:53.000000Z",
+  "block": 49084652,
+  "frm": "0xb0817f2cc3365df7f564f970169026c866a14a44",
+  "token": "0xd5f3879160bc7c32ebb4dc785f8a4f505888de68",
+  "censored": false
+ },
+ "0xff0ffd5b87e76e6fbd717abef9db455474224672": {
+  "ts": "2026-09-02T00:56:02.000000Z",
+  "block": 52163087,
+  "frm": "0x55642a3f10f1af5145d3d59021b1d6b03bb8692c",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": true
+ },
+ "0x0eecb9b57c2ba4f07d781fae69fa8b393c854425": {
+  "ts": "2026-09-02T13:53:58.000000Z",
+  "block": 52625946,
+  "frm": "0x4fdaab9427aff5d8e2fff9d9f9b5dd3a9dc014d6",
+  "token": "0x1d11f0496982706c5e14a514d4e79f2e6bde4516",
+  "censored": true
+ },
+ "0x6592bef516984f4931a81efb14d1e00a33c1c7fc": {
+  "ts": "2026-08-22T16:32:38.000000Z",
+  "block": 43289188,
+  "frm": "0x8366a39cc670b4001a1121b8f6a443a643e40951",
+  "token": "0x1d11f0496982706c5e14a514d4e79f2e6bde4516",
+  "censored": false
+ },
+ "0xd3dd1bde23ebf28b96e70aebab84bd8cd476ceeb": {
+  "ts": "2026-08-27T13:23:14.000000Z",
+  "block": 47475313,
+  "frm": "0x55642a3f10f1af5145d3d59021b1d6b03bb8692c",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": true
+ },
+ "0xb116d0dde17af94c76d5e42720d18ba182126bfc": {
+  "ts": "2026-08-30T08:58:04.000000Z",
+  "block": 49884631,
+  "frm": "0x2b9f4aa83915217a0b764d69c1e17e6db8c4cb1f",
+  "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+  "censored": true
+ },
+ "0xf2e77dc6dd419b2916797e5801fb6cbcc4b5643a": {
+  "ts": "2026-08-27T15:40:47.000000Z",
+  "block": 47557116,
+  "frm": "0x82753967e6998382fee953067083684d98b2afc1",
+  "token": "0xe0444ef8bf4ed74f74fd73686e2ddf4c1c5591e8",
+  "censored": false
+ },
+ "0x933fb4cbd9d127de6b5eb7f8f51bbc4cdca363a8": {
+  "ts": "2026-08-17T06:04:26.000000Z",
+  "block": 38607113,
+  "frm": "0x39adb8acd07427d338b5f1afab436a04abfdb7c4",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": true
+ },
+ "0x392d173c41fdf8e6ef86f73b13ee67f7db7eef94": {
+  "ts": "2026-08-11T13:13:40.000000Z",
+  "block": 33688825,
+  "frm": "0x73ff3adafa43db16281ab29220778fe47dedaaba",
+  "token": "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a",
+  "censored": false
+ },
+ "0xb13c7ffc5b5b9ccb62c0ed44f5458f388411143f": {
+  "ts": "2026-09-01T17:43:48.000000Z",
+  "block": 51906659,
+  "frm": "0x862bc4805a407b98a6a487ae15606dce3e997c1d",
+  "token": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "censored": false
+ },
+ "0x560bde70cc476ba9c73f8081b607c706de3f8500": {
+  "ts": "2026-08-31T04:42:10.000000Z",
+  "block": 50586829,
+  "frm": "0xd3afeb2a57f70ef218aa82451c51b2fb0416ac9e",
+  "token": "0xd5f3879160bc7c32ebb4dc785f8a4f505888de68",
+  "censored": false
+ },
+ "0x7c68d48d7fed430c2700052da4c57c3dc9c53646": {
+  "ts": "2026-09-02T06:37:56.000000Z",
+  "block": 52366396,
+  "frm": "0x444214ba8045f197965577369e5af8e8bfe36080",
+  "token": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+  "censored": false
+ },
+ "0xedcf723d8479312e10349d5ebb32e98539debee5": {
+  "ts": "2026-08-31T16:48:43.000000Z",
+  "block": 51018878,
+  "frm": "0xe33e9e479df8802cb0866d5d05258bec4cf62948",
+  "token": "0xe93237c50d904957cf27e7b1133b510c669c2e74",
+  "censored": false
+ },
+ "0x579c40bfe27186df89cdd12176f57423746c0147": null,
+ "0x448256483b56c6139ae6375c30112435a7c23917": {
+  "ts": "2026-07-24T15:59:52.000000Z",
+  "block": 18275388,
+  "frm": "0xef3e6943aea01e1057ca70f7f2cd53a1cdf68ec3",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0x9e8a1b5a0ae1e33aea571487ed685c6635c9418a": {
+  "ts": "2026-08-30T04:11:39.000000Z",
+  "block": 49714532,
+  "frm": "0x2ebf0b66b575cd714d011dcc20487b47a052856e",
+  "token": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+  "censored": false
+ },
+ "0x0f251ceb4143e832030a913c0eb819b2a1400dee": {
+  "ts": "2026-08-08T19:09:22.000000Z",
+  "block": 31313710,
+  "frm": "0x374f567ea050fde8ec9a5202e4fe30d62f2be4ee",
+  "token": "0x58ffe4a942d3885baa22d7520691f611ef09e7aa",
+  "censored": true
+ },
+ "0xd5a6a12ef5902236c671a598423fdce99bcff82d": {
+  "ts": "2026-08-13T02:04:11.000000Z",
+  "block": 35017226,
+  "frm": "0xa1de6625ab940d065fbeda37627106f010d54c26",
+  "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+  "censored": true
+ },
+ "0x0baad5c5459ba1b30d955a08aa10dfe7dd953b8c": {
+  "ts": "2026-08-30T02:38:01.000000Z",
+  "block": 49659014,
+  "frm": "0x218914e26a0a814380fcd45a60cbefdbab32ef1e",
+  "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+  "censored": false
+ },
+ "0xc1570e89327dafae1d3afc0e66d6663270e8f333": {
+  "ts": "2026-08-30T23:57:19.000000Z",
+  "block": 50417494,
+  "frm": "0xbfd175b2bf642068c82ec119192caec895711f42",
+  "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+  "censored": false
+ },
+ "0x2a2769c5ac21191ac1ce60aaad439cf3751fc9e1": {
+  "ts": "2026-08-30T04:29:36.000000Z",
+  "block": 49725195,
+  "frm": "0x2ebf0b66b575cd714d011dcc20487b47a052856e",
+  "token": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+  "censored": false
+ },
+ "0x31a9d8052d66411b862f0240011f4ff975686c93": {
+  "ts": "2026-07-20T21:39:24.000000Z",
+  "block": 15031076,
+  "frm": "0x2459dedb3012d1e929edd17df26620120bdf11bf",
+  "token": "0x822cc93ffd030293e9842c30bbd678f530701867",
+  "censored": true
+ },
+ "0xa038446d606e6e339a42a4f4f618376f0d4446f8": {
+  "ts": "2026-08-26T06:00:04.000000Z",
+  "block": 46355852,
+  "frm": "0xec95e1922204b58beae8aaf82648fe05b4c11569",
+  "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "censored": true
+ },
+ "0x692b0aa4991dca7151c5d2b0b2b31f5cc9a58b69": {
+  "ts": "2026-07-19T13:32:51.000000Z",
+  "block": 13879102,
+  "frm": "0x4f2d757a4aa0f4cef89c6509cc00136e3229b41a",
+  "token": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+  "censored": true
+ },
+ "0xacb60d1475f0ddd8d71c3c2938c04940692c81bb": {
+  "ts": "2026-08-02T05:06:17.000000Z",
+  "block": 25636135,
+  "frm": "0x6e96e5d84513996ef7df308af345f9283c4da284",
+  "token": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+  "censored": false
+ },
+ "0x420bb5adad1f2597b3065a1a7b4ca446a81fcd90": {
+  "ts": "2026-08-19T12:52:40.000000Z",
+  "block": 40573214,
+  "frm": "0x7baf435847a4b45c2e22a7fd13549c3192c95953",
+  "token": "0xc72b96e0e48ecd4dc75e1e45396e26300bc39681",
+  "censored": false
+ },
+ "0x017b02eaed1c5b22f267373fd57724db5739c29e": {
+  "ts": "2026-08-31T19:59:40.000000Z",
+  "block": 51132111,
+  "frm": "0x88366f72d790c6d14abb3cfa5f5829262d35e81a",
+  "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+  "censored": false
+ },
+ "0xd571c8853f10dfe6adf2280f6288d75e91d9a069": {
+  "ts": "2026-07-09T15:51:41.000000Z",
+  "block": 5339012,
+  "frm": "0x144400e9c0b7b033153394258d2b6e9c637ce971",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": false
+ },
+ "0x3fbfdd53243b2af166a6b5e5f29984fc65dbe499": {
+  "ts": "2026-07-24T15:39:38.000000Z",
+  "block": 18263262,
+  "frm": "0x28e67855d2bb4e809720e2285384bf446c2351cd",
+  "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+  "censored": true
+ },
+ "0x625b7279cbba4687172db87c8f89c1176f07e766": {
+  "ts": "2026-08-13T07:47:50.000000Z",
+  "block": 35222774,
+  "frm": "0x6828e679fb51b6d0416035370af6ec0fb2f2055a",
+  "token": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+  "censored": false
+ },
+ "0xa4bb510e72a2c0243b8c39cc8f17637be6cc4a26": {
+  "ts": "2026-09-02T08:10:56.000000Z",
+  "block": 52421840,
+  "frm": "0xd3afeb2a57f70ef218aa82451c51b2fb0416ac9e",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": false
+ },
+ "0x06b46c4595bc050ecac70a02bdc837801b4c62bf": {
+  "ts": "2026-09-01T07:02:34.000000Z",
+  "block": 51525910,
+  "frm": "0x583503a53b19a141ea00c8ec02b7382eddc53371",
+  "token": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "censored": true
+ },
+ "0x61d8476eb8ac232391e4d3776f83846e906a69af": {
+  "ts": "2026-09-01T22:12:04.000000Z",
+  "block": 52065709,
+  "frm": "0x51567d23390950131323f303b70d389bea9455cf",
+  "token": "0x4d21483a44bf67a86b77e3da301411880797d452",
+  "censored": true
+ },
+ "0x560b23bc59df8700442a7abe447713d73fb7ac58": {
+  "ts": "2026-08-29T12:19:50.000000Z",
+  "block": 49149432,
+  "frm": "0xc61284332117c3fb23a2a56cceffd07f7af60029",
+  "token": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+  "censored": false
+ },
+ "0xb14a0828042264f6be8f54191f72f264f3ae0a82": {
+  "ts": "2026-07-17T23:44:23.000000Z",
+  "block": 12523811,
+  "frm": "0x4788832c26a6d78938b01f19728a48f217696087",
+  "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "censored": true
+ },
+ "0xebe17d4520eeaef526e39822c10a5db730f72e44": {
+  "ts": "2026-08-10T09:49:18.000000Z",
+  "block": 32703203,
+  "frm": "0x43dc3ecfe02aa4192f41143fee9c0b6267424935",
+  "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "censored": true
+ },
+ "0xf8ee2ff523d94738956a53bca280dd66c6f592c9": {
+  "ts": "2026-08-30T01:31:17.000000Z",
+  "block": 49619329,
+  "frm": "0xe543e1e5b793503f7f4bfdb468f518436285667d",
+  "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+  "censored": false
+ }
+}

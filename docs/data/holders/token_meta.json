@@ -1,0 +1,1942 @@
+[
+ {
+  "symbol": "AAOI",
+  "address": "0x521Cf887E6531c6F667b5BC4D896E5d9bfE8EB2E",
+  "http": 200,
+  "holders_count": 96,
+  "total_supply": "158134000000000000000",
+  "exchange_rate": "109.13",
+  "circulating_market_cap": "15028.210308881238",
+  "decimals": 18
+ },
+ {
+  "symbol": "AAPL",
+  "address": "0xaF3D76f1834A1d425780943C99Ea8A608f8a93f9",
+  "http": 200,
+  "holders_count": 60978,
+  "total_supply": "12821306034280000000000",
+  "exchange_rate": "325.16",
+  "circulating_market_cap": "4078011.5827489435",
+  "decimals": 18
+ },
+ {
+  "symbol": "ABCL",
+  "address": "0x3139D77Ace0cbAA5bDfD38bD1F1911a794AF0B0e",
+  "http": 200,
+  "holders_count": 23,
+  "total_supply": "410954000000000000000",
+  "exchange_rate": "12.64",
+  "circulating_market_cap": "4016.563700632903",
+  "decimals": 18
+ },
+ {
+  "symbol": "ADBE",
+  "address": "0x232B8ed6377BE97813853B0Ac104c4Cda8378d1B",
+  "http": 200,
+  "holders_count": 87,
+  "total_supply": "175930000000000000000",
+  "exchange_rate": "289.46",
+  "circulating_market_cap": "50926.59368675792",
+  "decimals": 18
+ },
+ {
+  "symbol": "AEHR",
+  "address": "0x5F604fBA1162193A4388A5DFa56F556f3E133cC2",
+  "http": 200,
+  "holders_count": 17,
+  "total_supply": "74439000000000000000",
+  "exchange_rate": "75.06",
+  "circulating_market_cap": "5587.91788063196",
+  "decimals": 18
+ },
+ {
+  "symbol": "AEIS",
+  "address": "0xfAf9cb261B5FCC1f404Bb10CD39C5c6C1974E612",
+  "http": 200,
+  "holders_count": 15,
+  "total_supply": "18900000000000000000",
+  "exchange_rate": "271.01",
+  "circulating_market_cap": "4095.650515890753",
+  "decimals": 18
+ },
+ {
+  "symbol": "ALAB",
+  "address": "0x748c32c3ca24eDf31ea597Db1F3d330a7a6DA3Dc",
+  "http": 200,
+  "holders_count": 21,
+  "total_supply": "24611000000000000000",
+  "exchange_rate": "280.21",
+  "circulating_market_cap": "6896.369898151027",
+  "decimals": 18
+ },
+ {
+  "symbol": "AMAT",
+  "address": "0x36046893810a7E7fCE501229d57dc3FC8c8716d0",
+  "http": 200,
+  "holders_count": 2460,
+  "total_supply": "28334000000000000000",
+  "exchange_rate": "462.61",
+  "circulating_market_cap": "12950.136674844105",
+  "decimals": 18
+ },
+ {
+  "symbol": "AMBA",
+  "address": "0x99D9D8663545151603863C5AcbD6FC3218899009",
+  "http": 200,
+  "holders_count": 32,
+  "total_supply": "212524000000000000000",
+  "exchange_rate": "69.29",
+  "circulating_market_cap": "12357.89505663534",
+  "decimals": 18
+ },
+ {
+  "symbol": "AMC",
+  "address": "0x05a3d1Cd21d0C88145E82600E62e7E496e0F222B",
+  "http": 200,
+  "holders_count": 1199,
+  "total_supply": "104731905000000000000000",
+  "exchange_rate": "2.63",
+  "circulating_market_cap": "305362.2714132908",
+  "decimals": 18
+ },
+ {
+  "symbol": "AMD",
+  "address": "0x86923f96303D656E4aa86D9d42D1e57ad2023fdC",
+  "http": 200,
+  "holders_count": 36319,
+  "total_supply": "3717810000000000000000",
+  "exchange_rate": "457.5",
+  "circulating_market_cap": "1620223.4409319877",
+  "decimals": 18
+ },
+ {
+  "symbol": "AMKR",
+  "address": "0xDd356AA38F40A7b7076755aC854B6FBb1F0D305B",
+  "http": 200,
+  "holders_count": 26,
+  "total_supply": "158103000000000000000",
+  "exchange_rate": "45.78",
+  "circulating_market_cap": "7237.881447080962",
+  "decimals": 18
+ },
+ {
+  "symbol": "AMZN",
+  "address": "0x12f190a9F9d7D37a250758b26824B97CE941bF54",
+  "http": 200,
+  "holders_count": 37634,
+  "total_supply": "7416033000000000000000",
+  "exchange_rate": "254.48",
+  "circulating_market_cap": "1886148.1573162968",
+  "decimals": 18
+ },
+ {
+  "symbol": "ANET",
+  "address": "0x28bABD556b60E53663B8615036479a29c2CDd1Bf",
+  "http": 200,
+  "holders_count": 22,
+  "total_supply": "27634000000000000000",
+  "exchange_rate": "190.36",
+  "circulating_market_cap": "5260.417422538245",
+  "decimals": 18
+ },
+ {
+  "symbol": "APLD",
+  "address": "0xb8DBf92F9741c9ac1c32115E78581f23509916FD",
+  "http": 200,
+  "holders_count": 125,
+  "total_supply": "1219828000000000000000",
+  "exchange_rate": "24.62",
+  "circulating_market_cap": "28860.036183270007",
+  "decimals": 18
+ },
+ {
+  "symbol": "APP",
+  "address": "0xA249BAF1063Af884807C1E1400AEf7784836917E",
+  "http": 200,
+  "holders_count": 55,
+  "total_supply": "90881000000000000000",
+  "exchange_rate": "312.61",
+  "circulating_market_cap": "27403.623937346216",
+  "decimals": 18
+ },
+ {
+  "symbol": "ASML",
+  "address": "0x47F93d52cBeC7C6D2CfC080e154002370a60dAEA",
+  "http": 200,
+  "holders_count": 2086,
+  "total_supply": "104227779330000000000",
+  "exchange_rate": "1681.13",
+  "circulating_market_cap": "139350.8395823734",
+  "decimals": 18
+ },
+ {
+  "symbol": "ASTS",
+  "address": "0x1AF6446f07eb1d97c546AFC8c9544cBDF3AD5137",
+  "http": 200,
+  "holders_count": 157,
+  "total_supply": "1377966000000000000000",
+  "exchange_rate": "58.47",
+  "circulating_market_cap": "88367.05521413438",
+  "decimals": 18
+ },
+ {
+  "symbol": "AUR",
+  "address": "0x373C06c4f7BDe527D7Dae4BA169E42b55E393CeD",
+  "http": 200,
+  "holders_count": 34,
+  "total_supply": "1774884000000000000000",
+  "exchange_rate": "5.52",
+  "circulating_market_cap": "5584.972076927125",
+  "decimals": 18
+ },
+ {
+  "symbol": "AVAV",
+  "address": "0xF6290b5e7C26502e2dA514C31509849718EA76A5",
+  "http": 200,
+  "holders_count": 28,
+  "total_supply": "54068000000000000000",
+  "exchange_rate": "141.81",
+  "circulating_market_cap": "7667.583246186609",
+  "decimals": 18
+ },
+ {
+  "symbol": "AVGO",
+  "address": "0x156E175DD063a8cE274C50654eF40e0032b3fbcF",
+  "http": 200,
+  "holders_count": 1628,
+  "total_supply": "65888000000000000000",
+  "exchange_rate": "377.46",
+  "circulating_market_cap": "24360.819254742408",
+  "decimals": 18
+ },
+ {
+  "symbol": "AXON",
+  "address": "0xC27dBD474aF5181c5A8777903690D8D262D12648",
+  "http": 200,
+  "holders_count": 19,
+  "total_supply": "11641000000000000000",
+  "exchange_rate": "583.62",
+  "circulating_market_cap": "6794.063405489593",
+  "decimals": 18
+ },
+ {
+  "symbol": "AXTI",
+  "address": "0x141eEa040c2250eEc0314e336975e81f85f6585e",
+  "http": 200,
+  "holders_count": 14,
+  "total_supply": "97576000000000000000",
+  "exchange_rate": "53.9",
+  "circulating_market_cap": "5259.773120818146",
+  "decimals": 18
+ },
+ {
+  "symbol": "BA",
+  "address": "0x4D21483a44Bf67a86b77E3dA301411880797D452",
+  "http": 200,
+  "holders_count": 971,
+  "total_supply": "859149000000000000000",
+  "exchange_rate": "206.51",
+  "circulating_market_cap": "178376.9851831742",
+  "decimals": 18
+ },
+ {
+  "symbol": "BABA",
+  "address": "0xad25Ac6C84D497db898fa1E8387bf6Af3532a1c4",
+  "http": 200,
+  "holders_count": 355,
+  "total_supply": "2420352000000000000000",
+  "exchange_rate": "112.57",
+  "circulating_market_cap": "272471.9253528062",
+  "decimals": 18
+ },
+ {
+  "symbol": "BB",
+  "address": "0x48E39E56aCdbA37b09020C0b734A613C9a2f100A",
+  "http": 200,
+  "holders_count": 2992,
+  "total_supply": "43164181000000000000000",
+  "exchange_rate": "7.78",
+  "circulating_market_cap": "337213.84041004337",
+  "decimals": 18
+ },
+ {
+  "symbol": "BE",
+  "address": "0x822CC93fFD030293E9842c30BBD678F530701867",
+  "http": 200,
+  "holders_count": 16178,
+  "total_supply": "2384908000000000000000",
+  "exchange_rate": "206.72",
+  "circulating_market_cap": "493020.5628709818",
+  "decimals": 18
+ },
+ {
+  "symbol": "BND",
+  "address": "0x2F62fC9fAbb470C690f141c28340eD832bB27020",
+  "http": 404,
+  "holders_count": null,
+  "total_supply": null,
+  "exchange_rate": null,
+  "circulating_market_cap": null,
+  "decimals": null
+ },
+ {
+  "symbol": "BULL",
+  "address": "0xceF9027c7d6985b85f0BA431125073529A947A68",
+  "http": 200,
+  "holders_count": 260,
+  "total_supply": "9362773000000000000000",
+  "exchange_rate": "9.1",
+  "circulating_market_cap": "82756.5855328176",
+  "decimals": 18
+ },
+ {
+  "symbol": "CBRS",
+  "address": "0x5c90450Bbb4273D7b2f17CF6917AEB237A569679",
+  "http": 200,
+  "holders_count": 51,
+  "total_supply": "31490000000000000000",
+  "exchange_rate": "179.26",
+  "circulating_market_cap": "5119.161924873457",
+  "decimals": 18
+ },
+ {
+  "symbol": "CCL",
+  "address": "0x9651342CeA770aE9a2969Ba2A52611523146aef9",
+  "http": 200,
+  "holders_count": 76,
+  "total_supply": "1739421006630000000000",
+  "exchange_rate": "23.82",
+  "circulating_market_cap": "41430.817679905515",
+  "decimals": 18
+ },
+ {
+  "symbol": "CEG",
+  "address": "0xaE517A2903E68bd929Dfd15be875F8369D53e94a",
+  "http": 200,
+  "holders_count": 26,
+  "total_supply": "35570000000000000000",
+  "exchange_rate": "285.82",
+  "circulating_market_cap": "10166.639043881934",
+  "decimals": 18
+ },
+ {
+  "symbol": "CELH",
+  "address": "0x8cF07C5A878945185d327aAa6e33FAa95F95e7bF",
+  "http": 200,
+  "holders_count": 65,
+  "total_supply": "666088000000000000000",
+  "exchange_rate": "30.97",
+  "circulating_market_cap": "18655.580655784568",
+  "decimals": 18
+ },
+ {
+  "symbol": "CIEN",
+  "address": "0x44f6D488021f8233B9416294d1FE9b1fEe28382d",
+  "http": 200,
+  "holders_count": 27,
+  "total_supply": "21643000000000000000",
+  "exchange_rate": "363.07",
+  "circulating_market_cap": "7858.055114211938",
+  "decimals": 18
+ },
+ {
+  "symbol": "CLOV",
+  "address": "0x62200915e7DEab1eC7f79fb246daDbB80eACdDd0",
+  "http": 200,
+  "holders_count": 49,
+  "total_supply": "3636919000000000000000",
+  "exchange_rate": "4.34",
+  "circulating_market_cap": "15268.09104773533",
+  "decimals": 18
+ },
+ {
+  "symbol": "CLS",
+  "address": "0xBf449977089c718C004a66C554B26B94ef3Ad4De",
+  "http": 200,
+  "holders_count": 16,
+  "total_supply": "21196000000000000000",
+  "exchange_rate": "292.51",
+  "circulating_market_cap": "6200.157555506678",
+  "decimals": 18
+ },
+ {
+  "symbol": "CLSK",
+  "address": "0xcBB95BBF36099d34dA091dc6Fa6F49EfA257Cee3",
+  "http": 200,
+  "holders_count": 60,
+  "total_supply": "1022190000000000000000",
+  "exchange_rate": "10.93",
+  "circulating_market_cap": "10476.10649",
+  "decimals": 18
+ },
+ {
+  "symbol": "COHR",
+  "address": "0x92F9F459F1a9a5AD266b182BE7Bffd1C6c666894",
+  "http": 200,
+  "holders_count": 25,
+  "total_supply": "32364000000000000000",
+  "exchange_rate": "273.17",
+  "circulating_market_cap": "6826.049328588273",
+  "decimals": 18
+ },
+ {
+  "symbol": "COIN",
+  "address": "0x6330D8C3178a418788dF01a47479c0ce7CCF450b",
+  "http": 200,
+  "holders_count": 25562,
+  "total_supply": "6816701000000000000000",
+  "exchange_rate": "176.57",
+  "circulating_market_cap": "1203355.2964433967",
+  "decimals": 18
+ },
+ {
+  "symbol": "COST",
+  "address": "0x4EA005168D7F09a7A0Ba9D1DEf21a479950E44C2",
+  "http": 200,
+  "holders_count": 10586,
+  "total_supply": "621553164690000000000",
+  "exchange_rate": "941.95",
+  "circulating_market_cap": "528176.9809242308",
+  "decimals": 18
+ },
+ {
+  "symbol": "CRCL",
+  "address": "0xdF0992E440dD0be65BD8439b609d6D4366bf1CB5",
+  "http": 200,
+  "holders_count": 7519,
+  "total_supply": "13967884000000000000000",
+  "exchange_rate": "88.42",
+  "circulating_market_cap": "1132746.8321973432",
+  "decimals": 18
+ },
+ {
+  "symbol": "CRDO",
+  "address": "0x4D67253bc223e6b0e104F1084c1fb2b669dDC41b",
+  "http": 200,
+  "holders_count": 15,
+  "total_supply": "30374000000000000000",
+  "exchange_rate": "186.77",
+  "circulating_market_cap": "5672.998415086868",
+  "decimals": 18
+ },
+ {
+  "symbol": "CRM",
+  "address": "0xd95B44124e475743a7589e68F3D74008A5536D44",
+  "http": 200,
+  "holders_count": 34,
+  "total_supply": "27363000000000000000",
+  "exchange_rate": "258.81",
+  "circulating_market_cap": "7082.0435214647305",
+  "decimals": 18
+ },
+ {
+  "symbol": "CRWD",
+  "address": "0xea72Ecca2d0f6bFA1394DBBCff85b52CD4233931",
+  "http": 200,
+  "holders_count": 48,
+  "total_supply": "17005750000000000000",
+  "exchange_rate": "924.4",
+  "circulating_market_cap": "0",
+  "decimals": 18
+ },
+ {
+  "symbol": "CRWV",
+  "address": "0x5f10A1C971B69e47e059e1dC91901B59b3fB49C3",
+  "http": 200,
+  "holders_count": 19031,
+  "total_supply": "6574328000000000000000",
+  "exchange_rate": "81.63",
+  "circulating_market_cap": "536696.0622120426",
+  "decimals": 18
+ },
+ {
+  "symbol": "CSCO",
+  "address": "0xF543967EEBB6f1917992eF0E68De63ab07a5a0dA",
+  "http": 200,
+  "holders_count": 40,
+  "total_supply": "84797000000000000000",
+  "exchange_rate": "110.69",
+  "circulating_market_cap": "9386.228759845362",
+  "decimals": 18
+ },
+ {
+  "symbol": "CTSH",
+  "address": "0x63D5a3b6939a33f1e75d8Bcd85759858239600DB",
+  "http": 200,
+  "holders_count": 15,
+  "total_supply": "55291000000000000000",
+  "exchange_rate": "63.74",
+  "circulating_market_cap": "3322.3992582005835",
+  "decimals": 18
+ },
+ {
+  "symbol": "CVNA",
+  "address": "0xa4f319104089FE321dc8093C6E707d4fE190A988",
+  "http": 200,
+  "holders_count": 45,
+  "total_supply": "160169000000000000000",
+  "exchange_rate": "74.32",
+  "circulating_market_cap": "10883.071610304723",
+  "decimals": 18
+ },
+ {
+  "symbol": "DDOG",
+  "address": "0x27c99fBde9D0d2AA4f4Bfb4943f237843DdF6958",
+  "http": 200,
+  "holders_count": 92,
+  "total_supply": "216835000000000000000",
+  "exchange_rate": "223.98",
+  "circulating_market_cap": "45132.92573656069",
+  "decimals": 18
+ },
+ {
+  "symbol": "DELL",
+  "address": "0x941AE714EC6D8130c7B75d67160Ca08f1e7d11Dd",
+  "http": 200,
+  "holders_count": 2928,
+  "total_supply": "758017927730000000000",
+  "exchange_rate": "468.64",
+  "circulating_market_cap": "276823.5779877684",
+  "decimals": 18
+ },
+ {
+  "symbol": "DJT",
+  "address": "0x1D11f0496982706C5e14A514D4E79F2e6BdE4516",
+  "http": 200,
+  "holders_count": 16808,
+  "total_supply": "113386163000000000000000",
+  "exchange_rate": "9.17",
+  "circulating_market_cap": "1100853.3994568181",
+  "decimals": 18
+ },
+ {
+  "symbol": "DOCN",
+  "address": "0xc02f12B9fe9E707079EC0d546f3050d3F6C1F8bD",
+  "http": 200,
+  "holders_count": 25,
+  "total_supply": "69357000000000000000",
+  "exchange_rate": "107.64",
+  "circulating_market_cap": "7466.07728369852",
+  "decimals": 18
+ },
+ {
+  "symbol": "ELF",
+  "address": "0x39EC44Bee4F6A116c6F9B8De566848a985C53C60",
+  "http": 200,
+  "holders_count": 78,
+  "total_supply": "326217000000000000000",
+  "exchange_rate": "103.72",
+  "circulating_market_cap": "33835.88867423159",
+  "decimals": 18
+ },
+ {
+  "symbol": "EWT",
+  "address": "0x1c690498150252222C275A5CEd69d3A6b1f52D5E",
+  "http": 200,
+  "holders_count": 13,
+  "total_supply": "59626000000000000000",
+  "exchange_rate": "114.66",
+  "circulating_market_cap": "3004.071125643567",
+  "decimals": 18
+ },
+ {
+  "symbol": "EWY",
+  "address": "0x7f0aBeF0C07280F82c6a08ead09dEd6BAE2C13Fc",
+  "http": 200,
+  "holders_count": 62,
+  "total_supply": "49686000000000000000",
+  "exchange_rate": "188.37",
+  "circulating_market_cap": "5874.928571964292",
+  "decimals": 18
+ },
+ {
+  "symbol": "F",
+  "address": "0x25C288E6D899b9BC30160965aD9644c67e73bE0C",
+  "http": 200,
+  "holders_count": 151,
+  "total_supply": "3777039000000000000000",
+  "exchange_rate": "13.78",
+  "circulating_market_cap": "74568.28875128686",
+  "decimals": 18
+ },
+ {
+  "symbol": "FICO",
+  "address": "0xa48F22A46C0F1C46CA7D111CB6c137c271987180",
+  "http": 200,
+  "holders_count": 16,
+  "total_supply": "5176000000000000000",
+  "exchange_rate": "1106.51",
+  "circulating_market_cap": "5350.102467405017",
+  "decimals": 18
+ },
+ {
+  "symbol": "FIG",
+  "address": "0x41F4267525a8AFf329540eF24fD83d9044758B33",
+  "http": 200,
+  "holders_count": 152,
+  "total_supply": "11592408000000000000000",
+  "exchange_rate": "26.71",
+  "circulating_market_cap": "284109.52800107194",
+  "decimals": 18
+ },
+ {
+  "symbol": "FISV",
+  "address": "0x9ECe29A4A2397C0a35fb5fA8EE2b9509130a98cc",
+  "http": 200,
+  "holders_count": 23,
+  "total_supply": "216267000000000000000",
+  "exchange_rate": "51.89",
+  "circulating_market_cap": "0",
+  "decimals": 18
+ },
+ {
+  "symbol": "FIX",
+  "address": "0x93Dbb1d2Dc5D63F4abACFF30485273f538Df68Ac",
+  "http": 200,
+  "holders_count": 18,
+  "total_supply": "8982000000000000000",
+  "exchange_rate": "1594.59",
+  "circulating_market_cap": "6890.562773254184",
+  "decimals": 18
+ },
+ {
+  "symbol": "FLNC",
+  "address": "0x282e87451E10fA6679BC7D76C69BE44cD3fC777C",
+  "http": 200,
+  "holders_count": 60,
+  "total_supply": "1479728000000000000000",
+  "exchange_rate": "10.62",
+  "circulating_market_cap": "12232.856524465642",
+  "decimals": 18
+ },
+ {
+  "symbol": "FLY",
+  "address": "0x03BC731Ffb162cdd7B98D3C6542bFC291126075d",
+  "http": 200,
+  "holders_count": 54,
+  "total_supply": "913621000000000000000",
+  "exchange_rate": "20.9",
+  "circulating_market_cap": "15805.90430286428",
+  "decimals": 18
+ },
+ {
+  "symbol": "FTNT",
+  "address": "0x3FB8976980d486084b2eb4a404BD12e72823958f",
+  "http": 200,
+  "holders_count": 22,
+  "total_supply": "63482000000000000000",
+  "exchange_rate": "158.42",
+  "circulating_market_cap": "10056.75927809962",
+  "decimals": 18
+ },
+ {
+  "symbol": "FUTU",
+  "address": "0xeB30663bDFf0622Ef4e4E5cBb4E975F19f33f51D",
+  "http": 200,
+  "holders_count": 84,
+  "total_supply": "268870000000000000000",
+  "exchange_rate": "117.96",
+  "circulating_market_cap": "30736.79308516603",
+  "decimals": 18
+ },
+ {
+  "symbol": "GE",
+  "address": "0x63b814DDBd6BF339f25Fed8c36158a008D5B373e",
+  "http": 200,
+  "holders_count": 77,
+  "total_supply": "216719000000000000000",
+  "exchange_rate": "349.35",
+  "circulating_market_cap": "75713.40213271273",
+  "decimals": 18
+ },
+ {
+  "symbol": "GEV",
+  "address": "0x94B8AAE43A1cCc08Aa64B7D1F29b4D920aF4a0C9",
+  "http": 200,
+  "holders_count": 16,
+  "total_supply": "5136000000000000000",
+  "exchange_rate": "906.15",
+  "circulating_market_cap": "2629.672459584901",
+  "decimals": 18
+ },
+ {
+  "symbol": "GLD",
+  "address": "0xC9a981FEE1F9DEc688bb123ccDeCc63D0deBFC4e",
+  "http": 200,
+  "holders_count": 11066,
+  "total_supply": "8431533000000000000000",
+  "exchange_rate": "400.82",
+  "circulating_market_cap": "3877176.4776778338",
+  "decimals": 18
+ },
+ {
+  "symbol": "GLW",
+  "address": "0x7c04E6A3368F2A1DE3874f0e80d2e0A1a9915da6",
+  "http": 200,
+  "holders_count": 48,
+  "total_supply": "54651000000000000000",
+  "exchange_rate": "142.94",
+  "circulating_market_cap": "7812.024889343784",
+  "decimals": 18
+ },
+ {
+  "symbol": "GLXY",
+  "address": "0x2D427692E928fa156ec22acfaBaFA0447C5805B7",
+  "http": 200,
+  "holders_count": 82,
+  "total_supply": "910627000000000000000",
+  "exchange_rate": "24.01",
+  "circulating_market_cap": "18779.353641843736",
+  "decimals": 18
+ },
+ {
+  "symbol": "GME",
+  "address": "0x1b0E319c6A659F002271B69dB8A7df2F911c153E",
+  "http": 200,
+  "holders_count": 33314,
+  "total_supply": "101721593000000000000000",
+  "exchange_rate": "18.92",
+  "circulating_market_cap": "1922278.9830700716",
+  "decimals": 18
+ },
+ {
+  "symbol": "GOOGL",
+  "address": "0x2e0847E8910a9732eB3fb1bb4b70a580ADAD4FE3",
+  "http": 200,
+  "holders_count": 47109,
+  "total_supply": "5581913000000000000000",
+  "exchange_rate": "334.93",
+  "circulating_market_cap": "1866967.3328981232",
+  "decimals": 18
+ },
+ {
+  "symbol": "HII",
+  "address": "0xEB61c0Ed490A367d4E3631cCf8a74B3bfc7E775D",
+  "http": 200,
+  "holders_count": 17,
+  "total_supply": "12257000000000000000",
+  "exchange_rate": "385.41",
+  "circulating_market_cap": "4391.827499235175",
+  "decimals": 18
+ },
+ {
+  "symbol": "HIMS",
+  "address": "0xCceE82fE024c36fA15E1005edE3E9e4787e23D09",
+  "http": 200,
+  "holders_count": 2451,
+  "total_supply": "72891666000000000000000",
+  "exchange_rate": "28.43",
+  "circulating_market_cap": "2294778.150141397",
+  "decimals": 18
+ },
+ {
+  "symbol": "HPE",
+  "address": "0x59dd09d4900C2E4B5F75b7c0d4E6796fcc234Cb1",
+  "http": 200,
+  "holders_count": 76,
+  "total_supply": "1029136000000000000000",
+  "exchange_rate": "52.26",
+  "circulating_market_cap": "53788.90313313735",
+  "decimals": 18
+ },
+ {
+  "symbol": "HWM",
+  "address": "0xAEa445c5F3DB1a462998ccC422A875A361ee5d99",
+  "http": 200,
+  "holders_count": 13,
+  "total_supply": "17805000000000000000",
+  "exchange_rate": "267.58",
+  "circulating_market_cap": "4764.307960711553",
+  "decimals": 18
+ },
+ {
+  "symbol": "IBM",
+  "address": "0x980dcf6766FA79f5Cf0c4AAdb3ab477ff15a9619",
+  "http": 200,
+  "holders_count": 126,
+  "total_supply": "516351000000000000000",
+  "exchange_rate": "229.88",
+  "circulating_market_cap": "119492.54599709265",
+  "decimals": 18
+ },
+ {
+  "symbol": "IBRX",
+  "address": "0x7c148F74ac7445D1F28366b7FcDC6792a9Fcd0Cf",
+  "http": 200,
+  "holders_count": 45,
+  "total_supply": "3001928000000000000000",
+  "exchange_rate": "8.11",
+  "circulating_market_cap": "24341.2156230299",
+  "decimals": 18
+ },
+ {
+  "symbol": "INDA",
+  "address": "0xACEF2e09adb47aD6aBeBAD9fF06689E60615C2B6",
+  "http": 200,
+  "holders_count": 38,
+  "total_supply": "341463000000000000000",
+  "exchange_rate": "51.12",
+  "circulating_market_cap": "17457.38513513066",
+  "decimals": 18
+ },
+ {
+  "symbol": "INFQ",
+  "address": "0xB853bC83a753342a4f8320ea680b4B1E84118D21",
+  "http": 200,
+  "holders_count": 20,
+  "total_supply": "1830665000000000000000",
+  "exchange_rate": "12.68",
+  "circulating_market_cap": "23217.3277384788",
+  "decimals": 18
+ },
+ {
+  "symbol": "INOD",
+  "address": "0xf1953DAB6FaD537488d5A022361FfAa8B4c95eC6",
+  "http": 200,
+  "holders_count": 41,
+  "total_supply": "135800000000000000000",
+  "exchange_rate": "60.59",
+  "circulating_market_cap": "117505.50254945089",
+  "decimals": 18
+ },
+ {
+  "symbol": "INTC",
+  "address": "0xc72b96e0E48ecd4DC75E1e45396e26300BC39681",
+  "http": 200,
+  "holders_count": 24456,
+  "total_supply": "11680555000000000000000",
+  "exchange_rate": "88.5",
+  "circulating_market_cap": "1067996.6348219747",
+  "decimals": 18
+ },
+ {
+  "symbol": "INTU",
+  "address": "0x56d23beE5f41A7120170b0c603Dae30128e460e9",
+  "http": 200,
+  "holders_count": 39,
+  "total_supply": "19272000000000000000",
+  "exchange_rate": "360.56",
+  "circulating_market_cap": "5817.933955636342",
+  "decimals": 18
+ },
+ {
+  "symbol": "IONQ",
+  "address": "0x558378E000D634A36593E338eBacdd6207640EfE",
+  "http": 200,
+  "holders_count": 72,
+  "total_supply": "290428000000000000000",
+  "exchange_rate": "37.21",
+  "circulating_market_cap": "9039.940369941236",
+  "decimals": 18
+ },
+ {
+  "symbol": "IREN",
+  "address": "0xF0AB0c93bE6F41369d302e55db1A96b3c430212D",
+  "http": 200,
+  "holders_count": 79,
+  "total_supply": "425447000000000000000",
+  "exchange_rate": "35.99",
+  "circulating_market_cap": "13853.579122080931",
+  "decimals": 18
+ },
+ {
+  "symbol": "JBL",
+  "address": "0xEAf2512dFC1bEAc608F8794B3793CD4E02894Aa6",
+  "http": 200,
+  "holders_count": 18,
+  "total_supply": "18197000000000000000",
+  "exchange_rate": "399.43",
+  "circulating_market_cap": "7268.567642538868",
+  "decimals": 18
+ },
+ {
+  "symbol": "JNJ",
+  "address": "0x03DfbBE0AC4E7bCDaFd08eD41A400326B77D8c80",
+  "http": 200,
+  "holders_count": 263,
+  "total_supply": "618651000000000000000",
+  "exchange_rate": "278.91",
+  "circulating_market_cap": "170144.08684901483",
+  "decimals": 18
+ },
+ {
+  "symbol": "JOBY",
+  "address": "0xb334C5cE741B80B5B671F47F5C269Cb193fe8E24",
+  "http": 200,
+  "holders_count": 31,
+  "total_supply": "2471816000000000000000",
+  "exchange_rate": "6.66",
+  "circulating_market_cap": "16473.45835112601",
+  "decimals": 18
+ },
+ {
+  "symbol": "KLAC",
+  "address": "0x96b933C74eCB4A0926b9210cef7b743EF46be2E9",
+  "http": 200,
+  "holders_count": 12,
+  "total_supply": "12887000000000000000",
+  "exchange_rate": "170.77",
+  "circulating_market_cap": "2200.729515526183",
+  "decimals": 18
+ },
+ {
+  "symbol": "KSS",
+  "address": "0x12e3c047bf9AeCAF9dDC98c05C31BFD1dd043993",
+  "http": 200,
+  "holders_count": 241,
+  "total_supply": "2542843000000000000000",
+  "exchange_rate": "17.99",
+  "circulating_market_cap": "45743.060108048274",
+  "decimals": 18
+ },
+ {
+  "symbol": "KTOS",
+  "address": "0x7FD06a4d81cCfA3F351394E144d5191874C31313",
+  "http": 200,
+  "holders_count": 26,
+  "total_supply": "100682000000000000000",
+  "exchange_rate": "50.15",
+  "circulating_market_cap": "0",
+  "decimals": 18
+ },
+ {
+  "symbol": "LHX",
+  "address": "0x48d60243c66437c6ac3c2495Be94747aEd5Dfe25",
+  "http": 200,
+  "holders_count": 13,
+  "total_supply": "18606000000000000000",
+  "exchange_rate": "268.22",
+  "circulating_market_cap": "4990.549919824473",
+  "decimals": 18
+ },
+ {
+  "symbol": "LITE",
+  "address": "0x8eF20885F94e3D9bc7eB3080279188Bd5ED7c08C",
+  "http": 200,
+  "holders_count": 67,
+  "total_supply": "18676000000000000000",
+  "exchange_rate": "864.54",
+  "circulating_market_cap": "14898.772127191858",
+  "decimals": 18
+ },
+ {
+  "symbol": "LLY",
+  "address": "0x8005d266423c7ea827372c9c864491e5786600ea",
+  "http": 200,
+  "holders_count": 2004,
+  "total_supply": "639927000000000000000",
+  "exchange_rate": "1184.9",
+  "circulating_market_cap": "752942.8873497143",
+  "decimals": 18
+ },
+ {
+  "symbol": "LMT",
+  "address": "0x329fcACEb9AD6F9580DD5F643fed0646900D043c",
+  "http": 200,
+  "holders_count": 82,
+  "total_supply": "119228000000000000000",
+  "exchange_rate": "544.94",
+  "circulating_market_cap": "83156.06292814598",
+  "decimals": 18
+ },
+ {
+  "symbol": "LRCX",
+  "address": "0x57b0030166DB0C31690d1A5aA167e2e26e2C29a4",
+  "http": 200,
+  "holders_count": 27,
+  "total_supply": "33721000000000000000",
+  "exchange_rate": "292.06",
+  "circulating_market_cap": "9848.614034104417",
+  "decimals": 18
+ },
+ {
+  "symbol": "LULU",
+  "address": "0x4e62068525Ab11FE768e29dfD00ef909B9803016",
+  "http": 200,
+  "holders_count": 318,
+  "total_supply": "1881390000000000000000",
+  "exchange_rate": "121.22",
+  "circulating_market_cap": "193161.4418924842",
+  "decimals": 18
+ },
+ {
+  "symbol": "LUNR",
+  "address": "0xa5D4968421bA94814Be3B136b15cf422101aC1a3",
+  "http": 200,
+  "holders_count": 57,
+  "total_supply": "1258702000000000000000",
+  "exchange_rate": "14.75",
+  "circulating_market_cap": "14393.670039744862",
+  "decimals": 18
+ },
+ {
+  "symbol": "MDB",
+  "address": "0xDdf2266b79abf0B48898959B0ed6E6adf512be74",
+  "http": 200,
+  "holders_count": 40,
+  "total_supply": "20203000000000000000",
+  "exchange_rate": "377.14",
+  "circulating_market_cap": "7119.40304220509",
+  "decimals": 18
+ },
+ {
+  "symbol": "META",
+  "address": "0xc0D6457C16Cc70d6790Dd43521C899C87ce02f35",
+  "http": 200,
+  "holders_count": 29819,
+  "total_supply": "2104367000000000000000",
+  "exchange_rate": "589.02",
+  "circulating_market_cap": "1284539.0300337737",
+  "decimals": 18
+ },
+ {
+  "symbol": "MOD",
+  "address": "0xc6Cbad1016b38B797610c25E1dc7D95988B1f362",
+  "http": 200,
+  "holders_count": 19,
+  "total_supply": "41762000000000000000",
+  "exchange_rate": "178.01",
+  "circulating_market_cap": "5127.0658645439435",
+  "decimals": 18
+ },
+ {
+  "symbol": "MPWR",
+  "address": "0x52D50D0280AD1054b43f052bD70a49a212A1b128",
+  "http": 200,
+  "holders_count": 12,
+  "total_supply": "3533000000000000000",
+  "exchange_rate": "1249.96",
+  "circulating_market_cap": "3908.6877311766825",
+  "decimals": 18
+ },
+ {
+  "symbol": "MRNA",
+  "address": "0x43B07D15cE533bEc5476d70C22a78a1B2B662155",
+  "http": 200,
+  "holders_count": 1076,
+  "total_supply": "3321418000000000000000",
+  "exchange_rate": "154.35",
+  "circulating_market_cap": "347275.5563473819",
+  "decimals": 18
+ },
+ {
+  "symbol": "MRVL",
+  "address": "0x62fd0668e10D8B72339BE2DCF7643001688ff13B",
+  "http": 200,
+  "holders_count": 2098,
+  "total_supply": "880277000000000000000",
+  "exchange_rate": "209.22",
+  "circulating_market_cap": "165979.391321932",
+  "decimals": 18
+ },
+ {
+  "symbol": "MSFT",
+  "address": "0xe93237C50D904957Cf27E7B1133b510C669c2e74",
+  "http": 200,
+  "holders_count": 42279,
+  "total_supply": "3318293000000000000000",
+  "exchange_rate": "498.01",
+  "circulating_market_cap": "1647573.3559821404",
+  "decimals": 18
+ },
+ {
+  "symbol": "MSTR",
+  "address": "0xec262a75e413fAfD0dF80480274532C79D42da09",
+  "http": 200,
+  "holders_count": 6472,
+  "total_supply": "12286415000000000000000",
+  "exchange_rate": "124.52",
+  "circulating_market_cap": "1476068.9367265902",
+  "decimals": 18
+ },
+ {
+  "symbol": "MTSI",
+  "address": "0xC93f4d80e268AB922e871bd169156C3CC41894e6",
+  "http": 200,
+  "holders_count": 16,
+  "total_supply": "18600000000000000000",
+  "exchange_rate": "259.4",
+  "circulating_market_cap": "4459.477554138362",
+  "decimals": 18
+ },
+ {
+  "symbol": "MU",
+  "address": "0xfF080c8ce2E5feadaCa0Da81314Ae59D232d4afD",
+  "http": 200,
+  "holders_count": 30866,
+  "total_supply": "3147300148890000000000",
+  "exchange_rate": "951.05",
+  "circulating_market_cap": "681423.7332896887",
+  "decimals": 18
+ },
+ {
+  "symbol": "MXL",
+  "address": "0x48961813349333209994750ffA89b3c5C22eC969",
+  "http": 200,
+  "holders_count": 59,
+  "total_supply": "251195000000000000000",
+  "exchange_rate": "57.22",
+  "circulating_market_cap": "14374.49922474177",
+  "decimals": 18
+ },
+ {
+  "symbol": "NAVN",
+  "address": "0xf7181b63Fdb858558A74ba96BC42732684cd7965",
+  "http": 200,
+  "holders_count": 16,
+  "total_supply": "200391000000000000000",
+  "exchange_rate": "60.42",
+  "circulating_market_cap": "12107.553836298563",
+  "decimals": 18
+ },
+ {
+  "symbol": "NBIS",
+  "address": "0x9D9c6684F596F66a64C030B93A886D51Fd4D7931",
+  "http": 200,
+  "holders_count": 84,
+  "total_supply": "59310000000000000000",
+  "exchange_rate": "197.68",
+  "circulating_market_cap": "11234.56660565394",
+  "decimals": 18
+ },
+ {
+  "symbol": "NET",
+  "address": "0x116F00968269B7bfbaD4109cE591d6E74c0601d4",
+  "http": 200,
+  "holders_count": 120,
+  "total_supply": "215927000000000000000",
+  "exchange_rate": "280.29",
+  "circulating_market_cap": "46988.55850974346",
+  "decimals": 18
+ },
+ {
+  "symbol": "NFLX",
+  "address": "0xE0444EF8BF4eD74f74FD73686e2ddF4C1c5591E8",
+  "http": 200,
+  "holders_count": 11502,
+  "total_supply": "4451559000000000000000",
+  "exchange_rate": "81.11",
+  "circulating_market_cap": "362609.0030839211",
+  "decimals": 18
+ },
+ {
+  "symbol": "NNE",
+  "address": "0xBEF75684C43c4ea7BD18Dd532a2244674Ee8b926",
+  "http": 200,
+  "holders_count": 105,
+  "total_supply": "1730374000000000000000",
+  "exchange_rate": "17.62",
+  "circulating_market_cap": "22481.451669854025",
+  "decimals": 18
+ },
+ {
+  "symbol": "NOW",
+  "address": "0x0C3260aF4B8f13a69c4c2dFb84fD667890CDFa14",
+  "http": 200,
+  "holders_count": 89,
+  "total_supply": "210849000000000000000",
+  "exchange_rate": "135.79",
+  "circulating_market_cap": "27661.639183183488",
+  "decimals": 18
+ },
+ {
+  "symbol": "NU",
+  "address": "0x408c14038a04f7bD235329E26d2bf569ee20e250",
+  "http": 200,
+  "holders_count": 580,
+  "total_supply": "11253741000000000000000",
+  "exchange_rate": "14.67",
+  "circulating_market_cap": "196920.42972625722",
+  "decimals": 18
+ },
+ {
+  "symbol": "NVDA",
+  "address": "0xd0601CE157Db5bdC3162BbaC2a2C8aF5320D9EEC",
+  "http": 200,
+  "holders_count": 90465,
+  "total_supply": "59324821000000000000000",
+  "exchange_rate": "219.36",
+  "circulating_market_cap": "14108087.589415623",
+  "decimals": 18
+ },
+ {
+  "symbol": "NVTS",
+  "address": "0xbE6702d7b70315376dC48a3293f24f0982F86386",
+  "http": 200,
+  "holders_count": 42,
+  "total_supply": "559969000000000000000",
+  "exchange_rate": "11.26",
+  "circulating_market_cap": "4512.70090099097",
+  "decimals": 18
+ },
+ {
+  "symbol": "OKLO",
+  "address": "0x8B2f88497f15A18E9D4FFa1a8fFB8538399aE774",
+  "http": 200,
+  "holders_count": 29,
+  "total_supply": "194782000000000000000",
+  "exchange_rate": "39.82",
+  "circulating_market_cap": "7500.201731769457",
+  "decimals": 18
+ },
+ {
+  "symbol": "ON",
+  "address": "0xbBD09F72b025360FeE5C928053Dca6248d35be54",
+  "http": 200,
+  "holders_count": 83,
+  "total_supply": "1457606000000000000000",
+  "exchange_rate": "74.55",
+  "circulating_market_cap": "30222.43093329903",
+  "decimals": 18
+ },
+ {
+  "symbol": "ONTO",
+  "address": "0x8ff63eAeEe3fE54Ba450c4F5538064Ec5A893Aef",
+  "http": 200,
+  "holders_count": 13,
+  "total_supply": "6982000000000000000",
+  "exchange_rate": "256.9",
+  "circulating_market_cap": "1793.664616936315",
+  "decimals": 18
+ },
+ {
+  "symbol": "ORCL",
+  "address": "0xb0992820E760d836549ba69BC7598b4af75dEE03",
+  "http": 200,
+  "holders_count": 18978,
+  "total_supply": "3715641722110000000000",
+  "exchange_rate": "142.49",
+  "circulating_market_cap": "528635.5681574763",
+  "decimals": 18
+ },
+ {
+  "symbol": "OUST",
+  "address": "0x40E7a279850e443f582059ae5dC1c3b6563E6395",
+  "http": 200,
+  "holders_count": 19,
+  "total_supply": "162846000000000000000",
+  "exchange_rate": "33.54",
+  "circulating_market_cap": "4298.287709703654",
+  "decimals": 18
+ },
+ {
+  "symbol": "P",
+  "address": "0x1Cdad396DB64BDa184d5182A97Dd9B3C62100b7D",
+  "http": 200,
+  "holders_count": 243,
+  "total_supply": "617845000000000000000",
+  "exchange_rate": "96.66",
+  "circulating_market_cap": "27118.7855603796",
+  "decimals": 18
+ },
+ {
+  "symbol": "PANW",
+  "address": "0xB039597eD45CBa7B6E2fb9E8BE51802969CEe5Be",
+  "http": 200,
+  "holders_count": 25,
+  "total_supply": "19387000000000000000",
+  "exchange_rate": "355.77",
+  "circulating_market_cap": "5837.573768399901",
+  "decimals": 18
+ },
+ {
+  "symbol": "PATH",
+  "address": "0xfb2664f07B6Aadd29ea7a59D8859b1AeB8645cDa",
+  "http": 200,
+  "holders_count": 28,
+  "total_supply": "667430000000000000000",
+  "exchange_rate": "16.67",
+  "circulating_market_cap": "11127.212447661543",
+  "decimals": 18
+ },
+ {
+  "symbol": "PENG",
+  "address": "0x9b23573b156B52565012F5cE02CDF60AFBaa70Be",
+  "http": 200,
+  "holders_count": 220,
+  "total_supply": "1493062000000000000000",
+  "exchange_rate": "48.37",
+  "circulating_market_cap": "67213.0634378311",
+  "decimals": 18
+ },
+ {
+  "symbol": "PFE",
+  "address": "0x7066A64c24e4206CD62E83bf198c1E7EB361F51e",
+  "http": 200,
+  "holders_count": 111,
+  "total_supply": "4968368000000000000000",
+  "exchange_rate": "28.36",
+  "circulating_market_cap": "146895.58123990658",
+  "decimals": 18
+ },
+ {
+  "symbol": "PL",
+  "address": "0xAA4d64474c172010aB57719cb9951E6142a100d3",
+  "http": 200,
+  "holders_count": 29,
+  "total_supply": "563253000000000000000",
+  "exchange_rate": "20.24",
+  "circulating_market_cap": "10402.490360690306",
+  "decimals": 18
+ },
+ {
+  "symbol": "PLTR",
+  "address": "0x894E1EC2D74FFE5AEF8Dc8A9e84686acCB964F2A",
+  "http": 200,
+  "holders_count": 34273,
+  "total_supply": "8530588000000000000000",
+  "exchange_rate": "176.09",
+  "circulating_market_cap": "1292231.2025403522",
+  "decimals": 18
+ },
+ {
+  "symbol": "POET",
+  "address": "0xcf6B2D875361be807EAfa57458c80f28521F9333",
+  "http": 200,
+  "holders_count": 75,
+  "total_supply": "2358972000000000000000",
+  "exchange_rate": "7.11",
+  "circulating_market_cap": "5829.956220956168",
+  "decimals": 18
+ },
+ {
+  "symbol": "POWL",
+  "address": "0x237c16D66590F67B886d978ACD362EAeaD8B18c7",
+  "http": 200,
+  "holders_count": 21,
+  "total_supply": "35226000000000000000",
+  "exchange_rate": "215.62",
+  "circulating_market_cap": "6330.114005901365",
+  "decimals": 18
+ },
+ {
+  "symbol": "PR",
+  "address": "0x4189F0c66EBBB0bfeF1C31f763131361EF32f77C",
+  "http": 200,
+  "holders_count": 39,
+  "total_supply": "273307000000000000000",
+  "exchange_rate": "23.86",
+  "circulating_market_cap": "4817.507119025763",
+  "decimals": 18
+ },
+ {
+  "symbol": "PWR",
+  "address": "0x9Ab02Ead789b6903c3c44d0ED32F9c707CDF12FD",
+  "http": 200,
+  "holders_count": 11,
+  "total_supply": "2315000000000000000",
+  "exchange_rate": "612.83",
+  "circulating_market_cap": "1418.7127549109307",
+  "decimals": 18
+ },
+ {
+  "symbol": "QBTS",
+  "address": "0xC583c60aeF9Dc401Da72cEC1B404743a93cea1Cc",
+  "http": 200,
+  "holders_count": 69,
+  "total_supply": "1151352000000000000000",
+  "exchange_rate": "16.69",
+  "circulating_market_cap": "18195.447506954446",
+  "decimals": 18
+ },
+ {
+  "symbol": "QCOM",
+  "address": "0x0f17206447090e464C277571124dD2688E48AEA9",
+  "http": 200,
+  "holders_count": 1627,
+  "total_supply": "133894000000000000000",
+  "exchange_rate": "168.65",
+  "circulating_market_cap": "19653.758443802002",
+  "decimals": 18
+ },
+ {
+  "symbol": "QQQ",
+  "address": "0xD5f3879160bc7c32ebb4dC785F8a4F505888de68",
+  "http": 200,
+  "holders_count": 12592,
+  "total_supply": "3962693000000000000000",
+  "exchange_rate": "707.56",
+  "circulating_market_cap": "2744530.29218705",
+  "decimals": 18
+ },
+ {
+  "symbol": "QUBT",
+  "address": "0x59818904ab4cE163b3cE4FfB64f2D6Ca02c434B4",
+  "http": 200,
+  "holders_count": 1759,
+  "total_supply": "52656183000000000000000",
+  "exchange_rate": "7.88",
+  "circulating_market_cap": "519851.97465816344",
+  "decimals": 18
+ },
+ {
+  "symbol": "RBLX",
+  "address": "0xF0C4BF4C582cb3836e98394b1d4e7B7281101bE8",
+  "http": 200,
+  "holders_count": 4146,
+  "total_supply": "14490495000000000000000",
+  "exchange_rate": "40.86",
+  "circulating_market_cap": "602669.3732486829",
+  "decimals": 18
+ },
+ {
+  "symbol": "RCAT",
+  "address": "0xFDE6b5d9BB419B10C23268c74e369AbFF39C0460",
+  "http": 200,
+  "holders_count": 210,
+  "total_supply": "19371675000000000000000",
+  "exchange_rate": "8.08",
+  "circulating_market_cap": "158598.6011486962",
+  "decimals": 18
+ },
+ {
+  "symbol": "RDDT",
+  "address": "0x05b37Fb53A299a1b874A619e1c4C404D52C36F4C",
+  "http": 200,
+  "holders_count": 15538,
+  "total_supply": "9474166000000000000000",
+  "exchange_rate": "149.24",
+  "circulating_market_cap": "1794578.0162784373",
+  "decimals": 18
+ },
+ {
+  "symbol": "RDW",
+  "address": "0x92Ef19E82bD8fF36661DE838D5eaE7e5CEF0EfFE",
+  "http": 200,
+  "holders_count": 50,
+  "total_supply": "1034011000000000000000",
+  "exchange_rate": "10.71",
+  "circulating_market_cap": "11074.67517554706",
+  "decimals": 18
+ },
+ {
+  "symbol": "RGTI",
+  "address": "0x284358abc07F9359f19f4b5b4aC91901Be2597Ba",
+  "http": 200,
+  "holders_count": 65,
+  "total_supply": "836501000000000000000",
+  "exchange_rate": "14.73",
+  "circulating_market_cap": "11230.264048094792",
+  "decimals": 18
+ },
+ {
+  "symbol": "RIVN",
+  "address": "0xB1BF26c1D20ff267A4f93550d1E0d06ac40a114B",
+  "http": 200,
+  "holders_count": 475,
+  "total_supply": "7061651000000000000000",
+  "exchange_rate": "15.51",
+  "circulating_market_cap": "129735.95426958946",
+  "decimals": 18
+ },
+ {
+  "symbol": "RKLB",
+  "address": "0x3b14C39E89D60D627b42a1A4CA45b5bb45Fc12e2",
+  "http": 200,
+  "holders_count": 128,
+  "total_supply": "1439667000000000000000",
+  "exchange_rate": "64.25",
+  "circulating_market_cap": "54978.308423934825",
+  "decimals": 18
+ },
+ {
+  "symbol": "RUN",
+  "address": "0x756Bc80af765C82da966a788858d65aDF14f3793",
+  "http": 200,
+  "holders_count": 107,
+  "total_supply": "5013986000000000000000",
+  "exchange_rate": "8.6",
+  "circulating_market_cap": "33345.82449188328",
+  "decimals": 18
+ },
+ {
+  "symbol": "SATS",
+  "address": "0x95052ddcd5DC25641657424A8Cf04834997E1730",
+  "http": 200,
+  "holders_count": 4,
+  "total_supply": "103000000000000000",
+  "exchange_rate": "99.71",
+  "circulating_market_cap": "31.409059447282967",
+  "decimals": 18
+ },
+ {
+  "symbol": "SCHD",
+  "address": "0xd63ABB2C13d7a8421a8017a712802053568e3C1D",
+  "http": 200,
+  "holders_count": 13,
+  "total_supply": "80539000000000000000",
+  "exchange_rate": "34.95",
+  "circulating_market_cap": "2814.598136745586",
+  "decimals": 18
+ },
+ {
+  "symbol": "SGOV",
+  "address": "0x92FD66527192E3e61d4DDd13322Aa222DE86F9B5",
+  "http": 200,
+  "holders_count": 546,
+  "total_supply": "14223141045680000000000",
+  "exchange_rate": "100.92",
+  "circulating_market_cap": "1315582.0771077613",
+  "decimals": 18
+ },
+ {
+  "symbol": "SHOP",
+  "address": "0xF53F66751B1Eff985311b693531E3290F600c410",
+  "http": 200,
+  "holders_count": 193,
+  "total_supply": "161506000000000000000",
+  "exchange_rate": "140.23",
+  "circulating_market_cap": "20640.43869431177",
+  "decimals": 18
+ },
+ {
+  "symbol": "SHY",
+  "address": "0xBE274710Bf3d9567e1B290eF6a5F9f90ca016FD8",
+  "http": 200,
+  "holders_count": 15,
+  "total_supply": "44540000000000000000",
+  "exchange_rate": "83.36",
+  "circulating_market_cap": "1522.7730113478706",
+  "decimals": 18
+ },
+ {
+  "symbol": "SIMO",
+  "address": "0x77E655E37F4d913fB9540e0d541D824171a60e81",
+  "http": 200,
+  "holders_count": 20,
+  "total_supply": "31117000000000000000",
+  "exchange_rate": "239.43",
+  "circulating_market_cap": "3684.600867354803",
+  "decimals": 18
+ },
+ {
+  "symbol": "SKHY",
+  "address": "0x84CAb63bc87912E71ad199ff14A0bA45de68FeF8",
+  "http": 200,
+  "holders_count": 982,
+  "total_supply": "4541000000000000000000",
+  "exchange_rate": "159.12",
+  "circulating_market_cap": "678017.3638820258",
+  "decimals": 18
+ },
+ {
+  "symbol": "SLS",
+  "address": "0x285b231728c7E4333799183DF1094d775246a535",
+  "http": 200,
+  "holders_count": 20,
+  "total_supply": "454000000000000000000",
+  "exchange_rate": "13.58",
+  "circulating_market_cap": "3273.2408014657317",
+  "decimals": 18
+ },
+ {
+  "symbol": "SLV",
+  "address": "0x411eFb0E7f985935DAec3D4C3ebaEa0d0AD7D89f",
+  "http": 200,
+  "holders_count": 4606,
+  "total_supply": "13921476000000000000000",
+  "exchange_rate": "59.22",
+  "circulating_market_cap": "911928.0961360144",
+  "decimals": 18
+ },
+ {
+  "symbol": "SMCI",
+  "address": "0xc01aA1fECeC0605b13bc84874ff7256C0f5F562a",
+  "http": 200,
+  "holders_count": 98,
+  "total_supply": "507553000000000000000",
+  "exchange_rate": "37.13",
+  "circulating_market_cap": "18331.98893411203",
+  "decimals": 18
+ },
+ {
+  "symbol": "SMH",
+  "address": "0x072f979c2CAc8e1391B0162a87Fee094bF8744a0",
+  "http": 200,
+  "holders_count": 22,
+  "total_supply": "15818000000000000000",
+  "exchange_rate": "549.79",
+  "circulating_market_cap": "8696.701068495333",
+  "decimals": 18
+ },
+ {
+  "symbol": "SMR",
+  "address": "0x1Eebee7F74517e0279dFb09d25B0407bEEc3FDd6",
+  "http": 200,
+  "holders_count": 44,
+  "total_supply": "1753055000000000000000",
+  "exchange_rate": "9.25",
+  "circulating_market_cap": "15372.848405684237",
+  "decimals": 18
+ },
+ {
+  "symbol": "SNAP",
+  "address": "0xF6589F11Bc40b669e584073F428B05562F568733",
+  "http": 200,
+  "holders_count": 193,
+  "total_supply": "65073181000000000000000",
+  "exchange_rate": "5.36",
+  "circulating_market_cap": "401799.4972518171",
+  "decimals": 18
+ },
+ {
+  "symbol": "SNDK",
+  "address": "0xB90A19fF0Af67f7779afF50A882A9CfF42446400",
+  "http": 200,
+  "holders_count": 24446,
+  "total_supply": "1045403000000000000000",
+  "exchange_rate": "1572.7",
+  "circulating_market_cap": "1645619.3080294332",
+  "decimals": 18
+ },
+ {
+  "symbol": "SNOW",
+  "address": "0xBa0CAB75495255d0cB58E22B648bFED4ECD1F47E",
+  "http": 200,
+  "holders_count": 62,
+  "total_supply": "63222000000000000000",
+  "exchange_rate": "314.6",
+  "circulating_market_cap": "16563.019197849597",
+  "decimals": 18
+ },
+ {
+  "symbol": "SOFI",
+  "address": "0x98E75885157C80992A8D41b696D8c9C6Fb30A926",
+  "http": 200,
+  "holders_count": 137,
+  "total_supply": "5949235000000000000000",
+  "exchange_rate": "16.95",
+  "circulating_market_cap": "100868.02224642305",
+  "decimals": 18
+ },
+ {
+  "symbol": "SOUN",
+  "address": "0x6E3Dfd9f7e1649BaA14D25cac18C94d62dB10A54",
+  "http": 200,
+  "holders_count": 169,
+  "total_supply": "17354300000000000000000",
+  "exchange_rate": "6.84",
+  "circulating_market_cap": "143468.63504232754",
+  "decimals": 18
+ },
+ {
+  "symbol": "SOXX",
+  "address": "0x75742c18BC1f1C5c5f448f4C9D9C6F66dafAAa38",
+  "http": 200,
+  "holders_count": 62,
+  "total_supply": "53932000000000000000",
+  "exchange_rate": "512.28",
+  "circulating_market_cap": "27628.44778968137",
+  "decimals": 18
+ },
+ {
+  "symbol": "SPCX",
+  "address": "0x4a0E65A3EcceC6dBe60AE065F2e7bb85Fae35eEa",
+  "http": 200,
+  "holders_count": 68069,
+  "total_supply": "44849236000000000000000",
+  "exchange_rate": "140.67",
+  "circulating_market_cap": "5996541.522238346",
+  "decimals": 18
+ },
+ {
+  "symbol": "SPMO",
+  "address": "0xAd622320e520de39e72d41EF07438C3Fd3354875",
+  "http": 200,
+  "holders_count": 63,
+  "total_supply": "168858000000000000000",
+  "exchange_rate": "146.63",
+  "circulating_market_cap": "24759.23510615985",
+  "decimals": 18
+ },
+ {
+  "symbol": "SPY",
+  "address": "0x117cc2133c37B721F49dE2A7a74833232B3B4C0C",
+  "http": 200,
+  "holders_count": 46160,
+  "total_supply": "15574288000000000000000",
+  "exchange_rate": "763.12",
+  "circulating_market_cap": "11923347.129665842",
+  "decimals": 18
+ },
+ {
+  "symbol": "TE",
+  "address": "0xb1969f6604CA1AE7a2cD3F1827876e914594CA2D",
+  "http": 200,
+  "holders_count": 47,
+  "total_supply": "6162481000000000000000",
+  "exchange_rate": "4.82",
+  "circulating_market_cap": "20635.498570215732",
+  "decimals": 18
+ },
+ {
+  "symbol": "TEAM",
+  "address": "0x5B97476b922F3305131B8f0B9D333172E87f4aaE",
+  "http": 200,
+  "holders_count": 27,
+  "total_supply": "67606000000000000000",
+  "exchange_rate": "189.52",
+  "circulating_market_cap": "12812.89480877893",
+  "decimals": 18
+ },
+ {
+  "symbol": "TEM",
+  "address": "0xB1CC0EC7Db69Cf43539119814df40071b9d61793",
+  "http": 200,
+  "holders_count": 64,
+  "total_supply": "159654000000000000000",
+  "exchange_rate": "61.99",
+  "circulating_market_cap": "8969.357259048404",
+  "decimals": 18
+ },
+ {
+  "symbol": "TER",
+  "address": "0x2778C5024D5cA2CdB0f8eAD671ffc69963AdCD9C",
+  "http": 200,
+  "holders_count": 29,
+  "total_supply": "27965000000000000000",
+  "exchange_rate": "333.27",
+  "circulating_market_cap": "9320.068289130457",
+  "decimals": 18
+ },
+ {
+  "symbol": "TSEM",
+  "address": "0x89776d4Cd68193597A2fC132cfaC1fDe36CCeA8a",
+  "http": 200,
+  "holders_count": 36,
+  "total_supply": "17693000000000000000",
+  "exchange_rate": "200.94",
+  "circulating_market_cap": "3555.196508560514",
+  "decimals": 18
+ },
+ {
+  "symbol": "TSLA",
+  "address": "0x322F0929c4625eD5bAd873c95208D54E1c003b2d",
+  "http": 200,
+  "holders_count": 50451,
+  "total_supply": "7919754000000000000000",
+  "exchange_rate": "351.72",
+  "circulating_market_cap": "2753537.2948036357",
+  "decimals": 18
+ },
+ {
+  "symbol": "TSM",
+  "address": "0x58FfE4a942d3885bAa22D7520691F611EF09e7AA",
+  "http": 200,
+  "holders_count": 6664,
+  "total_supply": "3756900000000000000000",
+  "exchange_rate": "411.62",
+  "circulating_market_cap": "1645956.878480916",
+  "decimals": 18
+ },
+ {
+  "symbol": "TTD",
+  "address": "0x0b5fb4031cae9163db10B169Ee72685F0EdC8545",
+  "http": 200,
+  "holders_count": 42,
+  "total_supply": "2627744000000000000000",
+  "exchange_rate": "14.27",
+  "circulating_market_cap": "28028.024656647336",
+  "decimals": 18
+ },
+ {
+  "symbol": "TTWO",
+  "address": "0x5e81213613b6B86EaB4c6c50d718d34359459786",
+  "http": 200,
+  "holders_count": 6758,
+  "total_supply": "7512441000000000000000",
+  "exchange_rate": "218.58",
+  "circulating_market_cap": "1642098.1345958447",
+  "decimals": 18
+ },
+ {
+  "symbol": "UMC",
+  "address": "0x0E6e67Ba88e7b5d9B67636A215c76779B948dE79",
+  "http": 200,
+  "holders_count": 36,
+  "total_supply": "260999000000000000000",
+  "exchange_rate": "22.25",
+  "circulating_market_cap": "5140.61691819277",
+  "decimals": 18
+ },
+ {
+  "symbol": "UNH",
+  "address": "0xcF364ea52787e289De6F32077834056E3E70D6A8",
+  "http": 200,
+  "holders_count": 51,
+  "total_supply": "151814000000000000000",
+  "exchange_rate": "421.31",
+  "circulating_market_cap": "62905.0639829987",
+  "decimals": 18
+ },
+ {
+  "symbol": "UPS",
+  "address": "0xf23250dac154D05Bb671CB0d0eBEf3c635c79CE2",
+  "http": 200,
+  "holders_count": 118,
+  "total_supply": "1231093000000000000000",
+  "exchange_rate": "104.67",
+  "circulating_market_cap": "125678.61781570413",
+  "decimals": 18
+ },
+ {
+  "symbol": "USAR",
+  "address": "0xd917B029C761D264c6A312BBbcDA868658eF86a6",
+  "http": 200,
+  "holders_count": 17718,
+  "total_supply": "31712242000000000000000",
+  "exchange_rate": "17.67",
+  "circulating_market_cap": "558922.6754597697",
+  "decimals": 18
+ },
+ {
+  "symbol": "USO",
+  "address": "0xa30FA36Db767ad9eD3f7a60fC79526fB4d56D344",
+  "http": 200,
+  "holders_count": 5090,
+  "total_supply": "8164466000000000000000",
+  "exchange_rate": "139.81",
+  "circulating_market_cap": "1082014.2312055526",
+  "decimals": 18
+ },
+ {
+  "symbol": "VICR",
+  "address": "0x6006ed4B2F94110851ff7509D97D034f0EeD9226",
+  "http": 200,
+  "holders_count": 16,
+  "total_supply": "30697000000000000000",
+  "exchange_rate": "177.7",
+  "circulating_market_cap": "3603.173884331422",
+  "decimals": 18
+ },
+ {
+  "symbol": "VRT",
+  "address": "0xFA78C12E6488814A0262E4e802749a4a737d5fB7",
+  "http": 200,
+  "holders_count": 20,
+  "total_supply": "27410000000000000000",
+  "exchange_rate": "255.38",
+  "circulating_market_cap": "5995.630782855614",
+  "decimals": 18
+ },
+ {
+  "symbol": "VSAT",
+  "address": "0x26dCbfb34FC83CAbD6990f449674efDc6097fF85",
+  "http": 200,
+  "holders_count": 35,
+  "total_supply": "290114000000000000000",
+  "exchange_rate": "65.35",
+  "circulating_market_cap": "5340.481762255791",
+  "decimals": 18
+ },
+ {
+  "symbol": "VST",
+  "address": "0x561e2a49212b7cCF47f2744Ccb83e200722fADBc",
+  "http": 200,
+  "holders_count": 51,
+  "total_supply": "135192000000000000000",
+  "exchange_rate": "138.95",
+  "circulating_market_cap": "16870.21067699541",
+  "decimals": 18
+ },
+ {
+  "symbol": "VTI",
+  "address": "0x0594134DF3f171a354D9C85eBD65b7A6148F6D09",
+  "http": 200,
+  "holders_count": 24,
+  "total_supply": "7727000000000000000",
+  "exchange_rate": "353.69",
+  "circulating_market_cap": "2732.9464406884863",
+  "decimals": 18
+ },
+ {
+  "symbol": "WDAY",
+  "address": "0x82DA4646242e1D962e96e932269Dc644c94a9CaA",
+  "http": 200,
+  "holders_count": 54,
+  "total_supply": "88611000000000000000",
+  "exchange_rate": "201.34",
+  "circulating_market_cap": "9550.550239414159",
+  "decimals": 18
+ },
+ {
+  "symbol": "WDC",
+  "address": "0xF52597345A8Edf418bc4071b4a35112472277D3e",
+  "http": 200,
+  "holders_count": 38,
+  "total_supply": "35999000000000000000",
+  "exchange_rate": "449.63",
+  "circulating_market_cap": "14144.855156023461",
+  "decimals": 18
+ },
+ {
+  "symbol": "WULF",
+  "address": "0x348Be1A8663f15edDe5CDf8A96BB69078f7aB6Fd",
+  "http": 200,
+  "holders_count": 56,
+  "total_supply": "1704192000000000000000",
+  "exchange_rate": "14.72",
+  "circulating_market_cap": "15700.80497570956",
+  "decimals": 18
+ },
+ {
+  "symbol": "WYFI",
+  "address": "0x9e7ABD3C9139D14E4c86DcE0e455AAB7A0C2FB3E",
+  "http": 200,
+  "holders_count": 538,
+  "total_supply": "32884000000000000000000",
+  "exchange_rate": "16.98",
+  "circulating_market_cap": "568159.4414492332",
+  "decimals": 18
+ },
+ {
+  "symbol": "XLK",
+  "address": "0x15Cd20759CE7F3285c29A319dE2D1A2e098c6f43",
+  "http": 200,
+  "holders_count": 65,
+  "total_supply": "130091000000000000000",
+  "exchange_rate": "191.9",
+  "circulating_market_cap": "33042.02693254406",
+  "decimals": 18
+ },
+ {
+  "symbol": "XNDU",
+  "address": "0xA8eB3BCcbf2017eE7CBfb652eB51CF2E1B153289",
+  "http": 200,
+  "holders_count": 47,
+  "total_supply": "477000000000000000000",
+  "exchange_rate": "9.67",
+  "circulating_market_cap": "3762.0375882006488",
+  "decimals": 18
+ },
+ {
+  "symbol": "XOM",
+  "address": "0xf9B46d3D1B22199D4D1025a9cEDB540A33F1a2d5",
+  "http": 200,
+  "holders_count": 3112,
+  "total_supply": "277192000000000000000",
+  "exchange_rate": "163.54",
+  "circulating_market_cap": "40432.570825288196",
+  "decimals": 18
+ },
+ {
+  "symbol": "ZM",
+  "address": "0x44c4F142009036cF477eD2d09932051843137CF1",
+  "http": 200,
+  "holders_count": 96,
+  "total_supply": "479726000000000000000",
+  "exchange_rate": "99.51",
+  "circulating_market_cap": "47739.07625008082",
+  "decimals": 18
+ },
+ {
+  "symbol": "ZS",
+  "address": "0x7dc013eB55e436f30d7ED1AFE4E36d6e45e3c3f7",
+  "http": 200,
+  "holders_count": 38,
+  "total_supply": "42391000000000000000",
+  "exchange_rate": "177.55",
+  "circulating_market_cap": "6767.956590314555",
+  "decimals": 18
+ }
+]
