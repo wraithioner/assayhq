@@ -1,185 +1,228 @@
-# MARKET_SIZE — is there an agent population that doesn't use ERC-8004?
+# Are there benchmarkable AI trading agents on Robinhood Chain?
 
-**Question.** Public reporting claims ~2,100 agents deployed in week one. Only **61** ever
-registered with ERC-8004, and only **1** survives every scoring gate
-([`BACKFILL.md`](./BACKFILL.md)). Does a real population exist that simply never registered?
+**A measurement note. Robinhood Chain (Arbitrum Orbit L2, chain ID 4663).**
+Measured 2 September 2026 at head block **52,527,642**. Chain launched 1 July 2026.
 
-**This is a count, not a scoring change.** Nothing measured here enters the scoring universe.
-D3 (scoring starts at the ERC-8004 registration block, never backfilled) stands unchanged. No
-profiles, no rankings, no per-address data — this document contains counts only.
+**Short answer: no — not today.**
 
-**Measured:** 2026-09-02, head block **52,527,642**.
+Exactly **one** address on the chain satisfies the conditions required to benchmark a trading
+agent honestly, and it has made **four** Stock Token movements in total. That is not a
+population; it is a rounding error. Separately, there *is* a substantial automated population
+trading Stock Tokens — roughly **51** addresses operating continuously — but it does not
+register any identity, and its behaviour looks more like market-making and arbitrage than like
+autonomous strategy agents. Both findings are below, with the method and the numbers.
 
 ---
 
-## Answer against the pre-committed decision rule
+## 1. What "benchmarkable" has to mean
 
-> *Decision rule, fixed before looking: if fewer than 20 addresses show sustained agent-like
-> Stock Token activity, the equity-agent population does not exist.*
+The published literature on LLM trading agents has a measurement problem rather than a
+performance problem. In a survey of 77 studies, 19 met a minimum bar of producing actions in a
+closed loop; of those, roughly one modelled transaction costs and one documented survivorship
+handling, and none reached full reproducibility. The field cannot compare agents to each other
+because the protocol to do so does not exist.
 
-**Sustained, machine-cadence, non-venue addresses trading Stock Tokens: 51.**
+On-chain execution can supply that protocol for free, because four things become facts rather
+than claims:
 
-The rule is **met** — the threshold of 20 is exceeded at the pre-committed definition and at
-the next two strictness levels. The population exists. It just does not register.
+1. **Identity** — you know which address acted, and it cannot be swapped after the fact.
+2. **Costs** — every fill has a real execution price and a real gas cost.
+3. **Survivorship** — a dead agent is still in the data. It cannot be deleted from the sample.
+4. **Point-in-time** — you can value a position using only information available at that block.
 
-| "Sustained" = present in ≥ k of 16 independent windows | Addresses (venue pools excluded) |
+An address is *benchmarkable* only if all four hold. In practice that means: it declares an
+identity, it trades assets with an independent price feed, and its trades happen on a venue
+whose execution price you can read. Failing any one of those makes a published return number
+unfalsifiable, which is worse than publishing nothing.
+
+## 2. Method
+
+Everything below is read-only, from chain state, via the public RPC (`eth_getLogs`,
+`eth_getBlockByNumber`, `eth_call`) plus Blockscout for verified-contract metadata. No archive
+node was required.
+
+Two identifiers do the work:
+
+- `Registered(uint256 indexed agentId, string agentURI, address indexed owner)` — the ERC-8004
+  identity registry, topic `0xca52e62c…`.
+- `TransferWithScaledUI(address indexed from, address indexed to, uint256 value, uint256 uiValue)`
+  — every Stock Token movement, topic `0x37e7f0db…`. (Note: the deployed contracts use this
+  name, not the EIP-8056 draft's `TransferWithUIAmount`, whose topic never appears on chain.)
+
+**Full enumeration of Stock Token flow is not possible from this endpoint.** The RPC caps
+responses at 10,000 logs, and a single 10,000-block window already exceeds that — implying
+**more than 50 million** Stock Token movements since launch. Registry data is small enough to
+enumerate exactly; flow data is therefore sampled: 16 windows of 400 blocks, spread across the
+40M blocks below head, covering **0.0122%** of chain history.
+
+Sampled discovery makes the address counts **lower bounds**. An address active in less than
+roughly a fifth of all 40-second intervals can be missed entirely, so the error runs toward
+undercounting the automated population, not overcounting it.
+
+## 3. The registered population: 61 identities, 1 benchmarkable
+
+The ERC-8004 `IdentityRegistry` is live at `0x8004A169FB4a3325136EB29fA0ceB6D2e539a432`
+(ERC-1967 proxy, deployed at block 12,058,809, implementation `IdentityRegistryUpgradeable`,
+an ERC-721 named "AgentIdentity"). It is not mentioned anywhere in Robinhood's developer
+documentation; it was found by probing the standard ERC-8004 addresses and confirmed on chain.
+
+Every registration ever emitted, enumerated exactly:
+
+| Gate | Surviving | Note |
+|---|---|---|
+| Registrations | **61** | agentIds 0–60 |
+| Unique owner addresses | **45** | 4 owners hold >1 identity; one holds 11 |
+| …with any Stock Token movement after their own registration block | **3** | 42 of 45 have never moved a Stock Token |
+| …trading majority in tokens that have a price feed | **3** | all three are 100% feed-covered |
+| …whose trades can be matched to a priced execution | **1** | 2 of 3 excluded |
+| **Benchmarkable** | **1** | and it has 4 movements, 3 of them priced |
+
+Three details matter for interpreting that funnel.
+
+**Registration is close to costless and partly automated.** 61 identities across 45 owners,
+with one owner holding 11 and ids 38–53 landing within about 100 blocks of each other — the
+signature of scripted batch registration, not 61 independent operators.
+
+**The two exclusions are real, not artefacts of a strict filter.** The largest of the three
+active registrants moved Stock Tokens 36 times but only 5 of those movements sit in a
+transaction containing a decentralised-exchange trade. A representative excluded transaction
+contains exactly two logs — a `Transfer` and a `TransferWithScaledUI` — and no swap, no
+quote-asset leg, and no venue interaction at all. It is a one-way token send into a contract.
+There is no execution price, so there is nothing to measure. Those sends go to five
+minimal-proxy clones of a verified `RHBTCAccount` contract, which delegate to a protocol called
+`RHMachines`: the address is making deposits, not trades.
+
+**Price-feed coverage is not the binding constraint.** Only 35 of the 194 Stock Tokens have a
+Chainlink feed, which sounds like a serious limit — but all three active registrants trade
+exclusively inside those 35. Coverage excluded nobody here.
+
+## 4. The unregistered population: ~51 sustained automated addresses
+
+If registered agents are almost absent, the obvious question is whether an equivalent
+population exists that simply never registered. Public reporting claimed roughly 2,100 agents
+deployed in the chain's first week.
+
+Sampling the flow gives a clear answer: automated Stock Token trading is large.
+
+| Measure | Value |
 |---|---|
-| **≥ 3 (pre-committed threshold)** | **51** |
+| Stock Token movements | **13.26 / block ≈ 11.46M / day** |
+| Chain-wide transactions | 15.55 / block ≈ 13.44M / day |
+| Distinct addresses touching Stock Tokens in 0.0122% of blocks | **1,694** |
+
+Counting addresses that recur across independent sampled windows, after excluding venue
+infrastructure (any contract answering `token0()`, i.e. an AMM pool — 19 of them):
+
+| Present in ≥ k of 16 windows | Addresses |
+|---|---|
+| ≥ 3 | **51** |
 | ≥ 5 | 33 |
 | ≥ 8 | 17 |
 | ≥ 10 | 12 |
 | ≥ 12 | 8 |
 
-The count is above 20 at k=3 and k=5, and below it at k≥8. The threshold used is the one
-fixed in the script before the data was collected (`SUSTAINED_MIN_WINDOWS = 3`), not chosen
-afterwards. The ladder is published so the sensitivity is visible rather than hidden.
+Each window is 400 blocks ≈ 40 seconds. Appearing in three separate 40-second snapshots
+scattered across 60 days implies activity in a large fraction of all such intervals, so k=3 is
+a sparse-sampling bar rather than a lax one.
 
-Why k=3 is a strong bar rather than a weak one: each window is 400 blocks ≈ **40 seconds**,
-and the 16 windows together cover **0.0122%** of all blocks since launch. Appearing in three
-separate 40-second snapshots scattered across 60 days implies the address is active in a
-large fraction of all such intervals. It is not a low bar; it is a sparse-sampling bar.
+For context, the literal threshold "more than 50 Stock Token movements since launch" does not
+discriminate at this density. With 1,694 addresses visible in 0.0122% of blocks, the
+extrapolation factor is ~8,207×, so a single sampled movement already implies thousands since
+launch. The qualifying population is in the thousands; recurrence is the meaningful cut.
 
----
+## 5. The cadence finding: automated, but not scheduled
 
-## The counts
+Profiling the 51 non-venue sustained addresses gives two signals that point in opposite
+directions, and the second is the interesting one.
 
-### Scale of Stock Token activity
-
-| Measure | Value |
+| Signal | Result |
 |---|---|
-| Stock Token movements (`TransferWithScaledUI`) | **13.26 / block ≈ 11.46M / day** |
-| Chain-wide transactions | 15.55 / block ≈ 13.44M / day |
-| Movements per chain transaction | ≈ 0.85 |
+| Active outside US market hours (incl. weekends), in ≥3 windows | **50 / 50** |
+| Inter-event timing measurable (≥5 gaps) | 38 |
+| **Median inter-event gap coefficient of variation** | **2.14** |
+| Highly regular timing (CV < 1.0) | **2 / 38** |
+| Contracts / EOAs | 41 / 9 |
 
-Chain-wide throughput matches the ~11.6M tx/day figure in public reporting. The surprise is
-the ratio: by **event count**, Stock Token movements are now nearly one per transaction on the
-whole chain. That is not a statement about value — RWA value on chain is small — it is a
-statement about how much automated Stock Token traffic exists.
+Every one of them trades round-the-clock, which rules out humans. But the timing is **bursty,
+not metronomic**: a CV above 2 means activity arrives in clusters, and only 2 of 38 addresses
+resemble a scheduled job. One address produced 3,027 Stock Token movements inside a single
+500-block (~50 second) window.
 
-### Addresses with >50 Stock Token movements since launch
+Bytecode tells the same story. Excluding the 19 AMM pools, the sustained set is **51 distinct
+singleton bytecodes**, with only small clone fleets (4 addresses sharing a 130-byte
+proxy, 3 sharing an EIP-1167 45-byte proxy, 2 sharing a 23-byte stub). There is no large fleet
+of identical agents deployed from one framework.
 
-**The >50 threshold does not discriminate at this density**, and the honest answer is that the
-qualifying population is in the thousands.
+Reactive burst timing, continuous operation, inventory-scale message rates, and heterogeneous
+one-off bytecode together describe **market-making and arbitrage infrastructure**. They do not
+describe a population of strategy agents making periodic allocation decisions. Bytecode cannot
+prove intent, and this evidence does not settle what these addresses *are* — but it does not
+support calling them AI trading agents.
 
-In 6,400 sampled blocks (0.0122% of chain history) there were **1,694 distinct participating
-addresses**. Extrapolation factor is ~8,207×:
+## 6. Conclusion
 
-| Sampled movements | Addresses | Implied since-launch total |
-|---|---|---|
-| ≥ 1 | 1,694 | ≳ 8,200 |
-| ≥ 2 | 850 | ≳ 16,400 |
-| ≥ 5 | 244 | ≳ 41,000 |
-| ≥ 10 | 122 | ≳ 82,000 |
-| ≥ 50 | 35 | ≳ 410,000 |
+- **Benchmarkable AI trading agents on Robinhood Chain today: effectively zero.** One address
+  clears every gate, with four Stock Token movements. Four movements cannot support a Sharpe
+  ratio, an information ratio, or a drawdown series. Any leaderboard built on this would be
+  publishing noise.
+- **ERC-8004 is not a useful discovery mechanism here.** 61 registrations, 45 owners, 3 that
+  trade, 1 measurable — while roughly 51 sustained automated traders never registered at all.
+  Registration and activity are close to uncorrelated on this chain.
+- **Automated Stock Token trading is real and large** — ~11.5M movements per day, nearly one
+  per chain transaction by event count — but its observable behaviour is that of market makers
+  and arbitrageurs, not of autonomous agents. Whether an LLM-agent subset exists inside it is
+  unresolved, and its size could be zero.
+- **The claim of ~2,100 agents is not visible in Stock Token flow.** Whatever those agents
+  were, they are not identifiable as a sustained, distinguishable population trading tokenized
+  equities.
+- **The infrastructure was not the constraint.** Feed coverage excluded nobody, and the
+  ERC-8056 corporate-action mechanics that were expected to be dangerous turned out to be
+  nearly free (a 1% dividend costs a constant-product pool ~0.124 bps; a compensated split
+  costs zero). The constraint is that the population being measured does not yet exist.
 
-Even a single sampled movement implies ~8,200 movements since launch under uniform activity.
-So essentially every address that appears at all clears ">50". The discriminating question is
-sustained presence, which is why the ladder above is the reported answer.
+**One open variable.** Every number here was produced while Robinhood covered gas. The 90-day
+fee waiver ends around 29 September 2026, and no measurement of this chain unsubsidised exists
+yet. The next section makes that comparison a single command.
 
-### Machine-like cadence (of the 50 non-pool sustained addresses profiled)
+## 7. Reproducing this
 
-| Signal | Count |
-|---|---|
-| Active in ≥3 off-hours windows (outside the US cash session, incl. weekends) | **50 / 50** |
-| Enough intra-window events to measure inter-event regularity | 38 |
-| Highly regular timing (gap CV < 1.0) | **2 / 38** |
-| Median inter-event gap CV | **2.14** (min 0.76, max 6.80) |
+A snapshot script takes the same measurements deterministically and diffs two runs:
 
-Two signals point in opposite directions, and both matter:
+```bash
+# baseline already committed: docs/data/snapshots/2026-09-02-pre-subsidy-end.json
+python3 scripts/snapshot/subsidy_snapshot.py --out docs/data/snapshots/2026-09-30-post-subsidy-end.json
 
-- **Round-the-clock operation is universal.** Every sustained address transacts outside US
-  market hours and at weekends. No human is doing this.
-- **The timing is bursty, not metronomic.** A median gap CV of 2.14 means activity arrives in
-  clusters, not on a schedule. Only 2 of 38 look like a cron job.
+python3 scripts/snapshot/subsidy_snapshot.py --diff \
+  docs/data/snapshots/2026-09-02-pre-subsidy-end.json \
+  docs/data/snapshots/2026-09-30-post-subsidy-end.json
+```
 
-Bursty + 24/7 + pool-adjacent is the signature of **event-driven market-making or arbitrage**,
-not of a scheduled portfolio-rebalancing agent.
+It reports Stock Token movement rate, chain-wide transaction rate, and the sustained
+agent-like address count, all relative to the head block at run time. Sampling constants are
+fixed in the script; changing them between runs invalidates the comparison.
 
-### EOA vs contract, and bytecode clusters
+The registry funnel in §3 can be re-derived directly:
 
-Of the 69 sustained addresses before venue filtering:
+```bash
+# every ERC-8004 registration ever, in one call
+curl -s -X POST https://rpc.mainnet.chain.robinhood.com \
+  -H 'content-type: application/json' \
+  -d '{"jsonrpc":"2.0","id":1,"method":"eth_getLogs","params":[{
+        "fromBlock":"0x0","toBlock":"latest",
+        "address":"0x8004A169FB4a3325136EB29fA0ceB6D2e539a432",
+        "topics":["0xca52e62c367d81bb2e328eb795f7c7ba24afb478408a26c0e201d155c449bc4a"]}]}'
+```
 
-| | Count |
-|---|---|
-| Venue infrastructure (answers `token0()` — i.e. AMM pools) — **excluded** | 19 |
-| Remaining sustained addresses | 50 |
-| — contracts | 41 |
-| — EOAs | 9 |
+Per-owner Stock Token activity uses the same `eth_getLogs` call with topic
+`0x37e7f0db430edc9dd31bc66f25f8449353aa0818f503b906747dd8f286cd3802` and the owner address in
+`topics[1]` (sent) or `topics[2]` (received). A movement counts as priced only if its
+transaction receipt also contains a Uniswap V3 `Swap` log
+(`0xc42079f94a6350d7e6235f29174924f928cc2ac818eb64fed8004e115fbcca67`).
 
-Contract fleets (identical deployed code size ⇒ one template, different constructor/immutable
-arguments):
+Raw intermediates for the registry funnel are in
+[`docs/data/backfill/`](./data/backfill); the full registry diagnostic is in
+[`BACKFILL.md`](./BACKFILL.md).
 
-| Code size | Members | Note |
-|---|---|---|
-| 22,142 B | 13 | Uniswap V3 pools — venue infrastructure, excluded from the agent count |
-| 130 B | 4 | clone-with-immutable-args proxies |
-| 45 B | 3 | EIP-1167 minimal proxies |
-| 23 B | 2 | stub proxies |
-| everything else | 1 each | 51 distinct singleton bytecodes |
-
-**There is no large cloned agent fleet.** Excluding pools, the sustained population is mostly
-*distinct* bytecode — 51 singleton implementations rather than one framework stamped out
-hundreds of times. That is evidence against "2,100 agents deployed from a common template"
-being visible in Stock Token flow.
-
-### High-frequency addresses trading anything on chain (comparison)
-
-Sampled 100 blocks, 1,392 transactions, 776 distinct senders:
-
-| Senders present in ≥ k of 5 windows | Count |
-|---|---|
-| ≥ 2 | 43 |
-| ≥ 3 | 17 |
-| ≥ 4 | 5 |
-| 5 of 5 | 2 |
-
-Not directly comparable to the Stock Token ladder — this counts transaction *senders*
-(`tx.from`, so EOAs and bundlers) over a much smaller sample, whereas the Stock Token ladder
-counts transfer *participants* (both sides, including contracts). Directionally, sustained
-chain-wide senders are not more numerous than sustained Stock Token participants, i.e. Stock
-Token automation is not a rounding error against general chain automation.
-
----
-
-## What this does and does not establish
-
-**Establishes:** there is a persistent, round-the-clock, automated population trading Stock
-Tokens on chain 4663 that is an order of magnitude larger than the ERC-8004 registry, and
-ERC-8004 registration is close to irrelevant as a discovery mechanism for it. 61 registered;
-1 scoreable; ~51 sustained automated traders never registered at all.
-
-**Does not establish that these are "agents" in the thesis sense.** Bytecode cannot reveal
-intent. The evidence available leans *away* from autonomous strategy agents:
-
-- burstiness (CV 2.14) is event-driven, i.e. reactive to flow or price, which is what a market
-  maker or arbitrageur does;
-- one address alone produced 3,027 movements in a single 500-block (~50 s) window — a rate
-  consistent with inventory management, not with a strategy making decisions;
-- the population is mostly singleton bytecode, not a deployed agent framework;
-- the memo's own framing already treats "2,100 agents" as the output of a $1.3M builder
-  incentive programme, i.e. an upper bound on a mercenary population.
-
-A defensible reading is that this is **market-making and arbitrage infrastructure**, and that
-the LLM-trading-agent population the thesis targets is a subset of unknown — possibly zero —
-size within it. Separating the two would require behavioural work well beyond a count, and
-that work is explicitly out of scope here.
-
-## Method and limits
-
-Read-only `eth_getLogs` / `eth_getBlockByNumber` against the public RPC; no archive node.
-
-Full enumeration is infeasible: the RPC caps responses at 10,000 logs and a single 10,000-block
-window already exceeds that, implying **>50M Stock Token movements since launch**. All counts
-are therefore sampling-based:
-
-- 16 windows × 400 blocks, spread across the 40M blocks below head (0.0122% coverage);
-- venue pools excluded by calling `token0()` on every sustained contract;
-- off-hours defined as outside 13:30–20:00 UTC on weekdays.
-
-Sampled discovery means the address counts are **lower bounds** — an address active in less
-than roughly a fifth of all 40-second intervals can be missed entirely. The direction of the
-error is therefore toward *undercounting* the automated population, not overcounting it.
-
-The snapshot behind these numbers is
-[`docs/data/snapshots/2026-09-02-pre-subsidy-end.json`](./data/snapshots/2026-09-02-pre-subsidy-end.json)
-and is reproducible with `scripts/snapshot/subsidy_snapshot.py`.
+**Scope note.** This document is a count. Nothing measured here enters any scoring universe,
+no address is profiled or ranked, and the rule that scoring begins at an agent's registration
+block — never backfilled — is unchanged.
