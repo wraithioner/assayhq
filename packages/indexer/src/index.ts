@@ -2,8 +2,21 @@
  * @rhchain/indexer — reorg-safe, resumable indexer for Robinhood Chain.
  * Public surface for the metrics package and tooling.
  */
-export { config, loadConfig, robinhoodChain, isScoreable, scoreableByAddress, quoteAssets } from "./config.js";
-export type { IndexerConfig, ScoreableToken } from "./config.js";
+export {
+  config,
+  loadConfig,
+  robinhoodChain,
+  isScoreable,
+  scoreableByAddress,
+  canonicalStockTokenByAddress,
+  quoteAssets,
+} from "./config.js";
+export type {
+  IndexerConfig,
+  ScoreableToken,
+  CanonicalStockToken,
+  QuoteAsset,
+} from "./config.js";
 export { openDb, createSchema } from "./db.js";
 export type { Db, OpenedDb } from "./db.js";
 export { Indexer } from "./indexer.js";
@@ -24,4 +37,12 @@ export {
   type PricePoint,
 } from "./pricing.js";
 export { findCommonAncestor, extendsTip, type StoredBlock } from "./reorg.js";
+export {
+  AGENT_WALLET_METADATA_KEY,
+  ZERO_ADDRESS,
+  decodeAgentWalletMetadata,
+  agentWalletAsOf,
+  walletsEverBound,
+  type AgentWalletPoint,
+} from "./identity.js";
 export * as schema from "./schema.js";

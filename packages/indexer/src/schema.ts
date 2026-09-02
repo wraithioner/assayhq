@@ -36,10 +36,11 @@ export const tokens = sqliteTable("tokens", {
   scoreable: integer("scoreable", { mode: "boolean" }).notNull().default(false),
 });
 
-/** ERC-8004 agent identities. The scored wallet is the current NFT owner. */
+/** ERC-8004 agent identities. Scoring follows the verified agentWallet metadata. */
 export const agents = sqliteTable("agents", {
   agentId: text("agent_id").primaryKey(),
   owner: text("owner").notNull(), // lower-cased; current owner of the AgentIdentity NFT
+  agentWallet: text("agent_wallet"), // current cryptographically verified ERC-8004 wallet
   agentURI: text("agent_uri"),
   registeredBlock: integer("registered_block").notNull(),
   registeredAt: integer("registered_at").notNull(), // unix seconds — the scoring start
@@ -47,9 +48,9 @@ export const agents = sqliteTable("agents", {
 });
 
 /**
- * Ownership transfers of an AgentIdentity NFT (a "wallet rotation"). The current
- * owner is the latest by (block, logIndex). Kept so identity is fully
- * log-derivable and survivorship can cluster rotated wallets under agentId.
+ * Ownership transfers of an AgentIdentity NFT. Ownership controls registry
+ * metadata but does not itself identify the trading wallet. Kept so the current
+ * controller remains fully log-derivable.
  */
 export const agentOwnerHistory = sqliteTable(
   "agent_owner_history",
@@ -68,7 +69,29 @@ export const agentOwnerHistory = sqliteTable(
   }),
 );
 
-/** Stock-token movements that touch an agent wallet (raw + underlying-share value). */
+/**
+ * Point-in-time ERC-8004 agentWallet bindings decoded from MetadataSet. A null
+ * wallet is stored as the zero address and closes the preceding binding.
+ */
+export const agentWalletHistory = sqliteTable(
+  "agent_wallet_history",
+  {
+    id: integer("id").primaryKey({ autoIncrement: true }),
+    agentId: text("agent_id").notNull(),
+    wallet: text("wallet").notNull(),
+    blockNumber: integer("block_number").notNull(),
+    blockTimestamp: integer("block_timestamp").notNull(),
+    txHash: text("tx_hash").notNull(),
+    logIndex: integer("log_index").notNull(),
+  },
+  (t) => ({
+    uq: unique().on(t.txHash, t.logIndex),
+    byAgent: index("awh_agent_idx").on(t.agentId, t.blockNumber, t.logIndex),
+    byWallet: index("awh_wallet_idx").on(t.wallet, t.blockNumber),
+  }),
+);
+
+/** Canonical Stock Token movements touching any wallet ever bound to an agent. */
 export const tokenTransfers = sqliteTable(
   "token_transfers",
   {
@@ -78,25 +101,29 @@ export const tokenTransfers = sqliteTable(
     toAddr: text("to_addr").notNull(),
     rawValue: text("raw_value").notNull(), // decimal string
     uiValue: text("ui_value").notNull(), // underlying shares, from TransferWithScaledUI
-    agentWallet: text("agent_wallet").notNull(), // the agent wallet on one side
-    direction: text("direction", { enum: ["in", "out"] }).notNull(),
     scoreable: integer("scoreable", { mode: "boolean" }).notNull(),
     blockNumber: integer("block_number").notNull(),
     blockTimestamp: integer("block_timestamp").notNull(),
     txHash: text("tx_hash").notNull(),
     logIndex: integer("log_index").notNull(),
-    /** Set once attribution runs: the swaps.id this transfer was matched to, or null (unattributed). */
+    attributionStatus: text("attribution_status", {
+      enum: ["pending", "matched", "unattributed", "ambiguous"],
+    })
+      .notNull()
+      .default("pending"),
     attributedSwapId: integer("attributed_swap_id"),
+    attributionMethod: text("attribution_method"),
   },
   (t) => ({
     uq: unique().on(t.txHash, t.logIndex),
-    byAgent: index("tt_agent_idx").on(t.agentWallet, t.blockNumber),
+    byFrom: index("tt_from_idx").on(t.fromAddr, t.blockNumber),
+    byTo: index("tt_to_idx").on(t.toAddr, t.blockNumber),
     byTx: index("tt_tx_idx").on(t.txHash),
   }),
 );
 
 /**
- * Quote-asset (USDG/WETH) movements touching an agent — the cash leg. A row in
+ * Quote-asset (USDG/WETH) movements touching a wallet ever bound to an agent. A row in
  * the same tx as an attributed swap is a trade leg (internal); otherwise it is an
  * external deposit/withdrawal. Needed so NAV values cash, not just stock.
  */
@@ -108,8 +135,6 @@ export const cashTransfers = sqliteTable(
     fromAddr: text("from_addr").notNull(),
     toAddr: text("to_addr").notNull(),
     value: text("value").notNull(), // decimal string
-    agentWallet: text("agent_wallet").notNull(),
-    direction: text("direction", { enum: ["in", "out"] }).notNull(),
     blockNumber: integer("block_number").notNull(),
     blockTimestamp: integer("block_timestamp").notNull(),
     txHash: text("tx_hash").notNull(),
@@ -117,7 +142,8 @@ export const cashTransfers = sqliteTable(
   },
   (tb) => ({
     uq: unique().on(tb.txHash, tb.logIndex),
-    byAgent: index("ct_agent_idx").on(tb.agentWallet, tb.blockNumber),
+    byFrom: index("ct_from_idx").on(tb.fromAddr, tb.blockNumber),
+    byTo: index("ct_to_idx").on(tb.toAddr, tb.blockNumber),
     byTx: index("ct_tx_idx").on(tb.txHash),
   }),
 );
@@ -198,5 +224,5 @@ export const txGas = sqliteTable("tx_gas", {
   blockNumber: integer("block_number").notNull(),
   gasUsed: text("gas_used").notNull(),
   effectiveGasPrice: text("effective_gas_price").notNull(),
-  feePayer: text("fee_payer").notNull(), // tx.from or paymaster — who actually bore gas
+  txFrom: text("tx_from").notNull(), // transaction sender; not necessarily the economic fee payer
 });

@@ -14,9 +14,23 @@
     "date": "2026-07-01",
     "gasWaiverEndsApprox": "2026-09-29"
   },
-  "stablecoins": {
-    "USDG": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
-    "WETH": "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+  "quoteAssets": {
+    "USDG": {
+      "address": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+      "decimals": 6,
+      "feedProxy": "0x61B7e5650328764B076A108EFF5fa7282a1B9aD2",
+      "feedSecondaryProxy": "0x901f56689360B89D7767a8acE28B7801e6348fa2",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    },
+    "WETH": {
+      "address": "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+      "decimals": 18,
+      "feedProxy": "0x78F3556b67E17Df817D51Ef5a990cDaF09E8d3A9",
+      "feedSecondaryProxy": "0x5058aDee53b04e374d8bEDbAD634Bc4778F50b22",
+      "feedDecimals": 8,
+      "feedHeartbeat": 86400
+    }
   },
   "erc8004": {
     "identityRegistry": "0x8004A169FB4a3325136EB29fA0ceB6D2e539a432",

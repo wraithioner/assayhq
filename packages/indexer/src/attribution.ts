@@ -15,6 +15,9 @@ export interface TransferRef {
   txHash: string;
   token: string; // lower-cased
   logIndex: number;
+  fromAddr: string;
+  toAddr: string;
+  rawValue: bigint;
 }
 
 export interface SwapRef {
@@ -22,6 +25,16 @@ export interface SwapRef {
   txHash: string;
   stockToken: string; // lower-cased
   logIndex: number;
+  pool: string;
+  stockAmount: bigint;
+}
+
+export type AttributionMethod = "pool-counterparty" | "exact-amount" | "single-candidate";
+
+export interface AttributionResult {
+  swapId: number | null;
+  status: "matched" | "unattributed" | "ambiguous";
+  method: AttributionMethod | null;
 }
 
 /**
@@ -31,39 +44,72 @@ export interface SwapRef {
 export function attributeTransfers(
   transfers: readonly TransferRef[],
   swaps: readonly SwapRef[],
-): Map<string, number | null> {
+): Map<string, AttributionResult> {
   const swapsByTx = new Map<string, SwapRef[]>();
   for (const s of swaps) {
     const arr = swapsByTx.get(s.txHash) ?? [];
     arr.push(s);
     swapsByTx.set(s.txHash, arr);
   }
-  const out = new Map<string, number | null>();
+  const out = new Map<string, AttributionResult>();
   for (const t of transfers) {
     const candidates = (swapsByTx.get(t.txHash) ?? []).filter(
       (s) => s.stockToken.toLowerCase() === t.token.toLowerCase(),
     );
     if (candidates.length === 0) {
-      out.set(t.key, null);
+      out.set(t.key, { swapId: null, status: "unattributed", method: null });
       continue;
     }
-    let best = candidates[0]!;
-    let bestDist = Math.abs(best.logIndex - t.logIndex);
-    for (const s of candidates.slice(1)) {
-      const d = Math.abs(s.logIndex - t.logIndex);
-      if (d < bestDist) {
-        best = s;
-        bestDist = d;
-      }
+
+    const poolMatches = candidates.filter(
+      (s) =>
+        (t.fromAddr.toLowerCase() === s.pool.toLowerCase() ||
+          t.toAddr.toLowerCase() === s.pool.toLowerCase()) &&
+        abs(s.stockAmount) === t.rawValue,
+    );
+    if (poolMatches.length === 1) {
+      out.set(t.key, {
+        swapId: poolMatches[0]!.id,
+        status: "matched",
+        method: "pool-counterparty",
+      });
+      continue;
     }
-    out.set(t.key, best.id);
+
+    const amountMatches = candidates.filter((s) => abs(s.stockAmount) === t.rawValue);
+    if (amountMatches.length === 1) {
+      out.set(t.key, {
+        swapId: amountMatches[0]!.id,
+        status: "matched",
+        method: "exact-amount",
+      });
+      continue;
+    }
+
+    if (candidates.length === 1) {
+      out.set(t.key, {
+        swapId: candidates[0]!.id,
+        status: "matched",
+        method: "single-candidate",
+      });
+      continue;
+    }
+
+    // Multiple same-token swaps without a unique amount/pool match are not
+    // guessed. A false match is worse than an explicitly incomplete score.
+    out.set(t.key, { swapId: null, status: "ambiguous", method: null });
   }
   return out;
 }
 
+function abs(x: bigint): bigint {
+  return x < 0n ? -x : x;
+}
+
 export interface AgentFlowItem {
   scoreable: boolean;
-  usdVolume: bigint; // absolute USD volume of the movement (>= 0)
+  /** null when a feed-less/unattributed movement has no defensible USD price. */
+  usdVolume: bigint | null;
 }
 
 export interface CoverageResult {
@@ -73,7 +119,8 @@ export interface CoverageResult {
   coverageRatio: number;
   scoredUsd: bigint;
   totalUsd: bigint;
-  reason: "ok" | "no-flow" | "majority-feedless";
+  unknownItems: number;
+  reason: "ok" | "no-flow" | "majority-feedless" | "unknown-unpriced-flow";
 }
 
 /**
@@ -83,22 +130,35 @@ export interface CoverageResult {
 export function classifyAgentCoverage(items: readonly AgentFlowItem[]): CoverageResult {
   let scoredUsd = 0n;
   let totalUsd = 0n;
+  let unknownItems = 0;
   for (const it of items) {
+    if (it.usdVolume === null) {
+      unknownItems++;
+      continue;
+    }
     const v = it.usdVolume < 0n ? -it.usdVolume : it.usdVolume;
     totalUsd += v;
     if (it.scoreable) scoredUsd += v;
   }
   if (totalUsd === 0n) {
-    return { scoreable: false, coverageRatio: 0, scoredUsd, totalUsd, reason: "no-flow" };
+    return {
+      scoreable: false,
+      coverageRatio: 0,
+      scoredUsd,
+      totalUsd,
+      unknownItems,
+      reason: unknownItems > 0 ? "unknown-unpriced-flow" : "no-flow",
+    };
   }
   const coverageRatio = Number((scoredUsd * 1_000_000n) / totalUsd) / 1_000_000;
   // majority NOT feed-less: scoredUsd >= totalUsd/2  <=>  2*scoredUsd >= totalUsd
-  const scoreable = scoredUsd * 2n >= totalUsd && scoredUsd > 0n;
+  const scoreable = unknownItems === 0 && scoredUsd * 2n >= totalUsd && scoredUsd > 0n;
   return {
     scoreable,
     coverageRatio,
     scoredUsd,
     totalUsd,
-    reason: scoreable ? "ok" : "majority-feedless",
+    unknownItems,
+    reason: unknownItems > 0 ? "unknown-unpriced-flow" : scoreable ? "ok" : "majority-feedless",
   };
 }

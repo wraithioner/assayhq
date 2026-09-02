@@ -24,6 +24,22 @@ export interface ScoreableToken {
   feedHeartbeat: number;
 }
 
+export interface CanonicalStockToken {
+  symbol: string;
+  address: `0x${string}`;
+  decimals: number;
+  isin: string;
+}
+
+export interface QuoteAsset {
+  address: `0x${string}`;
+  decimals: number;
+  feedProxy: `0x${string}`;
+  feedSecondaryProxy: `0x${string}`;
+  feedDecimals: number;
+  feedHeartbeat: number;
+}
+
 export interface IndexerConfig {
   chain: {
     name: string;
@@ -33,7 +49,7 @@ export interface IndexerConfig {
     nativeCurrency: { name: string; symbol: string; decimals: number };
   };
   launch: { date: string; gasWaiverEndsApprox: string };
-  stablecoins: { USDG: `0x${string}`; WETH: `0x${string}` };
+  quoteAssets: { USDG: QuoteAsset; WETH: QuoteAsset };
   erc8004: {
     identityRegistry: `0x${string}`;
     identityImplementation: `0x${string}`;
@@ -46,12 +62,34 @@ export interface IndexerConfig {
     quoterV2: `0x${string}`;
   };
   sharedTokenImplementation: `0x${string}`;
+  canonicalStockTokens: CanonicalStockToken[];
   scoreableTokens: ScoreableToken[];
 }
 
-export function loadConfig(path?: string): IndexerConfig {
+type ConfigFile = Omit<IndexerConfig, "canonicalStockTokens">;
+
+function loadCanonicalStockTokens(path: string): CanonicalStockToken[] {
+  const lines = readFileSync(path, "utf8").trim().split(/\r?\n/);
+  const header = lines.shift();
+  if (!header?.startsWith("symbol,address,chainId,decimals,")) {
+    throw new Error(`unexpected Stock Token CSV header in ${path}`);
+  }
+  return lines.map((line) => {
+    const [symbol, address, chainId, decimals, , , status, isin] = line.split(",");
+    if (!symbol || !address || !decimals || !isin) throw new Error(`bad Stock Token row: ${line}`);
+    if (chainId !== "4663" || status !== "ASSET_STATUS_ACTIVE") {
+      throw new Error(`unexpected Stock Token deployment: ${line}`);
+    }
+    return { symbol, address: address as `0x${string}`, decimals: Number(decimals), isin };
+  });
+}
+
+export function loadConfig(path?: string, tokenCsvPath?: string): IndexerConfig {
   const p = path ?? join(here, "..", "config", "robinhood-mainnet.json");
-  return JSON.parse(readFileSync(p, "utf8")) as IndexerConfig;
+  const stockTokens =
+    tokenCsvPath ?? join(here, "..", "..", "..", "docs", "data", "stock-tokens.csv");
+  const file = JSON.parse(readFileSync(p, "utf8")) as ConfigFile;
+  return { ...file, canonicalStockTokens: loadCanonicalStockTokens(stockTokens) };
 }
 
 export const config: IndexerConfig = loadConfig();
@@ -70,11 +108,16 @@ export const scoreableByAddress: ReadonlyMap<string, ScoreableToken> = new Map(
   config.scoreableTokens.map((t) => [t.address.toLowerCase(), t]),
 );
 
+/** All issuer-published Stock Token addresses, including the 159 feed-less assets. */
+export const canonicalStockTokenByAddress: ReadonlyMap<string, CanonicalStockToken> = new Map(
+  config.canonicalStockTokens.map((t) => [t.address.toLowerCase(), t]),
+);
+
 export function isScoreable(tokenAddress: string): boolean {
   return scoreableByAddress.has(tokenAddress.toLowerCase());
 }
 
 /** The set of stablecoin/quote addresses that anchor a USD execution price. */
 export const quoteAssets: ReadonlySet<string> = new Set(
-  [config.stablecoins.USDG, config.stablecoins.WETH].map((a) => a.toLowerCase()),
+  Object.values(config.quoteAssets).map((a) => a.address.toLowerCase()),
 );

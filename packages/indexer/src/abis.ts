@@ -17,6 +17,9 @@ export const evUIMultiplierUpdated = parseAbiItem(
 export const evRegistered = parseAbiItem(
   "event Registered(uint256 indexed agentId, string agentURI, address indexed owner)",
 );
+export const evMetadataSet = parseAbiItem(
+  "event MetadataSet(uint256 indexed agentId, string indexed indexedMetadataKey, string metadataKey, bytes metadataValue)",
+);
 export const evNftTransfer = parseAbiItem(
   "event Transfer(address indexed from, address indexed to, uint256 indexed tokenId)",
 );
@@ -37,6 +40,7 @@ export const stockTokenAbi = parseAbi([
 /** ERC-8004 IdentityRegistry (verified impl ABI subset — /docs/RECON.md §5). */
 export const identityRegistryAbi = parseAbi([
   "event Registered(uint256 indexed agentId, string agentURI, address indexed owner)",
+  "event MetadataSet(uint256 indexed agentId, string indexed indexedMetadataKey, string metadataKey, bytes metadataValue)",
   "event URIUpdated(uint256 indexed agentId, string newURI, address indexed updatedBy)",
   "event Transfer(address indexed from, address indexed to, uint256 indexed tokenId)",
   "function ownerOf(uint256 tokenId) view returns (address)",

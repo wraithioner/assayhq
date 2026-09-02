@@ -52,6 +52,7 @@ export function createSchema(sqlite: Database.Database): void {
     CREATE TABLE IF NOT EXISTS agents (
       agent_id TEXT PRIMARY KEY,
       owner TEXT NOT NULL,
+      agent_wallet TEXT,
       agent_uri TEXT,
       registered_block INTEGER NOT NULL,
       registered_at INTEGER NOT NULL,
@@ -70,6 +71,19 @@ export function createSchema(sqlite: Database.Database): void {
     );
     CREATE INDEX IF NOT EXISTS aoh_agent_idx ON agent_owner_history (agent_id, block_number);
 
+    CREATE TABLE IF NOT EXISTS agent_wallet_history (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      agent_id TEXT NOT NULL,
+      wallet TEXT NOT NULL,
+      block_number INTEGER NOT NULL,
+      block_timestamp INTEGER NOT NULL,
+      tx_hash TEXT NOT NULL,
+      log_index INTEGER NOT NULL,
+      UNIQUE (tx_hash, log_index)
+    );
+    CREATE INDEX IF NOT EXISTS awh_agent_idx ON agent_wallet_history (agent_id, block_number, log_index);
+    CREATE INDEX IF NOT EXISTS awh_wallet_idx ON agent_wallet_history (wallet, block_number);
+
     CREATE TABLE IF NOT EXISTS token_transfers (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       token TEXT NOT NULL,
@@ -77,17 +91,18 @@ export function createSchema(sqlite: Database.Database): void {
       to_addr TEXT NOT NULL,
       raw_value TEXT NOT NULL,
       ui_value TEXT NOT NULL,
-      agent_wallet TEXT NOT NULL,
-      direction TEXT NOT NULL,
       scoreable INTEGER NOT NULL,
       block_number INTEGER NOT NULL,
       block_timestamp INTEGER NOT NULL,
       tx_hash TEXT NOT NULL,
       log_index INTEGER NOT NULL,
       attributed_swap_id INTEGER,
+      attribution_status TEXT NOT NULL DEFAULT 'pending',
+      attribution_method TEXT,
       UNIQUE (tx_hash, log_index)
     );
-    CREATE INDEX IF NOT EXISTS tt_agent_idx ON token_transfers (agent_wallet, block_number);
+    CREATE INDEX IF NOT EXISTS tt_from_idx ON token_transfers (from_addr, block_number);
+    CREATE INDEX IF NOT EXISTS tt_to_idx ON token_transfers (to_addr, block_number);
     CREATE INDEX IF NOT EXISTS tt_tx_idx ON token_transfers (tx_hash);
 
     CREATE TABLE IF NOT EXISTS cash_transfers (
@@ -96,15 +111,14 @@ export function createSchema(sqlite: Database.Database): void {
       from_addr TEXT NOT NULL,
       to_addr TEXT NOT NULL,
       value TEXT NOT NULL,
-      agent_wallet TEXT NOT NULL,
-      direction TEXT NOT NULL,
       block_number INTEGER NOT NULL,
       block_timestamp INTEGER NOT NULL,
       tx_hash TEXT NOT NULL,
       log_index INTEGER NOT NULL,
       UNIQUE (tx_hash, log_index)
     );
-    CREATE INDEX IF NOT EXISTS ct_agent_idx ON cash_transfers (agent_wallet, block_number);
+    CREATE INDEX IF NOT EXISTS ct_from_idx ON cash_transfers (from_addr, block_number);
+    CREATE INDEX IF NOT EXISTS ct_to_idx ON cash_transfers (to_addr, block_number);
     CREATE INDEX IF NOT EXISTS ct_tx_idx ON cash_transfers (tx_hash);
 
     CREATE TABLE IF NOT EXISTS uni_pools (
@@ -165,7 +179,7 @@ export function createSchema(sqlite: Database.Database): void {
       block_number INTEGER NOT NULL,
       gas_used TEXT NOT NULL,
       effective_gas_price TEXT NOT NULL,
-      fee_payer TEXT NOT NULL
+      tx_from TEXT NOT NULL
     );
   `);
 }

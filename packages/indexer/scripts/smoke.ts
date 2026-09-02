@@ -30,7 +30,13 @@ async function main() {
 
   // Scope to a single, liquid token to keep RPC pressure low.
   const aapl = config.scoreableTokens.find((x) => x.symbol === "AAPL")!;
-  const trimmed: IndexerConfig = { ...config, scoreableTokens: [aapl] };
+  const trimmed: IndexerConfig = {
+    ...config,
+    canonicalStockTokens: [
+      { symbol: aapl.symbol, address: aapl.address, decimals: aapl.decimals, isin: aapl.isin },
+    ],
+    scoreableTokens: [aapl],
+  };
 
   const { db } = openDb(":memory:");
   const idx = new Indexer(db, trimmed, client, { logChunk: 500 });

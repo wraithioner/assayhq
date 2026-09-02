@@ -51,16 +51,27 @@ The feed emits `AnswerUpdated` (~24h heartbeat, sparse); NAV uses the last answe
 timestamp. Reason: fully recomputable from chain logs (the go-ahead banned the off-chain RH price
 API). Confirmed the event fires on the AAPL aggregator with the expected value.
 
-### D-1.8 — Agent identity = current AgentIdentity NFT owner (log-derivable)
-The ERC-8004 impl emits no event for `setAgentWallet`, so binding a distinct operating wallet isn't
-recomputable from logs. v1 scores the NFT owner (`Registered.owner`, updated by NFT `Transfer`);
-`getAgentWallet` is deferred to a clearly-flagged, call-derived Phase-2 enhancement. Reason:
-recomputability is non-negotiable for the scoreboard's promise.
+### D-1.8 — Agent identity = verified `agentWallet` metadata history (correction)
+The earlier owner-as-wallet decision was wrong. The deployed ERC-8004 implementation emits
+`MetadataSet(agentId, …, metadataKey, metadataValue)` when `setAgentWallet` succeeds; for the
+`agentWallet` key the value is the packed, proof-verified address. v1 decodes that event into a
+point-in-time binding history and treats NFT ownership only as registry control. A wallet is scored
+only while bound and never before registration. Reason: this is both cryptographically stronger and
+fully log-recomputable; assuming the NFT owner trades would create silent false attribution.
 
 ### D-1.9 — Unattributed-flow detector + coverage gate, exactly as directed
-A stock-token move with no same-tx Uniswap swap is unattributed (excluded from execution scoring;
-aggregated by token to rank the next venue). Majority-feedless agents are unscoreable, never
-partial. Both are pure, unit-tested functions.
+A stock-token move is matched only to a same-tx, same-token Uniswap swap with a unique pool/amount
+or otherwise unambiguous candidate; multiple indistinguishable swaps are explicitly `ambiguous`,
+not guessed. Unmatched and ambiguous flow is excluded from execution scoring and aggregated by
+token to rank the next venue. Majority-feedless agents are unscoreable, never partial. Unknown,
+unpriced flow also makes coverage unscoreable rather than disappearing from the denominator.
+
+### D-1.10 — Index canonical emitters once; attach agents point-in-time downstream
+The indexer accepts `TransferWithScaledUI` only from the issuer-published 194-address allowlist and
+stores each `(txHash, logIndex)` once, even when both endpoints are agent wallets. Agent direction
+and identity are point-in-time joins against `agent_wallet_history`, not duplicated columns on the
+raw event. Reason: duplicated endpoint rows corrupt volume/NAV, while storing today's owner on a
+historical event breaks recomputability after wallet rotation.
 
 ## Phase 0 — recon (2026-09-01)
 

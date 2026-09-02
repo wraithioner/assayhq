@@ -17,10 +17,10 @@ import {
   type PublicClient,
   type Address,
 } from "viem";
-import { and, gte, lte, isNull } from "drizzle-orm";
+import { and, asc, eq, gte, lte } from "drizzle-orm";
 import type { Db } from "./db.js";
 import type { IndexerConfig } from "./config.js";
-import { robinhoodChain, scoreableByAddress, quoteAssets } from "./config.js";
+import { robinhoodChain } from "./config.js";
 import * as t from "./schema.js";
 import {
   uniswapV3FactoryAbi,
@@ -30,15 +30,23 @@ import {
   evTransferWithScaledUI,
   evUIMultiplierUpdated,
   evRegistered,
+  evMetadataSet,
   evNftTransfer,
   evSwap,
   evAnswerUpdated,
   UNIV3_FEE_TIERS,
 } from "./abis.js";
 import { attributeTransfers, type TransferRef, type SwapRef } from "./attribution.js";
-import { findCommonAncestor, type StoredBlock } from "./reorg.js";
+import { decodeAgentWalletMetadata, ZERO_ADDRESS } from "./identity.js";
+import type { StoredBlock } from "./reorg.js";
 
 const lc = (a: string) => a.toLowerCase();
+
+function batches<T>(items: readonly T[], size: number): T[][] {
+  const out: T[][] = [];
+  for (let i = 0; i < items.length; i += size) out.push(items.slice(i, i + size));
+  return out;
+}
 
 export interface IndexerOptions {
   /** Blocks kept as a reorg buffer below the head (public RH chain is fast). */
@@ -70,20 +78,54 @@ export class Indexer {
     this.stateId = opts.stateId ?? "main";
   }
 
-  /** Seed the 35 scoreable tokens. Idempotent. */
+  /** Seed every canonical Stock Token plus the two v1 quote assets. */
   seedTokens(): void {
-    for (const tk of this.cfg.scoreableTokens) {
+    const scoreable = new Map(this.cfg.scoreableTokens.map((tk) => [lc(tk.address), tk]));
+    for (const tk of this.cfg.canonicalStockTokens) {
+      const covered = scoreable.get(lc(tk.address));
       this.db
         .insert(t.tokens)
         .values({
           address: lc(tk.address),
           symbol: tk.symbol,
           decimals: tk.decimals,
-          feedProxy: lc(tk.feedProxy),
-          feedDecimals: tk.feedDecimals,
-          scoreable: true,
+          feedProxy: covered ? lc(covered.feedProxy) : null,
+          feedDecimals: covered?.feedDecimals ?? null,
+          scoreable: covered !== undefined,
         })
-        .onConflictDoNothing()
+        .onConflictDoUpdate({
+          target: t.tokens.address,
+          set: {
+            symbol: tk.symbol,
+            decimals: tk.decimals,
+            feedProxy: covered ? lc(covered.feedProxy) : null,
+            feedDecimals: covered?.feedDecimals ?? null,
+            scoreable: covered !== undefined,
+          },
+        })
+        .run();
+    }
+    for (const [symbol, quote] of Object.entries(this.cfg.quoteAssets)) {
+      this.db
+        .insert(t.tokens)
+        .values({
+          address: lc(quote.address),
+          symbol,
+          decimals: quote.decimals,
+          feedProxy: lc(quote.feedProxy),
+          feedDecimals: quote.feedDecimals,
+          scoreable: false,
+        })
+        .onConflictDoUpdate({
+          target: t.tokens.address,
+          set: {
+            symbol,
+            decimals: quote.decimals,
+            feedProxy: lc(quote.feedProxy),
+            feedDecimals: quote.feedDecimals,
+            scoreable: false,
+          },
+        })
         .run();
     }
   }
@@ -116,8 +158,8 @@ export class Indexer {
 
   async discoverPools(): Promise<number> {
     let found = 0;
-    for (const tk of this.cfg.scoreableTokens) {
-      for (const quote of [this.cfg.stablecoins.USDG, this.cfg.stablecoins.WETH]) {
+    for (const tk of this.cfg.canonicalStockTokens) {
+      for (const quote of Object.values(this.cfg.quoteAssets)) {
         for (const fee of UNIV3_FEE_TIERS) {
           let pool: Address;
           try {
@@ -125,7 +167,7 @@ export class Indexer {
               address: getAddress(this.cfg.uniswapV3.factory),
               abi: uniswapV3FactoryAbi,
               functionName: "getPool",
-              args: [getAddress(tk.address), getAddress(quote), fee],
+              args: [getAddress(tk.address), getAddress(quote.address), fee],
             })) as Address;
           } catch {
             continue;
@@ -143,7 +185,7 @@ export class Indexer {
               token1: lc(token1 as string),
               fee,
               stockToken: lc(tk.address),
-              quoteToken: lc(quote),
+              quoteToken: lc(quote.address),
               createdBlock: 0,
             })
             .onConflictDoNothing()
@@ -178,6 +220,7 @@ export class Indexer {
           .values({
             agentId,
             owner,
+            agentWallet: null,
             agentURI: (log.args.agentURI as string) ?? "",
             registeredBlock: Number(log.blockNumber),
             registeredAt: ts,
@@ -190,6 +233,38 @@ export class Indexer {
           .values({
             agentId,
             owner,
+            blockNumber: Number(log.blockNumber),
+            blockTimestamp: ts,
+            txHash: log.transactionHash!,
+            logIndex: log.logIndex!,
+          })
+          .onConflictDoNothing()
+          .run();
+        n++;
+      }
+
+      // ERC-8004's agentWallet is a cryptographically verified metadata field,
+      // not necessarily the NFT owner. The implementation emits the packed
+      // address in MetadataSet, including the initial binding at registration.
+      const metadata = await this.client.getLogs({
+        address: registry,
+        event: evMetadataSet,
+        fromBlock: f,
+        toBlock: to,
+      });
+      for (const log of metadata) {
+        const decoded = decodeAgentWalletMetadata(
+          log.args.metadataKey as string,
+          log.args.metadataValue as `0x${string}`,
+        );
+        if (decoded === undefined) continue;
+        const ts = await this.blockTs(Number(log.blockNumber));
+        const agentId = (log.args.agentId as bigint).toString();
+        this.db
+          .insert(t.agentWalletHistory)
+          .values({
+            agentId,
+            wallet: decoded === null ? ZERO_ADDRESS : lc(decoded),
             blockNumber: Number(log.blockNumber),
             blockTimestamp: ts,
             txHash: log.transactionHash!,
@@ -221,11 +296,12 @@ export class Indexer {
         this.db.update(t.agents).set({ owner }).where(eqAgent(agentId)).run();
       }
     }
+    this.refreshAgentSnapshots();
     return n;
   }
 
   async indexMultiplierUpdates(fromBlock: number, toBlock: number): Promise<number> {
-    const tokens = this.cfg.scoreableTokens.map((x) => getAddress(x.address));
+    const tokens = this.cfg.canonicalStockTokens.map((x) => getAddress(x.address));
     let n = 0;
     for await (const [f, to] of this.chunks(fromBlock, toBlock)) {
       const logs = await this.client.getLogs({ address: tokens, event: evUIMultiplierUpdated, fromBlock: f, toBlock: to });
@@ -291,7 +367,14 @@ export class Indexer {
 
   async indexPrices(fromBlock: number, toBlock: number): Promise<number> {
     let n = 0;
-    for (const tk of this.cfg.scoreableTokens) {
+    const feeds = [
+      ...this.cfg.scoreableTokens.map((tk) => ({ feedProxy: tk.feedProxy })),
+      ...Object.values(this.cfg.quoteAssets).map((quote) => ({ feedProxy: quote.feedProxy })),
+    ];
+    const seenFeeds = new Set<string>();
+    for (const tk of feeds) {
+      if (seenFeeds.has(lc(tk.feedProxy))) continue;
+      seenFeeds.add(lc(tk.feedProxy));
       let aggregator: Address;
       try {
         aggregator = (await this.client.readContract({
@@ -327,91 +410,132 @@ export class Indexer {
   }
 
   async indexAgentTransfers(fromBlock: number, toBlock: number): Promise<number> {
-    const agents = this.db.select().from(t.agents).all();
-    if (agents.length === 0) return 0;
-    const walletSet = new Set(agents.map((a) => lc(a.owner)));
-    const walletArg = [...walletSet].map((a) => getAddress(a)) as Address[];
+    const walletSet = this.walletsEverBound();
+    if (walletSet.size === 0) return 0;
+    const walletArgs = batches([...walletSet].map((a) => getAddress(a)), 50);
+    const tokenArgs = batches(
+      this.cfg.canonicalStockTokens.map((tk) => getAddress(tk.address)),
+      100,
+    );
+    const canonical = new Set(this.cfg.canonicalStockTokens.map((tk) => lc(tk.address)));
+    const scoreable = new Set(this.cfg.scoreableTokens.map((tk) => lc(tk.address)));
     let n = 0;
     for await (const [f, to] of this.chunks(fromBlock, toBlock)) {
-      for (const side of ["from", "to"] as const) {
-        const logs = await this.client.getLogs({
-          event: evTransferWithScaledUI,
-          args: side === "from" ? { from: walletArg } : { to: walletArg },
-          fromBlock: f,
-          toBlock: to,
-        });
-        for (const log of logs) {
-          const token = lc(log.address);
-          const from = lc(log.args.from as string);
-          const toA = lc(log.args.to as string);
-          const agentWallet = side === "from" ? from : toA;
-          if (!walletSet.has(agentWallet)) continue;
-          const ts = await this.blockTs(Number(log.blockNumber));
-          this.db
-            .insert(t.tokenTransfers)
-            .values({
-              token,
-              fromAddr: from,
-              toAddr: toA,
-              rawValue: (log.args.value as bigint).toString(),
-              uiValue: (log.args.uiValue as bigint).toString(),
-              agentWallet,
-              direction: side === "from" ? "out" : "in",
-              scoreable: scoreableByAddress.has(token),
-              blockNumber: Number(log.blockNumber),
-              blockTimestamp: ts,
-              txHash: log.transactionHash!,
-              logIndex: log.logIndex!,
-            })
-            .onConflictDoNothing()
-            .run();
-          n++;
+      for (const addresses of tokenArgs) {
+        for (const wallets of walletArgs) {
+          for (const side of ["from", "to"] as const) {
+            const logs = await this.client.getLogs({
+              address: addresses,
+              event: evTransferWithScaledUI,
+              args: side === "from" ? { from: wallets } : { to: wallets },
+              fromBlock: f,
+              toBlock: to,
+            });
+            for (const log of logs) {
+              const token = lc(log.address);
+              if (!canonical.has(token)) continue;
+              const from = lc(log.args.from as string);
+              const toA = lc(log.args.to as string);
+              if (!walletSet.has(from) && !walletSet.has(toA)) continue;
+              const ts = await this.blockTs(Number(log.blockNumber));
+              const result = this.db
+                .insert(t.tokenTransfers)
+                .values({
+                  token,
+                  fromAddr: from,
+                  toAddr: toA,
+                  rawValue: (log.args.value as bigint).toString(),
+                  uiValue: (log.args.uiValue as bigint).toString(),
+                  scoreable: scoreable.has(token),
+                  blockNumber: Number(log.blockNumber),
+                  blockTimestamp: ts,
+                  txHash: log.transactionHash!,
+                  logIndex: log.logIndex!,
+                })
+                .onConflictDoNothing()
+                .run();
+              n += result.changes;
+            }
+          }
         }
       }
     }
     return n;
   }
 
-  /** Index USDG/WETH (the cash leg) Transfer events touching agent wallets. */
+  private walletsEverBound(): Set<string> {
+    return new Set(
+      this.db
+        .select({ wallet: t.agentWalletHistory.wallet })
+        .from(t.agentWalletHistory)
+        .all()
+        .map((row) => lc(row.wallet))
+        .filter((wallet) => wallet !== ZERO_ADDRESS),
+    );
+  }
+
+  private refreshAgentSnapshots(): void {
+    this.db.update(t.agents).set({ agentWallet: null }).run();
+    const owners = this.db
+      .select()
+      .from(t.agentOwnerHistory)
+      .orderBy(asc(t.agentOwnerHistory.blockNumber), asc(t.agentOwnerHistory.logIndex))
+      .all();
+    for (const row of owners) {
+      this.db.update(t.agents).set({ owner: lc(row.owner) }).where(eqAgent(row.agentId)).run();
+    }
+    const wallets = this.db
+      .select()
+      .from(t.agentWalletHistory)
+      .orderBy(asc(t.agentWalletHistory.blockNumber), asc(t.agentWalletHistory.logIndex))
+      .all();
+    for (const row of wallets) {
+      this.db
+        .update(t.agents)
+        .set({ agentWallet: lc(row.wallet) === ZERO_ADDRESS ? null : lc(row.wallet) })
+        .where(eqAgent(row.agentId))
+        .run();
+    }
+  }
+
+  /** Index USDG/WETH (the cash leg) Transfer events touching bound agent wallets. */
   async indexCashTransfers(fromBlock: number, toBlock: number): Promise<number> {
-    const agents = this.db.select().from(t.agents).all();
-    if (agents.length === 0) return 0;
-    const walletSet = new Set(agents.map((a) => lc(a.owner)));
-    const walletArg = [...walletSet].map((a) => getAddress(a)) as Address[];
-    const cashTokens = [getAddress(this.cfg.stablecoins.USDG), getAddress(this.cfg.stablecoins.WETH)];
+    const walletSet = this.walletsEverBound();
+    if (walletSet.size === 0) return 0;
+    const walletArgs = batches([...walletSet].map((a) => getAddress(a)), 50);
+    const cashTokens = Object.values(this.cfg.quoteAssets).map((quote) => getAddress(quote.address));
     let n = 0;
     for await (const [f, to] of this.chunks(fromBlock, toBlock)) {
-      for (const side of ["from", "to"] as const) {
-        const logs = await this.client.getLogs({
-          address: cashTokens,
-          event: evTransfer,
-          args: side === "from" ? { from: walletArg } : { to: walletArg },
-          fromBlock: f,
-          toBlock: to,
-        });
-        for (const log of logs) {
-          const from = lc(log.args.from as string);
-          const toA = lc(log.args.to as string);
-          const agentWallet = side === "from" ? from : toA;
-          if (!walletSet.has(agentWallet)) continue;
-          const ts = await this.blockTs(Number(log.blockNumber));
-          this.db
-            .insert(t.cashTransfers)
-            .values({
-              token: lc(log.address),
-              fromAddr: from,
-              toAddr: toA,
-              value: (log.args.value as bigint).toString(),
-              agentWallet,
-              direction: side === "from" ? "out" : "in",
-              blockNumber: Number(log.blockNumber),
-              blockTimestamp: ts,
-              txHash: log.transactionHash!,
-              logIndex: log.logIndex!,
-            })
-            .onConflictDoNothing()
-            .run();
-          n++;
+      for (const wallets of walletArgs) {
+        for (const side of ["from", "to"] as const) {
+          const logs = await this.client.getLogs({
+            address: cashTokens,
+            event: evTransfer,
+            args: side === "from" ? { from: wallets } : { to: wallets },
+            fromBlock: f,
+            toBlock: to,
+          });
+          for (const log of logs) {
+            const from = lc(log.args.from as string);
+            const toA = lc(log.args.to as string);
+            if (!walletSet.has(from) && !walletSet.has(toA)) continue;
+            const ts = await this.blockTs(Number(log.blockNumber));
+            const result = this.db
+              .insert(t.cashTransfers)
+              .values({
+                token: lc(log.address),
+                fromAddr: from,
+                toAddr: toA,
+                value: (log.args.value as bigint).toString(),
+                blockNumber: Number(log.blockNumber),
+                blockTimestamp: ts,
+                txHash: log.transactionHash!,
+                logIndex: log.logIndex!,
+              })
+              .onConflictDoNothing()
+              .run();
+            n += result.changes;
+          }
         }
       }
     }
@@ -419,7 +543,7 @@ export class Indexer {
   }
 
   /**
-   * Fetch gas facts for the transactions that moved agent balances. `feePayer`
+   * Fetch gas facts for the transactions that moved agent balances. `txFrom`
    * is the receipt's `from`; for ERC-4337 flows that is the bundler, not the
    * agent — the subsidy/paymaster caveat (/docs/RECON.md §7) is resolved in
    * @rhchain/metrics, which decides whether the agent actually bore the cost.
@@ -430,9 +554,14 @@ export class Indexer {
       .from(t.tokenTransfers)
       .where(and(gte(t.tokenTransfers.blockNumber, fromBlock), lte(t.tokenTransfers.blockNumber, toBlock)))
       .all();
+    const cashRows = this.db
+      .select({ txHash: t.cashTransfers.txHash })
+      .from(t.cashTransfers)
+      .where(and(gte(t.cashTransfers.blockNumber, fromBlock), lte(t.cashTransfers.blockNumber, toBlock)))
+      .all();
     const seen = new Set<string>();
     let n = 0;
-    for (const r of rows) {
+    for (const r of [...rows, ...cashRows]) {
       if (seen.has(r.txHash)) continue;
       seen.add(r.txHash);
       const rcpt = await this.client.getTransactionReceipt({ hash: r.txHash as `0x${string}` });
@@ -443,7 +572,7 @@ export class Indexer {
           blockNumber: Number(rcpt.blockNumber),
           gasUsed: rcpt.gasUsed.toString(),
           effectiveGasPrice: rcpt.effectiveGasPrice.toString(),
-          feePayer: lc(rcpt.from),
+          txFrom: lc(rcpt.from),
         })
         .onConflictDoNothing()
         .run();
@@ -457,7 +586,13 @@ export class Indexer {
     const transfers = this.db
       .select()
       .from(t.tokenTransfers)
-      .where(and(gte(t.tokenTransfers.blockNumber, fromBlock), lte(t.tokenTransfers.blockNumber, toBlock), isNull(t.tokenTransfers.attributedSwapId)))
+      .where(
+        and(
+          gte(t.tokenTransfers.blockNumber, fromBlock),
+          lte(t.tokenTransfers.blockNumber, toBlock),
+          eq(t.tokenTransfers.attributionStatus, "pending"),
+        ),
+      )
       .all();
     const swapsRows = this.db
       .select()
@@ -469,19 +604,31 @@ export class Indexer {
       txHash: r.txHash,
       token: r.token,
       logIndex: r.logIndex,
+      fromAddr: r.fromAddr,
+      toAddr: r.toAddr,
+      rawValue: BigInt(r.rawValue),
     }));
     const srefs: SwapRef[] = swapsRows.map((s) => ({
       id: s.id,
       txHash: s.txHash,
       stockToken: s.stockToken,
       logIndex: s.logIndex,
+      pool: s.pool,
+      stockAmount: BigInt(s.stockAmount),
     }));
     const matched = attributeTransfers(trefs, srefs);
     for (const r of transfers) {
-      const swapId = matched.get(`${r.txHash}:${r.logIndex}`);
-      if (swapId != null) {
-        this.db.update(t.tokenTransfers).set({ attributedSwapId: swapId }).where(eqTransferId(r.id)).run();
-      }
+      const result = matched.get(`${r.txHash}:${r.logIndex}`);
+      if (!result) continue;
+      this.db
+        .update(t.tokenTransfers)
+        .set({
+          attributedSwapId: result.swapId,
+          attributionStatus: result.status,
+          attributionMethod: result.method,
+        })
+        .where(eqTransferId(r.id))
+        .run();
     }
   }
 
@@ -503,6 +650,7 @@ export class Indexer {
   rollbackAbove(block: number): void {
     const tables = [
       t.agentOwnerHistory,
+      t.agentWalletHistory,
       t.tokenTransfers,
       t.cashTransfers,
       t.swaps,
@@ -513,6 +661,8 @@ export class Indexer {
     for (const tbl of tables) {
       this.db.delete(tbl).where(gte(tbl.blockNumber, block + 1)).run();
     }
+    this.db.delete(t.agents).where(gte(t.agents.registeredBlock, block + 1)).run();
+    this.refreshAgentSnapshots();
     this.db.delete(t.blocks).where(gte(t.blocks.number, block + 1)).run();
   }
 
@@ -539,8 +689,6 @@ export class Indexer {
   }
 }
 
-// drizzle where-helpers kept local to avoid importing eq at top for one use each
-import { eq } from "drizzle-orm";
 function eqAgent(agentId: string) {
   return eq(t.agents.agentId, agentId);
 }

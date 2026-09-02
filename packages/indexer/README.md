@@ -12,7 +12,7 @@ generated from the primary-source-verified [`/docs/RECON.md`](../../docs/RECON.m
 
 | Stream | Source | Table |
 |---|---|---|
-| Agent identities + owner (wallet) rotations | ERC-8004 `Registered` + NFT `Transfer` | `agents`, `agent_owner_history` |
+| Agent identities, controllers, and verified trading-wallet bindings | ERC-8004 `Registered`, NFT `Transfer`, `MetadataSet(agentWallet)` | `agents`, `agent_owner_history`, `agent_wallet_history` |
 | Stock-token moves touching an agent | `TransferWithScaledUI` (raw `value` + `uiValue`) | `token_transfers` |
 | Uniswap V3 executions | pool `Swap` (pools found by `factory.getPool`) | `swaps`, `uni_pools` |
 | Corporate actions | `UIMultiplierUpdated` | `multiplier_updates` |
@@ -31,9 +31,9 @@ generated from the primary-source-verified [`/docs/RECON.md`](../../docs/RECON.m
 - **Point-in-time** — prices are a sparse `AnswerUpdated` series; NAV uses
   `priceAsOf(t)` = the last answer at-or-before `t`, never a future one.
 
-The correctness-critical logic is pure and unit-tested (no network): reorg
+The correctness-critical logic is pure and unit-tested (no network): identity history, reorg
 (`reorg.ts`), attribution + coverage (`attribution.ts`), pricing + slippage
-(`pricing.ts`). Run `pnpm --filter @rhchain/indexer test` (19 tests).
+(`pricing.ts`). Run `pnpm --filter @rhchain/indexer test` (24 tests).
 
 ## Scoring-relevant policy (from the go-ahead)
 
@@ -43,9 +43,9 @@ The correctness-critical logic is pure and unit-tested (no network): reorg
 - **Uniswap V3 only.** A stock-token move with no Uniswap swap in the same tx is
   **unattributed flow** — excluded from execution scoring and, aggregated by token,
   it ranks which venue (Rialto/Lighter/…) to integrate next.
-- **Identity is log-derivable.** The scored wallet is the current owner of the
-  AgentIdentity NFT (`Registered.owner`, updated by NFT `Transfer`). See the
-  `getAgentWallet` caveat below.
+- **Identity is log-derivable.** The scored wallet comes from proof-verified
+  `agentWallet` metadata emitted by ERC-8004. NFT ownership is registry control,
+  not assumed trading activity. Wallet association is resolved point-in-time.
 
 ## Validated against mainnet
 
@@ -60,7 +60,7 @@ swap ratio).
 ## Usage
 
 ```bash
-# discover Uniswap pools for the 35 tokens (call-based; no launch-era log scan)
+# discover Uniswap pools for all canonical Stock Tokens (call-based)
 tsx src/cli.ts discover-pools --db data.sqlite
 
 # index a finalized block range (idempotent; re-runnable)
@@ -75,12 +75,13 @@ tsx src/cli.ts stats --db data.sqlite
   the public RPC rate-limits (HTTP 429) and isn't archival. Point `RH_RPC` at
   Alchemy and backfill launch→tip in ranges. The smoke deliberately scopes to a
   small recent window + one token.
-- **`getAgentWallet` is not log-derivable.** The ERC-8004 impl has no event for
-  `setAgentWallet`, so v1 scores the NFT **owner** address (fully recomputable). If
-  agents trade from a distinct bound wallet, that is a Phase-2 enhancement (an
-  archival `getAgentWallet` snapshot, clearly flagged as call-derived).
+- **Unbound agents have no scored wallet.** ERC-8004 registration defines the
+  survivorship universe, but an agent contributes scored activity only after a
+  verified `agentWallet` binding. Clearing or rotating the binding takes effect at
+  that event's exact block/log position.
 - **Pool discovery uses `factory.getPool`** (single calls) rather than scanning
   `PoolCreated`; `uni_pools.created_block` is therefore 0 (unknown) for call-found
   pools. It doesn't affect swap indexing.
-- **`fee_payer` is the receipt `from`.** For ERC-4337 flows that is the bundler, not
-  the agent; the subsidy/paymaster attribution is resolved in `@rhchain/metrics`.
+- **`tx_from` is not claimed to be the economic fee payer.** For ERC-4337 flows it
+  can be the bundler; the subsidy/paymaster attribution is resolved in
+  `@rhchain/metrics` rather than silently charging the agent.
