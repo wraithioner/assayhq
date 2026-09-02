@@ -9,9 +9,12 @@ and timestamped, and dead agents can't be deleted from the sample. This project 
 and publishes metrics that are **net of costs, survivorship-safe, point-in-time, and recomputable
 by a third party**.
 
-## Status: Phase 0 (recon) — complete, awaiting go-ahead
+## Status: Phase 1 — indexer correctness pass
 
-**No application code yet.** Phase 0 established ground truth against primary sources. Start here:
+Phase 0 established ground truth against primary sources. Phase 1 is approved and underway:
+the ERC-8056 adapter is complete, and the raw-event indexer now has point-in-time ERC-8004 wallet
+bindings, canonical Stock Token filtering, Uniswap attribution, Chainlink proxy snapshots, and a
+tested reorg/resume loop. Metrics and the static web scoreboard are next. Start here:
 
 - **[`docs/RECON.md`](docs/RECON.md)** — the recon deliverable: chain params, token & feed
   addresses, exact ERC-8056 interface + event topic hashes, ERC-8004 registry, DEX venues, the gas
@@ -48,7 +51,7 @@ python3 scripts/recon/keccak.py  # event topic0 hashes (self-tested)
 No custody, vaults, copy-trading, wallet connect, token, KYC/PII, or write transactions of any
 kind. Phase 1 is an indexer + metrics engine + static leaderboard only.
 
-## Planned layout (Phase 1, after go-ahead)
+## Phase 1 layout
 
 ```
 packages/erc8056   # raw <-> underlying-share adapter (TS + Solidity), multiplier history
@@ -57,4 +60,4 @@ packages/metrics   # NAV, return/alpha/IR/Sharpe/maxDD net of gas+slippage; surv
 apps/web           # sortable static leaderboard + per-agent "verify this yourself" recompute panel
 ```
 
-Stack (planned): TypeScript, viem, Postgres/SQLite, Drizzle, Next.js. Pinned versions.
+Stack: TypeScript, viem, SQLite, Drizzle, Next.js. Versions are pinned.

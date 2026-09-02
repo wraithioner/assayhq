@@ -218,6 +218,29 @@ export const priceUpdates = sqliteTable(
   }),
 );
 
+/**
+ * Proxy-level Chainlink reads at deterministic cadence blocks and every
+ * scoring-relevant event block. Unlike aggregator logs, these remain correct
+ * across proxy aggregator upgrades and are the price source used by metrics.
+ */
+export const priceSnapshots = sqliteTable(
+  "price_snapshots",
+  {
+    id: integer("id").primaryKey({ autoIncrement: true }),
+    feedProxy: text("feed_proxy").notNull(),
+    answer: text("answer").notNull(),
+    roundId: text("round_id").notNull(),
+    updatedAt: integer("updated_at").notNull(),
+    blockNumber: integer("block_number").notNull(),
+    blockTimestamp: integer("block_timestamp").notNull(),
+    source: text("source", { enum: ["cadence", "event"] }).notNull(),
+  },
+  (t) => ({
+    uq: unique().on(t.feedProxy, t.blockNumber),
+    byFeedBlock: index("ps_feed_block_idx").on(t.feedProxy, t.blockNumber),
+  }),
+);
+
 /** Per-transaction gas, for cost accounting (and the subsidy/paymaster caveat). */
 export const txGas = sqliteTable("tx_gas", {
   txHash: text("tx_hash").primaryKey(),

@@ -5,6 +5,7 @@ import {
   priceStaleness,
   execPriceUsdPerToken,
   slippageBps,
+  adverseSlippageBps,
   type PricePoint,
 } from "../src/pricing.js";
 
@@ -63,6 +64,8 @@ describe("execPriceUsdPerToken", () => {
       quoteAmountRaw: 631_277_000n,
       stockDecimals: 18,
       quoteDecimals: 6,
+      quoteUsdPrice: 100_000_000n,
+      quotePriceDecimals: 8,
       outDecimals: 8,
     });
     expect(price).toBe(31_563_850_000n);
@@ -70,8 +73,41 @@ describe("execPriceUsdPerToken", () => {
 
   it("throws on a zero stock amount", () => {
     expect(() =>
-      execPriceUsdPerToken({ stockAmountRaw: 0n, quoteAmountRaw: 1n, stockDecimals: 18, quoteDecimals: 6 }),
+      execPriceUsdPerToken({
+        stockAmountRaw: 0n,
+        quoteAmountRaw: 1n,
+        stockDecimals: 18,
+        quoteDecimals: 6,
+        quoteUsdPrice: 100_000_000n,
+        quotePriceDecimals: 8,
+      }),
     ).toThrow(RangeError);
+  });
+
+  it("converts a WETH quote through the point-in-time ETH/USD feed", () => {
+    // 0.1 stock exchanged for 0.006 WETH at $5,000/ETH = $300/stock.
+    const price = execPriceUsdPerToken({
+      stockAmountRaw: 10n ** 17n,
+      quoteAmountRaw: 6n * 10n ** 15n,
+      stockDecimals: 18,
+      quoteDecimals: 18,
+      quoteUsdPrice: 500_000_000_000n,
+      quotePriceDecimals: 8,
+      outDecimals: 8,
+    });
+    expect(price).toBe(30_000_000_000n);
+  });
+
+  it("uses the USDG/USD feed rather than assuming a hard peg", () => {
+    const price = execPriceUsdPerToken({
+      stockAmountRaw: 10n ** 18n,
+      quoteAmountRaw: 300n * 10n ** 6n,
+      stockDecimals: 18,
+      quoteDecimals: 6,
+      quoteUsdPrice: 99_000_000n,
+      quotePriceDecimals: 8,
+    });
+    expect(price).toBe(29_700_000_000n);
   });
 });
 
@@ -86,5 +122,11 @@ describe("slippageBps", () => {
 
   it("throws on a non-positive mid", () => {
     expect(() => slippageBps(1n, 0n)).toThrow(RangeError);
+  });
+
+  it("makes adverse slippage direction-aware", () => {
+    expect(Math.round(adverseSlippageBps(101n, 100n, "buy"))).toBe(100);
+    expect(Math.round(adverseSlippageBps(99n, 100n, "sell"))).toBe(100);
+    expect(Math.round(adverseSlippageBps(99n, 100n, "buy"))).toBe(-100);
   });
 });

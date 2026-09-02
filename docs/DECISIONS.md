@@ -73,6 +73,21 @@ and identity are point-in-time joins against `agent_wallet_history`, not duplica
 raw event. Reason: duplicated endpoint rows corrupt volume/NAV, while storing today's owner on a
 historical event breaks recomputability after wallet rotation.
 
+### D-1.11 — Reorg recovery persists the rollback before replay
+The follower indexes only through `head - reorgBuffer`. On a stored-tip mismatch it rechecks all
+stored event/checkpoint headers inside the buffer, rolls raw tables back to the highest canonical
+match, and **writes that rollback cursor before** replaying. If the oldest checkpoint also differs,
+it stops with a resync-required error. Reason: replaying after a deep, unproven ancestor silently
+mixes forks; persisting the rollback first also makes a crash during replay safely resumable.
+
+### D-1.12 — Proxy snapshots are authoritative; every quote has its own USD feed
+Metrics will use `latestRoundData` read from the Chainlink **proxy** at each agent event block plus
+an aligned 36,000-block cadence. This remains correct across aggregator upgrades; raw
+`AnswerUpdated` logs are retained as audit evidence, not the scoring source. Both USDG and WETH are
+converted through their point-in-time USD feeds, and ETH/USD is captured at every agent event block
+for gas. Reason: assuming USDG=$1 hides depegs, while treating WETH units as dollars is a catastrophic
+but superficially plausible execution-price bug.
+
 ## Phase 0 — recon (2026-09-01)
 
 ### D-0.1 — Primary sources are read from raw HTML / on-chain, not via a summarizer

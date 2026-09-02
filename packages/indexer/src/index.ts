@@ -20,7 +20,7 @@ export type {
 export { openDb, createSchema } from "./db.js";
 export type { Db, OpenedDb } from "./db.js";
 export { Indexer } from "./indexer.js";
-export type { IndexerOptions } from "./indexer.js";
+export type { IndexerOptions, SyncResult } from "./indexer.js";
 export {
   attributeTransfers,
   classifyAgentCoverage,
@@ -34,6 +34,7 @@ export {
   priceStaleness,
   execPriceUsdPerToken,
   slippageBps,
+  adverseSlippageBps,
   type PricePoint,
 } from "./pricing.js";
 export { findCommonAncestor, extendsTip, type StoredBlock } from "./reorg.js";

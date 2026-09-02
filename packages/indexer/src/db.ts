@@ -174,6 +174,19 @@ export function createSchema(sqlite: Database.Database): void {
     );
     CREATE INDEX IF NOT EXISTS pu_feed_time_idx ON price_updates (feed_proxy, updated_at);
 
+    CREATE TABLE IF NOT EXISTS price_snapshots (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      feed_proxy TEXT NOT NULL,
+      answer TEXT NOT NULL,
+      round_id TEXT NOT NULL,
+      updated_at INTEGER NOT NULL,
+      block_number INTEGER NOT NULL,
+      block_timestamp INTEGER NOT NULL,
+      source TEXT NOT NULL,
+      UNIQUE (feed_proxy, block_number)
+    );
+    CREATE INDEX IF NOT EXISTS ps_feed_block_idx ON price_snapshots (feed_proxy, block_number);
+
     CREATE TABLE IF NOT EXISTS tx_gas (
       tx_hash TEXT PRIMARY KEY,
       block_number INTEGER NOT NULL,

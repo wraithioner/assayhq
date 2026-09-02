@@ -51,11 +51,13 @@ function pow10(n: number): bigint {
 }
 
 /**
- * Realised execution price from a Uniswap swap, as USD-quote per ONE whole stock
- * token, scaled to `outDecimals` (default 8, to compare directly with a Chainlink
- * answer). Amounts are the absolute raw amounts that moved.
+ * Realised execution price from a Uniswap swap, in USD per ONE whole stock token,
+ * scaled to `outDecimals` (default 8, to compare directly with a Chainlink
+ * answer). The quote asset's own point-in-time USD feed is mandatory: this keeps
+ * USDG depeg-aware and prevents WETH from being mistaken for a dollar quote.
  *
- *   price = (|quote| / 10^quoteDec) / (|stock| / 10^stockDec)   [USD per token]
+ *   price = (|quote| / 10^quoteDec) × quoteUsd
+ *           / (|stock| / 10^stockDec)                           [USD per token]
  *
  * @throws if the stock amount is zero.
  */
@@ -64,14 +66,19 @@ export function execPriceUsdPerToken(args: {
   quoteAmountRaw: bigint;
   stockDecimals: number;
   quoteDecimals: number;
+  quoteUsdPrice: bigint;
+  quotePriceDecimals: number;
   outDecimals?: number;
 }): bigint {
   const stock = abs(args.stockAmountRaw);
   const quote = abs(args.quoteAmountRaw);
   if (stock === 0n) throw new RangeError("stock amount is zero; execution price undefined");
+  if (args.quoteUsdPrice <= 0n) throw new RangeError("quote USD price must be > 0");
   const outDecimals = args.outDecimals ?? 8;
-  const num = quote * pow10(args.stockDecimals) * pow10(outDecimals);
-  const den = stock * pow10(args.quoteDecimals);
+  const num =
+    quote * args.quoteUsdPrice * pow10(args.stockDecimals) * pow10(outDecimals);
+  const den =
+    stock * pow10(args.quoteDecimals) * pow10(args.quotePriceDecimals);
   return num / den;
 }
 
@@ -86,6 +93,16 @@ export function slippageBps(execPrice: bigint, midPrice: bigint): number {
   // (exec - mid) / mid * 10000, computed in fixed point then to number
   const diff = execPrice - midPrice;
   return Number((diff * 10_000n * 1_000_000n) / midPrice) / 1_000_000;
+}
+
+/** Positive means the agent paid adverse slippage; negative means price improvement. */
+export function adverseSlippageBps(
+  execPrice: bigint,
+  midPrice: bigint,
+  side: "buy" | "sell",
+): number {
+  const raw = slippageBps(execPrice, midPrice);
+  return side === "buy" ? raw : -raw;
 }
 
 function abs(x: bigint): bigint {
