@@ -180,6 +180,19 @@ used in eight places in `schema.ts` — still typechecks on 0.45.2; the changelo
 record no removal, only a types-only breaking change to MySQL/PostgreSQL column builders that
 this SQLite schema does not touch.
 
+### D-2.13 — `erc8056` 0.1.3 is a runtime-identical release, and says so
+The CVE-2026-39356 response (D-2.12) touched `packages/erc8056` only by moving `vitest` and
+`@vitest/coverage-v8` from 2.1.8 to 3.2.7. The package has zero runtime dependencies and `dist/`
+does not embed the version, so a 0.1.3 tarball carries byte-identical `dist/`, `solidity/` and
+`LICENSE` to 0.1.2 — verified by diffing a fresh build against the published 0.1.2 tarball, not
+assumed. Released anyway, for two reasons a consumer can actually observe: `CHANGELOG.md` was
+added to `files` after 0.1.2 shipped, so 0.1.3 is the first tarball to carry the release record;
+and the published `package.json` no longer declares `devDependencies` that automated scanners
+flag, which this package has already drawn one report over. **Not** presented as a security
+fix for consumers: `devDependencies` are never installed downstream and never appear in a
+consumer's `npm audit`, so calling it one would be the kind of overstated claim D-2.2 exists to
+stop. The changelog entry leads with "runtime-identical" for that reason.
+
 ## Phase 1 — build (2026-09-01)
 
 Approved scope constraints (from the go-ahead): score **only the 35 feed-covered tokens**
