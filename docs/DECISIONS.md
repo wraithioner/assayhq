@@ -180,18 +180,29 @@ used in eight places in `schema.ts` — still typechecks on 0.45.2; the changelo
 record no removal, only a types-only breaking change to MySQL/PostgreSQL column builders that
 this SQLite schema does not touch.
 
-### D-2.13 — `erc8056` 0.1.3 is a runtime-identical release, and says so
-The CVE-2026-39356 response (D-2.12) touched `packages/erc8056` only by moving `vitest` and
-`@vitest/coverage-v8` from 2.1.8 to 3.2.7. The package has zero runtime dependencies and `dist/`
-does not embed the version, so a 0.1.3 tarball carries byte-identical `dist/`, `solidity/` and
-`LICENSE` to 0.1.2 — verified by diffing a fresh build against the published 0.1.2 tarball, not
-assumed. Released anyway, for two reasons a consumer can actually observe: `CHANGELOG.md` was
-added to `files` after 0.1.2 shipped, so 0.1.3 is the first tarball to carry the release record;
-and the published `package.json` no longer declares `devDependencies` that automated scanners
-flag, which this package has already drawn one report over. **Not** presented as a security
-fix for consumers: `devDependencies` are never installed downstream and never appear in a
-consumer's `npm audit`, so calling it one would be the kind of overstated claim D-2.2 exists to
-stop. The changelog entry leads with "runtime-identical" for that reason.
+### D-2.13 — `erc8056` 0.1.3 withdrawn: no release where every consumer-facing byte is identical
+A 0.1.3 was prepared (`63ac798`, `2cb9dcb`) after the CVE-2026-39356 response (D-2.12) moved
+`packages/erc8056`'s `vitest` and `@vitest/coverage-v8` from 2.1.8 to 3.2.7. Diffing a fresh
+build against the published 0.1.2 tarball showed `dist/`, `solidity/` and `LICENSE` byte-identical;
+the package has zero runtime dependencies and `dist/` does not embed the version, so a consumer
+would have installed exactly what 0.1.2 already gives them. Both commits are reverted and the
+version stays **0.1.2**, matching npm. The devDependency bump and the `CHANGELOG.md` entry in
+`files` remain on `main` and ride into the next release that changes runtime behaviour.
+
+Two rules, recorded so the next runtime-identical bump does not re-litigate them:
+
+1. **No release whose every consumer-facing byte is identical to the last.** A version number is
+   permanent on npm. Four versions in ~25 hours, the last changing nothing a consumer can
+   observe, reads as churn, not care.
+2. **A devDependency bump is never framed as a consumer security fix.** `devDependencies` are not
+   installed downstream and never appear in a consumer's `npm audit`. The withdrawn changelog
+   entry went further and claimed the package "has already drawn one such report" from scanners
+   reading a published `package.json` — but issue #1 scanned the *monorepo lockfile* and discussed
+   *drizzle-orm in `packages/indexer`*, never the published erc8056 package. Two different
+   artifacts, conflated to strengthen a justification. That is the pattern D-2.2 exists to stop,
+   and it was caught before publish rather than after.
+
+Same reasoning as D-2.2: don't overstate.
 
 ## Phase 1 — build (2026-09-01)
 

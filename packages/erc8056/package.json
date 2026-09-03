@@ -1,6 +1,6 @@
 {
   "name": "@assayhq/erc8056",
-  "version": "0.1.3",
+  "version": "0.1.2",
   "description": "ERC-8056 (Scaled UI Amount) reference math: raw <-> underlying-share conversion, a point-in-time corporate-action multiplier history, and multiplier-independent valuation. Zero dependencies.",
   "keywords": [
     "erc8056",

@@ -11,25 +11,6 @@ curl -sSL "$(npm view @assayhq/erc8056@<version> dist.tarball)" | tar xz
 # then diff package/dist against a build of the commit below
 ```
 
-## 0.1.3 — 2026-09-03
-
-Commit [`63ac798`](../../commit/63ac798) · published: pending · integrity: pending
-(fill both from the registry after `npm publish`, with the command at the top of this file)
-
-**Runtime-identical to 0.1.2.** `dist/`, `solidity/` and `LICENSE` are byte-for-byte the same,
-and the package has zero runtime dependencies, so nothing a consumer installs changes. What did:
-
-- **Test tooling moved onto patched versions.** `vitest` and `@vitest/coverage-v8`
-  2.1.8 → 3.2.7, as part of the repository-wide response to CVE-2026-39356
-  (`docs/DECISIONS.md` D-2.12), which also cleared two criticals in the 2.x `vitest` line.
-  These are `devDependencies` — never installed by a consumer, and invisible to a consumer's
-  `npm audit` — but scanners that read a published `package.json` flag them anyway, and this
-  package has already drawn one such report.
-- **`CHANGELOG.md` now ships in the tarball.** It was added to `files` after 0.1.2 was
-  published, so the 0.1.2 tarball does not contain it; this is the first version that does.
-
-Verified before release: 52 tests pass and coverage is 100% on all four axes under vitest 3.2.7.
-
 ## 0.1.2 — 2026-09-02
 
 Commit [`3174afb`](../../commit/3174afb) · published 12:55:57 UTC ·
