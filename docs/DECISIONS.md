@@ -125,6 +125,61 @@ model is also optimistic: measured flow has a median inter-event CV of 2.14, and
 activity of the same daily volume clusters into fewer intervals, so the real floor is higher
 than these numbers.
 
+### D-2.12 — CVE-2026-39356: real, unreachable here, patched anyway; `ws` overridden not upgraded
+An unsolicited issue (wraithioner/assayhq#1, from an automated scanner) reported
+[CVE-2026-39356](https://github.com/advisories/GHSA-gpj5-g38j-94v9) — HIGH, CWE-89, SQL
+injection via unescaped identifier delimiters in `drizzle-orm < 0.45.2`. Verified against the
+GitHub advisory database and NVD, and reproduced independently with `pnpm audit`: the advisory
+is genuine and 0.36.4 was in range.
+
+**It was not exploitable here.** The advisory only applies where untrusted runtime input
+reaches identifier or alias construction. This repo has no `sql.identifier()`, no `sql.raw()`,
+no dynamic `.as()`; every `orderBy` takes a static schema object, and the indexer is a local
+CLI with no HTTP surface. The issue's own patch was also wrong for this repo — it edited a
+`dependencies` block in the root `package.json`, which does not exist (the package lives in
+`packages/indexer`). Upgraded regardless: an unexploitable HIGH is still a HIGH the next
+reader has to re-derive.
+
+Six advisories were cleared at once, since the tree had five the issue never mentioned,
+including two criticals:
+
+| package | from | to | why |
+|---|---|---|---|
+| `drizzle-orm` (prod) | 0.36.4 | 0.45.2 | CVE-2026-39356; 0.45.2 is the only fixed 0.x |
+| `ws` (prod, via `viem`) | 8.18.0 | 8.21.3 | GHSA high + moderate |
+| `vitest` (dev) | 2.1.8 | 3.2.7 | two criticals (RCE, arbitrary file read) |
+| `vite` (dev, via `vitest`) | 5.4.21 | 6.4.3 | high + two moderates |
+| `esbuild` (dev) | 0.21.5 / 0.23.1 | 0.25.12 / 0.28.2 | moderate |
+| `tsx` (dev) | 4.19.2 | 4.23.13 | carries the patched esbuild |
+
+Three calls worth recording:
+
+**`ws` is overridden, not fixed by upgrading `viem`.** `viem@2.21.55` pins `ws` at exactly
+`8.18.0`, so the only ways to move it are a `pnpm.overrides` entry or a viem upgrade. Viem was
+left alone deliberately: it is the one production dependency that talks to the chain, and every
+published measurement in `MARKET_SIZE.md`, `HOLDER_BASE.md` and `CHAIN_SCALE.md` was produced
+with 2.21.55. Thirty-five minor versions of churn in the RPC layer, to fix an advisory in a
+module this codebase never loads (the indexer uses `http()` transport only, never
+`webSocket()`), is a worse trade than one pinned override. `8.21.3` is the same `ws` major that
+upstream viem itself now ships.
+
+**`vite` needed an override too.** `vitest@3.2.7` accepts `vite ^5 || ^6 || ^7`, so pnpm kept
+the `5.4.21` already in the tree and the vite advisories survived the vitest bump. vite 5.x
+tops out *inside* the vulnerable range (`<=6.4.2`) and pins `esbuild ^0.21.3`, so no 5.x
+release can be clean — 6.4.3 is the floor, not a preference.
+
+**vitest 3.2.7, not 4 or 5.** The advisory floor is 3.2.6. The tests are this repo's proof of
+correctness, so the smallest jump that clears it wins over `latest` (5.0.0, three majors away).
+
+Verified after: `pnpm audit` reports **0 advisories** in both the full and `--prod` trees,
+`pnpm -r typecheck` clean, all **94 tests** pass, `erc8056` coverage still 100% on all four
+axes, `next build` succeeds, and `packages/erc8056/dist` is still byte-identical to the
+published 0.1.2 tarball (TypeScript is unchanged at 5.6.3), so the `CHANGELOG.md` provenance
+claim survives. Drizzle's deprecated object-form table-extras callback — `(t) => ({ ... })`,
+used in eight places in `schema.ts` — still typechecks on 0.45.2; the changelogs 0.37→0.45
+record no removal, only a types-only breaking change to MySQL/PostgreSQL column builders that
+this SQLite schema does not touch.
+
 ## Phase 1 — build (2026-09-01)
 
 Approved scope constraints (from the go-ahead): score **only the 35 feed-covered tokens**
